@@ -1,5 +1,6 @@
 # Ignorar archivos de base de datos SQLite
 *.sqlite3
+*.db
 
 # Ignorar migraciones compiladas de Python
 __pycache__/
