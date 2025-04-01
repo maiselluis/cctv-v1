@@ -1,7 +1,6 @@
 # Ignorar archivos de base de datos SQLite
 *.sqlite3
-*.db
-
+crcCCTV_db.db
 # Ignorar migraciones compiladas de Python
 __pycache__/
 *.pyc
