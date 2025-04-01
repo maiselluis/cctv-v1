@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Delete Shift
+  {% endblock %}
+
+{%block content%}
+<div class="card card-primary card-outline mb-4">
+<div class="card-header">
+	<label class="card-title">Delete Shift</label>
+</div>
+<div class="card-body">
+	<form method="post" >
+		{% csrf_token %}
+		
+		<p>Are you sure that you want to delete "{{shift.shift}}"?</p>
+		 
+	</form>
+	<div class="card-footer">
+		
+			<input type="submit" class="btn btn-danger" value="Delete">
+			<a href="{% url 'shift-list' %}" class="btn btn-secondary">Cancel</a>
+		
+	</div>
+</div>
+</div>
+{%endblock%}

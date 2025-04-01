@@ -1,0 +1,55 @@
+{% extends 'base.html'%} {% block title %} 
+CCTV @ CRC | Update User {% endblock %}
+
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+   <div class="row">
+     <div class="col-sm-6">
+       <h3 class="mb-0">USER</h3>
+     </div>
+     <div class="col-sm-6">
+       <ol class="breadcrumb float-sm-end">
+         <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'user-list' %}>User </a></li>
+         <li class="breadcrumb-item active" aria-current="page">
+         Edit
+          </li>
+       </ol>
+     </div>
+   </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+
+{%block content%}
+
+<div class="card card-primary card-outline mb-4">
+ 
+  <div class="card-header">
+    <div class="card-title">Edit</div>
+  </div>
+    
+        <form class="pt-3" method="post" enctype="multipart/form-data">
+          <div class="card-body">
+            {% csrf_token %}
+            {{ form.as_p }}         
+           
+          </div>
+          <div class="card-footer">        
+            <input class="btn btn-success mb-2" type="submit" value="Save">             
+              <a class="btn btn-secondary  mb-2" href="{% url 'user-list' %}">Cancel</a>
+        </div>
+        </form>   
+ 
+</div>
+
+
+{% endblock%}
+
+
+
+
+ 
+        

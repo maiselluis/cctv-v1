@@ -1,0 +1,118 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | Video List
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">Report Videos</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="{% url 'report-list' %}"> Report </a> 
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                   Videos
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+ <div class="card card-primary card-outline mb-4">
+    <div class="card-header">
+        <h1>All Videos  </h1>
+    </div>
+{% if  videos %}
+<div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered table-hover  table-sm" id="video" >
+        <thead>
+          <tr>
+            <th> #</th>
+            <th>Caption</th>
+            <th>Video</th>  
+            {%if user.is_superuser or perms.cctv.change_reportvideo or perms.cctv.delete_reportvideo %} 
+            <th>Opctions</th>    
+            {%endif%}
+                 
+          </tr>
+        </thead>
+        <tbody>       
+           
+            {% for video in videos %}
+                         
+                {% if video.video_file %}
+                <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ video.caption }}</td>
+                <td> 
+                    <div class="embed-responsive embed-responsive-16by9">
+                    <video controls autoplay class=" embed-responsive-item object-fit-sm-contain" autoplay width="100%" height="auto" >
+                     <source src="{{ video.video_file.url }}" type="video/mp4" >
+                      Your browser does not support the video tag.
+                     </video>  
+                    </div>
+                 </td>
+                     {%if  perms.cctv.change_reportvideo or perms.cctv.delete_reportvideo or perms.cctv.add_reportvideo %}
+                    <td >
+                        <div class="btn-group">
+                            {%if perms.cctv.add_reportvideo%}
+                          <a href="{% url 'download_video' video_id=video.id %}" class="btn btn-primary">Download </a> 
+                          {%endif%}
+                          {% if perms.cctv.change_reportvideo %}
+                            <a href="{% url 'reportvideo_edit' report_id=video.report.pk pk=video.pk %}" class="btn btn-warning">Edit</a>
+                           {%endif%}
+                           {% if perms.cctv.delete_reportvideo %}
+                            <a href="{% url 'reportvideo_delete' report_id=video.report.pk pk=video.pk %}" class="btn btn-danger">Delete</a> 
+                            {%endif%}
+                        </div>
+                     
+                    </td>
+                {%endif%}
+              
+                {% endif %}
+            </tr>
+            
+        {% endfor %}
+  
+   </tbody>
+  
+      </table>
+    </div>
+ 
+</div>
+{%else%}
+<div class="card-body">
+ 
+    <label class="card-title" style="color: red;">No videos yet</label>
+   </div>
+
+
+
+{%endif%}
+
+<div class="card-footer">
+    <a class="btn btn-secondary mb-2" href="{% url 'report-list' %}"> <i class="bi bi-arrow-left"> </i> Back</a>
+    {% if perms.cctv.add_reportvideo %}
+    <a class=" btn btn-success mb-2  bi bi-upload"  href="{% url 'reportvideo_add' report_id %}"> Upload Video</a>
+    {%endif%}
+  
+   
+</div>
+
+ </div>
+
+
+
+
+
+
+{%endblock%}

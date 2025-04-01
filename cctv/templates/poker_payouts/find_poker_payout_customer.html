@@ -1,0 +1,262 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Find Poker Payouts Customer
+ {% endblock%}
+ {%block content_header%}
+<div class="app-content-header"> 
+ <div class="container-fluid"> 
+     <div class="row">
+         <div class="col-sm-6">
+        
+             <h3 class="mb-0">POKER PAYOUTS - FIND BY CUSTOMER</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item "><a  href={% url 'poker_payouts-list' %}> Poker Payouts</a></li>
+                 <li class="breadcrumb-item active" aria-current="page"> Find By Customer</li>
+             </ol>
+         </div>
+     </div> 
+ </div> 
+</div>
+{%endblock%}
+
+ {%block content%}
+
+ <div class="card card-primary card-outline mb-4">
+    <div style="overflow-x: auto;">
+    <div class="card-header">
+    
+        <form method="get" > 
+          <div class="container-fluid">
+            <div class="row d-flex justify-content-end">   
+              <div  class="col-sm-auto d-flex justify-content-end"> 
+                {{ form.location}}
+             </div>   
+              <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+                <label class="card-title">{{ form.date_begin.label_tag }} </label>            
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end"> 
+            {{ form.date_begin }}
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end align-self-center">     
+              <label class="card-title">{{ form.date_end.label_tag }}</label> 
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end">     
+              {{ form.date_end }}
+            </div> 
+              <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+                <label class="card-title">{{ form.customer.label_tag }}</label>            
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end"> 
+                {{ form.customer }}
+            </div> 
+           
+            <div  class="col-sm-auto">     
+              <button class="btn btn-primary " type="submit"> Find</button>               
+            
+            </div>   
+            <div class="col-sm-auto">
+                       
+              <button class="btn btn-outline-dark bi-filetype-pdf" data-url="{% url 'poker_payouts_customer' %}"   onclick="openReport(this)">PDF</button>
+            
+            </div>                             
+        
+          </div>                  
+          </div>                                                  
+          
+        </form>  
+           
+   </div>
+    </div>
+
+   
+   <div style="overflow-x: auto;">
+     <div class="card-body">  
+        
+        {% if poker_payout_customer %}
+
+       <h2>Results:</h2>  
+       <div class="table-responsive"> 
+       <table class="table table-bordered table-hover  table-sm" id="poker_payout_by_customer" >
+           <thead>
+            <tr >
+                <th style="width: 10px">#</th>
+                <th>Date</th>
+                <th>Time</th>                             
+                <th>Table</th>
+                <th>Combination</th>
+                <th>Bet</th>
+                <th>Payout</th>
+                <th>Customer</th>
+                <th>Dealer</th>
+                <th>Inspector</th>
+                <th>Pitboss</th>
+                <th>Branch</th>
+             <!--   <th>Options</th>-->
+              </tr>
+           </thead>
+           <tbody>
+               {% for poker_payout_customer in poker_payout_customer %}
+     
+             <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ poker_payout_customer.date|date:'d-m-Y' }}</td>
+                <td>{{ poker_payout_customer.time|time:"g:iA" }}</td>                     
+                <td>{{ poker_payout_customer.table }}</td>        
+                <td>{{ poker_payout_customer.combination }}</td>
+                <td>{{ poker_payout_customer.bet }}</td>
+                <td>{{ poker_payout_customer.payout }}</td>  
+                <td>{{ poker_payout_customer.customer }}</td>  
+                <td>{{ poker_payout_customer.dealer }}</td>  
+                <td>{{ poker_payout_customer.inspector }}</td>  
+                <td>{{ poker_payout_customer.pitboss }}</td> 
+                <td>{{ poker_payout_customer.location }}</td> 
+                
+               <!--              
+               <td class="col-sm-1">                     
+                 <a class="btn btn-outline-dark mb-2 bi-printer"  href="#" > Print</a>     
+                 
+               </td>
+               -->
+             </tr>
+     
+           
+             {% endfor %}
+            
+           </tbody>
+           <tfoot>
+            <tr>
+                <th>Total</th>
+                <th colspan="4"></th>
+                
+                <th></th>
+              
+                <th></th>
+                <th colspan="5"></th>
+
+                
+                
+            </tr>
+        </tfoot>
+     
+         </table>
+       </div>
+        {%else%}
+        <li>No  Poker Payouts betwen days found</li>
+        {%endif%}
+    
+     </div>
+    </div>
+     <div class="card-footer">
+       
+       <a class="btn btn-secondary mb-2 bi-chevron"  href="{% url 'poker_payouts-list' %}" > <i class="bi bi-arrow-left"> </i> Back</a> 
+            
+        
+           </div>
+     
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+     <script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+     <script>
+
+        $(document).ready(function () {
+          
+            var table = $('#poker_payout_by_customer').DataTable({
+              "order": [[0, 'desc']] ,
+              oLanguage: {
+                              oPaginate: {
+                                sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                                sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                                sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                                sLast: '<i class="fas fa-angle-double-left"></i> Last',
+        
+                              }
+                                               },
+          
+          columnDefs: [
+          { 
+                targets: 1, 
+                render: function(data, type, row) {
+                    if (type === 'sort') {
+                       
+                        let parts = data.split('-'); 
+                        return new Date(parts[2], parts[1] - 1, parts[0]).getTime(); 
+                    }
+                    return data; 
+                }
+            },
+             
+              
+           //  {
+        //      orderable: false,targets:[11]
+       //      },
+       //      { 
+      //        searchable: false,targets:[11]
+      //        },
+                
+            ],
+        
+        
+                footerCallback: function (row, data, start, end, display) {
+                    var api = this.api();
+        
+                    // Función para convertir a número
+                    var intVal = function (i) {
+                        return typeof i === 'string'
+                            ? i.replace(/[\$,]/g, '') * 1
+                            : typeof i === 'number'
+                            ? i
+                            : 0;
+                    };
+        
+                    // Calcular totales por columna
+                    var totalBet = api
+                        .column(5)
+                        .data()
+                        .reduce(function (a, b) {
+                            return intVal(a) + intVal(b);
+                        }, 0);
+        
+                   
+        
+                    var totalPayout = api
+                        .column(6)
+                        .data()
+                        .reduce(function (a, b) {
+                            return intVal(a) + intVal(b);
+                        }, 0);
+        
+                  
+        
+                    // Mostrar totales en el footer
+                    $(api.column(5).footer()).html(totalBet.toFixed(2));
+                    $(api.column(6).footer()).html(totalPayout.toFixed(2));
+                  
+                },
+            });
+        });
+             </script>
+
+             
+<script>
+  function openReport(button) {
+
+const baseUrl = button.getAttribute('data-url');
+
+// Obtén los valores de los campos de fecha
+const dateBegin = document.querySelector('[name="date_begin"]').value;
+const dateEnd = document.querySelector('[name="date_end"]').value;
+const location = document.querySelector('[name="location"]').value;    
+const customer = document.querySelector('[name="customer"]').value;  
+
+// Construye la URL con los parámetros
+const fullUrl = `${baseUrl}?location=${encodeURIComponent(location)}&customer=${encodeURIComponent(customer)}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`;     
+
+// Abre la URL en una nueva ventana o pestaña
+window.open(fullUrl, '_blank');
+}
+
+ </script>
+    
+ {% endblock %}

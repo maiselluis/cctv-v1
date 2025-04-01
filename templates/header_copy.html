@@ -1,0 +1,197 @@
+{%load static%}
+<nav class="app-header navbar navbar-expand bg-body">
+  <!--begin::Container-->
+  <div class="container-fluid">
+
+    <!--begin::Start Navbar Links-->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+          <i class="bi bi-list"></i>
+        </a>
+      </li>
+      <li class="nav-item d-none d-md-block">
+        <a href="#" class="nav-link">Home</a>
+        
+      </li>
+      <li>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Report
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Report Main</a></li>
+            <li><a class="dropdown-item" href="#">Report by Date</a></li>
+            <li><a class="dropdown-item" href="#">Report by Id</a></li>
+            <li><a class="dropdown-item" href="#">Repor by Type</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Daily Shift
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Daily Shift Report</a></li>
+            <li><a class="dropdown-item" href="#">Selected Dates</a></li>
+            <li><a class="dropdown-item" href="#">Message Book</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Cash Desk
+          </button>
+        
+          <ul class="dropdown-menu">
+        
+            <li>
+              <a class="dropdown-item" href="#">Cash Desk Transactions</a>
+            </li>
+            <li><a class="dropdown-item" href="#">Selected Dates</a></li>
+            <li><a class="dropdown-item" href="#">Complementary</a></li>
+            <li><a class="dropdown-item" href="#">Customer Experiense</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >Cash Desk Transaction by Type of Transaction</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >Cash Desk Transaction by Customer</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Cash Desk Error
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Cash Desk Error Main</a></li>
+            <li><a class="dropdown-item" href="#">Selected Dates</a></li>
+            <li><a class="dropdown-item" href="#">Synopsis Cashier</a></li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >Cash Desk Transaction by Type of Transaction</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <!--  <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Cash Transaction</a> </li>-->
+      <!-- <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Cash Desk Error</a> </li>-->
+      <!-- <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Poker Payouts</a> </li>-->
+
+      <li>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Poker Payouts
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Poker Payout Main</a></li>
+            <li><a class="dropdown-item" href="#">Selected Dates</a></li>
+            <li><a class="dropdown-item" href="#">Synopsis Staff</a></li>
+            <li><a class="dropdown-item" href="#">Selected Combination</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li><a class="dropdown-item" href="#">Payouts by Customer</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Payouts by Combination</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Report Synopsis
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Cctv</a></li>
+            <li><a class="dropdown-item" href="#">Dealer</a></li>
+            <li><a class="dropdown-item" href="#">Inspector</a></li>
+            <li><a class="dropdown-item" href="#">PitBoss</a></li>
+            <li><a class="dropdown-item" href="#">Summary</a></li>
+            <li><a class="dropdown-item" href="#">Title</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li><a class="dropdown-item" href="#">Over Payment</a></li>
+            <li><a class="dropdown-item" href="#">Under Payment</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item d-none d-md-block">
+        <a href="#" class="nav-link">Daily Exceptions</a>
+      </li>
+      <li class="nav-item d-none d-md-block">
+         <a href="#" class="nav-link">Staff List</a>
+      </li>
+      <li class="nav-item d-none d-md-block">
+        <a href="#" class="nav-link">Black List</a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" href="#" data-lte-toggle="fullscreen">
+         <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i>
+         <i data-lte-icon="minimize" class="bi bi-fullscreen-exit" style="display: none;"></i> </a>
+        </li>
+    </ul>
+    <!--end::Start Navbar Links-->
+
+    <!--begin::End Navbar Links-->
+    <!--el navbar option pages es las ocptiones de buscar notification y perfil que no voy a usar de momento-->
+    <!--   {include  'navbar_option.html'}-->
+
+    <!--end::End Navbar Links-->
+  </div>
+  <!--end::Container-->
+</nav>

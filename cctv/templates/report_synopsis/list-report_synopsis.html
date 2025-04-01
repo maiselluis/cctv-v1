@@ -1,0 +1,169 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Report Synopsis 
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">REPORT SYNOPSIS</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Report Synopsiss 
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div style="overflow-x: auto;">
+        <div class="card-header">
+
+          <div class="container-fluid"> 
+            <div class="row">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <a  class="btn btn-outline-dark bi bi-camera-video fs-5 "  href="{% url 'report_synopsis-list-cctv' %}"   > Cctv</a >
+                    <a   class="btn btn-outline-dark  bi bi-people fs-5 "  href="{% url 'report_synopsis-list-dealer' %}" > Dealer/Cashier/Attendant </a > 
+                    <a   class="btn btn-outline-dark bi bi-people fs-5 "  href="{% url 'report_synopsis-list-inspector' %}" >  Inspector/Senior</a > 
+                    <a   class="btn btn-outline-dark bi bi-people fs-5 "  href="{% url 'report_synopsis-list-pitboss' %}" > PitBoss/Supervisor</a > 
+                    <a   class="btn btn-outline-dark bi bi-briefcase fs-5 "  href="{% url 'report_synopsis-list-summary' %}" >  Summary</a > 
+                    <a   class="btn btn-outline-dark bi bi-card-heading fs-5 "  href="{% url 'report_synopsis-list-tittle' %}" > Report Title</a >
+                    <a   class="btn btn-outline-dark bi-arrow-up-square fs-5 "  href="{% url 'report_synopsis-list-overpayment' %}" >  Over Pyment</a >
+                    <a   class="btn btn-outline-dark bi bi-arrow-down-square fs-5 "  href="{% url 'report_synopsis-list-underpayment' %}" >  Under Pyment</a >
+                
+                  </div>
+            </div>
+        </div>
+        </div>
+  </div>
+  {%if object_list %}
+  <div style="overflow-x: auto;">
+  <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered table-hover  table-sm" id="reportSynopsis" >
+      <thead>
+        <tr >
+          <th>Date</th>
+          <th> No.</th>
+          <th>Report Title</th> 
+          <th>Origination</th>                 
+          <th>Value</th>                  
+          <th>Money Recovered </th>         
+          <th>Money Not Recovered </th>
+          <th>Money Paid</th> 
+          <th>Money Not Paid</th>     
+          <th>Footage</th>   
+             
+          <th>Branch</th>                 
+        
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr >
+          <td>{{ object.date|date:'d-m-Y' }}</td>
+          <td>{{ object.report_nro }}</td>
+          <td>{{ object.report_title }}</td> 
+          <td>{{ object.origination }}</td> 
+          <td>$TT{{ object.value_us }}</td> 
+          <td>$TT {{ object.money_recovered }}</td>
+          <td>$TT {{ object.money_not_recovered }}</td>
+          <td>$TT{{ object.money_paid }}</td>
+          <td>$TT{{ object.money_not_paid }}</td>
+          <td class="text-center align-middle">
+            {% if object.dubbed_to %}
+          <i class="bi bi-check-circle-fill text-success"></i> <!-- Ícono verde -->
+      {% else %}
+          <i class="bi bi-x-circle-fill text-danger"></i> <!-- Ícono rojo -->
+      {% endif %}
+            </td>
+
+          <td>{{ object.location }}</td>
+          
+    
+        </tr>
+        
+        
+        {% endfor%}
+      </tbody>
+
+    </table>
+    </div>
+  
+  </div>
+  </div>
+
+  {%else%}
+  <div class="card-body">
+ 
+   <label class="card-title" style="color: red;"> No Report  yet!</label>
+  </div>
+
+  {%endif%}
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+
+<script>
+
+$(document).ready(function () {
+    $.fn.dataTable.moment('DD-MM-YYYY');
+
+
+
+    var  reportT=$('#reportSynopsis').DataTable(
+    {
+      "order": [[0, 'desc']], 
+
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+        },
+      "responsive": true,
+  
+      columnDefs: [
+         { 
+                targets: 1, 
+                render: function(data, type, row) {
+                    if (type === 'sort') {
+                       
+                        let parts = data.split('-'); 
+                        return new Date(parts[2], parts[1] - 1, parts[0]).getTime(); 
+                    }
+                    return data; 
+                }
+            },
+      
+      
+   
+        
+    ]
+    
+    }
+   
+  )
+
+  });
+
+  
+  </script>
+
+{% endblock%}

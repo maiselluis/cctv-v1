@@ -1,0 +1,71 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Report Detail-Report #{{report.report}}  {% endblock %}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 class="mb-0">USER PROFILE</h3>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-end">
+          <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'report-list' %}>Daily Report </a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+           Detail
+           </li>
+        </ol>
+      </div>
+    </div> <!--end::Row-->
+  </div> <!--end::Container-->
+ </div>
+ {%endblock%}
+
+ {%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+<div class="card-header">
+    <nav class="app-header navbar navbar-expand ">
+        <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">                      
+                    <label class="card-title" > Detail </label> 
+                </li>
+              </ul>
+             <ul class="navbar-nav">
+             
+                  <li class="nav-link" float-end">
+                    <a  class=" btn btn-outline-dark bi-filetype-pdf"  href="#"   >  PDF </a >
+                  </li>
+                  <li class="nav-link"float-end">
+                    <a  class=" btn btn-outline-dark bi bi-file-excel"  href="#"   >  Excel </a >
+                  </li>                      
+              </ul>  
+      </div>
+  </nav>  
+    
+</div>
+<div class="card-body">
+  <div class="row g-4 mb-4">
+   
+
+
+      <p><strong>Branch:</strong> {{ user_profile.location }}</p>
+      <p><strong>User:</strong> {{ user_profile.user }}</p>
+          
+     
+     
+  
+   
+    </div>
+   
+ 
+ 
+  
+</div>
+<div class="card-footer">
+    <a class="btn btn-secondary " href={% url 'user_profile-list'%} > Back</a>
+</div>
+</div>
+
+{%endblock%}

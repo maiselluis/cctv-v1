@@ -1,0 +1,145 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Token List 
+ 
+{% endblock %}
+{%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">TOKENS</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Catalog List
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                   Token List
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+{%block content%}
+
+  
+
+    <div class="card card-primary card-outline mb-4">        
+      <div class="card-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="btn-group" role="group">
+                {%if perms.cctv.add_token %}
+                <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'token-create' %}"> Add Token</a>
+              {%endif%}
+            </div>
+            </div>
+           
+          
+            </div>
+         
+        </div>
+      
+        </div>         
+      
+      
+       {% if object_list %}
+       <div style="overflow-x: auto;">
+      <div class="card-body">
+        
+          <table class="table table-hover  table-bordered table-sm" id="token">
+              <thead>
+                  <tr>
+                      <th style="width: 50px">#</th>
+                      <th>Token</th>
+                      <th>Options</th>
+                      
+                  </tr>
+              </thead>
+              <tbody>
+                {% for object in object_list%}
+                <tr class="align-middle">
+                  <td>{{ forloop.counter }}</td>
+                  <td>                          
+                     
+                     {{object.token}}
+                    </td>
+                  <td class="col-sm">
+                    <div class="btn-group" role="group">
+                      {%if perms.cctv.view_token %}
+                    <a class="btn  btn-info mb-2 bi bi-folder  "  href="{% url 'token-detail' object.id %}"> Detail</a> 
+                    {%endif%}
+                    {%if perms.cctv.change_token %}
+                    <a class="btn  btn-warning mb-2 bi bi-pencil-square"  href="{% url 'token-update' object.id %}"> Edit</a> 
+                    {%endif%}
+                    {%if perms.cctv.delete_token %}
+                    <a class="btn btn-danger mb-2 bi bi-trash"  href="{% url 'token-delete' object.id %}"> Delete</a>  
+                    {%endif%}
+                    </div>                                                      
+                  </td>                                 
+              </tr>                         
+              
+                {% endfor%}                      
+                 
+              </tbody>
+          </table>
+      </div> 
+       </div>
+    
+      {% else %}
+      <div class="card-body">
+     
+        <label class="card-title" style="color: red;"> No Token yet</li>
+      </div>
+     
+      {%endif%}
+</div> 
+
+
+
+
+ 
+
+<script>
+var  token=$('#token').DataTable(
+  {
+    oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+            },
+          responsive:true,
+
+columnDefs: [
+    { 
+      width: '1%', targets: 0
+     },
+    {
+        targets: -1,
+        className: 'dt-body-right'
+    },
+   {
+     orderable: false,targets:[2]
+    },
+    { 
+      searchable: false,targets:[2]
+      },
+      
+  ]
+  
+  }
+ 
+)
+
+</script>
+{% endblock%}

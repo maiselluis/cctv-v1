@@ -1,0 +1,244 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   BlackList 
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">BLACKLIST</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href="{% url 'index' %"}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    BlackList
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid"> 
+      <div class="row">
+          <div class="col-sm-6">
+          {%if perms.cctv.add_blacklist%}
+            <div class="btn-group" role="group">
+              <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'blacklist-create' %}"> Add BlackList </a>
+          </div>
+          {%endif%}
+          </div>
+   </div>
+    </div>
+  </div>
+
+
+<div class="card-body">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm" id="blacklist">
+      <thead>
+        <tr>              
+          <th class="d-none d-md-table-cell">Id</th>         
+          <th>Photo</th>
+          <th >Date</th>          
+          <th>Name</th>
+          <th>Surname</th>                    
+          <th class="d-none d-md-table-cell">Sex</th>
+          <th class="d-none d-md-table-cell">Reason</th>
+          <th class="d-none d-md-table-cell">Race</th>    
+          <th class="d-none d-md-table-cell">Duration</th>    
+          <th class="d-none d-md-table-cell">Branch</th>        
+          <th>Options</th>
+        </tr>
+        <tr>
+          <td class="d-none d-md-table-cell"><select class="column-filter form-select" data-column="id"></select></td> 
+          <td></td>
+          <td><select class="column-filter form-select" data-column="date"></select></td>
+          <td><select class="column-filter form-select" data-column="name"></select></td>
+          <td><select class="column-filter form-select" data-column="surname"></select></td>
+          <td class="d-none d-md-table-cell "><select class="column-filter form-select" data-column="sex"></select></td>
+          <td class="d-none d-md-table-cell"><select class="column-filter form-select" data-column="reason"></select></td>
+          <td class="d-none d-md-table-cell"><select class="column-filter form-select" data-column="race"></select></td>
+          <td class="d-none d-md-table-cell"><select class="column-filter form-select" data-column="duration"></select></td>
+          <td class="d-none d-md-table-cell"><select class="column-filter form-select" data-column="location"></select></td>
+          
+          <td></td> 
+      </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    
+    </table>
+  </div>
+</div>
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.4/sorting/datetime-moment.js"></script>
+
+<script>
+ $(document).ready(function () {
+
+  $.fn.dataTable.moment('DD-MM-YYYY');
+
+    var blacklisttable = $('#blacklist').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: {
+            url: "{% url 'blacklist-list' %}",
+            type: "GET",
+            data: function(d) {
+                d.start = d.start || 0;
+                d.length = d.length || 10;
+
+                var filters = {};
+                $('.column-filter').each(function() {
+                    var column = $(this).data('column');
+                    var value = $(this).val();
+                    if (value) {
+                        filters[column] = value;
+                    }
+                });
+
+                d.filters = JSON.stringify(filters);  
+            }
+        },
+        language: {
+            processing: " <span>Loading data...</span>"
+        },
+        orderCellsTop: true,
+        columnDefs: [
+            { targets: [0,  5, 6, 7,8,9], className: "d-none d-md-table-cell" }
+        ],
+        columns: [
+            { data: "id", searchable: true, orderable: true },
+            {
+                data: "picture",
+                searchable: false,
+                orderable: false,
+                render: function(data) {
+                    return data ? '<img src="' + data + '" class="mx-auto d-block" style="height:3rem; width:3rem; border-radius: 30px" />' : '';
+                }
+            },
+            { 
+            data: "date", 
+            type: "date",
+            searchable:true,
+            orderable:true,
+            render: function(data, type, row) {
+                return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
+                  }
+               },
+            { data: "name", searchable: true, orderable: true },
+            { data: "surname", searchable: true, orderable: true },
+            { data: "sex", searchable: true, orderable: true },
+            { data: "reason", orderable: true, searchable: true },
+            { data: "race", searchable: true, orderable: true },
+            { data: "duration", searchable: true, orderable: true },
+            { data: "location", searchable: true, orderable: true },
+          
+            {
+                data: null,
+                orderable: false,
+                searchable: false,
+                render: function(data) {
+                    let actions = '<div class="d-flex justify-content-end gap-2">';
+                    {% if perms.cctv.view_blacklist %}
+                    actions += '<a class="btn btn-info mb-2 d-flex align-items-center" href="' + data.detail_url + '"> ' +
+                               '<i class="bi bi-folder me-1"></i> Detail</a>';
+                    {% endif %}
+                    {% if perms.cctv.change_blacklist  %}
+                    actions += '<a class="btn btn-warning mb-2 d-flex align-items-center d-none d-md-table-cell" href="' + data.edit_url + '"> ' +
+                               '<i class="bi bi-pencil-square me-1"></i> Edit</a>';
+                    {% endif %}
+                    {% if perms.cctv.add_blacklist %}
+                    actions += '<a class="btn btn-outline-dark  d-none d-md-table-cell" target=_blank href="' + data.pdf_url + '"> ' +
+                               '<i class="bi bi-filetype-pdf me-1"></i> PDF</a>';
+                    {% endif %}
+                    actions += '</div>';
+                    return actions;
+                }
+            }
+        ],
+        order: [[0, 'desc']],
+        oLanguage: {
+            oPaginate: {
+                sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                sLast: '<i class="fas fa-angle-double-left"></i> Last',
+            }
+        },
+        searchDelay: 500,
+        responsive: true
+    });
+
+    function populateFilters() {
+    $.ajax({
+        url: "{% url 'blacklist-list' %}",
+        type: "GET",
+        data: { 
+            filters_only: true,
+
+        filters: JSON.stringify({ 
+                id:"",           
+                date: "", 
+                name: "", 
+                surname: "", 
+                sex: "", 
+                reason: "", 
+                race: "", 
+                duration: "", 
+                location: "" 
+                
+            })
+         },
+        success: function(response) {
+  
+
+            if (response.data) {
+                response.data.forEach(filterObj => {
+                    let column = filterObj.filter;
+                    
+                    let values = filterObj.values; 
+                    
+                    let select = $('select[data-column="' + column + '"]');
+                    select.empty();
+                    select.append('<option value="">All</option>');
+
+                    values.forEach(function(value) {
+                        if (column.toLowerCase().includes("date") && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+                let dateParts = value.split("-");
+                value = `${dateParts[2]}-${dateParts[1]}-${dateParts[0].slice(-2)}`; // DD-MM-YY
+                               } 
+                        select.append('<option value="' + value + '">' + value + '</option>');
+                    });
+                });
+            } 
+        },
+     
+    });
+}
+
+populateFilters();
+
+   
+    $('.column-filter').on('change', function() {
+        blacklisttable.ajax.reload();
+    });
+});
+
+    
+  
+  </script>
+  {% endblock%}
+

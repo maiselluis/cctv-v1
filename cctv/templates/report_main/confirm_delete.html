@@ -1,0 +1,45 @@
+{% extends 'base.html'%} {% block title %}
+ CCTV @ CRC | Delete Report
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+	 <div class="row">
+		 <div class="col-sm-6">
+			 <h3 class="mb-0">REPORT-DELETE</h3>
+		 </div>
+		 <div class="col-sm-6">
+			 <ol class="breadcrumb float-sm-end">
+				 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+				 <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'report-list' %}>Report </a></li>
+				 <li class="breadcrumb-item active" aria-current="page">
+					Delete
+				  </li>
+			 </ol>
+		 </div>
+	 </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+{%block content%}
+<div class="card card-primary card-outline mb-4">
+	<div class="card-header">
+		
+	</div>
+
+	<div class="card-body">
+		<form method="post" >
+			{% csrf_token %}
+			
+			<p>Are you sure that you want to delete Report #{{report.report_nro}} with Date {{report.date|date:'d-m-Y'}} and title {{report.report_title}}?</p>
+			
+			<div class="card-footer">
+				<input type="submit" class="btn btn-danger" value="Delete">
+				<a href="{% url 'report-list' %}" class="btn btn-secondary">Cancel</a>
+			</div>
+		</form>	
+	</div>
+</div>
+
+{%endblock%}

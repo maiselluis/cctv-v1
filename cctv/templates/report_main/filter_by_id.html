@@ -1,0 +1,176 @@
+{% extends 'base.html'%} {% block title %}
+ CCTV @ CRC | Find Report By Id 
+{% endblock %}
+
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+	 <div class="row">
+		 <div class="col-sm-6">
+			 <h3 class="mb-0">REPORT-Find By Report No.</h3>
+		 </div>
+		 <div class="col-sm-6">
+			 <ol class="breadcrumb float-sm-end">
+				 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+				 <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'report-list' %}>Report </a></li>
+				 <li class="breadcrumb-item active" aria-current="page">
+					Find By Id
+				  </li>
+			 </ol>
+		 </div>
+	 </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    
+    <form method="get" > 
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-end">   
+          
+          <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+            <label class="card-title">{{ form.report_id.label_tag }} </label>            
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end"> 
+          {{ form.report_id }}  
+        </div> 
+       
+        <div  class="col-sm-auto">     
+          <button class="btn btn-primary " type="submit"> Find</button>               
+        
+        </div>                         
+    
+      </div>                  
+      </div>                                                  
+      
+    </form>  
+       
+</div>
+
+<div style="overflow-x: auto;">
+    <div class="card-body">  
+      <div style="overflow-x: auto;">
+      {%if report %}
+      <h2>Results:</h2>  
+           
+      <table class="table table-bordered table-hover  table-sm" id="reportT" >
+        <thead>
+          <tr >
+            <th> No.</th>
+            <th>Date</th>
+            <th>Time</th>         
+            <th>Report Type</th>  
+            <th>Report Title</th>        
+            <th>Location </th>
+            <th>Origination</th>
+            <th>Duty Manager</th>
+            <th>Pittboss/Supervisor</th> 
+            <th>Inspector/Senior</th> 
+            <th>Dealer/Cashier/Attendant</th>                    
+               
+            <th>Branch</th>         
+            <th>Print</th>           
+           
+          </tr>
+        </thead>
+        <tbody>
+          {% for report in report%}
+  
+          <tr >
+            <td>{{ report.report_nro }}</td>
+            <td>{{ report.date|date:'d-m-Y' }}</td>
+            <td>{{ report.time|time:"g:iA" }}</td>         
+            <td>{{ report.report_type }}</td> 
+            <td>{{ report.report_title }}</td>         
+            <td>{{ report.area }}</td>
+            <td>{{ report.origination }}</td>
+            {%if  report.duty_manager %}
+            <td>{{ report.duty_manager }}</td>
+            {%else%}
+            <th></th>
+            {%endif%}
+            {%if report.pittboss %}
+            <td>{{ report.pittboss }}</td>
+            {%else%}
+            <th></th>
+            {%endif%}
+            {%if report.inspector  %}
+            <td>{{ report.inspector }}</td>
+            {%else%}
+            <th></th>
+            {%endif%}
+           
+            {%if report.dealer %}
+            <td>{{ report.dealer }}</td>
+            {%else%}
+            <th></th>
+            {%endif%}
+           
+           
+  
+            <td>{{ report.location }}</td>
+            
+          <td>  <a  class="btn btn-outline-dark mb-2 bi-filetype-pdf"  href="{% url 'reporte_pdf' report.report %}"  target="_blank">PDF</a> </td>
+          </tr>
+          
+          
+          {% endfor%}
+        </tbody>
+    
+        </table>
+
+   {%else%}
+  
+   <li>No Report  found!</li>
+   {%endif%}
+    </div>
+    
+    <div class="card-footer">
+      <a class="btn btn-secondary mb-2 "  href="{% url 'report-list' %}" ><i class="bi bi-arrow-left"> </i> Back</a>
+    </div>
+    
+    </div>
+</div>
+</div>
+
+<script>
+
+  
+
+  var  reportT=$('#reportT').DataTable(
+    {
+      order: [[0, 'desc']],
+      
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                                       },
+  
+  columnDefs: [
+      
+      
+     {
+       orderable: false,targets:[12]
+      },
+    
+      { 
+        searchable: false,targets:[12]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+   
+{% endblock %}

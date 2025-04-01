@@ -1,0 +1,210 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Find Daily Exception By Employee
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">DAILY EXCEPTION - FIND BY EMPLOYEE</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'daily_exeption-list' %}>   Daily Exception </a>  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                   Find By Employee
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+
+     <div class="card card-primary card-outline mb-4">
+      <div class="card-header">
+    
+        <form method="get" > 
+          <div class="container-fluid">
+            <div class="row d-flex justify-content-end"> 
+              <div  class="col-sm-auto d-flex justify-content-end"> 
+                {{ form.location}}
+               </div>   
+              <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+                <label class="card-title">{{ form.date_begin.label_tag }} </label>            
+             </div> 
+             <div  class="col-sm-auto d-flex justify-content-end"> 
+                {{ form.date_begin }}
+              </div> 
+             <div  class="col-sm-auto d-flex justify-content-end align-self-center">     
+                <label class="card-title">{{ form.date_end.label_tag }}</label> 
+              </div> 
+              <div  class="col-sm-auto d-flex justify-content-end">     
+                {{ form.date_end }}
+              </div> 
+              <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+                <label class="card-title">{{ form.employee.label_tag }}  </label>            
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end"> 
+              {{ form.employee }} 
+            </div> 
+           
+            <div  class="col-sm-auto">     
+              <button class="btn btn-primary " type="submit"> Find</button>               
+            
+            </div>   
+            <div class="col-sm-auto">
+              <button  class=" btn btn-outline-dark bi-filetype-pdf"  data-url="{% url 'daily_exception_by_employee_pdf' %}"  onclick="openReport(this)">  PDF </button>
+            </div>                        
+        
+          </div>                  
+          </div>                                                  
+          
+        </form>  
+           
+   </div>
+
+        
+    
+         <div class="card-body">  
+        
+          {% if daily_exeption %}
+  
+         <h2>Results:</h2>  
+              
+         <table class="table table-bordered table-hover  table-sm" id="dailyException" >
+             <thead>
+              <tr class="text-middle align-middle">              
+                <th class="text-center align-middle">#</th>         
+                <th class="text-center align-middle">Date</th>          
+                <th class="text-center align-middle">Employee</th>        
+                <th class="text-center align-middle">Exception Type</th>
+                <th class="text-center align-middle">Time In</th>
+                <th class="text-center align-middle">Time Out</th>
+              <!-- <th>Over Time Hours</th>
+                <th>Old Shift</th>
+                <th>New Shift</th>   -->        
+                <th class="text-center align-middle">Detail</th>  
+                <th class="text-center align-middle">Branch</th>      
+                <!--<th >Options</th>-->
+              </tr>
+             </thead>
+             <tbody>
+                 {% for daily_exeption in daily_exeption %}
+       
+               <tr>
+            <td>{{ daily_exeption.id}}</td>         
+            <td>{{ daily_exeption.date|date:'d-m-Y' }}</td>
+            <td>{{ daily_exeption.employee}} ({{ daily_exeption.employee_id}})</td>
+            <td>{{ daily_exeption.exception_type}}</td>
+            <td>{{ daily_exeption.daily_from|date:"g:iA" }}</td>  
+            <td>{{ daily_exeption.daily_to|date:"g:iA" }}</td>      
+            <!--<td>{{ daily_exeption.total_hours }}</td>  
+            <td>{{ daily_exeption.old_shift|date:"g:iA" }}</td>  
+            <td>{{ daily_exeption.new_shift|date:"g:iA"}}</td>  -->
+            <td>{{ daily_exeption.detail}}</td>
+            <td>{{ daily_exeption.location}}</td>
+                               
+              <!--   <td class="col-sm-1">                     
+                   <a class="btn btn-outline-dark mb-2 bi-printer"  href="#" > Print</a>     
+                   
+                 </td>
+                 -->
+               </tr>
+       
+             
+               {% endfor %}
+              
+             </tbody>
+       
+           </table>
+          {%else%}
+          <li>No  Daily Exception betwen days found</li>
+          {%endif%}
+      
+       </div>
+     
+            <div class="card-footer">
+       
+             <a class="btn btn-secondary mb-2 bi-chevron"  href="{% url 'daily_exeption-list' %}" > Back</a> 
+            
+        
+            </div>
+     
+     </div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+ <script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+     <script>
+      var  dailyException=$('#dailyException').DataTable(
+        {
+          "order": [[1, 'desc']] ,
+          
+          oLanguage: {
+                          oPaginate: {
+                            sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                            sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                            sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                            sLast: '<i class="fas fa-angle-double-left"></i> Last',
+    
+                          }
+                                           },
+          responsive:true,
+                                          
+      
+    columnDefs: [
+    { 
+                targets: 1, 
+                render: function(data, type, row) {
+                    if (type === 'sort') {
+                       
+                        let parts = data.split('-'); 
+                        return new Date(parts[2], parts[1] - 1, parts[0]).getTime(); 
+                    }
+                    return data; 
+                }
+            },
+          
+       //  {
+         //  orderable: false,targets:[9]
+         // },
+         // { 
+           // searchable: false,targets:[9]
+           // },
+            
+       ]
+        
+        }
+       
+      )
+      
+      </script> 
+
+
+<script>
+  function openReport(button) {
+  // Obtén la URL base del atributo data-url
+   const baseUrl = button.getAttribute('data-url');
+ 
+   // Obtén los valores de los campos de fecha
+   const dateBegin  = document.querySelector('[name="date_begin"]').value;
+   const dateEnd = document.querySelector('[name="date_end"]').value;
+   const location = document.querySelector('[name="location"]').value;
+   const employee=document.querySelector('[name="employee"]').value;
+   console.log(employee)
+ 
+ 
+   // Construye la URL con los parámetros
+   const fullUrl = `${baseUrl}?location=${location}&employee=${employee}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`;
+ 
+   // Abre la URL en una nueva ventana o pestaña
+   window.open(fullUrl, '_blank');
+ }
+    </script>
+
+
+
+ {% endblock %}%}

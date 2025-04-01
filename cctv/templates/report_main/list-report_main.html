@@ -1,0 +1,195 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | Report  List
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0"> REPORT</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                   Report
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+
+ {%endblock%}
+ {%block content%}
+ 
+
+<div class="card card-primary card-outline mb-4">
+  <div style="overflow-x: auto;">
+      <div class="card-header">
+      
+          <div class="container-fluid"> 
+            <div class="row">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                {% if perms.cctv.add_report %}
+                <a  class="btn btn-primary mb-2 bi-plus-lg"  href="{% url 'report-create' %}"   > Add Report </a >
+                {%endif%}
+
+                  <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'filter-report' %}" > Find Report by Date </a >   
+                  <a   class="btn btn-outline-dark mb-2 bi-binoculars"  href="{% url 'filter-report-id' %}"   > Find Report by Report No. </a >
+                  <a   class="btn btn-outline-dark mb-2 bi-filter-square"  href="{%  url 'filter-report-type' %}"> Find Report by  Report Type </a >
+              </div>
+       
+          </div>
+
+          </div>
+
+
+      </div>
+</div>
+
+  <div style="overflow-x: auto;">
+  <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered table-hover  table-sm" id="reportT" >
+      <thead>
+        <tr >
+          <th  class="d-none d-md-table-cell"> No.</th>
+          <th>Date</th>
+          <th>Time</th>         
+          <th class="d-none d-md-table-cell">Report Type</th>  
+          <th>Report Title</th>        
+          <th  class="d-none d-md-table-cell">Location </th>
+          <th  class="d-none d-md-table-cell">Origination</th>
+          <th  class="d-none d-md-table-cell">Duty Manager</th>
+          <th  class="d-none d-md-table-cell">Pittboss/Supervisor</th> 
+          <th  class="d-none d-md-table-cell">Inspector/Senior</th>         
+             
+          <th>Branch</th>                 
+         <th> Options </th>
+        </tr>
+      </thead>
+      <tbody>       
+      </tbody>
+
+    </table>
+    </div>
+  
+  </div>
+  </div>
+
+
+
+
+
+  
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+
+<script>
+
+$(document).ready(function () {
+    $.fn.dataTable.moment('DD-MM-YYYY');
+    $.fn.dataTable.moment('HH:mm');  
+
+    var  reportT=$('#reportT').DataTable(
+    {
+      processing:true,
+      serverSide:true,
+      ajax:{
+        url:"{% url  'report-list' %}",
+        type:'GET',
+        data:function(d){
+        d.start = d.start || 0;
+        d.length = d.length || 10;
+        },
+       
+
+      },
+      language: {
+           processing: "<span>Loading data...</span>"
+        },
+
+      order: [[1, "desc"],[2, "desc"]], 
+
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+        },
+      responsive: true,
+      searchdelay:500,
+  
+      columnDefs: [{ targets: [0,3, 5,6,7,8,9], className: "d-none d-md-table-cell" }],
+      columns: [
+               { data: "report_nro",orderable:true,searchable:true},    
+
+               { data: "date",orderable:true,searchable:true, "render": function(data, type, row) {
+                       return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
+                   }
+               },
+               { data: "time",orderable:true,searchable:true, "render": function(data, type, row) {
+                if (data){
+                  return moment(data, "HH:mm:ss").format("h:mm A");
+                }
+                return "";
+              }
+               },
+              
+               { data: "report_type",orderable:true,searchable:true},
+               { data: "report_title",orderable:true,searchable:true},
+               { data: "area",orderable:true,searchable:true },
+               { data: "origination",orderable:true,searchable:true },
+               { data: "duty_manager" ,orderable:true,searchable:true},
+               { data: "pittboss" ,orderable:true,searchable:true},        
+               { data: "inspector",orderable:true,searchable:true },                     
+               { data: "location",orderable:true,searchable:true},
+               {
+    data: null,
+    orderable: false,
+    searchable: false,
+    render: function(data) {
+        let actions = '<div class="btn-group">';  // Comienza el grupo de botones
+
+        // Verificación de permisos y acciones estándar
+        {% if perms.cctv.view_report %}
+        actions += '<a class="btn btn-info mb-2 bi bi-folder" href="' + data.detail_url + '"> Detail</a>';
+        {% endif %}
+
+        {% if perms.cctv.change_report %}
+        actions += '<a class="btn btn-warning mb-2 bi bi-pencil-square d-none d-md-table-cell" href="' + data.edit_url + '"> Edit</a>';
+        {% endif %}
+
+        {% if perms.cctv.delete_report %}
+        actions += '<a class="btn btn-danger mb-2 bi bi-trash d-none d-md-table-cell" href="' + data.delete_url + '"> Delete</a>';
+        {% endif %}
+
+        // Verificación si 'dubbed_to' es true
+        if (data.dubbed_to) {
+            actions += '<a class="btn btn-outline-success mb-2 bi bi-camera-video d-none d-md-table-cell" href="' + data.view_video + '"> Video</a>';
+        }
+
+        actions += '</div>';  // Cierra el grupo de botones
+        return actions;
+    }
+}
+
+
+           ],
+    
+    });
+
+  });
+
+  
+  </script>
+
+  {% endblock%}
+

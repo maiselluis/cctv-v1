@@ -1,0 +1,88 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC | Update Cash Desk Transactions
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">CASH DESK TRANSACTIONS - EDIT</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'cash_desk_transactions-list' %}>Cash Desk Transactions</a> </li>
+                 <li class="breadcrumb-item">Edit</li>
+                </ol>
+         </div>
+     </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div style="overflow-x: auto;">
+  <div class="card-header">
+    <div class="card-title">Update Cash Desk Transactions</div>
+  </div>
+  </div>
+  <div style="overflow-x: auto;">
+    <div class="card-body">
+      <form method="post">
+        {% csrf_token %}
+ 
+        <div class="card-body"> 
+          <strong>
+            {{form.as_p}}
+          </strong>
+         
+            <!--
+          <div class="row g-4 mb-2">
+         <div class="col-md-12">
+          <div class="row">
+            <div class="col"><strong>{{ form.date.label_tag }}</strong> {{ form.date }}</div>
+            <div class="col "><strong>{{ form.time.label_tag }}</strong> {{ form.time }}</div>
+            <div class="col "><strong>{{ form.area_cashier.label_tag }}</strong> {{ form.area_cashier }} </div>       
+            <div class="col "><strong> {{ form.account_type.label_tag }}</strong> {{ form.account_type }} </div>          
+            <div class="col "><strong>{{ form.customer.label_tag }}</strong> {{ form.customer }}</div> 
+            <div class="col "><strong> {{ form.token.label_tag }}</strong> {{ form.token }} </div>
+          
+          </div>   
+          <div class="row">
+           
+            <div class="col"><strong> {{ form.tt_dolar.label_tag }} </strong>{{ form.tt_dolar}} </div>           
+            <div class="col"><strong> {{ form.usd_dolar.label_tag }}</strong> {{ form.usd_dolar }}</div>
+            <div class="col"><strong> {{ form.euro_dolar.label_tag }} </strong>{{ form.euro_dolar }}</div>
+            <div class="col"><strong>{{ form.gbp_dolar.label_tag }}</strong> {{ form.gbp_dolar }}</div>
+            <div class="col"><strong> {{ form.cad_dolar.label_tag }}</strong> {{ form.cad_dolar }}</div>
+            <div class="col"><strong> {{ form.employee.label_tag }} </strong>{{ form.employee }}</div>
+           
+            
+          </div>
+          <div class="row">
+            <div class="col-sm-2"><strong>{{ form.autorized_by.label_tag }}</strong> {{ form.autorized_by }}</div>
+            <div class="col-sm-2"><strong>{{ form.detail.label_tag }}</strong> {{ form.detail }}</div>
+          </div>
+       
+  
+         </div>
+               
+          -->    
+            
+          </div>
+        </div>
+        
+        <div class="card-footer">        
+         <input class="btn btn-success mb-2" type="submit" value="Save">                 
+           <a class="btn btn-secondary mb-2" href="{% url 'cash_desk_transactions-list' %}">Cancel</a>
+    </div>     
+               
+         </form> 
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock%}    

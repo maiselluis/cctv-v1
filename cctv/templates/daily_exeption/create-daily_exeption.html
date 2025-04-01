@@ -1,0 +1,73 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC | New Daily Exception
+ {% endblock %}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">DAILY EXCEPTION - ADD</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item"><a  href={% url 'daily_exeption-list' %}>  Daily Exception </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Add
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+ </div>
+ {%endblock%}
+
+
+{%block content%}
+
+<div class="card card-primary card-outline mb-4"> 
+      <div class="card-header">
+        <label class="card-title">New Daily Exception</label>
+      </div>
+       <form method="post">
+       {% csrf_token %}
+
+       <div class="card-body">           
+          <div class="row" >
+     <strong>
+      {{form.as_p}}
+     </strong>
+      
+
+     
+      
+       <!--
+        <div class="col-sm-8"><strong>{{ form.date.label_tag }}</strong> {{ form.date }}</div>       
+        <div class="col-sm-8  " > <strong>{{ form.employee.label_tag }} </strong> {{ form.employee }} </div>  
+        <div class="col-sm-8 "><strong>{{ form.exception_type.label_tag }}</strong> {{ form.exception_type }} </div>    
+        <div class="col-sm-8  "><strong>{{ form.daily_from.label_tag }}</strong> {{ form.daily_from}}</div>
+        <div class="col-sm-8  "><strong>{{ form.daily_to.label_tag }}</strong> {{ form.daily_to }}</div>
+        <div class="col-sm-8  "><strong>{{ form.old_shift.label_tag }}</strong> {{ form.old_shift }}</div> 
+        <div class="col-sm-8 "><strong>{{ form.new_shift.label_tag }}</strong> {{ form.new_shift }}</div> 
+        <div class="col-sm-8 "><strong> {{ form.detail.label_tag }}</strong> {{ form.detail }} </div>
+        <div class="col-sm-8  "><strong> {{ form.total_hours.label_tag }}</strong> {{ form.total_hours }} </div>
+
+          -->
+           
+          
+        </div>
+      </div>
+  
+       
+       <div class="card-footer">        
+        <input class="btn btn-success mb-2" type="submit" value="Save">   
+        <button class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>              
+          <a class="btn btn-secondary mb-2" href="{% url 'daily_exeption-list' %}">Cancel</a>
+   </div>     
+              
+        </form>      
+     
+    </div>
+   
+
+{% endblock%}       

@@ -1,0 +1,136 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | PositionList
+ {% endblock%}
+ 
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0"> POSITION</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Catalog List
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                Position
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+ <div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="btn-group" role="group">    
+            {% if perms.cctv.add_position %}
+            <a  class="btn btn-primary mb-2 bi bi-plus-lg"  href="{% url 'position-create' %}"> Add Position</a >  
+              {%endif%}   
+
+        </div>
+        </div>       
+      
+        </div>
+     
+    </div>
+        
+  </div>
+  {% if object_list %}
+  <div style="overflow-x: auto;">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm" id="positionT" >
+      <thead>
+        <tr >
+          <th style="width: 10px">#</th>
+          <th> Position </th>
+          <th>Department</th>
+          <th> Options </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr class="align-middle">
+          <td>{{ forloop.counter }}</td>
+          <td>{{ object.name }}</td>
+          <td>{{ object.department }}</td>
+          <td class="col-sm-3">
+            <div class="btn-group">
+              {% if perms.cctv.view_position %}
+              <a class="btn btn-info mb-2"  href="{% url 'position-detail' object.id %}" > Detail</a> 
+              {%endif%}
+
+              {% if perms.cctv.change_position %}
+              <a class="btn btn-warning mb-2"  href="{% url 'position-update' object.id %}" > Edit</a> 
+              {%endif%}
+              {% if perms.cctv.delete_position %}
+              <a class="btn btn-danger mb-2" href="{% url 'position-delete' object.id %}" > Delete</a >
+                {%endif%}
+            </div>
+           
+           
+          </td>
+        </tr>
+      
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
+  </div>
+  {% else %}
+  <div class="card-body">    
+    <label class="card-title" style="color: red;">No Position yet</label>
+  </div>
+
+  {%endif%}
+  
+</div>
+
+
+<script>
+  var  positionT=$('#positionT').DataTable(
+    {
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+  },
+  responsive:true,
+  
+  columnDefs: [
+      { 
+        width: '1%', targets: 0
+       },
+      {
+          targets: -1,
+          className: 'dt-body-right'
+      },
+     {
+       orderable: false,targets:[3]
+      },
+      { 
+        searchable: false,targets:[3]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+  {% endblock%}
+

@@ -1,0 +1,80 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC |Staff Detail {{ object.staff }} 
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">STAFF LIST - DETAIL</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item active"  aria-current="page"><a  href={% url 'staff-list' %}>Staff List</a>   </li>
+                 <li class="breadcrumb-item active" aria-current="page"> Detail </li>
+             </ol>
+         </div>
+     </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+    <div class="card-header">
+        <div class="card-header">
+            <nav class="app-header navbar navbar-expand">
+                <div class="container-fluid d-flex justify-content-start">
+                    <h5 class="mb-0"> Staff Id # {{ object.id }}</h5>
+                </div>
+               <!-- 
+                <div class="container-fluid d-flex justify-content-end">
+                   
+                    <a class="btn btn-outline-dark bi-filetype-pdf" href="#" target="_blank">
+                        PDF
+                    </a>
+                </div>
+            -->
+            </nav>
+        </div>
+<div class="card-body">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="text-center mb-3">
+                <img class="img-fluid rounded-circle shadow" style="height: 10rem; width: 10rem;" src="{{ object.photo.url }}" alt="User Image">
+            </div>
+            <ul class="list-group ">
+                <li class="list-group-item list-hover text-start"><strong>Staff ID:</strong> {{ object.id }}</li>
+                <li class="list-group-item list-hover text-start"><strong>Name:</strong> {{ object.name }} {{ object.surname }}</li>
+                <li class="list-group-item list-hover text-start"><strong>Department:</strong> {{ object.department }}</li>
+                <li class="list-group-item list-hover text-start"><strong>Position:</strong> {{ object.position }}</li>
+                <li class="list-group-item list-hover text-start">
+                    {% if object.active %}            
+                        <span class="text-success"><i class="bi bi-check-circle"></i> <strong>Active</strong></span>
+                    {% else %}
+                        <span class="text-danger"><i class="bi bi-x-circle"></i> <strong>Inactive</strong></span>
+                    {% endif %}
+                </li>
+                <li class="list-group-item list-hover text-start"><strong>Location:</strong> {{ object.location }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .list-hover:hover {
+        background-color: #e1e3e6;
+        transition: background-color 0.3s ease-in-out;
+    }
+</style>
+
+         
+  
+
+<div class="card-footer">
+    <a class="btn btn-secondary" href="{% url 'staff-list'%}" > <i class="bi bi-arrow-left"> </i> Back</a>
+</div>
+</div>
+
+{%endblock%}

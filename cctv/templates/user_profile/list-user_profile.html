@@ -1,0 +1,131 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | User Profile List
+ {% endblock%}
+ 
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0"> USER PROFILE</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    User Profile
+                  </li>
+                
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+ <div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="btn-group" role="group">    
+            {%if perms.cctv.add_userprofile %}   
+            <a  class="btn btn-primary mb-2 bi bi-plus-lg"  href="{% url 'user_profile-create' %}"> Add User Profile</a >   
+              {%endif%}         
+        </div>
+        </div>       
+      
+        </div>
+     
+    </div>
+        
+  </div>
+  {% if object_list %}
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm" id="user_profile" >
+      <thead>
+        <tr >
+          <th style="width: 10px">#</th>
+          <th> Branch </th>
+          <th>Username</th>
+          <th> Options </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr class="align-middle">
+          <td>{{ forloop.counter }}</td>
+          <td>{{ object.location }}</td>
+          <td>{{ object.user }}</td>
+          <td class="col-sm-3">
+            <div class="btn-group">
+              {%if perms.cctv.view_userprofile %} 
+              <a class="btn btn-info mb-2"  href="{% url 'user_profile-detail' object.id %}"> Detail</a>
+              {%endif%} 
+              {%if perms.cctv.change_userprofile %} 
+              <a class="btn btn-warning mb-2"  href="{% url 'user_profile-update' object.id %}" > Edit</a> 
+              {%endif%} 
+              {%if perms.cctv.delete_userprofile %} 
+              <a class="btn btn-danger mb-2" href="{% url 'user_profile-delete' object.id %}" > Delete</a >
+                {%endif%} 
+              
+            </div>
+           
+           
+          </td>
+        </tr>
+      
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
+ 
+  {% else %}
+  <div class="card-body">    
+    <label class="card-title" style="color: red;">No User Profile yet</label>
+  </div>
+
+  {%endif%}
+  
+</div>
+
+
+<script>
+  var  report_title=$('#user_profile').DataTable(
+    {
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                                       },
+  
+  columnDefs: [
+      { 
+        width: '1%', targets: 0
+       },
+      {
+          targets: -1,
+          className: 'dt-body-right'
+      },
+     {
+       orderable: false,targets:[3]
+      },
+      { 
+        searchable: false,targets:[3]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+  {% endblock%}
+

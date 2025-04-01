@@ -1,0 +1,134 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC | New Staff
+ {% endblock %}
+ {%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0"> STAFF LIST </h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item active"  aria-current="page"><a  href={% url 'staff-list' %}>Staff List</a>   </li>
+                 <li class="breadcrumb-item active" aria-current="page"> Add Staff </li>
+             </ol>
+         </div>
+     </div> 
+ </div> 
+</div>
+{%endblock%}
+{%block content%}
+
+   
+ 
+<div class="card card-primary card-outline mb-4"> 
+    <div class="card-header">
+        <label class="card-title"> <strong>Add  </strong></label>
+    </div> 
+    
+        <form  method="post" enctype="multipart/form-data"> 
+          <div class="card-body">
+                                    {% csrf_token %}  
+                                    <strong>
+
+                                    
+                                    <div class="mb-3">
+                                        <label  class="form-label">{{form.id.label_tag}}</label> 
+                                        {{form.id}}
+                                    
+                                    </div>  
+                                    <div class="mb-3">
+                                    <label  class="form-label">{{form.name.label_tag}}</label> 
+                                    {{form.name}}
+                                
+                                </div>  
+                                <div class="mb-3">
+                                <label  class="form-label">{{form.surname.label_tag}}</label> 
+                                {{form.surname}}
+                            
+                                </div>  
+                                <div class=" mb-3">
+                                <label  class="form-label">{{ form.photo.label_tag }}</label> 
+                            
+                                {{ form.photo }}
+                            </div>
+                        <div class=" mb-3">
+                            <label  class="form-label">{{ form.department.label_tag }} </label> 
+                            
+                            {{ form.department }}
+                        </div>
+                        <div class=" mb-3">
+                            <label  class="form-label">{{ form.position.label_tag }} </label> 
+                            
+                            {{ form.position }}
+                        </div>
+                        <div class="mb-3 form-check">
+                            <label  class="form-check-label">{{ form.active.label_tag }} </label> 
+                            
+                            {{ form.active }}
+                        </div>
+                        <div class="mb-3 form-label">
+                            <label  class="form-check-label">{{ form.location.label_tag }} </label> 
+                            
+                            {{ form.location }}
+                        </div>
+                                        
+                                        
+                                
+                    </strong>
+            </div>
+           
+            
+            <div class="card-footer">        
+                <input class="btn btn-success mb-2" type="submit" value="Save">  
+                <button class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>               
+                  <a class="btn btn-secondary mb-2" href="{% url 'staff-list' %}">Cancel</a>
+             </div>
+             
+        </form>
+    
+ </div>
+
+ <script>
+
+  $(document).ready(function () {
+    
+          // Escucha el cambio en el campo categoría
+          $('#id_department').change(function () {
+            
+              var Id = $(this).val(); 
+            
+              if (Id) {
+                 
+                  $.ajax({
+                      url: "{% url 'ajax_load_position' %}",
+                      data: {
+                          'id': Id
+                      },
+                      success: function (data) {
+                          var $position = $('#id_position');
+                          $position.empty();  
+                          $position.append('<option value="">---------</option>');  
+                         
+                          data.forEach(function (item) {
+                              $position.append('<option value="' + item.id + '">' + item.name + '</option>');
+                              
+                          });
+                      }
+                  });
+              } else {
+                  $('#id_position').empty();
+                  $('#id_position').append('<option value="">---------</option>');
+              }
+          });
+      });
+  </script>
+{% endblock%}
+
+
+
+
+ 
+        

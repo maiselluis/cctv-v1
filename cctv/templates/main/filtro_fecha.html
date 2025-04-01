@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Home {% endblock %}
+ {%block content_header%}
+
+
+ <div class="card card-primary card-outline mb-4">
+        <div class="card-header">
+            <label class="card-title"> Filter Date</label>         
+        </div>
+        <div class="card-body">
+        <h1>Dates</h1>
+        <form method="get">
+            {{ form.as_p }}
+            <button class="btn btn-warning mb-2" type="submit">Filter</button>
+        </form>
+        <h2>Results:</h2>
+        <ul>
+            {% for main in main %}
+                <li>{{ main.date }} - {{ main.location }}</li>
+            {% empty %}
+                <li>No hay eventos que coincidan con el filtro.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{%endblock%}

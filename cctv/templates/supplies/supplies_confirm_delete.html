@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+	 <div class="row">
+		 <div class="col-sm-6">
+			 <h3 class="mb-0">SUPPLIES-DELETE</h3>
+		 </div>
+		 <div class="col-sm-6">
+			 <ol class="breadcrumb float-sm-end">
+				 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+				 <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'supplies_list' %}>Supplies </a></li>
+				 <li class="breadcrumb-item active" aria-current="page">
+					Delete
+				  </li>
+			 </ol>
+		 </div>
+	 </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{% block content %}
+<div class="card card-primary card-outline mb-4">
+        <div class="card-body">
+
+    <h2>¿ Are you sure you want to delete this request?</h2>
+    <p>Department {{ supplies.department}}-Prepared by {{ supplies.prepared_by}}-Autorized by {{ supplies.approved_by}}</p>
+    <p>Details -{{ supplies.description}} </p>
+    <p>This action cannot be undone.</p>
+        <form method="post">
+            {% csrf_token %}        
+
+
+
+            <div class="card-footer">
+                <a class="btn btn-secondary" href="{% url 'supplies_list' %}">Cancelar</a>
+                <button class="btn btn-danger"  type="submit">Eliminar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

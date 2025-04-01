@@ -1,0 +1,77 @@
+{% extends 'base.html'%} {% block title %} 
+CCTV @ CRC | New Counterfeit
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">COUNTERFEIT MONEY - ADD</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item"><a  href={% url 'counterfeit-list' %}>  Counterfeit Money</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                 Add
+                  </li>
+
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+  {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="card-title">Add Counterfeit</div>
+  </div>
+
+ 
+
+
+<div class="card-body">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}  
+    <strong>
+
+    {{form.as_p}}
+  </strong>
+   <!--
+      <div class="row">
+      
+          <fieldset>   
+            <div class="mb-3"><strong>{{ form.date.label_tag }}</strong> {{ form.date }}</div>
+            <div class="mb-3" ><strong>{{ form.area_cashier.label_tag }}</strong> {{ form.area_cashier }}</div>
+            <div class="mb-3"><strong>{{ form.report_nro.label_tag }}</strong> {{ form.report_nro }}</div>
+            <div class="mb-3"> <strong>{{ form.location.label_tag }} </strong>{{ form.location }} </div>
+            <div  class="mb-3"><strong>{{ form.usd_dolar.label_tag }}</strong> {{ form.usd_dolar }} </div>                
+            <div class="mb-3" ><strong> {{ form.tt_dolar.label_tag }} </strong>{{ form.tt_dolar }} </div>
+            <div class="mb-3"><strong> {{ form.euro_dolar.label_tag }}</strong> {{ form.euro_dolar }} </div>
+            <div  class="mb-3"><strong>{{ form.gbp_dolar.label_tag }}</strong> {{ form.gbp_dolar }}</div> 
+            <div class="mb-3" ><strong> {{ form.serial_number.label_tag }}</strong> {{ form.serial_number }} </div>
+            <div  class="mb-3"><strong> {{ form.money_not_recovered.label_tag }} </strong>{{ form.money_not_recovered}} </div>
+            <div class="mb-3" ><strong> {{ form.cctv_id.label_tag }}</strong> {{ form.cctv_id }}</div>
+            <div class="mb-3" ><strong> {{ form.money_paid.label_tag }} </strong>{{ form.money_paid }}</div>
+            <div class="mb-3" ><strong>{{ form.money_not_paid.label_tag }}</strong> {{ form.money_not_paid }}</div>  
+            <div class="mb-3" ><strong>{{ form.notes.label_tag }}</strong> {{ form.notes }}</div>  
+           </fieldset>
+           
+  
+  </div>
+-->
+</div>
+
+    <div class="card-footer">
+      <input class="btn btn-success mb-2" type="submit" value="Save" />
+      <button class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>   
+      <a class="btn btn-secondary mb-2" href="{% url 'counterfeit-list' %}"> Cancel</a>
+    </div>
+  </form>
+</div>
+
+
+{% endblock%}

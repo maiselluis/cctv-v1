@@ -1,0 +1,127 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | Customer List
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+    <div class="row">
+        <div class="col-sm-6">
+            <h3 class="mb-0">CUSTOMERS</h3>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Catalog List
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                Customers
+                </li>
+            </ol>
+        </div>
+    </div> <!--end::Row-->
+</div> <!--end::Container-->
+</div>
+{%endblock%}
+
+
+{% block content %}
+<div class="card card-primary card-outline mb-4">
+ <div class="card-header">
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-sm-6">
+         <div class="btn-group" role="group">          
+          {% if perms.cctv.add_customer %}
+           <a class="btn btn-primary btn mb-2 bi bi-plus-lg" href="{% url 'customer-create' %}" > Add Customers</a>
+           {% endif %}
+         </div>
+       </div>      
+     </div>
+   </div>
+ </div>
+ <div style="overflow-x: auto;">
+   <div class="card-body">
+     <table class="table table-bordered table-hover table-sm" id="customers">
+       <thead>
+         <tr>
+           <th>#</th>
+           <th>Photo</th>
+           <th>Customer</th>
+           <th>Branch</th>
+           <th>Options</th>
+         </tr>
+       </thead>
+       <tbody>
+       </tbody>
+     </table>
+   </div>
+ </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var customersTable = $('#customers').DataTable({
+      processing: true,
+      serverSide: true,
+      ajax: {
+          url: "{% url 'customer-list' %}",
+          type: "GET",
+          data: function(d) {
+              d.start = d.start || 0;
+              d.length = d.length || 10;
+          }
+      },
+      language: {
+           processing: "<span>Loading data...</span>"
+        },
+      columns: [
+          { data: "id", searchable: true, orderable: true },
+          {
+              data: "photo",
+              searchable: false,
+              orderable: false,
+              render: function(data) {
+                  return data ? '<img src="' + data + '" class="mx-auto d-block" style="height:3rem; width:3rem; border-radius: 30px" />' : '';
+              }
+          },
+          { data: "customer", searchable: true, orderable: true },
+          { data: "location", searchable: true, orderable: true },
+          {
+              data: null,
+              orderable: false,
+              searchable: false,
+              render: function(data) {
+             return '<div class="d-flex justify-content-end gap-2">' +
+           '<a class="btn btn-info mb-2 d-flex align-items-center" href="' + data.detail_url + '"> ' +
+           '<i class="bi bi-folder me-1"></i> Detail</a>' +
+
+           '<a class="btn btn-warning mb-2 d-flex align-items-center" href="' + data.edit_url + '"> ' +
+           '<i class="bi bi-pencil-square me-1"></i> Edit</a>' +
+
+           '<a class="btn btn-danger mb-2 d-flex align-items-center" href="' + data.delete_url + '"> ' +
+           '<i class="bi bi-trash me-1"></i> Delete</a>' +
+           '</div>';
+    }
+          }
+      ],
+      order: [[0, "asc"]],  
+      oLanguage: {
+            oPaginate: {
+                sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                sLast: '<i class="fas fa-angle-double-left"></i> Last',
+            }
+        },
+      searchDelay: 300,  
+      responsive: true
+  });
+});
+
+</script>
+
+
+{% endblock %}
+

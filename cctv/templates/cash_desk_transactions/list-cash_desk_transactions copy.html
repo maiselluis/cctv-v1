@@ -1,0 +1,152 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Cash Desk Transactions List 
+ {% endblock%}
+ 
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">CASH DESK TRANSACTIONS</h3>
+             
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Cash Desk Transactions
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {% block content %}
+
+ <div class="card card-primary card-outline mb-4">
+   <div style="overflow-x: auto;">
+     <div class="card-header">
+       <div class="container-fluid"> 
+         <div class="row">
+           <div class="btn-group" role="group" aria-label="Basic example">
+             {% if perms.cctv.add_cash_desk_transaction %}
+             <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'cash_desk_transactions-create' %}"> Add Transaction</a>
+             {% endif %}
+             <a class="btn btn-outline-dark mb-2 bi bi-calendar" href="{% url 'transactions-by-day' %}"> Find Transaction by Dates </a>
+             <a class="btn btn-outline-dark mb-2 bi bi-emoji-angry" href="{% url 'customer-expense' %}"> Customer Expense </a>
+             <a class="btn btn-outline-dark mb-2 bi bi-person-raised-hand" href="{% url 'customer-complimentary' %}"> Customer Complimentary </a>
+             <a class="btn btn-outline-dark mb-2 bi-binoculars" href="{% url 'transactions-by-customer' %}"> Find Transaction by Customer </a>
+             <a class="btn btn-outline-dark mb-2 bi-filter-square" href="{% url 'transactions-by-account'%}"> Find Transaction by Account Type </a>
+             <a class="btn btn-outline-success mb-2 bi bi-clock-history" href="{% url 'transaction-timeline'%}"> Timeline </a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <div style="overflow-x: auto;">
+     <div class="card-body">
+       <table class="table table-bordered table-hover table-sm" id="cash_desk_transact">
+         <thead>
+           <tr>              
+             <th>#</th>
+             <th>Location</th>
+             <th>Date</th>          
+             <th>Time</th>          
+             <th>Account Type</th>        
+             <th>Token</th>
+             <th>TTD</th>
+             <th>USD</th>
+             <th>EURO</th>
+             <th>GBP</th>
+             <th>CAD</th>           
+             <th>Authorized</th>
+             <th>Machine No</th>
+             <th>Employee</th>  
+             <th>Customer</th>          
+             <th>Branch</th> 
+             <th>Options</th>
+           </tr>
+         </thead>
+         <tbody></tbody> 
+       </table>
+     </div> 
+   </div>
+ </div>
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+ <script src="https://cdn.datatables.net/plug-ins/1.13.4/sorting/datetime-moment.js"></script>
+ 
+ <script>
+    $(document).ready(function () {
+        // Registrar el formato de fecha y hora en DataTables
+        $.fn.dataTable.moment('DD-MM-YYYY'); // Para la fecha
+        $.fn.dataTable.moment('HH:mm');     // Para la hora
+ 
+        var table = $('#cash_desk_transact').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "url": window.location.href,  
+                "type": "GET",
+                "dataSrc": function (json) {
+                    return json.data;
+                }
+            },
+            "columns": [
+                { "data": "transactions" },
+                { "data": "area_cashier" },
+                { "data": "date", "render": function(data, type, row) {
+                        return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
+                    }
+                },
+                { "data": "time", "render": function(data, type, row) {
+                        return moment(data, "HH:mm:ss").format("HH:mm");
+                    }
+                },
+                { "data": "account_type" },
+                { "data": "token" },
+                { "data": "tt_dolar" },
+                { "data": "usd_dolar" },
+                { "data": "euro_dolar" },
+                { "data": "gbp_dolar" },
+                { "data": "cad_dolar" },
+                { "data": "autorized_by" },
+                { "data": "machine_no" },
+                { "data": "employee" },
+                { "data": "customer" },
+                { "data": "location" },
+                {
+                    "data": "transactions",
+                    "orderable": false,
+                    "searchable": false,
+                    "render": function (data, type, row) {
+                        return `
+                            <div class="btn-group">
+                                <a class="btn btn-info bi bi-folder" href="/cash_desk_transactions/detail/${data}/"> Detail</a>
+                                <a class="btn btn-warning bi-pencil-square" href="/cash_desk_transactions/update/${data}/"> Edit</a>
+                                <a class="btn btn-danger bi bi-trash" href="/cash_desk_transactions/delete/${data}/"> Delete</a>
+                            </div>
+                        `;
+                    }
+                }
+            ],
+            "order": [[0, "desc"],[2, "desc"], [3, "desc"]], // Ordenar por fecha y luego por hora en orden descendente
+            "language": {
+                "paginate": {
+                    "next": "Next <i class='fas fa-angle-double-right'></i>",
+                    "previous": "<i class='fas fa-angle-double-left'></i> Previous",
+                    "first": "<i class='fas fa-angle-double-left'></i> First",
+                    "last": "<i class='fas fa-angle-double-left'></i> Last"
+                }
+            },
+            "responsive": true,
+        });
+    });
+ </script>
+ 
+ 
+ 
+ {% endblock %}
+ 

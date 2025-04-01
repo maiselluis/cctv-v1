@@ -1,0 +1,77 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC | New Poker Payouts  
+ {% endblock %}
+
+ {%block content_header%}
+<div class="app-content-header"> 
+ <div class="container-fluid"> 
+     <div class="row">
+         <div class="col-sm-6">
+        
+             <h3 class="mb-0">Poker Payouts - ADD</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item "><a  href={% url 'poker_payouts-list' %}> Poker Payouts</a></li>
+                 <li class="breadcrumb-item active" aria-current="page"> Add </li>
+             </ol>
+         </div>
+     </div> 
+ </div> 
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card card-primary card-outline mb-4"> 
+  <div class="card-header">
+    
+  </div>
+
+    <div class="card-body">
+        <form class="pt-3" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="card-body">  
+              <!--         
+              <div class="row g-4 mb-2">
+           <div class="col-md-12">
+            <div class="row">
+              <div class="col"><strong>{{ form.date.label_tag }}</strong> {{ form.date }}</div>
+              <div class="col "><strong>{{ form.time.label_tag }}</strong> {{ form.time }}</div>
+              <div class="col " > <strong>{{ form.table.label_tag }} </strong> {{ form.table }} </div>   
+              <div class="col " > <strong>{{ form.combination.label_tag }} </strong> {{ form.combination }} </div>
+              <div class="col " > <strong>{{ form.bet.label_tag }} </strong> {{ form.bet }} </div>          
+              <div class="col "><strong>{{ form.payout.label_tag }}</strong> {{ form.payout }} </div>    
+              <div class="col "><strong> {{ form.customer.label_tag }}</strong> {{ form.customer }} </div>       
+              <div class="col "><strong> {{ form.dealer.label_tag }}</strong> {{ form.dealer }} </div>  
+              <div class="col "><strong> {{ form.inspector.label_tag }}</strong> {{ form.inspector }} </div> 
+              <div class="col "><strong> {{ form.pitboss.label_tag }}</strong> {{ form.pitboss }} </div>   
+            </div>  
+           </div>
+            </div>
+          </div>
+        -->
+          <strong>
+            {{form.as_p}}
+          </strong>
+       
+        </div>
+           
+         
+            
+            <div class="card-footer">        
+                <input class="btn btn-success mb-2" type="submit" value="Save"> 
+                <button class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>                
+                  <a class="btn btn-secondary mb-2" href="{% url 'poker_payouts-list' %}">Cancel</a>
+                </div>
+            
+        </form>
+    </div>
+ </div>
+{% endblock%}
+
+
+
+
+ 
+        

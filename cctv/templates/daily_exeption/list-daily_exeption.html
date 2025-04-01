@@ -1,0 +1,174 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Daily Exception List 
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">DAILY EXCEPTION</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Daily Exception
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+
+  <div class="card-header">
+    <div class="container-fluid"> 
+      <div class="row">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          {% if perms.cctv.add_dailyexeption %}
+          <a  class="btn btn-primary mb-2 bi bi-plus-lg"  href="{% url 'daily_exeption-create' %}"> Add Daily Exception</a >
+            {%endif%}
+          <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'daily_exeption-by-day' %}" > Find by Dates </a >
+          <a   class="btn btn-outline-dark mb-2 bi bi-ban"  href="{%  url 'daily_exeption-by-exeption' %}" > Find by Exception Type </a >
+          <a   class="btn btn-outline-dark mb-2 bi bi-people"  href="{% url 'daily_exeption-by-employee'%}"> Find by Employee </a >   
+       </div> 
+      </div>
+    </div>   
+  </div>
+
+
+<div style="overflow-x: auto;">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm"  id="daily_exeptionT">
+      <thead>
+        <tr class="text-middle align-middle">              
+          <th  class=" d-none d-md-table-cell text-center align-middle">#</th>         
+          <th  class="text-center align-middle">Date</th>                
+          <th  class="text-center align-middle">Employee</th>        
+          <th  class="text-center align-middle">Exception Type</th>
+          <th  class="text-center align-middle">Time In</th>
+          <th  class="d-none d-md-table-cell text-center align-middle">Time Out</th>         
+          <th class="d-none d-md-table-cell text-center align-middle">Detail</th>        
+          <th  class="d-none d-md-table-cell text-center align-middle">Branch</th>         
+          <th   class="text-center align-middle">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      </tbody>
+    </table>
+  </div> 
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+
+<script>
+$(document).ready(function () {  
+  // Asegurar que Moment.js está registrado para el DataTable
+  $.fn.dataTable.moment('DD-MM-YYYY');
+  $.fn.dataTable.moment('hh:mm A');     // Para la hora
+
+  var daily_exeptionT = $('#daily_exeptionT').DataTable({
+      serverSide:true,
+      responsive:true,
+      processing:true,
+      searchdealay:500,
+      ajax:{
+        url:"{% url 'daily_exeption-list' %}",
+        type:'GET',
+        data:function(d){
+          d.start = d.start || 0;
+          d.length = d.length || 10;
+        },
+      },
+      language: {
+           processing: "<span>Loading data...</span>"
+        },
+      columnDefs: [{ targets: [0,5,6,7,8], className: "d-none d-md-table-cell" }],
+      order: [[1, 'desc']],
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                    },
+      columns: [
+               { data: "id",orderable:true,searchable:true},    
+
+               { data: "date",orderable:true,searchable:true, render: function(data, type, row) {
+                if (data){
+                  return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
+                }
+                return "";
+                      
+                      
+                   }
+               },
+              
+              
+               { data: "employee",orderable:true,searchable:true},
+               { data: "exception_type",orderable:true,searchable:true},
+               { data: "daily_from",orderable:true,searchable:true ,render:function(data, type, row) {  
+                if (data){
+                  return moment(data, "HH:mm:ss").format("h:mm A");
+                }   else
+                 return ""     ;      
+
+                      
+                   }},
+               { data: "daily_to",orderable:true,searchable:true ,render:
+                function(data, type, row) {
+                  if (data){
+                    return moment(data, "HH:mm:ss").format("h:mm A");
+                  } else
+                  return "" ;
+                       
+                   }},
+               { data: "detail",orderable:true,searchable:true },
+               { data: "location" ,orderable:true,searchable:true},         
+             
+           
+               {
+                data: null,
+                orderable: false,
+                searchable: false,
+                render: function(data) {
+                    let actions = '<div class="btn-group">'; 
+             
+                    if (data.detail_url){
+                      actions += '<a class="btn btn-info mb-2 bi bi-folder" href="' + data.detail_url + '"> Detail</a>';
+                    }
+                              
+
+                    if (data.edit_url){
+                    actions += '<a class="btn btn-warning mb-2 bi bi-pencil-square d-none d-md-table-cell" href="' + data.edit_url + '"> Edit</a>';
+                    }
+
+                    if (data.delete_url) {
+                    actions += '<a class="btn btn-danger mb-2 bi bi-trash d-none d-md-table-cell" href="' + data.delete_url + '"> Delete</a>';
+                      }
+                  
+                    actions += '</div>';  
+                    return actions;
+                }
+                    }
+
+
+           ],
+   
+     
+  });
+
+});
+</script>
+
+  {% endblock%}

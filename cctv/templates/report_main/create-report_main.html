@@ -1,0 +1,170 @@
+{% extends 'base.html'%} {% block title %} CCTV @ CRC | New Report {% endblock%} 
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+	 <div class="row">
+		 <div class="col-sm-6">
+			 <h3 class="mb-0"> REPORT-ADD</h3>
+		 </div>
+		 <div class="col-sm-6">
+			 <ol class="breadcrumb float-sm-end">
+				 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+				 <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'report-list' %}> Report </a></li>
+				 <li class="breadcrumb-item active" aria-current="page">
+					Add
+				  </li>
+			 </ol>
+		 </div>
+	 </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+{%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <label  class="card-title" >Report # {{report.report_nro}}</label>
+  </div>
+  <form method="post" enctype="multipart/form-data" onsubmit="disableButton()">
+    {% csrf_token %}
+
+
+      <div class="card-body">
+
+ 
+
+                <div class="row g-4 mb-4">
+                <div class="col-md-10">
+                  <div class="row">
+                
+                    <div class="col-md-2">
+                      <div class="col"><strong>{{ form.report_nro.label_tag }}</strong> {{ form.report_nro }}</div>
+                        <div class="col"><strong>{{ form.date.label_tag }}</strong> {{ form.date }}</div>
+                        <div class="col"><strong>{{ form.time.label_tag }}</strong> {{ form.time }}</div>
+                      
+                    </div>
+                    <div class="col-md-4">
+                      <div><strong>{{ form.report_type.label_tag }}</strong> {{ form.report_type }} </div>                
+                      <div class="col"><strong> {{ form.report_title.label_tag }} </strong>{{ form.report_title }} </div>
+                      <div class="col"><strong> {{ form.origination.label_tag }}</strong> {{ form.origination }} </div>
+                    
+                    </div>
+                  
+                    <div class="col-md-3">
+                      <div class="col"><strong>{{ form.area.label_tag }}</strong> {{ form.area }}</div> 
+                      <div class="col"><strong> {{ form.money_recovered.label_tag }}</strong> {{ form.money_recovered }} </div>
+                      <div class="col"><strong> {{ form.money_not_recovered.label_tag }} </strong>{{ form.money_not_recovered}} </div>
+                    
+                    </div>
+                    <div class="col-md-3">
+                  
+                      <div class="col"><strong> {{ form.cctv_id.label_tag }}</strong> {{ form.cctv_id }}</div>
+                      <div class="col"><strong> {{ form.money_paid.label_tag }} </strong>{{ form.money_paid }}</div>
+                      <div class="col"><strong>{{ form.money_not_paid.label_tag }}</strong> {{ form.money_not_paid }}</div>
+                    </div>
+                  
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 pt-3">
+                      <hr>
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="col"> <strong> {{ form.duty_manager.label_tag }}</strong> {{ form.duty_manager }} </div>
+                      <div class="col"> <strong>  {{ form.pittboss.label_tag }}</strong> {{ form.pittboss }} </div>
+                      <div class="col">  <strong>   {{ form.inspector.label_tag }} </strong>{{ form.inspector }} </div>
+                      <div class="col">  <strong> {{ form.dealer.label_tag }}</strong> {{ form.dealer }}</div>
+                      <div class="col">  <strong> {{ form.other.label_tag }}</strong> {{ form.other }}</div>
+                
+                      
+                      
+                    </div> 
+                    <div class="col-md-4">
+                      <strong>  {{ form.detail.label_tag }} </strong> {{ form.detail }}
+                    
+                    </div>
+                    <div class="col-md-4">
+                      <strong>   {{ form.action_token.label_tag }} </strong>{{ form.action_token }}
+                      
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div><strong>{{ form.customer.label_tag }} </strong>{{ form.customer }} </div>      
+                  <div><strong>{{ form.winning.label_tag }} </strong> {{ form.winning }}</div>
+                  <div><strong>{{ form.box.label_tag }} </strong> {{ form.box }} </div>      
+                  <div><strong>{{ form.usd_rate.label_tag }}</strong> {{ form.usd_rate }} </div>
+                  <div><strong>{{ form.euro_rate.label_tag }}</strong> {{ form.euro_rate }} </div>
+                  <div><strong>{{ form.gbp_rate.label_tag }} </strong> {{ form.gbp_rate }} </div>
+                  <div><strong>{{ form.value_us.label_tag }}</strong>  {{ form.value_us }} </div>
+                  <div><strong>{{ form.dubbed_to.label_tag }}</strong> {{ form.dubbed_to }} </div>
+                    
+                  
+                  
+                  </div>
+
+              </div>
+
+  </div>
+
+    <div class="card-footer">
+      <input id="submitReport"  class="btn btn-success mb-2" type="submit" value="Save" />
+      <button  id ="save_and_continue" class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>  
+      <a class="btn btn-secondary mb-2" href="{% url 'report-list' %}"> Cancel</a>
+    </div>
+  </form>
+</div>
+
+
+<script>
+
+$(document).ready(function () {
+  
+        // Escucha el cambio en el campo categoría
+        $('#id_report_type').change(function () {
+          
+            var Id = $(this).val();  // Obtener el ID seleccionado
+          
+            if (Id) {
+                // Solicitar subcategorías al servidor
+                $.ajax({
+                    url: "{% url 'ajax_load_report_title' %}",
+                    data: {
+                        'id': Id
+                    },
+                    success: function (data) {
+                        var $report_title = $('#id_report_title');
+                        $report_title.empty();  // Limpiar las opciones actuales
+                        $report_title.append('<option value="">---------</option>');  // Opción vacía
+                        // Agregar nuevas opciones al campo subcategoría
+                        data.forEach(function (item) {
+                            $report_title.append('<option value="' + item.id + '">' + item.title + '</option>');
+                            
+                        });
+                    }
+                });
+            } else {
+                $('#id_report_title').empty();
+                $('#id_report_title').append('<option value="">---------</option>');
+            }
+        });
+    });
+</script>
+<script>
+  function disableButton() {
+    document.getElementById("save_and_continue").addEventListener("click", function() {
+    setTimeout(() => {
+        this.disabled = true;
+    }, 50); 
+});
+    document.getElementById("submitReport").disabled = true;
+
+}
+
+
+ 
+</script>
+{% endblock%}

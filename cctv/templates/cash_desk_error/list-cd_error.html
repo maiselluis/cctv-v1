@@ -1,0 +1,228 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Cash Desk Error List 
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">CASH DESK ERROR</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Cash Desk Error
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+<div class="card-header">
+
+  <div class="container-fluid"> 
+    <div class="row">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        {% if perms.cctv.add_cash_desk_error %}
+        <a  class="btn btn-primary bi bi-plus-lg "  href="{%  url 'cash_desk_error-create' %}"   > Add  Cash Desk Error</a >
+          {% endif %}
+          <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'cash_desk_error-by-day'%}" > Find by Date </a > 
+          <a   class="btn btn-outline-dark bi bi-calendar"  href="{% url 'synopsis_cashier' %}" > Synopsis Cashier </a > 
+      
+      </div>
+ </div>
+  </div>
+</div>
+
+  
+
+<div class="table-responsive">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm"  id="cash_desk_errorT">
+      <thead >
+        <tr >
+         <th class="d-none d-md-table-cell">#</th>
+          <th>Date</th>
+          <th >Time</th>                     
+          <th >Cashier Location</th>
+          <th>Error Type</th>
+          <th class="d-none d-md-table-cell">Duty Manager</th>
+          <th>TTD</th>
+          <th> USD </th>
+          <th class="d-none d-md-table-cell"> EURO</th>
+          <th class="d-none d-md-table-cell">Report #</th>
+          <th class="d-none d-md-table-cell">Found</th>
+          <th class="d-none d-md-table-cell"> Cashier</th>
+          <th class="d-none d-md-table-cell">Supervisor</th>
+          <th class="d-none d-md-table-cell">Branch</th>
+          <th >Options</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+  </div> 
+</div>
+
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+<script>
+
+  $(document).ready(function(){
+
+    $.fn.dataTable.moment('DD-MM-YYYY');
+    $.fn.dataTable.moment('HH:mm');    
+
+    var  cash_desk_errorT=$('#cash_desk_errorT').DataTable(
+    {
+     serverSide:true,
+     processing:true,
+     ajax:{
+      url:"{% url 'cash_desk_error-list' %}",
+      type:'GET',
+      data:function(d){
+        d.start = d.start || 0;
+        d.length = d.length || 10;
+      }
+     },
+     language: {
+            processing: " <span>Loading data...</span>"
+        },
+
+
+
+     order: [[1,'desc'],[2, 'desc']] ,
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                  },
+      responsive: true, 
+      searchDelay: 500,
+      columnDefs: [
+                    { targets: [0, 5, 8,9, 10, 11, 12,13], className: "d-none d-md-table-cell" },
+                    { targets: [10], className: "text-center align-middle" }
+                  ],
+      columns:[
+               { data: "id",orderable:true,searchable:true},
+             
+               { data: "date",orderable:true,searchable:true ,
+               render: function(data, type, row) {
+                       return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
+                   }
+               },
+               { data: "time",orderable:true,searchable:true, render: function(data, type, row) {
+                if (data){
+                  return moment(data, "HH:mm:ss").format("h:mm A");
+                }
+                return "";
+                   }
+               },
+               {data:"area_cashier",orderable:true,searchable:true},
+               {data:"error_type",orderable:true,searchable:true},
+               {data:"duty_manager",orderable:true,searchable:true},
+               {data:"tt",orderable:true,searchable:true},
+               {data:"usd",orderable:true,searchable:true},
+               {data:"euro",orderable:true,searchable:true},
+               {
+                   data: "report",
+                   orderable: true,
+                   searchable: true,
+                  render: function(data, type, row) {
+                  let location = row.location;
+
+                  // Validar que location sea solo el ID (si es una URL, extraer el ID)
+                  if (location.includes("http")) {
+                      const urlParts = location.split("/"); // Dividir la URL por "/"
+                      location = urlParts[urlParts.length - 2]; // Obtener el penúltimo segmento (asumiendo que es el ID)
+                  }      
+
+                    if (data) {
+                        // Construir la URL con valores correctos
+                        const url = `/get_report_id/${data}/${location}/`;
+
+                        $.ajax({
+                            url: url,
+                            type: 'GET',
+                            success: function(response) {
+                                const reportId = response.id;
+                              
+                                const detailUrl = `/report/detail/${reportId}/`;
+
+                                const linkElement = $(`#report-${data}`);
+                                linkElement.attr('href', detailUrl);                  
+                                linkElement.attr('target', '_blank'); // Abrir en nueva pestaña
+                                  }
+                                  });
+
+                                  return `<a href="#" id="report-${data}">${data}</a>`;
+                              } else {
+                                  return `<a href="#">Not available</a>`;
+                              }
+                          }
+                      },
+
+               {data:"found",orderable:true,searchable:true,render: function(data) {
+                return data == 'True' ? ' <i class="bi bi-check-circle-fill text-success"></i> ' :
+                                         '<i class="bi bi-x-circle-fill text-danger"></i>';}},
+              {data:"cashier",orderable:true,searchable:true },
+              {data:"supervisor",orderable:true,searchable:true},
+              {data:"location",searchable:true,orderable:true},
+              {data:null,
+                orderable: false,
+                searchable: false,
+                render: function(data) {
+                    let actions = '<div class="btn-group">';  // Comienza el grupo de botones
+
+                    // Verificación de permisos y acciones estándar
+                    {% if perms.cctv.view_cash_desk_error %}
+                    actions += '<a class="btn btn-info mb-2 bi bi-folder" href="' + data.detail_url + '"> Detail</a>';
+                    {% endif %}
+
+                    {% if perms.cctv.change_cash_desk_error %}
+                    actions += '<a class="btn btn-warning mb-2 bi bi-pencil-square d-none d-md-table-cell" href="' + data.edit_url + '"> Edit</a>';
+                    {% endif %}
+
+                    {% if perms.cctv.delete_cash_desk_error %}
+                    actions += '<a class="btn btn-danger mb-2 bi bi-trash d-none d-md-table-cell" href="' + data.delete_url + '"> Delete</a>';
+                    {% endif %}
+
+                  
+
+                    actions += '</div>';  // Cierra el grupo de botones
+                    return actions;
+                }
+              }
+
+
+      ],
+  
+
+    
+    }
+   
+  )
+
+  });
+ 
+  
+  </script>
+  {% endblock%}
+

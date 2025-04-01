@@ -1,0 +1,121 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Machine List
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">MACHINE</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Catalog List
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                   Machine
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    {% if perms.cctv.add_slot_machine %}
+    <a class="btn btn-primary  mb-2 bi bi-plus-lg" href="{% url 'machine-create' %}" > Add Machine</a>
+    {%endif%}
+    
+  </div>
+  {% if object_list%}
+  <div style="overflow-x: auto;">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm" id="machine">
+      <thead>
+        <tr >
+          <th style="width: 10px">#</th>
+          <th>Machine</th>
+          <th >Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr class="align-middle">
+          <td>{{ object.id }}</td>
+          <td>{{ object.name }}</td>
+          <td class="col-sm-3">
+            <div class="btn-group">
+              {% if perms.cctv.view_slot_machine %}
+              <a class="btn btn-info mb-2" href="{% url 'machine-detail' object.id%}" > Detail</a >
+                {%endif%}
+                {% if perms.cctv.change_slot_machine %}
+              <a class="btn btn-warning mb-2" href="{% url 'machine-update' object.id %}" > Edit</a >
+                {%endif%}
+                {% if perms.cctv.delete_slot_machine %}
+             <a class="btn btn-danger mb-2" href="{% url 'machine-delete' object.id %}" > Delete</a >
+              {%endif%}
+
+            </div>
+           
+          </td>
+        </tr>
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
+  </div>
+ 
+  {%else%}
+  <div class="card-body">   
+    <label class="card-title" style="color: red;">No Machine yet</label>
+  </div>
+ 
+{%endif%}
+</div>
+
+
+<script>
+  var  machine=$('#machine').DataTable(
+    {
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+     },
+     responsive:true,
+  
+  columnDefs: [
+      { 
+        width: '1%', targets: 0
+       },
+      {
+          targets: -1,
+          className: 'dt-body-right'
+      },
+     {
+       orderable: false,targets:[2]
+      },
+      { 
+        searchable: false,targets:[2]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+  {% endblock%}
+

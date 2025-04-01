@@ -1,0 +1,130 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Daily Exception List 
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">DAILY EXCEPTION</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Daily Exception
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+
+  <div class="card-header">
+    <div class="container-fluid"> 
+      <div class="row">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          {% if perms.cctv.add_dailyexeption %}
+          <a  class="btn btn-primary mb-2 bi bi-plus-lg"  href="{% url 'daily_exeption-create' %}"> Add Daily Exception</a >
+            {%endif%}
+          <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'daily_exeption-by-day' %}" > Find by Dates </a >
+          <a   class="btn btn-outline-dark mb-2 bi bi-ban"  href="{%  url 'daily_exeption-by-exeption' %}" > Find by Exception Type </a >
+          <a   class="btn btn-outline-dark mb-2 bi bi-people"  href="{% url 'daily_exeption-by-employee'%}"> Find by Employee </a >   
+       </div> 
+      </div>
+    </div>   
+  </div>
+
+{%if object_list%}
+<div class="table-responsive">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm"  id="daily_exeptionT">
+      <thead>
+        <tr class="text-middle align-middle">              
+          <th  class=" d-none d-md-table-cell text-center align-middle">#</th>         
+          <th  class="text-center align-middle">Date</th>                
+          <th  class="text-center align-middle">Employee</th>        
+          <th  class="text-center align-middle">Exception Type</th>
+          <th  class="text-center align-middle">Time In</th>
+          <th  class="d-none d-md-table-cell text-center align-middle">Time Out</th>         
+          <th class="d-none d-md-table-cell text-center align-middle">Detail</th>        
+          <th  class="d-none d-md-table-cell text-center align-middle">Branch</th>         
+          <th   class="text-center align-middle">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+        <tr >        
+          <td class="d-none d-md-table-cell">{{ object.id}}</td>         
+          <td>{{ object.date|date:'d-m-Y' }}</td>
+          <td>{{ object.employee}} ({{ object.employee_id}})</td>
+          <td>{{ object.exception_type}}</td>
+          <td >{{ object.daily_from|date:"g:iA" }}</td>  
+          <td class="d-none d-md-table-cell">{{ object.daily_to|date:"g:iA" }}</td>      
+        
+          <td class="d-none d-md-table-cell"  style="white-space: normal; word-wrap: break-word;">{{object.detail}}</td>
+          <td class="d-none d-md-table-cell">{{ object.location}}</td>
+            
+          <td class="text-end align-baseline" >
+            <div class="btn-group">
+              {% if perms.cctv.view_dailyexeption %}
+              <a class="btn btn-info mb-2 bi bi-folder" href="{% url 'daily_exeption-detail' object.id %}"> Detail </a>
+              {%endif%}
+              {% if perms.cctv.change_dailyexeption %}
+              <a class="d-none d-md-table-cell btn btn-warning mb-2 bi-pencil-square" href="{% url 'daily_exeption-update' object.id %}" > Edit</a>
+              {%endif%}
+              {% if perms.cctv.delete_dailyexeption %}
+              <a class="d-none d-md-table-cell btn btn-danger mb-2 bi bi-trash" href="{% url 'daily_exeption-delete' object.id %}" > Delete </a>
+              {%endif%}
+            </div>
+           
+          </td>
+        </tr>
+
+        {% endfor%}
+      </tbody>
+    </table>
+  </div> 
+</div>
+{% else %}
+    <div class="card-body">
+      <label class="card-title" style="color:red;">No Daily Exception yet</label>
+    </div>
+</div>
+{%endif%}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+
+<script>
+$(document).ready(function () {
+  
+  // Asegurar que Moment.js está registrado para el DataTable
+  $.fn.dataTable.moment('DD-MM-YYYY');
+
+  var daily_exeptionT = $('#daily_exeptionT').DataTable({
+      "order": [[1, 'desc']], // Ordenar por la columna 1 (fecha) en orden descendente
+      "language": {
+          "paginate": {
+              "next": 'Next <i class="fas fa-angle-double-right"></i>',
+              "previous": '<i class="fas fa-angle-double-left"></i> Previous',
+              "first": '<i class="fas fa-angle-double-left"></i> First',
+              "last": '<i class="fas fa-angle-double-left"></i> Last'
+          }
+      },
+      "responsive": true,
+      "columnDefs": [
+          { orderable: false, targets: [8] },
+          { searchable: false, targets: [8] }
+      ]
+  });
+
+});
+</script>
+
+  {% endblock%}

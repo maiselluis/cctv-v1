@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %} CCTV @ CRC | Detail Supplies {% endblock %}
+
+{%block content_header%}
+<div class="app-content-header"> 
+ <div class="container-fluid"> 
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">Supplies - DETAIL</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item"><a  href={% url 'supplies_list' %}>  Supplies </a></li>
+                 <li class="breadcrumb-item active" aria-current="page">
+           Detail    
+             </li>
+
+             </ol>
+         </div>
+     </div> 
+</div>
+{%endblock%}
+{% block content %}
+
+<div class="card  card-primary card-outline mb-5">
+        <div class="card-body"> 
+                <div class="row">
+                     
+                        <p><strong>Date:</strong> {{ supply.date }}</p>
+                        <p><strong>Department:</strong> {{ supply.department }}</p>
+                        <p><strong>Prepared by:</strong> {{ supply.prepared_by }}</p>
+                        <p><strong>Approbed by:</strong> {{ supply.approved_by }}</p>
+                        <p><strong>Request for:</strong> {{ supply.get_request_display }}</p>
+                        <p><strong>Description:</strong> {{ supply.description }}</p>
+                        
+                        
+                          
+                </div>
+                <div style="text-align: center;">
+                    {% if supply and supply.picture %}
+                    <img src="{{ supply.picture.url }}" alt="Imagen actual" style="max-width: 50%; height: auto; display: block; margin: auto;">
+                {% else %}
+                    <p>No image available</p>
+                {% endif %}
+                  
+                </div>
+        </div>
+    <div class="card-footer">
+        <a class="btn btn-secondary"  href="{% url 'supplies_list' %}"> <i class="bi bi-arrow-left"> </i> Back</a>
+    </div>
+</div>
+{% endblock %}

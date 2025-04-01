@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+
+{% block title %}
+ Zoom Customer-{{ image.name }} {{ image.surname }}
+{%  endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0"> Zoom BlackList Customer Reisntated </h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active"  aria-current="page"><a  href={% url 'blacklist-list-reinstated' %}>Reinstated Customers</a>   </li>
+                  <li class="breadcrumb-item active" aria-current="page"><a  href= {% url 'blacklist-detail-reinstated' image.id  %}>Detail  </a> </li>
+                  <li class="breadcrumb-item active" aria-current="page">Zoom </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+ </div> 
+ 
+ 
+
+
+
+{%endblock%}
+{% block content%}
+    <div class="card  card-primary card-outline mb-5">
+      <div class="card-header"> 
+        <div class="container-fluid"> <!--begin::Row-->
+          <div class="row">
+            <label class="card-title"> <strong>Customer - {{ image.name }} {{ image.surname }}</strong>  </label>
+          </div> <!--end::Row-->
+      </div> <!--end::Container-->
+     </div>
+  
+    <div class="card-body">
+      <div  class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-6">
+          <img class="mx-3"   id="main-img" height="700" width="700" src="/media/{{image.picture }} " style="border-radius: 30px"  />
+  
+        </div>
+      </div>
+    
+
+
+    
+      <div id="zoom">
+        <img id="zoom-img" />
+      </div>
+    </div>
+
+      <div class="card-footer">
+        <a href="  {% url 'blacklist-detail-reinstated' image.id  %}" class="btn btn-secondary" > <i class="bi-arrow-left"></i>Back </a> 
+      </div>
+</div>
+
+{% endblock %}

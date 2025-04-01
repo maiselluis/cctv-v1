@@ -1,0 +1,106 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC |Cash Desk Transactions Detail {{ object.token }} 
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">CASH DESK TRANSACTIONS - DETAIL</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'cash_desk_transactions-list' %}>Cash Desk Transactions</a> </li>
+                 <li class="breadcrumb-item">Detail</li>
+                </ol>
+         </div>
+     </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+  <!--iv style="overflow-x: auto;">
+ iv class="card-header">
+        <nav class="app-header navbar navbar-expand ">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                
+                </ul>
+                <ul class="navbar-nav">
+                
+                    <li class="nav-link float-end">
+                        <a  class=" btn btn-outline-dark bi-filetype-pdf"  href="#"   >  PDF </a >
+                    </li>
+                    <li class="nav-link float-end">
+                        <a  class=" btn btn-outline-dark bi bi-file-excel"  href="#"   >  Excel </a >
+                    </li>                      
+                </ul>  
+        </div>
+    </nav>  
+        
+    
+    </div>   
+
+</div>-->
+         <div style="overflow-x: auto;">
+                <div class="card-body">  
+                    <div class="row">
+                        <div class="col-sm-4">
+                
+                        </div>
+                        <div class="col-sm-6">
+                        
+                            <div class="row text-left g-2 mb-2">
+                                
+                                <h5> Transactions: <strong>{{ object.transactions }}</strong> </h5>
+                                <h5> Cashier Location: <strong>{{ object.area_cashier }}</strong> </h5>
+                                <H5> Date:<strong> {{ object.date|date:'d-m-Y' }} </strong></H5>
+                                <h5>Time:<strong> {{ object.time|time:"g:i A"}}</strong></h5>
+                                <h5>   Account Type: <strong> {{ object.account_type }} </strong></h5>
+                                <h5>  Token: <strong>  {{ object.token }} </strong></h5>
+                                <h5>  TT Dolar: <strong>  {{ object.tt_dolar }} </strong></h5>
+                                <h5>  USD Dolar: <strong>  {{ object.usd_dolar }} </strong></h5>
+                                
+                                <h5>  EURO Dolar:  <strong>  {{ object.euro_dolar }}</strong></h5>
+                                <h5>  GBP Dolar:  <strong>  {{ object.gbp_dolar}}</strong></h5>
+                                <h5>  CAD Dolar:  <strong>  {{ object.cad_dolar }}</strong></h5>
+                                <h5>  Autorized by: 
+                                     <strong> 
+                                        {%if object.autorized_by  %}
+                                         {{ object.autorized_by }}
+                                         {%endif%}
+                                        </strong></h5>
+                                <h5>  Employee:  <strong>
+                                    {%if object.employee %}
+                                      {{ object.employee }} 
+                                      {%endif%}
+                                    </strong></h5>
+                                <h5>  Customer:  <strong> 
+                                    {%if object.customer %}
+                                     {{ object.customer }} 
+                                     {%endif%}
+                                     <h5> Machine No. {{object.machine_no}}</h5>
+                                    </strong></h5> 
+                                    
+                                    <h5> Detail: <strong>
+                                        {% if   object.detail  %} 
+                                         <textarea class="form-control"   name="contenido" rows="5" cols="10" readonly>{{  object.detail|safe }}</textarea>
+                                         {%endif%}
+                                        </strong></h5>
+                                    
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        <div class="card-footer">
+            <a class="btn btn-secondary"  href="{% url 'cash_desk_transactions-list' %}" > <i class="bi bi-arrow-left"> </i> Back</a>
+        </div>
+</div>
+
+{%endblock%}

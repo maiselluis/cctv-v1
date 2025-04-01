@@ -1,0 +1,77 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Report Detail-Counterfeit #{{Counterfeit.id}}  {% endblock %}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">COUNTERFEIT MONEY - DETAIL</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item"><a  href={% url 'counterfeit-list' %}>  Counterfeit Money</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                 Add
+                  </li>
+
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+ <div class="card  card-primary card-outline mb-5">
+ <div class="card-body">  
+  <div class="row">
+      <div class="col-sm-4">
+
+      </div>
+      <div class="col-sm-6">
+         
+          <div class="row text-left g-2 mb-2">
+               
+              
+              <H5> Date:<strong> {{ counterfeit.date|date:'d-m-Y' }} </strong></H5>  
+              <h5> Location: <strong>{{ counterfeit.area_cashier }}</strong> </h5>           
+              <h5> Report #: <strong> {{ counterfeit.report_nro }} </strong></h5>
+              <h5>  Branch: <strong>  {{ counterfeit.location }} </strong></h5>
+              <h5>  USD: <strong>  {{ counterfeit.usd_dolar }} </strong></h5>
+              <h5>   TTD: <strong>  {{ counterfeit.tt_dolar }} </strong></h5>
+              <h5>   EURO : <strong>  {{ counterfeit.euro_dolar }} </strong></h5>
+              <h5>   GBP : <strong>  {{ counterfeit.gbp_dolar }} </strong></h5>
+              <h5>   Cashier : <strong> 
+                {% if counterfeit.employee %}
+                 {{ counterfeit.employee }}
+                {% endif %}
+
+                 </strong></h5>
+                 <h5>   Customer : <strong> 
+                    {% if counterfeit.customer %}
+                     {{ counterfeit.customer }}
+                    {% endif %}
+    
+                     </strong></h5>
+              <h5>   Serial Number : <strong>  {{ counterfeit.serial_number }} </strong></h5>
+              <h5>   Notes : <strong>  {{ counterfeit.notes }} </strong></h5>
+
+              
+             
+             
+                     
+                  
+          </div>
+      </div>
+  </div>
+
+
+</div>
+<div class="card-footer">
+    <a class="btn btn-secondary" href={% url 'counterfeit-list'%} > <i class="bi bi-arrow-left"> </i> Back</a>
+</div>
+</div>
+
+{%endblock%}

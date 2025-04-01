@@ -1,0 +1,183 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Synopsis Supplies Form
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">SUPPLIES FORM-SYNOPSIS </h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item"><a  href={% url 'supplies_list' %}>Supplies Form</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Synopsis </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  
+  <div class="card-header">
+    
+    <form method="get" > 
+      <div class="container-fluid">
+        <div class="row">
+            <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                <div class="d-flex flex-column align-items-start">
+                    {{ form.branch }}
+                </div>
+    
+                <div class="d-flex flex-column align-items-start">
+                    <label class="card-title">{{ form.date_begin.label_tag }}</label>
+                    {{ form.date_begin }}
+                </div>
+    
+                <div class="d-flex flex-column align-items-start">
+                    <label class="card-title">{{ form.date_end.label_tag }}</label>
+                    {{ form.date_end }}
+                </div>
+    
+                <div class="d-flex flex-column align-items-start">
+                    <label class="card-title">{{ form.department.label_tag }}</label>
+                    {{ form.department }}
+                </div>
+    
+                <div class="d-flex flex-column align-items-start">
+                    <label class="card-title">{{ form.prepared_by.label_tag }}</label>
+                    {{ form.prepared_by }}
+                </div>
+    
+                <div class="d-flex flex-column align-items-start">
+                    <label class="card-title">{{ form.approved_by.label_tag }}</label>
+                    {{ form.approved_by }}
+                </div>
+    
+                <div class="d-flex flex-column align-items-start">
+                    <label class="card-title">{{ form.request_for.label_tag }}</label>
+                    {{ form.request_for }}
+                </div>
+    
+                <div>
+                    <button class="btn btn-primary" type="submit">Find</button>
+                </div>
+            </div>
+        </div>
+    </div>
+                                               
+      
+    </form>  
+       
+</div>
+
+
+   
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <h2>Results:</h2>  
+    <table class="table table-bordered table-hover  table-sm" id="synospsis_supplies" >
+      <thead>
+        <tr >
+          <th>Date</th>
+          <th> Department</th>
+          <th>Prepared </th>
+          <th>Approbed</th> 
+          <th>Request</th>                 
+          <th>Description</th>                  
+          <th>Branch </th>         
+          
+        
+        </tr>
+      </thead>
+      <tbody>
+        {% for supplies in supplies %}
+
+        <tr>
+          <td>{{ supplies.date|date:'d-m-Y' }} </td>
+          <td>{{ supplies.department }}        </td>
+          <td>{{ supplies.prepared_by }}       </td> 
+          <td>{{ supplies.approved_by }}       </td>          
+          <td>{{ supplies.request_for }}           </td> 
+          <td>{{ supplies.description }}       </td> 
+          <td>{{ supplies.branch }}            </td>
+     
+          
+    
+        </tr>
+        
+        
+        {% endfor%}
+      </tbody>
+    
+
+    </table>
+    </div>
+  
+  </div>
+  <div class="card-footer">
+    <a class="btn btn-secondary" href="{% url 'supplies_list'%}" ><i class="bi bi-arrow-left"> </i> Back</a>
+  </div>
+  </div>
+
+
+
+    <script>
+    var  synospsis_supplies=$('#synospsis_supplies').DataTable(
+      {
+        order: [[0, 'desc']],
+        
+        oLanguage: {
+                        oPaginate: {
+                          sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                          sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                          sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                          sLast: '<i class="fas fa-angle-double-left"></i> Last',
+  
+                        }
+                                         },
+    /*
+    columnDefs: [
+        
+        
+       {
+         orderable: false,targets:[6]
+        },
+      
+        { 
+          searchable: false,targets:[9]
+          },
+          
+      ],
+*/
+      
+      }
+     
+    )
+    
+    </script>
+<!--
+<script>
+function openReport(button) {
+
+ const baseUrl = button.getAttribute('data-url');   
+ const dateBegin  = document.querySelector('[name="date_begin"]').value;
+ const dateEnd = document.querySelector('[name="date_end"]').value;
+ const location = document.querySelector('[name="location"]').value; 
+ const employee=document.querySelector('[name="employee"]').value;
+
+const fullUrl = `${baseUrl}?location=${location}&employee=${encodeURIComponent(employee)}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`; 
+
+ window.open(fullUrl, '_blank');
+}
+  </script>
+-->
+ 
+{% endblock %}

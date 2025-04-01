@@ -1,0 +1,18 @@
+{% extends 'base.html'%} {% block title %} CCTV @ CRC | Detail {{ object.department }}  {% endblock %}
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+<div class="card-header">
+    <label class="card-title" > Department Detail</label>
+</div>
+<div class="card-body">
+    <label class="card-title" > 
+        Department: {{ object.name }}
+    </label>
+  
+</div>
+<div class="card-footer">
+    <a class="btn btn-secondary" href={% url 'department-list'%} > <i class="bi bi-arrow-left"> </i> Back</a>
+</div>
+
+{%endblock%}

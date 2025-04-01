@@ -1,0 +1,113 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC | New Customer in BlackList
+ {% endblock %}
+ {%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">BLACKLIST  </h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item active"  aria-current="page"><a  href={% url 'blacklist-list' %}>BlackList</a>   </li>
+                 <li class="breadcrumb-item active" aria-current="page"> Add  </li>
+             </ol>
+         </div>
+     </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+{%block content%}
+
+<div class="card card-primary card-outline mb-4"> 
+  <div class="card-header">
+    <label class="card-title"> <strong> Add BlackList </strong></label>
+  </div>
+
+   
+        <form  method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="card-body">
+             
+<strong>
+                
+                <div class="mb-3">
+                    <label  class="form-label">{{form.date.label_tag}}</label> 
+                    {{form.date}}
+                
+                </div>  
+               <div class="mb-3">
+                <label  class="form-label">{{form.name.label_tag}}</label> 
+                {{form.name}}
+            
+            </div>  
+            <div class="mb-3">
+            <label  class="form-label">{{form.surname.label_tag}}</label> 
+            {{form.surname}}
+        
+            </div>  
+            <div class=" mb-3">
+                <label  class="form-label">{{ form.picture.label_tag }}</label> 
+            
+                {{ form.picture }}
+            </div>
+           
+    <div class=" mb-3">
+        <label  class="form-label">{{ form.blacklistby.label_tag }} </label> 
+        
+        {{ form.blacklistby }}
+    </div>
+    <div class=" mb-3">
+        <label  class="form-label">{{ form.sex.label_tag }} </label> 
+        
+        {{ form.sex }}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">{{ form.reason.label_tag }} </label> 
+        
+        {{ form.reason }}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">{{ form.duration.label_tag }} </label> 
+        
+        {{ form.duration }}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">{{ form.race.label_tag }} </label> 
+        
+        {{ form.race }}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">{{ form.details.label_tag }} </label> 
+        
+        {{ form.details }}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">{{ form.location.label_tag }} </label> 
+        
+        {{ form.location }}
+    </div>
+   
+                    
+</strong>                
+            
+
+</div>
+
+
+
+
+           
+            <div class="card-footer">        
+                <input class="btn btn-success mb-2" type="submit" value="Save">  
+                <button class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>                   
+                  <a class="btn btn-secondary mb-2" href="{% url 'blacklist-list' %}">Cancel</a>
+                </div>
+            
+        </form>
+   
+ </div>
+{% endblock%}   

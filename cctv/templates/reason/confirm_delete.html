@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Delete Reason
+  {% endblock %}
+
+{%block content%}
+	<div class="card card-primary card-outline mb-4">
+    <div class="card-header">
+		<label class="card-title">Delete Reason</label>
+
+	</div>
+   <div class="card-body">
+	<form method="post" >
+		{% csrf_token %}
+		
+		<p>Are you sure that you want to delete "{{reason.reason}}"?</p>
+     <div class="card-footer">
+		
+			<input type="submit" class="btn btn-danger" value="Delete">
+			<a href="{% url 'reason-list' %}" class="btn btn-secondary">Cancel</a>
+		
+	 </div>
+
+		
+	</form>
+
+   </div>
+
+	
+
+	</div>
+
+{%endblock%}

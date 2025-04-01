@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %} CCTV @ CRC | Supplies {% endblock%}
+{%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">SUPPLIES FORM LIST</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Supplies Form List
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+{% block content %}
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid"> 
+      <div class="row">
+          
+              <div class="btn-group" role="group" aria-label="Basic example">
+                {%if perms.cctv.add_supplies %}
+                <a class="btn btn-primary  bi-plus-lg" href="{% url 'supplies_create' %}"> Add Supplies Form</a>
+                {%endif%}
+                <a   class="btn btn-outline-dark  bi bi-bricks"  href="{% url 'supplies_synopsis' %}" > Synopsis Supplies Form </a > 
+          
+            </div>
+     </div>
+    </div>
+
+  </div>
+
+    <div class="card-body">
+      <table class="table table-bordered table-hover table-sm"  id="supplies">
+          
+                <thead>
+                  <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Department</th>
+                      <th>Prepared</th>
+                      <th>Approbed</th>
+                      <th>Request</th>
+                      <th>Description</th>
+                      <th>Branch</th>
+                      <th>Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for supply in supplies %}
+                  <tr>
+                      <td>{{ supply.id }}</td>
+                      <td>{{ supply.date|date:'d-m-Y' }}</td>
+                      <td>{{ supply.department }}</td>
+                      <td>{{ supply.prepared_by }}</td>
+                      <td>{{ supply.approved_by }}</td>
+                      <td>{{ supply.request_for }}</td>
+                      <td>{{ supply.description }}</td>
+                      <td>{{ supply.branch }}</td>
+
+                      <td class="col-sm-3">
+                        <div class="btn-group">
+                          <a class="btn btn-info mb-2" href="{% url 'supplies_detail' supply.id %}">Detail</a> 
+                          <a  class="btn btn-warning mb-2" href="{% url 'supplies_update' supply.id %}">Edit</a> 
+                          <a class="btn btn-danger mb-2" href="{% url 'supplies_delete' supply.id %}">Delete</a>
+                        </div>
+                      </td>
+                  </tr>
+                </tbody>
+                  {% endfor %}
+        </table>
+    </div>
+</div>
+
+<script>
+  var supplies = $('#supplies').DataTable(
+                     {
+                                       
+        
+             
+                  columnDefs: [
+                    { orderable: false,targets:[8]},
+                    { searchable: false,targets:[8]},
+                    
+                 
+                  ],
+                  oLanguage: {
+                    oPaginate: {
+                      sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                      sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                      sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                      sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                    }
+
+           },
+
+                            
+
+                  pageLength:10,  
+                  responsive:true,             
+
+   
+                }
+                    
+                    
+                    
+                    );           
+
+
+</script>
+{% endblock %}

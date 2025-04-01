@@ -1,0 +1,35 @@
+{% extends 'base.html'%} {% block title %} CCTV @ CRC | Update Report Type{% endblock %}
+{%block content%}
+
+<div class="card card-primary card-outline mb-4">
+ 
+  <div class="card-header">
+    <div class="card-title">Update Report Type</div>
+  </div>
+
+    <div class="card-body">
+        <form class="pt-3" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+      
+            
+            <div class="card-footer">        
+                <input class="btn btn-success mb-2" type="submit" value="Save">
+                 
+                  <a class="btn btn-secondary  mb-2" href="{% url 'report_type-list' %}">Cancel</a>
+            </div>
+            
+        </form>
+    </div>
+ 
+</div>
+
+
+
+{% endblock%}
+
+
+
+
+ 
+        

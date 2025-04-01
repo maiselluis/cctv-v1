@@ -1,0 +1,109 @@
+{%load static%}
+<script>
+  $(document).ready(function() {
+      // Mostrar mensajes y ocultarlos después de 3 segundos
+      $('.message').fadeIn().delay(5000).fadeOut();
+  });
+</script>
+<nav class="app-header navbar navbar-expand bg-body">
+  <!--begin::Container-->
+ 
+  <div class="container-fluid">
+   
+    <!--begin::Start Navbar Links-->
+    <ul class="navbar-nav">
+    
+ 
+      <li class="nav-item">
+        <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+          <i class="bi bi-list"></i>
+        </a>
+      </li>
+      <li class="nav-item d-none d-md-block">
+        <a href={% url 'index' %}  class="nav-link">Home</a>
+      </li>  
+     <li>
+      {% if messages %}
+      <div  id="popup-messages">
+          {% for message in messages %}
+              <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}  <br> </div>
+             
+          {% endfor %}
+      </div>
+  {% endif %}
+     </li>
+       
+     
+    </ul>   
+  
+ 
+    <ul class="navbar-nav ms-auto">    
+        
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-lte-toggle="fullscreen">
+          <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i>
+          <i
+            data-lte-icon="minimize"
+            class="bi bi-fullscreen-exit"
+            style="display: none"
+          ></i>
+        </a>
+      </li>
+      {% if user.is_authenticated %}
+      <li class="nav-item dropdown user-menu"> <a href="{% static 'lib/images/noimage.png'%}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+         <img src="{% static 'lib/images/noimage.jpg'%}" class="user-image rounded-circle shadow" alt="User Image">
+          <span class="d-none d-md-inline">
+            
+            Welcome {{user.username }}</span> </a>
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
+            <li class="user-header text-bg-primary"> 
+              <img src="{% static 'lib/images/noimage.jpg' %}" class="rounded-circle shadow" alt="User Image">
+               
+                  
+                   <!--<small>{{user.date_joined}} </small>-->
+                
+            </li> <!--end::User Image--> <!--begin::Menu Body-->
+            <li class="user-body"> <!--begin::Row-->
+            
+               {%if user.is_superuser%}
+               <p>
+                Name - {{user.first_name}} {{user.last_name}}
+               </p>
+               <p>
+                 Branch -  Administration
+               </p>
+               {%else%}
+               <p>
+                Name - {{user.first_name}} {{user.last_name}}
+               </p>
+               <p>
+                 Branch -  {{user.userprofile.location}}
+               </p>
+
+               {%endif%}
+            </li> <!--end::Menu Body--> <!--begin::Menu Footer-->
+            <li class="user-footer"> 
+             <!--
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-default btn-flat float-end" type="submit">Profile</button>
+            </form>
+          -->
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-default btn-flat float-end " type="submit">Sign out</button>
+            </form>
+              
+            </li> 
+        </ul>
+    </li>
+     {%endif%}
+
+    </ul>
+  </div>   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+   
+   
+   
+</nav>

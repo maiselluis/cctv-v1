@@ -1,0 +1,255 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Report Synopsis 
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">REPORT SYNOPSIS-CCTV</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item"><a  href={% url 'report_synopsis-list' %}>Report Synopsis</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">CCTV </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+ 
+
+  <div class="card-header">
+    
+    <form method="get" > 
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-end">   
+          <div  class="col-sm-auto d-flex justify-content-end"> 
+            {{ form.location}}
+           </div> 
+          <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+            <label class="card-title">{{ form.date_begin.label_tag }} </label>            
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end"> 
+        {{ form.date_begin }}
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end align-self-center">     
+          <label class="card-title">{{ form.date_end.label_tag }}</label> 
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end">     
+          {{ form.date_end }}
+        </div>
+        <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+          <label class="card-title">{{ form.employee.label_tag }} </label>            
+      </div> 
+        <div  class="col-sm-auto d-flex justify-content-end"> 
+          {{ form.employee}}
+         </div> 
+        <div  class="col-sm-auto">     
+          <button class="btn btn-primary " type="submit"> Find</button>               
+        
+        </div>
+       
+        <div class="col-sm-auto">
+                       
+          <button class="btn btn-outline-dark bi-filetype-pdf" data-url="{% url 'report_synopsis_cctv_pdf' %}"   onclick="openReport(this)">Export PDF</button>
+        
+        </div>
+                                    
+    
+      </div>                  
+      </div>                                                  
+      
+    </form>  
+       
+</div>
+
+
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <h2>Results:</h2>  
+    <table class="table table-bordered table-hover  table-sm" id="reportSynopsis_cctv" >
+      <thead>
+        <tr >
+          <th>Date</th>
+          <th> No.</th>
+          <th>Surveillance</th>
+          <th>Report Title</th> 
+          <th>Origination</th>                 
+          <th>Value</th>                  
+          <th>Money Recovered </th>         
+          <th>Money Not Recovered </th>
+          <th>Money Paid</th> 
+          <th>Money Not Paid</th>        
+             
+          <th>Branch</th>                 
+        
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in synopsis_cctv%}
+
+        <tr >
+          <td>{{ object.date|date:'d-m-Y' }}</td>
+          <td>{{ object.report_nro }}</td>
+          <td>{{ object.cctv_id }}</td> 
+          <td>{{ object.report_title }}</td> 
+         
+          <td>{{ object.origination }}</td> 
+          <td>{{ object.value_us }}</td> 
+          <td> {{ object.money_recovered }}</td>
+          <td>{{ object.money_not_recovered }}</td>
+          <td>{{ object.money_paid }}</td>
+          <td>{{ object.money_not_paid }}</td>
+
+          <td>{{ object.location }}</td>
+          
+    
+        </tr>
+        
+        
+        {% endfor%}
+      </tbody>
+      <tfoot>
+        <tr>
+            <th style="height:50px">Total</th>          
+            <th colspan="4"></th>             
+            
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+                    
+            
+        </tr>
+    </tfoot>
+
+    </table>
+    </div>
+  
+  </div>
+
+  <div class="card-footer">
+    <a class="btn btn-secondary" href="{% url 'report_synopsis-list'%}" ><i class="bi bi-arrow-left"> </i> Back</a>
+  </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+    <script>
+    var  reportT=$('#reportSynopsis_cctv').DataTable(
+      {
+        order: [[0, 'desc']],
+        
+        oLanguage: {
+                        oPaginate: {
+                          sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                          sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                          sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                          sLast: '<i class="fas fa-angle-double-left"></i> Last',
+  
+                        }
+                                         },
+    
+  /*  columnDefs: [
+        
+        
+       {
+         orderable: false,targets:[9]
+        },
+      
+        { 
+          searchable: false,targets:[9]
+          },
+          
+      ],*/
+      footerCallback: function (row, data, start, end, display) {
+               var api = this.api();
+   
+               // Función para convertir a número
+               var intVal = function (i) {
+                   return typeof i === 'string'
+                       ? i.replace(/[\$,]/g, '') * 1
+                       : typeof i === 'number'
+                       ? i
+                       : 0;
+               };
+   
+               // Calcular totales por columna
+               var totalValue = api
+                   .column(5)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               var totalMoRecov = api
+                   .column(6)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               var totalMonNotRec = api
+                   .column(7)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               var totalMonPaid = api
+                   .column(8)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+ 
+              var totalMoneNotPaid = api
+                   .column(9)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               // Mostrar totales en el footer
+               $(api.column(5).footer()).html('$TT '+ totalValue.toFixed(2));
+               $(api.column(6).footer()).html('$TT '+totalMoRecov.toFixed(2));
+               $(api.column(7).footer()).html('$TT '+totalMonNotRec.toFixed(2));
+               $(api.column(8).footer()).html('$TT '+totalMonPaid.toFixed(2));
+               $(api.column(9).footer()).html('$TT '+totalMoneNotPaid.toFixed(2));
+           },
+      
+      }
+     
+    )
+    
+    </script>
+
+<script>
+function openReport(button) {
+
+ const baseUrl = button.getAttribute('data-url');   
+ const dateBegin  = document.querySelector('[name="date_begin"]').value;
+ const dateEnd = document.querySelector('[name="date_end"]').value;
+ const location = document.querySelector('[name="location"]').value; 
+ const employee=document.querySelector('[name="employee"]').value;
+
+ const fullUrl = `${baseUrl}?location=${location}&employee=${encodeURIComponent(employee)}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`; 
+
+ window.open(fullUrl, '_blank');
+}
+  </script>
+
+ 
+{% endblock %}

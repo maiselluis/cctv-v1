@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Detail Shift {% endblock %}
+
+ {%block content_header%}
+ <div class="app-content-header"> 
+  <div class="container-fluid"> 
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">Shift - DETAIL</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item"><a  href={% url 'shift-list' %}>  Race</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+            Detail    
+              </li>
+
+              </ol>
+          </div>
+      </div> 
+</div>
+ {%endblock%}
+
+ {%block content%}
+ <div class="card  card-primary card-outline mb-5">
+ <div class="card-body">  
+  <div class="row">
+      <div class="col-sm-4">
+
+      </div>
+      <div class="col-sm-6">
+         
+          <div class="row text-left g-2 mb-2">               
+              
+             
+              <H5> Shift:<strong> {{ shift.shift}} </strong></H5>  
+             
+                     
+                  
+          </div>
+      </div>
+  </div>
+
+
+</div>
+<div class="card-footer">
+    <a class="btn btn-secondary" href="{% url 'shift-list'%}" > <i class="bi bi-arrow-left"> </i> Back</a>
+</div>
+</div>
+
+{%endblock%}

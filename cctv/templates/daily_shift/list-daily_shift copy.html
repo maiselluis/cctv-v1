@@ -1,0 +1,162 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Daily Shift List 
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">DAILY SHIFT REPORT</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  Daily Shift Report
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div style="overflow-x: auto;">
+   <div class="card-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              {% if perms.cctv.add_dailyshift %}
+              <a  class="btn btn-primary mb-2 bi bi-plus"  href="{%  url 'daily_shift-create' %}"   > New Shift</a >
+                {%endif%}
+                <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'dailyshift-by-day'%}" > Find Shift  by Date </a > 
+                          
+            </div>
+          </div>          
+      </div>
+    </div>
+  </div>
+{%if object_list%}
+<div style="overflow-x: auto;">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm"  id="daily_shift">
+      <thead>
+        <tr >
+          <th class="d-none d-md-table-cell">#</th>
+          <th>Date</th>
+          <th>Shifts</th>                  
+          <th>Supervisor</th>
+          <th class="d-none d-md-table-cell">Officer 1</th>
+          <th class="d-none d-md-table-cell">Officer 2</th>
+          <th class="d-none d-md-table-cell">Casino Open</th>
+          <th class="d-none d-md-table-cell">Casino Close</th>
+          <th class="d-none d-md-table-cell">USD Rate</th>
+          <th class="d-none d-md-table-cell">EURO Rate</th>
+          <th class="d-none d-md-table-cell">GBP Rate</th>
+          <th class="d-none d-md-table-cell">Branch</th>
+          <th >Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr >
+          <td class="d-none d-md-table-cell">{{ forloop.counter }}</td>
+          <td>{{ object.date|date:'d-m-Y' }}</td>
+          <td>{{ object.shift }}</td>   
+          {% if  object.supervisor %}                  
+          <td>{{ object.supervisor }}</td>
+          {% else %}
+          <td></td>
+          {%endif%}
+          {%if object.officer1 %}
+          <td class="d-none d-md-table-cell">{{ object.officer1 }}</td>
+          {% else %}
+          <td class="d-none d-md-table-cell"></td>
+          {%endif%}
+          {%if object.officer2 %}
+          <td class="d-none d-md-table-cell">{{ object.officer2 }}</td>
+          {% else %}
+          <td class="d-none d-md-table-cell"></td>
+          {%endif%}
+          <td class="d-none d-md-table-cell">{{ object.casino_open|date:"g:iA" }}</td> 
+          <td class="d-none d-md-table-cell">{{ object.casino_close|date:"g:iA" }}</td> 
+          <td class="d-none d-md-table-cell">{{ object.usd_rate }}</td>
+          <td class="d-none d-md-table-cell">{{ object.euro_rate }}</td>
+          <td class="d-none d-md-table-cell">{{ object.gbp_rate }}</td>   
+          <td class="d-none d-md-table-cell">{{ object.location }}</td>
+          <td class="col-sm">
+            <div class="btn-group">
+              {% if perms.cctv.view_dailyshift %}
+              <a class="btn  btn-info mb-2 bi bi-folder"  href="{% url 'daily_shift-detail' object.id %}" alt="Detail"> Detail </a>
+              {%endif%}
+              {% if perms.cctv.change_dailyshift %}
+              <a class="d-none d-md-table-cell btn btn-warning mb-2 bi-pencil-square"  href="{% url 'daily_shift-update' object.id %}" > Edit</a>
+                {%endif%}
+                {% if perms.cctv.delete_dailyshift %}
+              <a class="d-none d-md-table-cell btn btn-danger mb-2 bi bi-trash"  href="{% url 'daily_shift-delete' object.id %}" > Delete</a>
+              {%endif%}
+              {% if perms.cctv.view_dailyshift %}
+              <a  class="d-none d-md-table-cell btn btn-outline-dark mb-2 bi-filetype-pdf"  href="{% url 'daily_shift_report' object.id %}"  target="_blank">PDF</a>  
+             
+              {%endif%}
+            </div>
+           
+          </td>
+        </tr>
+
+        {% endfor%}
+      </tbody>
+    </table>
+  </div> 
+</div>
+{% else %}
+<div class="card-body">
+  <label class="card-title" style="color:red;">No Daily Shift yet</label>
+</div>
+
+{%endif%}
+</div>
+
+
+
+<script>
+  var  daily_shift=$('#daily_shift').DataTable(
+    {
+      "order": [[0, 'desc']] ,
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                                       },
+  
+  columnDefs: [
+      { 
+        width: '1%', targets: 0
+       },
+      {
+          targets: -1,
+          className: 'dt-body-right'
+      },
+     {
+       orderable: false,targets:[12]
+      },
+      { 
+        searchable: false,targets:[12]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+  {% endblock%}
+

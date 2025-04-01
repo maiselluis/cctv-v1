@@ -1,0 +1,107 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC | Home {% endblock %}
+ {%block content%}
+
+ <div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <label class="card-title">Main List</label>
+       
+  </div>
+  {% if object_list%}
+  <div style="overflow-x: auto;">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm"  id="main">
+      <thead>
+        <tr >
+          <th style="width: 10px">#</th>
+          <th> Date </th>
+          <th> Open Time </th>
+          <th> Close Time </th>
+          <th> Location </th>
+          <th> USD Rate </th>
+          <th> EURO Rate </th>
+          <th> GBP Rate </th>
+          <th> Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr class="align-middle">
+          <td>{{ forloop.counter }}</td>
+          <td>{{ object.date|date:'Y-m-d' }}</td>
+          <td>{{ object.casino_open|time:"g:iA" }}</td>
+          <td>{{ object.casino_close|time:"g:iA" }}</td>
+          <td>{{ object.location }}</td>
+          <td>{{ object.usd_rate }}</td>
+          <td>{{ object.euro_rate }}</td>
+          <td>{{ object.gbp_rate }}</td>
+          
+          <td class="col-sm-3">
+            <a class="btn btn-warning mb-2"  href="{% url 'main-update' object.id %}" > Edit</a> 
+            <a class="btn btn-danger mb-2" href="{% url 'main-delete' object.id %}" > Delete</a>         
+          
+          </td>
+        </tr>
+  
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <div class="card-footer clear-fix">
+    <a  class="btn btn-primary btn-lg mb-2 bi bi-plus-square"  href="{% url 'main-create' %}"   > New Date</a >
+  </div>
+  {% else %}
+  <div class="card-body">
+   
+    <label class="card-title" style="color: red;">No Date open  yet</label>
+  </div>
+  <div class="card-footer clear-fix">
+    <a  class="btn btn-primary btn-lg mb-2 bi bi-plus-square"  href="{% url 'main-create' %}"   > New Date</a >
+  </div>
+  {%endif%}
+  
+</div>
+
+
+<script>
+  var  main=$('#main').DataTable(
+    {
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+      },
+      responsive:true,
+  
+  columnDefs: [
+      { 
+        width: '1%', targets: 0
+       },
+      {
+          targets: -1,
+          className: 'dt-body-right'
+      },
+     {
+       orderable: false,targets:[2]
+      },
+      { 
+        searchable: false,targets:[2]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+{% endblock%}
+
+
+

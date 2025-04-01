@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+    CCTV @ CRC | {% if object %}Edit Shift{% else %}Add Shift{% endif %}
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+ <div class="row">
+   <div class="col-sm-6">
+   <h3 class="mb-0">SUPPLIES</h3>
+   </div>
+   <div class="col-sm-6">
+   <ol class="breadcrumb float-sm-end">
+     <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+     <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'supplies_list' %}>Supplies</a> </li>
+     {% if object %} <li class="breadcrumb-item">Edit</li>{% else %} <li class="breadcrumb-item">Add</li>{% endif %}
+    
+    </ol>
+   </div>
+ </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+{% block content %}
+<div class="card card-primary card-outline mb-4"> 
+ <div class="card-header">    
+        <div class="card-title"><h2>{% if object %}Edit {% else %}New {% endif %} Supplies</h2></div>
+ </div>
+ <div class="card-body">
+<form method="post" class="pt-3" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <strong>
+    {{ form.as_p }}
+    </strong>
+  
+    <div class="card-footer">        
+        <input class="btn btn-success mb-2" type="submit" value="Save">  
+        {% if not object %}
+        <button class="btn btn-success mb-2"  type="submit" name="save_and_continue">Save and Continue</button>  
+        {% endif %}    
+    
+        <a class="btn btn-secondary mb-2" href="{% url 'supplies_list' %}">Cancel</a>
+    </div>
+</form>
+
+</div>
+</div>
+{% endblock %}

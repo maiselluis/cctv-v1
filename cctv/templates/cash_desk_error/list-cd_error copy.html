@@ -1,0 +1,188 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Cash Desk Error List 
+ {% endblock%}
+
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">CASH DESK ERROR</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Cash Desk Error
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+<div class="card-header">
+
+  <div class="container-fluid"> 
+    <div class="row">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        {% if perms.cctv.add_cash_desk_error %}
+        <a  class="btn btn-primary bi bi-plus-lg "  href="{%  url 'cash_desk_error-create' %}"   > Add  Cash Desk Error</a >
+          {% endif %}
+          <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'cash_desk_error-by-day'%}" > Find by Date </a > 
+          <a   class="btn btn-outline-dark bi bi-calendar"  href="{% url 'synopsis_cashier' %}" > Synopsis Cashier </a > 
+      
+      </div>
+ </div>
+  </div>
+</div>
+
+  
+{%if object_list%}
+<div class="table-responsive">
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm"  id="cash_desk_errorT">
+      <thead >
+        <tr >
+         <th class="d-none d-md-table-cell">#</th>
+          <th>Date</th>
+          <th >Time</th>                     
+          <th class="d-none d-md-table-cell" >Cashier Location</th>
+          <th>Error Type</th>
+          <th class="d-none d-md-table-cell">Duty Manager</th>
+          <th>TTD</th>
+          <th> USD </th>
+          <th class="d-none d-md-table-cell"> EURO</th>
+          <th class="d-none d-md-table-cell">Report #</th>
+          <th class="d-none d-md-table-cell">Found</th>
+          <th class="d-none d-md-table-cell"> Cashier</th>
+          <th class="d-none d-md-table-cell">Supervisor</th>
+          <th class="d-none d-md-table-cell">Branch</th>
+          <th >Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list %}
+
+        <tr>
+          <td class="d-none d-md-table-cell">{{ object.id }}</td>
+           <td>{{ object.date|date:'d-m-Y' }}</td>
+           <td>{{ object.time|time:"g:iA" }}</td>              
+           <td class="d-none d-md-table-cell">{{ object.area_cashier }}</td>
+           <td>{{ object.error_type }}</td>
+           <td class="d-none d-md-table-cell">{{ object.duty_manager }}</td>
+           <td>{{ object.tt }}</td>
+           <td>{{ object.usd }}</td>
+           <td class="d-none d-md-table-cell">{{ object.euro }}</td>
+           {% if object.report %}
+           <td  class=" d-none d-md-table-cell text-center align-middle">{{ object.report }}</td>
+           {% else %}
+           <td  class=" d-none d-md-table-cell text-center align-middle"></td>
+          {%endif%}
+           <td class=" d-none d-md-table-cell text-center align-middle">
+           {% if object.found %}
+         <i class="bi bi-check-circle-fill text-success"></i> <!-- Ícono verde -->
+     {% else %}
+         <i class="bi bi-x-circle-fill text-danger"></i> <!-- Ícono rojo -->
+     {% endif %}
+           </td>
+           <td class="d-none d-md-table-cell">{{ object.cashier }}</td>
+           <td class="d-none d-md-table-cell">{{ object.supervisor }}</td>
+           <td class="d-none d-md-table-cell">{{ object.location }}</td>
+ 
+           <td class="text-end align-baseline"> 
+             <div class="btn-group" role="group" aria-label="Options">
+            
+               {% if perms.cctv.view_cash_desk_error %}
+              
+               <a class="btn  btn-info mb-2 bi bi-folder"  href="{% url 'cash_desk_error-detail' object.id %}" alt="Detail"> Detail </a>
+               
+                 {%endif%}
+                 
+                 {% if perms.cctv.change_cash_desk_error %}
+               <a class="d-none d-md-table-cell btn btn-warning mb-2 bi-pencil-square" href="{% url 'cash_desk_error-update' object.id %}" > Edit</a>
+               {%endif%}
+ 
+               {% if perms.cctv.delete_cash_desk_error %}
+ 
+               <a  class="d-none d-md-table-cell btn btn-danger mb-2 bi bi-trash" href="{% url 'cash_desk_error-delete' object.id %}" > Delete </a>
+               {%endif%}
+            
+             </div>
+ 
+           
+           </td>
+         </tr>
+
+        {% endfor%}
+      </tbody>
+    </table>
+  </div> 
+</div>
+
+{% else %}
+<div class="card-body">
+  <label class="card-title" style="color:red;">No Cash Desk Error yet</label>
+</div>
+
+{%endif%}
+<div class="card-footer">
+  
+</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+<script>
+  var  cash_desk_errorT=$('#cash_desk_errorT').DataTable(
+    {
+      "order": [[1, 'desc']] ,
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                                       },
+      responsive: true, 
+  
+  columnDefs: [
+  { 
+                targets: 1, 
+                render: function(data, type, row) {
+                    if (type === 'sort') {
+                       
+                        let parts = data.split('-'); 
+                        return new Date(parts[2], parts[1] - 1, parts[0]).getTime(); 
+                    }
+                    return data; 
+                }
+            },
+      { 
+        width: '1%', targets: 0
+       },
+      
+     {
+       orderable: false,targets:[14]
+      },
+      { 
+        searchable: false,targets:[14]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+  {% endblock%}
+

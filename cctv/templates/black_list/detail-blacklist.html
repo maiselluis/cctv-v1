@@ -1,0 +1,79 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC |BklackList Detail {{ object.staff }} 
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">BLACKLIST - DETAIL </h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item active"  aria-current="page"><a  href={% url 'blacklist-list' %}>BlackList</a>   </li>
+                 <li class="breadcrumb-item active" aria-current="page"> Detail </li>
+             </ol>
+         </div>
+     </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+    <div class="card-header">
+        <nav class="app-header navbar navbar-expand">
+            <div class="container-fluid d-flex justify-content-start">
+                <h5 class="mb-0">Details Customer in BlackList</h5>
+            </div>
+            
+            <div class="container-fluid d-flex justify-content-end">
+               
+                <a class="btn btn-outline-dark bi-filetype-pdf" href="{% url 'blacklist_pdf' object.id %}" target="_blank">
+                    PDF
+                </a>
+            </div>
+        
+        </nav>
+    </div>
+    
+    
+<div class="card-body text-center">
+    <div class="mb-4">
+        <a href="{% url 'magnifying' object.id %}">
+            <img src="{{ object.picture.url }}" class="img-fluid rounded shadow-lg" style="max-width: 300px; height: auto;">
+        </a>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <ul class="list-group list-group-flush text-start shadow">
+                <li class="list-group-item list-hover"><strong>Date:</strong> {{ object.date|date:'d-m-Y' }}</li>
+                <li class="list-group-item list-hover"><strong>Name:</strong> {{ object.name }}</li>
+                <li class="list-group-item list-hover"><strong>Surname:</strong> {{ object.surname }}</li>
+                <li class="list-group-item list-hover"><strong>Reason:</strong> <span class="text-danger">{{ object.reason }}</span></li>
+                <li class="list-group-item list-hover"><strong>Race:</strong> {{ object.race }}</li>
+                <li class="list-group-item list-hover"><strong>Sex:</strong> {{ object.sex }}</li>
+                <li class="list-group-item list-hover"><strong>Blacklisted By:</strong> {{ object.blacklistby }}</li>
+                <li class="list-group-item list-hover"><strong>Duration:</strong> {{ object.duration }}</li>
+                <li class="list-group-item list-hover"><strong>Location:</strong> {{ object.location }}</li>
+                <li class="list-group-item list-hover"><strong>Details:</strong> {{ object.details }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <div class="card-footer">
+        <a class="btn btn-secondary" href="{% url 'blacklist-list'%}" ><i class="bi bi-arrow-left"></i> Back</a>
+    </div>
+</div>
+<style>
+    .list-hover:hover {
+        background-color: #e1e3e6;
+        transition: background-color 0.3s ease-in-out;
+    }
+</style>
+
+{%endblock%}

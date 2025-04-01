@@ -1,0 +1,160 @@
+
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC | Manage Permission to {{ user.username }}
+ {% endblock %}
+ 
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0"> Manage Permission to {{ user.username }}</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Authentication
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="{% url 'user-list' %}"> User</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Permission
+                    </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+
+
+{%block content%}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card card-primary card-outline mb-4"> 
+            <div class="card-header">
+              <div class="card-title">Add Permission to {{ user.username }}</div>
+            </div>
+          
+              <div class="card-body">
+                  <form class="pt-3" method="post" enctype="multipart/form-data" action="{% url 'add_permission' user_id=user.id %}">
+                      {% csrf_token %}
+                      {{ form.as_p }}    
+                      
+                      <div class="card-footer">        
+                          <input class="btn btn-success mb-2" type="submit" value="Save">
+                          <a class="btn btn-secondary  mb-2" href="{% url 'user-list' %}">Cancel </a>
+                           
+                           
+                          </div>
+                      
+                  </form>
+              </div>
+           </div>
+    
+    </div>
+    <div class="col-lg-6"> 
+        <div class="card card-primary card-outline mb-4">
+            <div class="card-header">
+                <label class="card-title"> Current Permissions</label>
+            </div>
+        
+        
+            {% if permissions %}
+            <div class="card-body">
+              <table class="table table-bordered table-hover  table-sm" id="permissions">
+                <thead>
+                  <tr >
+                    <th style="width: 10px">#</th>  
+                    <th>Permission</th>
+                    <th >Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for permission in permissions %}
+          
+                  <tr class="align-middle">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ permission.name }}</td>
+                    <td class="col-sm">     
+                       
+          
+                        <a  class="btn btn-danger mb-2" href="{% url 'remove_permission' user_id=user.id permission_id=permission.id %}">Revoke</a>
+                       
+                     
+                     
+                    </td>
+                  </tr>
+                 
+                  {% endfor%}
+                </tbody>
+              </table>
+            </div>
+          
+          
+            {%else %}
+          <div class="card-body">
+            
+            <label class="card-title" style="color:red;">No Permission yet</label>
+          </div>
+          
+          {%endif%}
+          
+          </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+
+
+   <script>
+    var  permissions=$('#permissions').DataTable(
+      {
+        oLanguage: {
+                        oPaginate: {
+                          sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                          sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                          sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                          sLast: '<i class="fas fa-angle-double-left"></i> Last',
+  
+                        }
+                                         },
+    
+    columnDefs: [
+        { 
+          width: '1%', targets: 0
+         },
+        {
+            targets: -1,
+            className: 'dt-body-right'
+        },
+       {
+         orderable: false,targets:[2]
+        },
+        { 
+          searchable: false,targets:[2]
+          },
+          
+      ]
+      
+      }
+     
+    )
+    
+    </script>
+  
+{%endblock%}

@@ -1,0 +1,153 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | User List
+ {% endblock%}
+ 
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0"> USER LIST </h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Authentication 
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    User 
+                  </li>
+                
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+ <div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="btn-group" role="group">    
+            {%if perms.cctv.add_user %}   
+            <a  class="btn btn-primary mb-2 bi bi-plus-lg"  href="{% url 'user-create' %}"> Add User </a >   
+              {%endif%}         
+        </div>
+        </div>       
+      
+        </div>
+     
+    </div>
+        
+  </div>
+  {% if object_list %}
+  <div class="card-body">
+    <table class="table table-bordered table-hover table-sm" id="user" >
+      <thead>
+        <tr >
+          <th style="width: 10px">#</th>
+          <th> Username </th>
+          <th>Email Address</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Super User</th>
+         
+         
+         
+          <th> Options </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr class="align-middle">
+          <td>{{ object.id }}</td>
+         
+          <td> <a href="{% url 'manage_user_permissions' object.id %}""> {{object.username }}</a></td>
+          <td>{{ object.email }}</td>
+          <td>{{ object.first_name }}</td>
+          <td>{{ object.last_name }}</td>
+          {% if object.is_superuser %}            
+          <td class="bi bi-check-circle-fill text-center fa-1x" style="color:green;" > </td>
+         {%else%}
+          <td class="bi bi-check-circle-fill text-center fa-1x" style="color:red;" >   </td>
+          {%endif%}
+         
+          
+         
+        
+          
+          <td class="col-sm">
+            <div class="btn-group">
+              {%if perms.cctv.view_user %} 
+              <a class="btn btn-info mb-2"  href="{% url 'user-detail' object.id %}"> Detail</a>
+              {%endif%} 
+              {%if perms.cctv.change_user %} 
+              <a class="btn btn-warning mb-2"  href="{% url 'user-update' object.id %}" > Edit</a> 
+              {%endif%} 
+              {%if perms.cctv.delete_user %} 
+              <a class="btn btn-danger mb-2" href="{% url 'user-delete' object.id %}" > Delete</a >
+                {%endif%} 
+              
+            </div>
+           
+           
+          </td>
+        </tr>
+      
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
+ 
+  {% else %}
+  <div class="card-body">    
+    <label class="card-title" style="color: red;">No User yet</label>
+  </div>
+
+  {%endif%}
+  
+</div>
+
+
+<script>
+  var  report_title=$('#user').DataTable(
+    {
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                                       },
+  
+  columnDefs: [
+      { 
+        width: '1%', targets: 0
+       },
+      {
+          targets: -1,
+          className: 'dt-body-right'
+      },
+     {
+       orderable: false,targets:[6]
+      },
+      { 
+        searchable: false,targets:[6]
+        },
+        
+    ]
+    
+    }
+   
+  )
+  
+  </script>
+  {% endblock%}
+

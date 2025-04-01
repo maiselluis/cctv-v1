@@ -1,0 +1,190 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Reinstated Customers List
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">REINSTATED CUSTOMERS</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href="{% url 'index' %"}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Reinstated Customers
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid"> 
+
+    </div>
+  </div>
+{%if object_list%}
+<div style="overflow-x: auto;">
+  <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm"  id="blacklist">
+      <thead>
+        <tr>              
+          <th class="d-none d-md-table-cell">Id</th>         
+          <th>Photo</th>
+          <th>Date</th>          
+          <th>Name</th>
+          <th>Surname </th>                    
+          <th class="d-none d-md-table-cell">Sex</th>
+          <th class="d-none d-md-table-cell">Reason</th>
+          <th class="d-none d-md-table-cell">Race</th>    
+          <th class="d-none d-md-table-cell">Duration</th>    
+          <th class="d-none d-md-table-cell">Branch</th>        
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr class="align-middle">  
+          <td class="d-none d-md-table-cell">{{ object.id}}</td>            
+          <td scope="row">  <img src="{{ object.picture.url }}" class="mx-auto d-block"   style="height:3.8rem; width:3.8rem; border-radius: 10px" /></td>    
+          <td>{{ object.date|date:'d-m-Y'}}</td> 
+          <td>{{ object.name}}</td>
+          <td>{{ object.surname }}</td>                
+          <td class="d-none d-md-table-cell">{{ object.sex }}</td>
+          <td class="d-none d-md-table-cell">{{ object.reason }}</td>
+          <td class="d-none d-md-table-cell">{{ object.race}}</td>
+          <td class="d-none d-md-table-cell">{{ object.duration}}</td>
+          <td class="d-none d-md-table-cell">{{ object.location}}</td>
+          
+          <td class="text-end align-baseline">
+            <div class="btn-group">
+            {%if perms.cctv.view_blacklist%}
+            <a class="btn  btn-info mb-2 bi bi-folder"  href="{% url 'blacklist-detail-reinstated' object.id %}"> Detail</a>
+            {%endif%}
+            {%if perms.cctv.change_blacklist%}
+            <a class="d-none d-md-table-cell btn btn-warning mb-2" href="{% url 'blacklist-update-reinstated' object.id %}" > Edit</a>
+            {%endif%}
+
+          
+            {%if perms.cctv.add_blacklist%}
+            <a  class="d-none d-md-table-cell btn btn-outline-dark bi-filetype-pdf mb-2"  href="{% url 'blacklist_pdf' object.id %}"  target="_blank" > PDF </a >
+             {%endif%}
+            </div>
+          </td>
+        </tr>
+
+        {% endfor%}
+      </tbody>
+      <tfoot >
+        <tr>
+            <th class="d-none d-md-table-cell" scope="col"data-dt-order="disable">Id</th>            
+            <th scope="col"data-dt-order="disable"></th>
+            <th scope="col" data-dt-order="disable">Date</th> 
+            <th scope="col" data-dt-order="disable">Name</th>
+            <th scope="col" data-dt-order="disable">Surname</th>
+           
+            <th class="d-none d-md-table-cell" scope="col"data-dt-order="disable">Sex</th>
+            <th class="d-none d-md-table-cell" scope="col"data-dt-order="disable">Reason</th>
+            <th class="d-none d-md-table-cell" scope="col"data-dt-order="disable">Race</th>  
+            <th class="d-none d-md-table-cell" scope="col" data-dt-order="disable">Duration</th>        
+            <th class="d-none d-md-table-cell" scope="col"data-dt-order="disable">Branch</th>                
+        </tr>
+    </tfoot>   
+
+    </table>
+    </div>
+  </div> 
+</div>
+{% else %}
+<div class="card-body">
+  <label class="card-title" style="color:red;">No Reinstated yet</label>
+</div>
+
+{%endif%}
+</div>
+
+
+
+<script>
+  var  blacklist=$('#blacklist').DataTable(
+    {
+
+      order: [[0, 'dec'],[2, 'dec']],
+columnDefs: [
+  {
+orderable: false,targets:[1,10]
+    },
+{ 'targets': 2, type: 'date-eu' }
+
+
+],
+oLanguage: {
+
+  oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+
+             },
+
+pageLength:10,  
+responsive: true, 
+
+             
+
+initComplete: function () {
+
+var r = $('#blacklist tfoot tr');
+        r.find('th').each(function(){
+          $(this).css('padding', 8);
+        });
+        $('#blacklist thead').append(r);
+        $('#search_0').css('text-align', 'center');
+
+      this.api().columns([0,2,3,4,5,6,7,8,9]).every(function () {
+      let column = this;
+
+      // Create select element
+      let select = document.createElement('select');
+      select.classList.add('form-select');
+      select.add(new Option(''));
+      column.footer().replaceChildren(select);
+
+      // Apply listener for user change in value
+      select.addEventListener('change', function () {
+      column
+      .search(select.value, {exact: true})
+      .draw();
+      });
+
+      // Add list of options
+      column
+      .data()
+      .unique()
+      .sort()
+      .each(function (d, j) {
+      let option = new Option(d);
+      option.classList.add('form-option'); // Add a custom class to each option if needed      
+      select.add(new Option(d));
+      });
+      });
+}
+
+
+
+});
+
+  
+  </script>
+  {% endblock%}
+

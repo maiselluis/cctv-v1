@@ -1,0 +1,159 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Find Daily Shift By Dates
+ {% endblock%}
+
+ {%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+ <div class="row">
+   <div class="col-sm-6">
+   <h3 class="mb-0">DAILY SHIFT - FIND BY DATE</h3>
+   </div>
+   <div class="col-sm-6">
+   <ol class="breadcrumb float-sm-end">
+     <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+     <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'daily_shift-list' %}>Daily Shift</a> </li>
+     <li class="breadcrumb-item">Find by Date</li>
+    </ol>
+   </div>
+ </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+ {%block content%}
+
+ <div class="card card-primary card-outline mb-4">
+     <div class="card-header">
+    
+        <form method="get" > 
+          <div class="container-fluid">
+            <div class="row d-flex justify-content-end">   
+              
+              <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+                <label class="card-title">{{ form.date_begin.label_tag }} </label>            
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end"> 
+            {{ form.date_begin }}
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end align-self-center">     
+              <label class="card-title">{{ form.date_end.label_tag }}</label> 
+            </div> 
+            <div  class="col-sm-auto d-flex justify-content-end">     
+              {{ form.date_end }}
+            </div> 
+            <div  class="col-sm-auto">     
+              <button class="btn btn-primary " type="submit"> Find</button>               
+            
+            </div>   
+                               
+        
+          </div>                  
+          </div>                                                  
+          
+        </form>  
+           
+   </div>
+
+        
+    
+     <div class="card-body">  
+        
+        {% if dailyshift %}
+
+       <h2>Results:</h2>  
+            
+       <table class="table table-bordered table-hover  table-sm" id="dailyShiftT" >
+           <thead>
+            <tr >
+                <th style="width: 10px">#</th>
+                <th>Date</th>
+                <th>Shifts</th>                  
+                <th>Supervisor</th>
+                <th>Officer 1</th>
+                <th>Officer 2</th>
+                <th>Casino Open</th>
+                <th>Casino Close</th>
+                <th>USD Rate</th>
+                <th>EURO Rate</th>
+                <th>GBP Rate</th>
+                <th>Branch</th>
+               
+              </tr>
+           </thead>
+           <tbody>
+               {% for dailyshift in dailyshift %}
+     
+             <tr>
+              <td>{{ dailyshift.id }}</td>
+              <td>{{ dailyshift.date|date:'d-m-Y' }}</td>
+              <td>{{ dailyshift.shift }}</td> 
+              {%if dailyshift.supervisor %}                    
+              <td>{{ dailyshift.supervisor }}</td>
+              {%else%}
+              <td></td>
+              {%endif%}
+              {%if  dailyshift.officer1 %}
+              <td>{{ dailyshift.officer1 }}</td>
+              {%else%}
+              <td></td>
+              {%endif%}
+              {%if  dailyshift.officer2 %}
+              <td>{{ dailyshift.officer2 }}</td>
+              {%else%}
+              <td></td>
+              {%endif%}
+              <td>{{ dailyshift.casino_open }}</td> 
+              <td>{{ dailyshift.casino_close }}</td> 
+              <td>{{ dailyshift.usd_rate }}</td>
+              <td>{{ dailyshift.euro_rate }}</td>
+              <td>{{ dailyshift.gbp_rate }}</td>   
+              <td>{{ dailyshift.location }}</td>
+                
+                             
+               
+             </tr>
+     
+           
+             {% endfor %}
+            
+           </tbody>
+     
+         </table>
+        {%else%}
+        <li>No  Daily Shift betwen days found</li>
+        {%endif%}
+    
+     </div>
+     
+     <div class="card-footer">
+       
+       <a class="btn btn-secondary mb-2 bi-chevron"  href="{% url 'daily_shift-list' %}" > <i class="bi bi-arrow-left"> </i>Back</a> 
+            
+        
+           </div>
+     
+     </div>
+    
+     <script>
+
+      $(document).ready(function () {
+       
+          var table = $('#dailyShiftT').DataTable({
+             "order": [[0, 'desc']] ,
+            oLanguage: {
+                            oPaginate: {
+                              sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                              sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                              sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                              sLast: '<i class="fas fa-angle-double-left"></i> Last',
+      
+                            }
+                                             },
+     
+          });
+      });
+           </script>
+
+    
+ {% endblock %}

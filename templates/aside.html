@@ -1,0 +1,533 @@
+{% load static%}
+<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+  <!--begin::Sidebar Brand-->
+  <div class="sidebar-brand">
+    <!--begin::Brand Link-->
+    <a href={% url 'index' %} class="brand-link">
+      <!--begin::Brand Image-->
+      <img src="{% static 'lib/images/Logo.png'%}" alt="Club Royal Caribbean" class="brand-image opacity-75 shadow" />
+      <!--end::Brand Image-->
+      <!--begin::Brand Text-->
+      {%if user.is_superuser %}
+      <span class="brand-text fw-bold">Administration</span>
+      {%else%}
+      <span class="brand-text fw-bold">{{user.userprofile.location}}</span>
+      {%endif%}
+      <!--end::Brand Text-->
+    </a>
+    <!--end::Brand Link-->
+  </div>
+  <!--end::Sidebar Brand-->
+  <!--begin::Sidebar Wrapper-->
+  <div class="sidebar-wrapper">
+    <nav class="mt-2">
+      <!--begin::Sidebar Menu-->
+
+      <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false" >
+        <li class="nav-header">GENERAL</li>
+        {% if perms.cctv.view_blacklist%}
+        <li class="nav-item">
+          <a href={%  url 'blacklist-list' %} class="nav-link">
+            <i class="nav-icon bi bi-person-slash fs-5"></i>
+             <p>Black List 
+              <i class="nav-arrow bi bi-chevron-right"></i>
+             </p>
+          </a>
+          <ul class="nav nav-treeview" >
+            {% if perms.cctv.add_blacklist%}
+            <li class="nav-item">
+              <a href={% url 'blacklist-list-reinstated' %} class="nav-link">     
+                <i class="bi bi-arrow-return-left fs-5"></i>           
+                <p>Reinstated Customers</p>
+              </a>
+            </li>
+            {%endif%}
+            </ul>
+        </li>
+        {%endif%}
+       {% if perms.cctv.view_staff%}
+        <li class="nav-item"> 
+          <a href={%  url 'staff-list' %} class="nav-link"> 
+          <i class="nav-icon bi bi-people fs-5"></i>              
+          
+            <p>Staff List</p>
+          </a>
+        </li>
+     {%endif%}
+ 
+
+        {%   if user.is_superuser or perms.cctv.view_dailyshift or perms.cctv.view_report   or perms.cctv.view_cash_desk_transaction or perms.cctv.view_cash_desk_error  or perms.cctv.view_poker_payout or  perms.cctv.view_counterfait or perms.cctv.view_dailyexeption  %}
+        <li class="nav-header"> MODULES </li> 
+        {% if perms.cctv.view_dailyshift%}          
+        <li class="nav-item">
+          <a href={% url 'daily_shift-list' %} class="nav-link">
+            <i class="nav-icon bi bi bi-calendar-day fs-5"></i>    
+            <p>Daily Shift Report </p>
+          </a>
+        </li> 
+         {%endif%}
+         {% if perms.cctv.view_report%}    
+        <li class="nav-item">
+          <a href={%  url 'report-list'  %} class="nav-link">
+            <i class="nav-icon bi bi-file-earmark-person fs-5"></i>
+             <p> Reports</p>
+          </a>
+        </li> 
+        {%endif%}
+        {%if perms.cctv.view_cash_desk_transaction%}
+        <li class="nav-item">
+          <a href={% url 'cash_desk_transactions-list' %} class="nav-link">
+            <i class="nav-icon bi  bi-cash fs-5"></i>            
+            <p>Cash Desk Transactions</p>
+          </a>
+        </li>    
+      {%endif%}
+      {%if perms.cctv.view_cash_desk_error%}
+        <li class="nav-item">
+          <a href={% url 'cash_desk_error-list' %} class="nav-link">
+            <i class="nav-icon bi bi-pc-display-horizontal fs-5"></i>
+            <p> Cash Desk Error </p>
+          </a>
+        </li>  
+        {%endif%}
+        {%if perms.cctv.view_poker_payout %}
+        <li class="nav-item">
+          <a href={% url 'poker_payouts-list' %} class="nav-link">
+            <i class="nav-icon bi bi-suit-spade fs-5"></i>
+            <p>  Poker Payouts </p>
+          </a>
+        </li>  
+         {%endif%}
+        {%if perms.cctv.view_report%}
+        <li class="nav-item">
+          <a href={% url 'report_synopsis-list' %} class="nav-link">
+            <i class="nav-icon bi bi bi-search fs-5"></i>
+            <p>  Report Synopsis </p>
+          </a>
+        </li> 
+        {%endif%}
+          {%if perms.cctv.view_counterfait %}
+        <li class="nav-item">
+          <a href={% url 'counterfeit-list' %} class="nav-link">
+            <i class="nav-icon bi bi-bank fs-5"></i>
+            <p>  Counterfeit Money </p>
+          </a>
+        </li>  
+             {%endif%}
+
+         {%if perms.cctv.view_dailyexeption %}   
+        <li class="nav-item">
+          <a href={% url 'daily_exeption-list' %} class="nav-link">
+            <i class="nav-icon bi bi-ban fs-5"></i>
+            <p> Daily Exceptions </p>
+          </a>
+        </li> 
+        {% endif%}  
+        <!--
+        {%if perms.cctv.view_supplies%}
+        <li class="nav-item">
+          <a href={% url 'supplies_list' %} class="nav-link">
+            <i class="nav-icon bi bi-textarea-resize fs-4"></i>
+            <p> Supplies Form </p>
+          </a>
+        </li>  
+        {%endif%}  
+      
+      -->
+      {%endif%}
+
+       
+        {% if user.is_superuser  or perms.cctv.view_location or perms.cctv.view_customer or   perms.cctv.slot_machine or perms.cctv.view_department or perms.cctv.view_position or perms.cctv.view_sex or perms.cctv.view_race or perms.cctv.view_reason or perms.cctv.view_duration or perms.cctv.view_reporttype or perms.cctv.view_reporttitle or perms.cctv.view_area or perms.cctv.view_reportorigination or perms.cctv.view_areacashier  or perms.cctv.view_accounttype or perms.cctv.view_token  or perms.cctv.view_pokercombination or perms.cctv.view_pokertable %}
+          <li class="nav-header">SETTINGS</li>
+      
+      
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="bi bi-card-checklist fs-5"></i>
+              <p>
+                CATALOG LIST
+                <i class="nav-arrow bi bi-chevron-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              {%if perms.cctv.view_location%}
+              <li class="nav-item">
+                <a href={% url 'location-list' %} class="nav-link">                
+                  <p>Branch</p>
+                </a>
+              </li>
+              {%endif%}
+              {%if perms.cctv.view_customer%} 
+              <li class="nav-item">
+                <a href={% url 'customer-list' %} class="nav-link">                
+                  <p>Customers</p>
+                </a>
+              </li>
+              {%endif%}
+              {%if perms.cctv.view_department or perms.cctv.view_position %} 
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                 
+                  <p>
+                    Catalog StaffList
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  {%if perms.cctv.view_department%} 
+                  <li class="nav-item">
+                    <a  href={% url 'department-list' %} class="nav-link">                
+                      <p>Department</p>
+                    </a>
+                  </li>
+                  {%endif%}
+                  {%if perms.cctv.view_position%} 
+                  <li class="nav-item">
+                    <a  href={% url 'position-list' %} class="nav-link">                
+                      <p>Position</p>
+                    </a>
+                  </li>
+                  {%endif%}
+                  </ul>
+                </li>
+                {%endif%}
+                {%if perms.cctv.view_sex or perms.cctv.view_race or perms.cctv.view_reason or perms.cctv.view_duration %} 
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                   
+                    <p>
+                      Catalog BlackList
+                      <i class="nav-arrow bi bi-chevron-right"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    {%if perms.cctv.view_sex%} 
+                    <li class="nav-item">
+                      <a href={% url 'sex-list' %} class="nav-link">                
+                        <p>Sex</p>
+                      </a>
+                    </li>
+                    {%endif%}
+                    {%if perms.cctv.view_race%} 
+                    <li class="nav-item">
+                      <a href={% url 'race-list' %} class="nav-link">                
+                        <p>Race</p>
+                      </a>
+                    </li>
+                    {%endif%}
+                    {%if perms.cctv.view_reason%} 
+                    <li class="nav-item">
+                      <a href={% url 'reason-list' %} class="nav-link">                
+                        <p>Reason</p>
+                      </a>
+                    </li>
+                    {%endif%}
+                    {%if perms.cctv.view_duration%} 
+                    <li class="nav-item">
+                      <a href={% url 'duration-list' %} class="nav-link">                
+                        <p>Duration</p>
+                      </a>
+                    </li>
+                    {%endif%}
+                    </ul>
+                  </li>
+                 {%endif%}
+                 {% if perms.cctv.view_reporttype or perms.cctv.view_reporttitle or perms.cctv.view_area or perms.cctv.view_reportorigination  %}
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                     
+                      <p>
+                        Catalog  Reports
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      {% if perms.cctv.view_reporttype %}
+                      <li class="nav-item">
+                        <a href={% url 'report_type-list'  %} class="nav-link">                
+                          <p>Reports Type</p>
+                        </a>
+                      </li>
+                      {%endif%}
+                      {% if perms.cctv.view_reporttitle %}
+                      <li class="nav-item">
+                        <a href={% url 'report_title-list' %} class="nav-link">                
+                          <p>Reports Title</p>
+                        </a>
+                      </li>
+                      {%endif%}
+                      {% if perms.cctv.view_area %}
+                      <li class="nav-item">
+                        <a href={% url 'area-list' %}  class="nav-link">                
+                          <p>Casino Location</p>
+                        </a>
+                      </li>
+                      {%endif%}
+                      {% if perms.cctv.view_reportorigination %}
+                      <li class="nav-item">
+                        <a href={% url 'origination-list' %} class="nav-link">                
+                          <p>Reports Origination</p>
+                        </a>
+                      </li>
+                          {%endif%}
+                      </ul>
+                    </li>
+                     {%endif%}
+                     {% if perms.cctv.view_areacashier  or perms.cctv.view_accounttype or perms.cctv.view_token or perms.cctv.view_slot_machine %}
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                       
+                        <p>
+                          Catalog CD Transaction
+                          <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                        {% if perms.cctv.view_areacashier %}
+                        <li class="nav-item">
+                          <a href={% url 'cashier_area-list' %} class="nav-link">                
+                            <p>Cashiers Location</p>
+                          </a>
+                        </li>
+                         {%endif%}
+                         {% if perms.cctv.view_accounttype %}
+                         
+                        <li class="nav-item">
+                          <a href= {%  url 'account_type-list' %} class="nav-link">                
+                            <p>Accounts Type</p>
+                          </a>
+                        </li>
+                        {%endif%}
+                        {% if perms.cctv.view_token %}
+                        <li class="nav-item">
+                          <a  href={% url 'token-list' %} class="nav-link">
+                          
+                            <p>Tokens</p>
+                          </a>
+                        </li>
+                       {%endif%}
+                       {% if perms.cctv.view_slot_machine %}
+                         
+                       <li class="nav-item">
+                         <a href= {%  url 'machine-list' %} class="nav-link">                
+                           <p>Slot Machine</p>
+                         </a>
+                       </li>
+                       {%endif%}
+                        </ul>
+                      </li>
+                        {%endif%}
+                        {% if perms.cctv.view_cash_desk_error%}
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                         
+                          <p>
+                            Catalog CD Eror
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          {% if perms.cctv.view_cash_desk_error%}
+                          <li class="nav-item">
+                            <a href={% url 'cash_desk_error_type-list' %} class="nav-link">                
+                              <p>Cash Desk Error Type</p>
+                            </a>
+                          </li>
+                          {%endif%}
+                          </ul>
+                        </li>
+                          {%endif%}
+                          {% if perms.cctv.view_dailyexeption%}
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                             
+                              <p>
+                                Catalog Daily Exeption
+                                <i class="nav-arrow bi bi-chevron-right"></i>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                              {% if perms.cctv.view_dailyexeption%}
+                              <li class="nav-item">
+                                <a href={% url 'exeption_type-list' %} class="nav-link">                
+                                  <p>Exeption Type</p>
+                                </a>
+                              </li>
+                              {%endif%}
+                              </ul>
+                            </li>
+                              {%endif%}
+                        {% if perms.cctv.view_pokercombination or perms.cctv.view_pokertable %}  
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">
+                           
+                            <p>
+                              Catalog Poker
+                              <i class="nav-arrow bi bi-chevron-right"></i>
+                            </p>
+                          </a>
+                          <ul class="nav nav-treeview">
+                            {% if perms.cctv.view_pokercombination%}
+                            <li class="nav-item">
+                              <a href={% url 'poker_combination-list' %} class="nav-link">                
+                                <p>Poker Combination</p>
+                              </a>
+                            </li>
+                            {%endif%}
+                            {% if perms.cctv.view_pokertable%}
+                            <li class="nav-item">
+                              <a href={% url 'poker_table-list'%} class="nav-link">                
+                                <p>Poker Table</p>
+                              </a>
+                            </li>
+                            {%endif%}
+                            </ul>
+                          </li>
+                         {%endif%}
+                         {% if perms.cctv.view_dailyshift%}
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                             
+                              <p>
+                                Catalog Daily Shift
+                                <i class="nav-arrow bi bi-chevron-right"></i>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview" >
+                              {% if perms.cctv.view_dailyshift%}
+                              <li class="nav-item">
+                                <a href={% url 'shift-list' %} class="nav-link">                
+                                  <p>Shifts</p>
+                                </a>
+                              </li>
+                              {%endif%}
+                              </ul>
+                            </li>  
+                            {%endif%}        
+
+             
+            </ul>
+          </li>
+          {%endif%}
+          {% if user.is_superuser %}
+
+         <!--
+           <li class="nav-item">
+            <a href="#" class="nav-link"> <i class="bi bi-person-fill-lock"></i>
+              <p> Authentication <i class="nav-arrow bi bi-chevron-right"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+            
+              <li class="nav-item"> <a href="{% url 'user-list'%}" class="nav-link">                
+                  <p>User</p>
+                </a>
+              </li>
+             
+              </ul>
+            </li>  
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+              
+                <p>
+                  <i class="bi bi-shield-lock-fill"></i> 
+
+                  Authorization
+                  <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+              
+                <li class="nav-item">
+                  <a href="{% url 'user_profile-list' %} " class="nav-link">                
+                    <p>User Profile</p>
+                  </a>
+                </li>
+              
+               
+               
+                </ul>
+             </li>  
+               
+            -->
+           
+            <li class="nav-item ">           
+              <a href="/admin/"  class="nav-link" target="_blank">  
+                <i class="bi bi-shield-lock fs-5"></i>              
+                <p>Administration Panel</p>
+              </a>
+            </li>
+
+        <!--  
+        <li class="nav-item ">           
+            <a href={% url 'dashboard' %}  class="nav-link">  
+              <i class="nav-icon bi bi-speedometer fs-5"></i>              
+              <p>Dashboard</p>
+            </a>
+          </li>
+        -->
+
+        
+          {%endif%}
+         
+       
+
+      </ul>
+      
+    </nav>
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js" integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script> <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+  <script src="{% static 'lib/js/adminlte.js' %}"></script> 
+  <script>
+      const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+      const Default = {
+          scrollbarTheme: "os-theme-light",
+          scrollbarAutoHide: "leave",
+          scrollbarClickScroll: true,
+      };
+      document.addEventListener("DOMContentLoaded", function() {
+          const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+          if (
+              sidebarWrapper &&
+              typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+          ) {
+              OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                  scrollbars: {
+                      theme: Default.scrollbarTheme,
+                      autoHide: Default.scrollbarAutoHide,
+                      clickScroll: Default.scrollbarClickScroll,
+                  },
+              });
+          }
+      });
+  </script> <!--end::OverlayScrollbars Configure--> <!-- OPTIONAL SCRIPTS --> <!-- sortablejs -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+   const currentUrl = window.location.href; // Obtiene la URL actual
+   const navLinks = document.querySelectorAll(".nav-link");
+
+   navLinks.forEach((link) => {
+     const linkHref = link.getAttribute("href");
+     
+     // Verifica si la URL actual coincide con el enlace
+     if (linkHref && currentUrl.includes(linkHref)) {
+       // Añade la clase 'active' al enlace actual
+       link.classList.add("active");
+
+       // Abre todos los menús padres del enlace actual
+       let parent = link.closest(".nav-item");
+       while (parent) {
+         if (parent.classList.contains("nav-item")) {
+           parent.classList.add("menu-open");
+         }
+         parent = parent.parentElement.closest(".nav-item");
+       }
+     }
+   });
+ });
+ </script>
+</aside>
+
+ 

@@ -1,0 +1,213 @@
+{% extends 'base.html'%}
+ {% block title %}
+  CCTV @ CRC | Counterfeit
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">COUNTERFEIT MONEY</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                   Counterfeit Money
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+      <div class="card-header">
+      
+          <div class="container-fluid"> 
+            <div class="row">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                {% if perms.cctv.add_counterfait %}
+                <a  class="btn btn-primary mb-2 bi-plus-lg"  href="{% url 'counterfeit-create' %}"   > Add Counterfeit </a >
+                  {%endif%}
+                <a  class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'counterfeit-by-day' %}" > Find by Date </a >   
+              </div>
+       
+          </div>
+
+          </div>
+
+
+      </div>
+
+
+  <div style="overflow-x: auto;">
+  <div class="card-body">
+   
+    <table class="table table-bordered table-hover  table-sm" id="counterfaitT" >
+      <thead>
+        <tr class="text-middle align-middle">
+          <th  class=" d-none d-md-table-cell text-center align-middle"> #</th>
+          <th  class="text-center align-middle">Date</th>
+          <th  class="text-center align-middle">Location</th>
+          <th  class="text-center align-middle">TTD</th>         
+          <th  class="text-center align-middle">USD</th>                 
+          <th  class="d-none d-md-table-cell text-center align-middle">EURO</th> 
+          <th  class="d-none d-md-table-cell text-center align-middle"> GBP</th>
+          <th  class="text-center align-middle">Serial Number</th>
+          <th  class="text-center align-middle">Report #</th>     
+          <th  class="text-center align-middle">Cashier</th> 
+          <th  class="text-center align-middle">Customer</th>   
+          <th class="text-center align-middle">Notes</th>  
+          <th class="text-center align-middle"> Branch </th>
+        <th class="text-center align-middle"> Options </th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      </tbody>
+    </table>
+ 
+  </div>
+   </div>
+
+
+  
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+<script>
+
+$(document).ready(function () {
+
+  $.fn.dataTable.moment('DD-MM-YYYY');
+
+  var  counterfaitT=$('#counterfaitT').DataTable(
+    {
+      serverSide:true,
+      responsive:true,
+      processing:true,
+      searchdealay:500,
+      language: {
+           processing: "<span>Loading data...</span>"
+        },
+      columnDefs: [{ targets: [0,5,6,7,10,11,12], className: "d-none d-md-table-cell" }],
+      order: [[1, 'desc'],[0, 'desc']] ,
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+},
+ajax:{
+        url:"{% url 'counterfeit-list' %}",
+        type:'GET',
+        data:function(d){
+        d.start = d.start || 0;
+        d.length = d.length || 10;
+        },
+      },
+
+      columns: [
+               { data: "id",orderable:true,searchable:true},    
+
+               { data: "date",orderable:true,searchable:true, "render": function(data, type, row) {
+                       return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
+                      
+                   }
+               },
+              
+              
+               { data: "area_cashier",orderable:true,searchable:true},
+               { data: "tt_dolar",orderable:true,searchable:true},
+               { data: "usd_dolar",orderable:true,searchable:true },
+               { data: "euro_dolar",orderable:true,searchable:true },
+               { data: "gbp_dolar" ,orderable:true,searchable:true},
+               { data: "serial_number" ,orderable:true,searchable:true},        
+               {
+                   data: "report_nro",
+                   orderable: true,
+                   searchable: true,
+                  render: function(data, type, row) {
+                  let location = row.location;
+
+                  // Validar que location sea solo el ID (si es una URL, extraer el ID)
+                  if (location.includes("http")) {
+                      const urlParts = location.split("/"); // Dividir la URL por "/"
+                      location = urlParts[urlParts.length - 2]; // Obtener el penúltimo segmento (asumiendo que es el ID)
+                  }      
+
+                    if (data) {
+                        // Construir la URL con valores correctos
+                        const url = `/get_report_id/${data}/${location}/`;
+
+                        $.ajax({
+                            url: url,
+                            type: 'GET',
+                            success: function(response) {
+                                const reportId = response.id;
+                              
+                                const detailUrl = `/report/detail/${reportId}/`;
+
+                                const linkElement = $(`#report-${data}`);
+                                linkElement.attr('href', detailUrl);                  
+                                linkElement.attr('target', '_blank'); // Abrir en nueva pestaña
+                                  }
+                                  });
+
+                                  return `<a href="#" id="report-${data}">${data}</a>`;
+                              } else {
+                                  return `<a href="#">Not available</a>`;
+                              }
+                          }
+                      },
+               { data: "employee",orderable:true,searchable:true },     
+               { data: "customer",orderable:true,searchable:true },              
+               { data: "notes",orderable:true,searchable:true },  
+               { data: "location",orderable:true,searchable:true},
+               {
+                data: null,
+                orderable: false,
+                searchable: false,
+                render: function(data) {
+                    let actions = '<div class="btn-group">'; 
+             
+                    if (data.detail_url){
+                      actions += '<a class="btn btn-info mb-2 bi bi-folder" href="' + data.detail_url + '"> Detail</a>';
+                    }
+                              
+
+                    if (data.edit_url){
+                    actions += '<a class="btn btn-warning mb-2 bi bi-pencil-square d-none d-md-table-cell" href="' + data.edit_url + '"> Edit</a>';
+                    }
+
+                    if (data.delete_url) {
+                    actions += '<a class="btn btn-danger mb-2 bi bi-trash d-none d-md-table-cell" href="' + data.delete_url + '"> Delete</a>';
+                      }
+                  
+                    actions += '</div>';  
+                    return actions;
+                }
+                    }
+
+
+           ],
+     
+    
+  
+  
+    
+    }
+   
+  )
+});
+  </script>
+
+  {% endblock%}
+

@@ -1,0 +1,214 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Staff List 
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+      <div class="row">
+          <div class="col-sm-6">
+              <h3 class="mb-0">STAFF LIST</h3>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Staff List
+                  </li>
+              </ol>
+          </div>
+      </div> <!--end::Row-->
+  </div> <!--end::Container-->
+</div>
+ {%endblock%}
+ {%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    <div class="container-fluid"> 
+      <div class="row">
+          <div class="col-sm-6">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              {%if perms.cctv.add_staff %}
+              <a class="btn btn-primary mb-2 bi-plus-lg" href="{% url 'staff-create' %}"> Add Staff</a>
+              {%endif%}
+          </div>
+          </div>
+   </div>
+    </div>
+
+  </div>
+
+{%if object_list %}
+<div style="overflow-x: auto;">
+  <div class="card-body">
+    <table class="table table-bordered table-hover"  id="staff">
+      <thead>
+        <tr>              
+          <th class="d-none d-md-table-cell"  >Id</th>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Surname </th>          
+          <th class="d-none d-md-table-cell" >Departament</th>
+          <th class="d-none d-md-table-cell" >Position</th>
+          <th class="d-none d-md-table-cell" >Branch</th>
+          <th >Active</th>                  
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in object_list%}
+
+        <tr>  
+          <td class="d-none d-md-table-cell" >{{ object.id}}</td>  
+          <td scope="row">  <img src="{{ object.photo.url }}" class="mx-auto d-block"  style="height:3.5rem; width:3.5rem; border-radius: 20px" /></td>    
+          <td >{{ object.name}}</td>
+          <td>{{ object.surname }}</td>        
+          <td class="d-none d-md-table-cell" >{{ object.department }}</td>
+          <td class="d-none d-md-table-cell" >{{ object.position }}</td>
+          <td class="d-none d-md-table-cell" >{{ object.location }}</td>
+         
+          <td > 
+            {% if object.active %}  
+          Active
+              {% else %}
+          Inactive
+            {% endif%}
+
+       </td>          
+         
+        
+          <td class="text-end align-baseline">
+            <div class="btn-group">
+              {% if perms.cctv.view_staff %}
+              <a class="btn  btn-info mb-2 bi bi-folder"  href="{% url 'staff-detail' object.id %}"> Detail</a>
+              {%endif%}
+              {%if perms.cctv.change_staff %}
+            <a class="d-none d-md-table-cell btn btn-warning mb-2" href="{% url 'staff-update' object.id %}" > Edit</a>
+            {%endif%}
+            {%if perms.cctv.delete_staff %}
+            <a class="d-none d-md-table-cell btn btn-danger mb-2" href="{% url 'staff-delete' object.id %}" > Delete</a>
+            {%endif%}
+            </div>
+           
+          </td>
+        </tr>
+
+        {% endfor%}
+      </tbody>
+      <tfoot>
+        <tr>
+
+        <td class="d-none d-md-table-cell" scope="col" data-dt-order="disable" >ID</td>
+        <td  scope="col" data-dt-order="disable" ></td>
+        <td scope="col" data-dt-order="disable">Name</td>
+        <td scope="col" data-dt-order="disable" >Surname</td>
+        <td class="d-none d-md-table-cell" scope="col" data-dt-order="disable" >Department</td>
+        <td class="d-none d-md-table-cell" scope="col" data-dt-order="disable" >Position</td>
+        <td class="d-none d-md-table-cell" scope="col" data-dt-order="disable">Branch</td>
+        
+
+        <td scope="col" data-dt-order="disable" ></td>
+        
+      </tr>
+      </tfoot>
+    </table>
+  </div> 
+</div>
+{% else %}
+<div class="card-body">
+  <label class="card-title" style="color:red;">No Staff yet</label>
+</div>
+
+{%endif%}
+</div>
+
+
+<script>
+    var staff = $('#staff').DataTable(
+                       {
+                                         
+                    
+                  /*dom: 'lifrtip',*/
+                        order: [[0, 'asc']],
+                    columnDefs: [
+                      { orderable: false,targets:[1,8]},
+                      { searchable: false,targets:[1,8]},
+                      
+                     {
+                    targets:7,
+                    data: "active",
+                    render: function(data, type, row, meta) { 
+                       
+                    if  (data=='Active' ) {
+                      return '<i class="bi bi-check-square text-right lg" style="color:green;">Active</i>';
+                      } 
+                    return  '<i class="bi bi-check-square-fill text-right lg" style="color:red;">Inactive</i>'
+                    
+                        
+                    },
+
+                  },
+                  
+                    ],
+                    oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+
+             },
+
+                              
+
+                    pageLength:10,  
+                    responsive:true,             
+
+                    initComplete: function () {
+
+                      var r = $('#staff tfoot tr');
+
+                          r.find('th').each(function(){
+                            $(this).css('padding', 8);
+                          });                      
+                          
+                            $('#staff thead').append(r);
+                            $('#search_0').css('text-align', 'center');
+                        
+                            
+
+                      this.api().columns([0,2,3,4,5,6,7]).every(function () {
+                      let column = this;
+                      // Create select element
+                      let select = document.createElement('select');
+                      select.classList.add('form-select');
+                      select.add(new Option(''));                      
+                      column.footer().replaceChildren(select);
+
+                      // Apply listener for user change in value
+                      select.addEventListener('change', function () {
+                      column.search(select.value, {exact: true}).draw();
+                      });
+
+                      // Add list of options
+                      column.data().unique().sort().each(function (d, j) {
+                        let option = new Option(d);
+                        option.classList.add('form-option'); // Add a custom class to each option if needed
+                        select.add(new Option(d));
+                      });
+                      });  
+
+
+} ,
+                  }
+                      
+                      
+                      
+                      );           
+
+
+  </script>
+  {% endblock%}
+

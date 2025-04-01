@@ -1,0 +1,62 @@
+{% extends 'base.html'%} {% block title %} CCTV @ CRC | Poker Payouts Detail {{ object.id }}  {% endblock %}
+
+{%block content_header%}
+<div class="app-content-header"> 
+ <div class="container-fluid"> 
+     <div class="row">
+         <div class="col-sm-6">
+        
+             <h3 class="mb-0">Poker Payouts - DETAIL</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+                 <li class="breadcrumb-item "><a  href={% url 'poker_payouts-list' %}> Poker Payouts</a></li>
+                 <li class="breadcrumb-item active" aria-current="page"> Detail </li>
+             </ol>
+         </div>
+     </div> 
+ </div> 
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+<div class="card-header">
+  
+</div>
+<div class="card-body">  
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-6">
+           
+            <div class="row text-left g-2 mb-2">
+                <H5> Date:<strong> {{ object.date|date:'d-m-Y' }} </strong></H5>
+                <h5>Time:<strong>  {{ object.time|time:"g:i A"}}</strong></h5>              
+                <h5> Table: <strong>{{ object.table }}</strong> </h5>
+                <h5> Combination: <strong> {{ object.combination }} </strong></h5>
+                <h5> Bet : <strong>  {{ object.bet }} </strong></h5>
+                <h5> Payout: <strong>  {{ object.payout }} </strong></h5>
+                <h5> Customer: <strong>  {{ object.customer }} </strong></h5>
+                <h5>  Dealer:  <strong>  {{ object.dealer }}</strong></h5>
+                <h5>  Inspector:  <strong>  {{ object.inspector}}</strong></h5>
+                <h5>  PitBoss:  <strong>  {{ object.pitboss }}</strong></h5>
+               
+                       
+                    
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<div class="card-footer">
+    <a class="btn btn-secondary" href="{% url 'poker_payouts-list'%} "><i class="bi bi-arrow-left"> </i> Back</a>
+</div>
+
+{%endblock%}

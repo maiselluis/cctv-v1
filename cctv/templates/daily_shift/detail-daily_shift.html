@@ -1,0 +1,88 @@
+{% extends 'base.html'%} {% block title %} CCTV @ CRC | Detail {{ object.token }}  {% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+ <div class="row">
+   <div class="col-sm-6">
+   <h3 class="mb-0">DAILY SHIFT - DETAIL</h3>
+   </div>
+   <div class="col-sm-6">
+   <ol class="breadcrumb float-sm-end">
+     <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+     <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'daily_shift-list' %}>Daily Shift</a> </li>
+     <li class="breadcrumb-item">DETAIL</li>
+    </ol>
+   </div>
+ </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+  <div class="card-header">
+    <nav class="app-header navbar navbar-expand ">
+
+      <div class="container-fluid d-flex justify-content-start">  
+              <label class="card-title" > Shift #{{object.id}}</label> 
+          </div>
+          
+          <div class="container-fluid d-flex justify-content-end">
+          
+            <button  class=" btn btn-outline-dark bi-filetype-pdf" onclick="openReport()">  PDF</button>
+          </div>
+   
+  </nav>   
+  </div>
+
+  <div class="card-body text-center">  
+      <div class="row justify-content-center">
+    
+    
+            
+              <div class="col-md-8">
+                <ul class="list-group list-group text-start shadow">
+                <li class="list-group-item list-hover">  <strong> Date:</strong>  {{ object.date|date:'d-m-Y' }} </li>
+                <li class="list-group-item list-hover">  <strong>Shift:</strong> {{ object.shift }}</li>                      
+                <li class="list-group-item list-hover">  <strong> Branch:</strong>  {{ object.location }} </li>
+                <li class="list-group-item list-hover">  <strong>  Supervisor:</strong>
+                {%if object.supervisor %}
+                    {{ object.supervisor }} 
+                {%endif%}
+              </li>
+                <li class="list-group-item list-hover">   <strong>Officer 1: </strong>  {%if object.officer1 %} {{ object.officer1 }} {%endif%}</li>
+                <li class="list-group-item list-hover">   <strong>  Officer 2:</strong> {%if object.officer2 %} {{ object.officer2 }} {%endif%}</li>
+                <li class="list-group-item list-hover"> <strong> Casino Open:</strong>  {{ object.casino_open|time:"g:i A" }} </li>
+                <li class="list-group-item list-hover">  <strong> Casino Close :</strong>  {{ object.casino_close|time:"g:i A" }}</li>
+                <li class="list-group-item list-hover"> <strong> USD Rate: </strong>{{ object.usd_rate }} </li>
+                <li class="list-group-item list-hover">  <strong>  EURO Rate:</strong>{{ object.euro_rate }} </li>
+                <li class="list-group-item list-hover">  <strong> GBP Rate:</strong> {{object.gbp_rate }} </li>
+                <li class="list-group-item list-hover"> <strong>Detail:</strong><textarea  class="form-control" name="contenido" rows="10" cols="50" readonly>{{  object.detail|safe }}</textarea> </li>
+                </ul>     
+              </div>
+        
+      </div>
+
+
+  </div>
+
+  <div class="card-footer">
+      <a class="btn btn-secondary" href="{% url 'daily_shift-list'%}" > <i class="bi bi-arrow-left"> </i> Back</a>
+  </div>
+</div>
+
+
+<style>
+  .list-hover:hover {
+      background-color: #e1e3e6;
+      transition: background-color 0.3s ease-in-out;
+  }
+</style>
+<script>
+  function openReport() {
+    const reportUrl =href="{% url 'daily_shift_report' object.id %}";
+    window.open(reportUrl, "_blank");
+  }
+</script>
+{%endblock%}

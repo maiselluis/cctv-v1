@@ -1,0 +1,103 @@
+{% extends 'base.html'%} 
+{% block title %} CCTV @ CRC |Daily Exception Detail {{ object.token }} 
+{% endblock %}
+
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+     <div class="row">
+         <div class="col-sm-6">
+             <h3 class="mb-0">DAILY EXCEPTION - DETAIL</h3>
+         </div>
+         <div class="col-sm-6">
+             <ol class="breadcrumb float-sm-end">
+                 <li class="breadcrumb-item"><a  href={% url 'index' %}> Home </a></li>
+                 <li class="breadcrumb-item"><a  href={% url 'daily_exeption-list' %}>  Daily Exception </a></li>
+                 <li class="breadcrumb-item active" aria-current="page">
+                   Detail
+                 </li>
+             </ol>
+         </div>
+     </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+{%block content%}
+
+<div class="card  card-primary card-outline mb-5">
+  <div class="card-header">
+    <nav class="app-header navbar navbar-expand ">
+        <div class="container-fluid">
+          <div class="container-fluid d-flex justify-content-start">
+            <h5 class="mb-0">Detail Daily Exception</h5>
+        </div>
+      <!-- 
+        <div class="container-fluid d-flex justify-content-end">
+        
+          <a  class=" btn btn-outline-dark bi-filetype-pdf"  href="#"   >  PDF </a >
+        </div>
+      -->
+     
+      </div>
+  </nav>      
+  
+</div>
+
+<div class="card-body text-center">  
+          <div class="row justify-content-center">
+              
+              <div class="col-md-8">
+                
+                <ul class="list-group list-group text-start shadow">
+                      
+                      
+                    <li  class="list-group-item list-hover">  <strong> Date:</strong> {{ daily_exeption.date|date:'d-m-Y' }} </li>                    
+                    <li  class="list-group-item list-hover"> <strong>Exception Type: </strong> {{ daily_exeption.exception_type }} </li>
+                    <li  class="list-group-item list-hover">  <strong> Employee: </strong>  {{ daily_exeption.employee }} ({{ daily_exeption.employee_id}}) </li>
+                    <li  class="list-group-item list-hover"> <strong>Time In: </strong> 
+                      {% if daily_exeption.daily_from %}
+                        {{ daily_exeption.daily_from|time:"g:i A" }}
+                        {%  endif %}
+
+                       
+                    </li>
+                      <li  class="list-group-item list-hover"><strong> Time Out:   </strong>
+                        {% if daily_exeption.daily_to %}
+                        {{ daily_exeption.daily_to|time:"g:i A" }}
+                        {% endif%}
+                      </li>
+                    <!--  <h5>   Total Hours : <strong>  {{ daily_exeption.total_hours }} </strong></h5>
+                      <h5>   Old Shift : <strong>  {{ daily_exeption.old_shift }} </strong></h5>
+                      <h5>   New Shift : <strong>  {{ daily_exeption.new_shift }} </strong></h5>-->
+                      
+                      <li  class="list-group-item list-hover"> <strong> Detail : </strong>
+                        {% if daily_exeption.detail  %}             
+                      </li>
+                        <li  class="list-group-item list-hover">   <p>  <textarea  class="form-control" name="contenido" rows="3" cols="10" readonly>{{ daily_exeption.detail|safe }}</textarea> </p></li>
+                     
+                      
+                        {%endif%}
+        
+                    
+                    
+                            
+                          
+                      </ul>
+              </div>
+          </div>
+
+
+</div>
+
+      <div class="card-footer">
+          <a class="btn btn-secondary" href={% url 'daily_exeption-list'%} > <i class="bi bi-arrow-left"> </i>Back</a>
+      </div>
+</div>
+<style>
+  .list-hover:hover {
+      background-color: #e1e3e6;
+      transition: background-color 0.3s ease-in-out;
+  }
+</style>
+
+{%endblock%}

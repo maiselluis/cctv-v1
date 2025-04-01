@@ -1,0 +1,280 @@
+{% extends 'base.html'%} {% block title %}
+ CCTV @ CRC | Filter Counterfeit by Date
+{% endblock %}
+{%block content_header%}
+<div class="app-content-header"> <!--begin::Container-->
+ <div class="container-fluid"> <!--begin::Row-->
+	 <div class="row">
+		 <div class="col-sm-6">
+			 <h3 class="mb-0">COUNTERFEIT MONEY - FILTER BY DATE</h3>
+		 </div>
+		 <div class="col-sm-6">
+			 <ol class="breadcrumb float-sm-end">
+				 <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+				 <li class="breadcrumb-item"><a  href={% url 'counterfeit-list' %}>  Counterfeit Money</a></li>
+				 <li class="breadcrumb-item active" aria-current="page">
+				Filter by date
+				 </li>
+
+			 </ol>
+		 </div>
+	 </div> <!--end::Row-->
+ </div> <!--end::Container-->
+</div>
+{%endblock%}
+
+{%block content%}
+
+<div class="card card-primary card-outline mb-4">
+  <div class="card-header">
+    
+    <form method="get" > 
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-end">   
+          <div  class="col-sm-auto d-flex justify-content-end"> 
+            {{ form.location}}
+           </div> 
+          <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+            <label class="card-title">{{ form.date_begin.label_tag }} </label>            
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end"> 
+        {{ form.date_begin }}
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end align-self-center">     
+          <label class="card-title">{{ form.date_end.label_tag }}</label> 
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end">     
+          {{ form.date_end }}
+        </div> 
+        <div  class="col-sm-auto">     
+          <button class="btn btn-primary " type="submit"> Find</button>               
+        
+        </div>  
+        <div class="col-sm-auto">
+                       
+          <button class="btn btn-outline-dark bi-filetype-pdf" data-url="{% url 'counterfeit_pdf' %}"   onclick="openReport(this)">PDF</button>
+        
+        </div>                              
+    
+      </div>                  
+      </div>                                                  
+      
+    </form>  
+       
+</div>
+
+   
+    <div class="card-body">  
+       
+       {% if counterfeit %}
+
+      <h2>Results:</h2>  
+           
+      <table class="table table-bordered table-hover  table-sm" id="counterfeitT" >
+          <thead>
+           <tr class="text-middle align-middle">
+               <th class="text-center align-middle">#</th>
+               <th class="text-center align-middle">Date</th>
+               <th class="text-center align-middle">Location</th>  
+               <th class="text-center align-middle">TTD</th>
+               <th class="text-center align-middle">USD</th>
+               <th class="text-center align-middle">EURO</th>
+               <th class="text-center align-middle">GBP</th>
+               <th class="text-center align-middle">Serial Number</th>
+               <th class="text-center align-middle">Report #</th>
+               <th  class="text-center align-middle">Cashier</th> 
+               <th  class="text-center align-middle">Customer</th>   
+               <th class="text-center align-middle">Notes</th>
+               <th class="text-center align-middle">Branch</th>
+           
+             </tr>
+          </thead>
+          <tbody>
+              {% for counterfeit in counterfeit %}
+    
+            <tr>
+              <th>{{ forloop.counter }}</th>
+              <td>{{ counterfeit.date|date:'d-m-Y' }}</td>
+               <td>{{ counterfeit.area_cashier }}</td>                          
+               <td>{{ counterfeit.tt_dolar }}</td>  
+               <td>{{ counterfeit.usd_dolar }}</td>    
+               <td>{{ counterfeit.euro_dolar }}</td>   
+               <td>{{ counterfeit.gbp_dolar }}</td>  
+               <td>{{ counterfeit.serial_number }}</td>
+         
+               <td>{{ counterfeit.report_nro }}</td>
+               {% if   counterfeit.employee  %}
+               <td>{{ counterfeit.employee }}</td> 
+               {% else %} 
+               <th></th>
+               {% endif%}
+               {% if counterfeit.customer %}
+               <td>{{ counterfeit.customer }}</td> 
+               {% else%}
+               <th></th>
+               {%endif%}
+               <td>{{ counterfeit.notes }}</td>  
+               <td>{{ counterfeit.location }}</td>  
+
+                <!--
+              <td class="col-sm-1">                     
+                <a class="btn btn-outline-dark mb-2 bi-printer"  href="#" > Print</a>     
+                
+              </td>
+              -->            
+            </tr>
+    
+          
+            {% endfor %}
+           
+          </tbody>
+          <tfoot>
+            <tr>
+                <th>Total</th>
+                <th colspan="2"></th>
+                
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>                
+                <th colspan="6"></th>
+                
+                
+               
+                
+            </tr>
+        </tfoot>
+    
+        </table>
+       {%else%}
+       <li>No  Counterfeit betwen days found</li>
+       {%endif%}
+   
+    </div>
+    
+    <div class="card-footer">
+      
+      <a class="btn btn-secondary mb-2 bi-chevron"  href="{% url 'counterfeit-list' %}" ><i class="bi bi-arrow-left"> </i> Back</a> 
+           
+       
+    </div>
+    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/datetime-moment.js"></script>
+    <script>
+
+      $(document).ready(function () {
+       // Inicializar DataTable
+       var table = $('#counterfeitT').DataTable({
+        "order": [[1, 'desc']] ,
+         oLanguage: {
+                         oPaginate: {
+                           sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                           sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                           sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                           sLast: '<i class="fas fa-angle-double-left"></i> Last',
+   
+                         }
+                     },
+     
+     columnDefs: [
+
+     { 
+                targets: 1, 
+                render: function(data, type, row) {
+                    if (type === 'sort') {
+                       
+                        let parts = data.split('-'); 
+                        return new Date(parts[2], parts[1] - 1, parts[0]).getTime(); 
+                    }
+                    return data; 
+                }
+            },
+        
+         
+     //   {
+   //      orderable: false,targets:[10]
+   //    },
+   //    { 
+   //      searchable: false,targets:[10]
+      //   },
+           
+       ],
+   
+   
+           footerCallback: function (row, data, start, end, display) {
+               var api = this.api();
+   
+               // Función para convertir a número
+               var intVal = function (i) {
+                   return typeof i === 'string'
+                       ? i.replace(/[\$,]/g, '') * 1
+                       : typeof i === 'number'
+                       ? i
+                       : 0;
+               };
+   
+               // Calcular totales por columna
+               var totalUSD = api
+                   .column(4)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               var totalEuro = api
+                   .column(5)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               var totalTT = api
+                   .column(3)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+              
+ 
+              var totalGBP = api
+                   .column(6)
+                   .data()
+                   .reduce(function (a, b) {
+                       return intVal(a) + intVal(b);
+                   }, 0);
+   
+               // Mostrar totales en el footer
+               $(api.column(3).footer()).html(totalTT.toFixed(2));
+               $(api.column(4).footer()).html(totalUSD.toFixed(2));   
+               $(api.column(5).footer()).html(totalEuro.toFixed(2));               
+               $(api.column(6).footer()).html(totalGBP.toFixed(2));
+           },
+       });
+   });
+        </script>
+
+<script>
+  function openReport(button) {
+
+const baseUrl = button.getAttribute('data-url');
+
+
+const dateBegin = document.querySelector('[name="date_begin"]').value;
+const dateEnd = document.querySelector('[name="date_end"]').value;
+const location = document.querySelector('[name="location"]').value;
+
+
+const fullUrl = `${baseUrl}?location=${location}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`;
+
+
+window.open(fullUrl, '_blank');
+}
+
+ </script>
+
+
+   
+{% endblock %}

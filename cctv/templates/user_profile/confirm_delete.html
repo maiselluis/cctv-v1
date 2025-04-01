@@ -1,0 +1,26 @@
+{% extends 'base.html'%} {% block title %}
+ CCTV @ CRC | Delete User Profile
+{% endblock %}
+
+{%block content_header%}
+<div class="card card-primary card-outline mb-4">
+<div class="card-header">
+	<label class="card-title">Delete User Profile</label>
+</div>
+<div class="card-body">
+	<form method="post" >
+		{% csrf_token %}
+		
+		<p>Are you sure that you want to delete <strong> "{{user_profile.user}}"? </strong></p>
+		
+			
+		<div class="card-footer">
+			<input type="submit" class="btn btn-danger" value="Delete">
+			<a href="{% url 'user_profile-list' %}" class="btn btn-secondary">Cancel</a>
+		
+		</div>
+	</form>
+</div>
+	
+</div>
+{%endblock%}
