@@ -1,0 +1,16 @@
+[
+{
+  "model": "cctv.cderrortype",
+  "pk": 1,
+  "fields": {
+    "error_type": "Under"
+  }
+},
+{
+  "model": "cctv.cderrortype",
+  "pk": 2,
+  "fields": {
+    "error_type": "Over"
+  }
+}
+]

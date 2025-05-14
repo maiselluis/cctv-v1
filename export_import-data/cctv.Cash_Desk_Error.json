@@ -1,0 +1,1712 @@
+[
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 2,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-08",
+    "time": "13:13:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1239,
+    "supervisor": 667,
+    "report": 5,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 3,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-08",
+    "time": "15:11:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 300.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1479,
+    "supervisor": 474,
+    "report": 6,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 4,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-12",
+    "time": "09:55:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1021,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1616,
+    "supervisor": 812,
+    "report": 15,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 5,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-13",
+    "time": "19:06:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 500.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1813,
+    "supervisor": 1098,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 6,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-16",
+    "time": "20:44:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 75,
+    "tt": 300.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 93,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 8,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-17",
+    "time": "02:12:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1454,
+    "supervisor": 1016,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 9,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-17",
+    "time": "02:12:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 1016,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 11,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-17",
+    "time": "05:15:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 107.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 12,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-17",
+    "time": "21:41:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1325,
+    "tt": 350.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1556,
+    "supervisor": 1251,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 13,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-18",
+    "time": "21:53:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 3,
+    "tt": 200.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1477,
+    "supervisor": 371,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 15,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-19",
+    "time": "16:55:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 600.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 876,
+    "supervisor": 371,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 16,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-19",
+    "time": "16:31:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1325,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1811,
+    "supervisor": 762,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 17,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-17",
+    "time": "17:46:00",
+    "area_cashier": 5,
+    "error_type": 1,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 199,
+    "report": 28,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 18,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-20",
+    "time": "10:03:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 1325,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1775,
+    "supervisor": 692,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 19,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-15",
+    "time": "17:07:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 200.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1479,
+    "supervisor": 667,
+    "report": 21,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 20,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-21",
+    "time": "16:16:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1034,
+    "tt": 60.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1837,
+    "supervisor": 1251,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 23,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-25",
+    "time": "15:14:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1637,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1454,
+    "supervisor": 1016,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 25,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-26",
+    "time": "20:47:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 1034,
+    "tt": 288.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1584,
+    "supervisor": 692,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 26,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-27",
+    "time": "16:16:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 75,
+    "tt": 500.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1695,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 28,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-29",
+    "time": "01:08:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1695,
+    "supervisor": 1302,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 30,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-30",
+    "time": "09:06:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1695,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 31,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-23",
+    "time": "13:58:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1168,
+    "tt": 250.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 812,
+    "supervisor": 812,
+    "report": 33,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 32,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-30",
+    "time": "17:40:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 600.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 812,
+    "report": 45,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 33,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-31",
+    "time": "16:36:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 72.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1596,
+    "supervisor": 1098,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 34,
+  "fields": {
+    "location": 2,
+    "date": "2025-01-31",
+    "time": "18:08:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1813,
+    "supervisor": 1098,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 35,
+  "fields": {
+    "location": 1,
+    "date": "2025-01-28",
+    "time": "20:53:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1168,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1239,
+    "supervisor": 199,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 37,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-01",
+    "time": "08:46:00",
+    "area_cashier": 5,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 2500.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1331,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 38,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-01",
+    "time": "17:48:00",
+    "area_cashier": 3,
+    "error_type": 2,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 1016,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 41,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-04",
+    "time": "07:36:00",
+    "area_cashier": 6,
+    "error_type": 2,
+    "duty_manager": 1637,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1596,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 42,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-04",
+    "time": "14:28:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 344,
+    "report": 52,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 43,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-04",
+    "time": "18:16:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1168,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 344,
+    "report": 53,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 44,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-05",
+    "time": "22:03:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1021,
+    "tt": 210.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 474,
+    "report": 58,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 45,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-04",
+    "time": "20:40:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 1168,
+    "tt": 200.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 344,
+    "report": 54,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 46,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-08",
+    "time": "23:39:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1637,
+    "tt": 140.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1596,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 47,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-07",
+    "time": "02:50:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 500.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 474,
+    "report": 60,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 48,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-10",
+    "time": "18:45:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 3,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1813,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 49,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-08",
+    "time": "01:00:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1026,
+    "supervisor": 344,
+    "report": 63,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 50,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-10",
+    "time": "17:42:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 38,
+    "tt": 600.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 199,
+    "report": 66,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 51,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-09",
+    "time": "23:00:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 967,
+    "supervisor": 667,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 52,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-11",
+    "time": "14:24:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 3,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 53,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-11",
+    "time": "21:41:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 75,
+    "tt": 200.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 876,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 54,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-13",
+    "time": "04:00:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1596,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 56,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-14",
+    "time": "19:40:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 3,
+    "tt": 40.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 371,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 59,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-13",
+    "time": "05:36:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1596,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 60,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-16",
+    "time": "07:15:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1034,
+    "tt": 80.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 371,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 63,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-18",
+    "time": "18:10:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 75,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 371,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 64,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-18",
+    "time": "20:48:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 75,
+    "tt": 99.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 371,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 65,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-19",
+    "time": "16:08:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 344,
+    "supervisor": 199,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 67,
+  "fields": {
+    "location": 5,
+    "date": "2025-02-22",
+    "time": "21:30:00",
+    "area_cashier": 3,
+    "error_type": 2,
+    "duty_manager": 1255,
+    "tt": 30.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1811,
+    "supervisor": 762,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 68,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-23",
+    "time": "16:45:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1034,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1813,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 69,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-24",
+    "time": "17:45:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1637,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 344,
+    "supervisor": 474,
+    "report": 91,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 70,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-23",
+    "time": "02:59:00",
+    "area_cashier": 5,
+    "error_type": 2,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 812,
+    "supervisor": 812,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 71,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-26",
+    "time": "19:59:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 50.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1813,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 73,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-27",
+    "time": "16:39:00",
+    "area_cashier": 3,
+    "error_type": 2,
+    "duty_manager": 3,
+    "tt": 80.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 1016,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 74,
+  "fields": {
+    "location": 5,
+    "date": "2025-02-27",
+    "time": "00:50:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 1255,
+    "tt": 151.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1556,
+    "supervisor": 1251,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 75,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-19",
+    "time": "18:23:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1189,
+    "supervisor": 199,
+    "report": 82,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 76,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-27",
+    "time": "01:35:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1168,
+    "tt": 70.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1616,
+    "supervisor": 199,
+    "report": 94,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 79,
+  "fields": {
+    "location": 1,
+    "date": "2025-02-23",
+    "time": "13:57:00",
+    "area_cashier": 5,
+    "error_type": 2,
+    "duty_manager": 1021,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 812,
+    "supervisor": 812,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 80,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-02",
+    "time": "05:40:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 876,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 82,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-02",
+    "time": "02:29:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 876,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 83,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-03",
+    "time": "09:37:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 71.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 84,
+  "fields": {
+    "location": 2,
+    "date": "2025-02-03",
+    "time": "21:48:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 71.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 1302,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 85,
+  "fields": {
+    "location": 5,
+    "date": "2025-03-01",
+    "time": "05:25:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 10,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1556,
+    "supervisor": 692,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 86,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-09",
+    "time": "02:57:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 1016,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 87,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-07",
+    "time": "14:00:00",
+    "area_cashier": 5,
+    "error_type": 2,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1189,
+    "supervisor": 1189,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 89,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-21",
+    "time": "16:16:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 10,
+    "tt": 60.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1837,
+    "supervisor": 1251,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 90,
+  "fields": {
+    "location": 5,
+    "date": "2025-01-21",
+    "time": "16:16:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 10,
+    "tt": 60.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1837,
+    "supervisor": 1251,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 91,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-10",
+    "time": "17:21:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 371,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 92,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-10",
+    "time": "21:57:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 300.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1814,
+    "supervisor": 371,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 93,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-09",
+    "time": "16:37:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1026,
+    "supervisor": 199,
+    "report": 110,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 94,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-14",
+    "time": "13:28:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1189,
+    "supervisor": 812,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 95,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-13",
+    "time": "23:33:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1021,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1479,
+    "supervisor": 474,
+    "report": 118,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 96,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-15",
+    "time": "21:49:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 75,
+    "tt": 4500.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1543,
+    "supervisor": 1016,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 97,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-16",
+    "time": "18:13:00",
+    "area_cashier": 5,
+    "error_type": 2,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 812,
+    "supervisor": 812,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 98,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-20",
+    "time": "23:25:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 38,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1239,
+    "supervisor": 667,
+    "report": null,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 99,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-24",
+    "time": "19:23:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1021,
+    "tt": 1000.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 344,
+    "supervisor": 344,
+    "report": 140,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 100,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-24",
+    "time": "16:13:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1021,
+    "tt": 93.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 344,
+    "supervisor": 344,
+    "report": 139,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 101,
+  "fields": {
+    "location": 2,
+    "date": "2025-03-26",
+    "time": "21:36:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 759,
+    "tt": 200.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1477,
+    "supervisor": 1302,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 102,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-28",
+    "time": "01:02:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1021,
+    "tt": 90.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1851,
+    "supervisor": 344,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 103,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-30",
+    "time": "10:57:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 1021,
+    "tt": 105.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1189,
+    "supervisor": 344,
+    "report": 148,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 104,
+  "fields": {
+    "location": 1,
+    "date": "2025-03-31",
+    "time": "06:12:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1324,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1026,
+    "supervisor": 344,
+    "report": 150,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 105,
+  "fields": {
+    "location": 1,
+    "date": "2025-04-01",
+    "time": "15:32:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1021,
+    "tt": 400.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1026,
+    "supervisor": 474,
+    "report": 152,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 106,
+  "fields": {
+    "location": 1,
+    "date": "2025-04-01",
+    "time": "20:11:00",
+    "area_cashier": 5,
+    "error_type": 2,
+    "duty_manager": 1021,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 812,
+    "supervisor": 812,
+    "report": 153,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 107,
+  "fields": {
+    "location": 2,
+    "date": "2025-04-04",
+    "time": "18:06:00",
+    "area_cashier": 1,
+    "error_type": 1,
+    "duty_manager": 1034,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 93,
+    "supervisor": 1302,
+    "report": 234,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 108,
+  "fields": {
+    "location": 2,
+    "date": "2025-04-04",
+    "time": "22:17:00",
+    "area_cashier": 2,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 20.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1876,
+    "supervisor": 1016,
+    "report": 235,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 109,
+  "fields": {
+    "location": 2,
+    "date": "2025-04-04",
+    "time": "02:22:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1596,
+    "supervisor": 1016,
+    "report": 236,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 111,
+  "fields": {
+    "location": 2,
+    "date": "2025-04-08",
+    "time": "16:45:00",
+    "area_cashier": 3,
+    "error_type": 1,
+    "duty_manager": 759,
+    "tt": 855.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 93,
+    "supervisor": 1016,
+    "report": 244,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 112,
+  "fields": {
+    "location": 1,
+    "date": "2025-04-14",
+    "time": "23:59:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1021,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1239,
+    "supervisor": 667,
+    "report": null,
+    "found": false
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 114,
+  "fields": {
+    "location": 2,
+    "date": "2025-04-18",
+    "time": "04:05:00",
+    "area_cashier": 2,
+    "error_type": 2,
+    "duty_manager": 75,
+    "tt": 108.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 93,
+    "supervisor": 1302,
+    "report": 258,
+    "found": true
+  }
+},
+{
+  "model": "cctv.cash_desk_error",
+  "pk": 115,
+  "fields": {
+    "location": 1,
+    "date": "2025-04-22",
+    "time": "12:20:00",
+    "area_cashier": 1,
+    "error_type": 2,
+    "duty_manager": 1168,
+    "tt": 100.0,
+    "usd": 0.0,
+    "euro": 0.0,
+    "cashier": 1217,
+    "supervisor": 812,
+    "report": null,
+    "found": true
+  }
+}
+]

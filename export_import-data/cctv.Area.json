@@ -1,0 +1,359 @@
+[
+{
+  "model": "cctv.area",
+  "pk": 1,
+  "fields": {
+    "area": "ADMIN/HOTEL"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 2,
+  "fields": {
+    "area": "AR1"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 3,
+  "fields": {
+    "area": "AR2"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 4,
+  "fields": {
+    "area": "AREA"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 5,
+  "fields": {
+    "area": "BAR"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 6,
+  "fields": {
+    "area": "BJ"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 7,
+  "fields": {
+    "area": "BJ 1"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 8,
+  "fields": {
+    "area": "BJ 2"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 9,
+  "fields": {
+    "area": "CD"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 10,
+  "fields": {
+    "area": "CD VIP"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 11,
+  "fields": {
+    "area": "CD1"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 12,
+  "fields": {
+    "area": "CD2"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 13,
+  "fields": {
+    "area": "COUNTROOM"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 14,
+  "fields": {
+    "area": "KITCHEN"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 15,
+  "fields": {
+    "area": "LG AREA"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 16,
+  "fields": {
+    "area": "LOCKER ROOM"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 17,
+  "fields": {
+    "area": "MAINBANK"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 18,
+  "fields": {
+    "area": "PARKING LOT"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 19,
+  "fields": {
+    "area": "PK1"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 20,
+  "fields": {
+    "area": "PK10"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 21,
+  "fields": {
+    "area": "PK11"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 22,
+  "fields": {
+    "area": "PK12"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 23,
+  "fields": {
+    "area": "PK2"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 24,
+  "fields": {
+    "area": "PK3"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 25,
+  "fields": {
+    "area": "PK4"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 26,
+  "fields": {
+    "area": "PK5"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 27,
+  "fields": {
+    "area": "PK6"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 28,
+  "fields": {
+    "area": "PK7"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 29,
+  "fields": {
+    "area": "PK8"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 30,
+  "fields": {
+    "area": "PK9"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 31,
+  "fields": {
+    "area": "PUNTOBANCO"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 32,
+  "fields": {
+    "area": "RECEPTION"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 33,
+  "fields": {
+    "area": "RESTAURANT"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 34,
+  "fields": {
+    "area": "SECURITY BASE/CHECKPOINTS"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 35,
+  "fields": {
+    "area": "SLOT AREA"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 36,
+  "fields": {
+    "area": "SMOKE ROOM"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 37,
+  "fields": {
+    "area": "SPORTS BETTING"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 38,
+  "fields": {
+    "area": "STAFF ROOM"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 39,
+  "fields": {
+    "area": "STAFF SMOKING"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 40,
+  "fields": {
+    "area": "V.I.P"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 41,
+  "fields": {
+    "area": "V.I.P PARKING"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 42,
+  "fields": {
+    "area": "V.I.P ROOM"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 43,
+  "fields": {
+    "area": "VAULT"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 44,
+  "fields": {
+    "area": "Till 1"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 45,
+  "fields": {
+    "area": "Till 2"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 46,
+  "fields": {
+    "area": "Till 3"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 47,
+  "fields": {
+    "area": "Front Entrance"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 48,
+  "fields": {
+    "area": "Back Door"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 49,
+  "fields": {
+    "area": "Kitchen Access"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 50,
+  "fields": {
+    "area": "PK13"
+  }
+},
+{
+  "model": "cctv.area",
+  "pk": 51,
+  "fields": {
+    "area": "CCTV DOOR"
+  }
+}
+]

@@ -82,8 +82,15 @@
                                     {%if object.customer %}
                                      {{ object.customer }} 
                                      {%endif%}
-                                     <h5> Machine No. {{object.machine_no}}</h5>
                                     </strong></h5> 
+
+                                      <h5> Machine No.
+                                      {% if object.machine_no %}
+                                        <strong>
+                                        {{object.machine_no}}
+                                        </strong></h5>
+                                        {% endif %}
+                                   
                                     
                                     <h5> Detail: <strong>
                                         {% if   object.detail  %} 

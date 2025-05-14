@@ -1,0 +1,30 @@
+[
+{
+  "model": "cctv.reporttype",
+  "pk": 1,
+  "fields": {
+    "report_type": "Error"
+  }
+},
+{
+  "model": "cctv.reporttype",
+  "pk": 2,
+  "fields": {
+    "report_type": "Incident"
+  }
+},
+{
+  "model": "cctv.reporttype",
+  "pk": 3,
+  "fields": {
+    "report_type": "Other"
+  }
+},
+{
+  "model": "cctv.reporttype",
+  "pk": 4,
+  "fields": {
+    "report_type": "Procedure"
+  }
+}
+]

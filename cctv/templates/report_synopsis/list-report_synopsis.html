@@ -26,24 +26,28 @@
 
 <div class="card card-primary card-outline mb-4">
   <div style="overflow-x: auto;">
-        <div class="card-header">
+    <div class="card-header">
 
-          <div class="container-fluid"> 
-            <div class="row">
-                  <div class="btn-group" role="group" aria-label="Basic example">
-                    <a  class="btn btn-outline-dark bi bi-camera-video fs-5 "  href="{% url 'report_synopsis-list-cctv' %}"   > Cctv</a >
-                    <a   class="btn btn-outline-dark  bi bi-people fs-5 "  href="{% url 'report_synopsis-list-dealer' %}" > Dealer/Cashier/Attendant </a > 
-                    <a   class="btn btn-outline-dark bi bi-people fs-5 "  href="{% url 'report_synopsis-list-inspector' %}" >  Inspector/Senior</a > 
-                    <a   class="btn btn-outline-dark bi bi-people fs-5 "  href="{% url 'report_synopsis-list-pitboss' %}" > PitBoss/Supervisor</a > 
-                    <a   class="btn btn-outline-dark bi bi-briefcase fs-5 "  href="{% url 'report_synopsis-list-summary' %}" >  Summary</a > 
-                    <a   class="btn btn-outline-dark bi bi-card-heading fs-5 "  href="{% url 'report_synopsis-list-tittle' %}" > Report Title</a >
-                    <a   class="btn btn-outline-dark bi-arrow-up-square fs-5 "  href="{% url 'report_synopsis-list-overpayment' %}" >  Over Pyment</a >
-                    <a   class="btn btn-outline-dark bi bi-arrow-down-square fs-5 "  href="{% url 'report_synopsis-list-underpayment' %}" >  Under Pyment</a >
-                
-                  </div>
-            </div>
-        </div>
-        </div>
+      <div class="container-fluid"> 
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card p-3 shadow-sm">
+             <div class="btn-group d-flex flex-wrap" role="group">
+            
+                  <a  class="btn btn-outline-dark bi bi-camera-video fs-5 "  href="{% url 'report_synopsis-list-cctv' %}"   > Cctv</a >
+                  <a   class="btn btn-outline-dark  bi bi-people fs-5 "  href="{% url 'report_synopsis-list-dealer' %}" > Dealer/Cashier/Attendant </a > 
+                  <a   class="btn btn-outline-dark bi bi-people fs-5 "  href="{% url 'report_synopsis-list-inspector' %}" >  Inspector/Senior</a > 
+                  <a   class="btn btn-outline-dark bi bi-people fs-5 "  href="{% url 'report_synopsis-list-pitboss' %}" > PitBoss/Supervisor</a > 
+                  <a   class="btn btn-outline-dark bi bi-briefcase fs-5 "  href="{% url 'report_synopsis-list-summary' %}" >  Summary</a > 
+                  <a   class="btn btn-outline-dark bi bi-card-heading fs-5 "  href="{% url 'report_synopsis-list-tittle' %}" > Report Title</a >
+                  <a   class="btn btn-outline-dark bi-arrow-up-square fs-5 "  href="{% url 'report_synopsis-list-overpayment' %}" >  Over Pyment</a >
+                  <a   class="btn btn-outline-dark bi bi-arrow-down-square fs-5 "  href="{% url 'report_synopsis-list-underpayment' %}" >  Under Pyment</a >
+              
+                </div>
+              </div></div>
+          </div>
+      </div>
+    </div>
   </div>
   {%if object_list %}
   <div style="overflow-x: auto;">
@@ -56,11 +60,11 @@
           <th> No.</th>
           <th>Report Title</th> 
           <th>Origination</th>                 
-          <th>Value</th>                  
-          <th>Money Recovered </th>         
-          <th>Money Not Recovered </th>
-          <th>Money Paid</th> 
-          <th>Money Not Paid</th>     
+          <th>Value($USD)</th>                  
+          <th>Money Recovered($TT) </th>         
+          <th>Money Not Recovered($TT) </th>
+          <th>Money Paid($TT)</th> 
+          <th>Money Not Paid($TT)</th>     
           <th>Footage</th>   
              
           <th>Branch</th>                 

@@ -96,7 +96,7 @@
           {% for object in report%}
   
           <tr >
-            <td>{{ object.report_nro }}</td>
+            <td> <a href="{% url 'report-detail' object.report%}" target="_blank"  class="text-blue fw-semibold text-decoration-none">    {{ object.report_nro }} </a></td>
             <td>{{ object.date|date:'d-m-Y' }}</td>
             <td>{{ object.time|time:"g:iA" }}</td>         
             <td>{{ object.report_type }}</td> 

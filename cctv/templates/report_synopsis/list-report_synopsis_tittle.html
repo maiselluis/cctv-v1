@@ -85,11 +85,11 @@
           <th> No.</th>       
           <th>Report Title</th> 
           <th>Origination</th>                 
-          <th>Value</th>                  
-          <th>Money Recovered </th>         
-          <th>Money Not Recovered </th>
-          <th>Money Paid</th> 
-          <th>Money Not Paid</th>        
+          <th>Value($USD)</th>                  
+          <th>Money Recovered($TT) </th>         
+          <th>Money Not Recovered($TT) </th>
+          <th>Money Paid($TT)</th> 
+          <th>Money Not Paid($TT)</th>        
              
           <th>Branch</th>                 
         
@@ -221,7 +221,7 @@
                    }, 0);
    
                // Mostrar totales en el footer
-               $(api.column(4).footer()).html( '$TT '+totalValue.toFixed(2));
+               $(api.column(4).footer()).html( '$USD '+totalValue.toFixed(2));
                $(api.column(5).footer()).html('$TT '+totalMoRecov.toFixed(2));
                $(api.column(6).footer()).html('$TT '+totalMonNotRec.toFixed(2));
                $(api.column(7).footer()).html('$TT '+totalMonPaid.toFixed(2));

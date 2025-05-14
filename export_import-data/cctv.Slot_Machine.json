@@ -1,0 +1,3488 @@
+[
+{
+  "model": "cctv.slot_machine",
+  "pk": 30,
+  "fields": {
+    "name": 30
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 35,
+  "fields": {
+    "name": 35
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 40,
+  "fields": {
+    "name": 40
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 42,
+  "fields": {
+    "name": 42
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 43,
+  "fields": {
+    "name": 43
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 47,
+  "fields": {
+    "name": 47
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 63,
+  "fields": {
+    "name": 63
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 183,
+  "fields": {
+    "name": 183
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 199,
+  "fields": {
+    "name": 199
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 223,
+  "fields": {
+    "name": 223
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 246,
+  "fields": {
+    "name": 246
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 247,
+  "fields": {
+    "name": 247
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 248,
+  "fields": {
+    "name": 248
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 249,
+  "fields": {
+    "name": 249
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 250,
+  "fields": {
+    "name": 250
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 251,
+  "fields": {
+    "name": 251
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 252,
+  "fields": {
+    "name": 252
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 253,
+  "fields": {
+    "name": 253
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 254,
+  "fields": {
+    "name": 254
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 255,
+  "fields": {
+    "name": 255
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 256,
+  "fields": {
+    "name": 256
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 257,
+  "fields": {
+    "name": 257
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 258,
+  "fields": {
+    "name": 258
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 259,
+  "fields": {
+    "name": 259
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 260,
+  "fields": {
+    "name": 260
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 261,
+  "fields": {
+    "name": 261
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 262,
+  "fields": {
+    "name": 262
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 263,
+  "fields": {
+    "name": 263
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 264,
+  "fields": {
+    "name": 264
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 274,
+  "fields": {
+    "name": 274
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 275,
+  "fields": {
+    "name": 275
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 276,
+  "fields": {
+    "name": 276
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 277,
+  "fields": {
+    "name": 277
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 278,
+  "fields": {
+    "name": 278
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 279,
+  "fields": {
+    "name": 279
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 280,
+  "fields": {
+    "name": 280
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 281,
+  "fields": {
+    "name": 281
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 282,
+  "fields": {
+    "name": 282
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 283,
+  "fields": {
+    "name": 283
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 284,
+  "fields": {
+    "name": 284
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 285,
+  "fields": {
+    "name": 285
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 286,
+  "fields": {
+    "name": 286
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 287,
+  "fields": {
+    "name": 287
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 288,
+  "fields": {
+    "name": 288
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 289,
+  "fields": {
+    "name": 289
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 290,
+  "fields": {
+    "name": 290
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 291,
+  "fields": {
+    "name": 291
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 292,
+  "fields": {
+    "name": 292
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 293,
+  "fields": {
+    "name": 293
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 294,
+  "fields": {
+    "name": 294
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 295,
+  "fields": {
+    "name": 295
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 296,
+  "fields": {
+    "name": 296
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 297,
+  "fields": {
+    "name": 297
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 298,
+  "fields": {
+    "name": 298
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 299,
+  "fields": {
+    "name": 299
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 300,
+  "fields": {
+    "name": 300
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 301,
+  "fields": {
+    "name": 501
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 302,
+  "fields": {
+    "name": 502
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 303,
+  "fields": {
+    "name": 503
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 304,
+  "fields": {
+    "name": 504
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 305,
+  "fields": {
+    "name": 505
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 306,
+  "fields": {
+    "name": 506
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 307,
+  "fields": {
+    "name": 507
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 308,
+  "fields": {
+    "name": 508
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 309,
+  "fields": {
+    "name": 509
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 310,
+  "fields": {
+    "name": 510
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 311,
+  "fields": {
+    "name": 511
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 312,
+  "fields": {
+    "name": 512
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 313,
+  "fields": {
+    "name": 513
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 314,
+  "fields": {
+    "name": 514
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 315,
+  "fields": {
+    "name": 515
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 316,
+  "fields": {
+    "name": 516
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 317,
+  "fields": {
+    "name": 517
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 318,
+  "fields": {
+    "name": 518
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 319,
+  "fields": {
+    "name": 519
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 320,
+  "fields": {
+    "name": 520
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 346,
+  "fields": {
+    "name": 661
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 347,
+  "fields": {
+    "name": 301
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 348,
+  "fields": {
+    "name": 665
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 349,
+  "fields": {
+    "name": 390
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 350,
+  "fields": {
+    "name": 675
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 351,
+  "fields": {
+    "name": 497
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 352,
+  "fields": {
+    "name": 498
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 353,
+  "fields": {
+    "name": 499
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 354,
+  "fields": {
+    "name": 446
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 355,
+  "fields": {
+    "name": 447
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 356,
+  "fields": {
+    "name": 448
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 357,
+  "fields": {
+    "name": 527
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 358,
+  "fields": {
+    "name": 528
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 359,
+  "fields": {
+    "name": 312
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 360,
+  "fields": {
+    "name": 313
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 361,
+  "fields": {
+    "name": 314
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 362,
+  "fields": {
+    "name": 315
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 363,
+  "fields": {
+    "name": 341
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 364,
+  "fields": {
+    "name": 340
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 365,
+  "fields": {
+    "name": 339
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 366,
+  "fields": {
+    "name": 338
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 367,
+  "fields": {
+    "name": 337
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 368,
+  "fields": {
+    "name": 336
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 369,
+  "fields": {
+    "name": 335
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 370,
+  "fields": {
+    "name": 334
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 371,
+  "fields": {
+    "name": 660
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 372,
+  "fields": {
+    "name": 662
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 373,
+  "fields": {
+    "name": 663
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 374,
+  "fields": {
+    "name": 664
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 375,
+  "fields": {
+    "name": 659
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 376,
+  "fields": {
+    "name": 658
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 377,
+  "fields": {
+    "name": 657
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 378,
+  "fields": {
+    "name": 656
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 379,
+  "fields": {
+    "name": 655
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 380,
+  "fields": {
+    "name": 363
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 381,
+  "fields": {
+    "name": 367
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 382,
+  "fields": {
+    "name": 366
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 383,
+  "fields": {
+    "name": 460
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 384,
+  "fields": {
+    "name": 461
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 385,
+  "fields": {
+    "name": 462
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 386,
+  "fields": {
+    "name": 463
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 387,
+  "fields": {
+    "name": 459
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 388,
+  "fields": {
+    "name": 458
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 389,
+  "fields": {
+    "name": 489
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 390,
+  "fields": {
+    "name": 490
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 392,
+  "fields": {
+    "name": 491
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 394,
+  "fields": {
+    "name": 488
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 395,
+  "fields": {
+    "name": 487
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 396,
+  "fields": {
+    "name": 492
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 397,
+  "fields": {
+    "name": 361
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 398,
+  "fields": {
+    "name": 360
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 399,
+  "fields": {
+    "name": 359
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 400,
+  "fields": {
+    "name": 358
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 401,
+  "fields": {
+    "name": 354
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 402,
+  "fields": {
+    "name": 355
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 403,
+  "fields": {
+    "name": 356
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 404,
+  "fields": {
+    "name": 357
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 405,
+  "fields": {
+    "name": 333
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 406,
+  "fields": {
+    "name": 326
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 407,
+  "fields": {
+    "name": 426
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 408,
+  "fields": {
+    "name": 427
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 409,
+  "fields": {
+    "name": 323
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 410,
+  "fields": {
+    "name": 322
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 411,
+  "fields": {
+    "name": 321
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 412,
+  "fields": {
+    "name": 320
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 413,
+  "fields": {
+    "name": 441
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 414,
+  "fields": {
+    "name": 442
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 415,
+  "fields": {
+    "name": 443
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 416,
+  "fields": {
+    "name": 444
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 417,
+  "fields": {
+    "name": 445
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 418,
+  "fields": {
+    "name": 440
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 419,
+  "fields": {
+    "name": 439
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 420,
+  "fields": {
+    "name": 438
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 421,
+  "fields": {
+    "name": 437
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 422,
+  "fields": {
+    "name": 436
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 423,
+  "fields": {
+    "name": 449
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 424,
+  "fields": {
+    "name": 369
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 425,
+  "fields": {
+    "name": 351
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 426,
+  "fields": {
+    "name": 304
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 427,
+  "fields": {
+    "name": 330
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 428,
+  "fields": {
+    "name": 331
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 429,
+  "fields": {
+    "name": 332
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 430,
+  "fields": {
+    "name": 425
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 432,
+  "fields": {
+    "name": 316
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 433,
+  "fields": {
+    "name": 318
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 434,
+  "fields": {
+    "name": 327
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 435,
+  "fields": {
+    "name": 328
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 436,
+  "fields": {
+    "name": 468
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 437,
+  "fields": {
+    "name": 469
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 438,
+  "fields": {
+    "name": 470
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 439,
+  "fields": {
+    "name": 471
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 440,
+  "fields": {
+    "name": 464
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 441,
+  "fields": {
+    "name": 465
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 442,
+  "fields": {
+    "name": 466
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 443,
+  "fields": {
+    "name": 467
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 444,
+  "fields": {
+    "name": 368
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 445,
+  "fields": {
+    "name": 401
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 446,
+  "fields": {
+    "name": 404
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 447,
+  "fields": {
+    "name": 395
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 448,
+  "fields": {
+    "name": 398
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 449,
+  "fields": {
+    "name": 413
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 450,
+  "fields": {
+    "name": 414
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 451,
+  "fields": {
+    "name": 415
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 452,
+  "fields": {
+    "name": 416
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 453,
+  "fields": {
+    "name": 417
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 454,
+  "fields": {
+    "name": 418
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 455,
+  "fields": {
+    "name": 324
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 456,
+  "fields": {
+    "name": 325
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 457,
+  "fields": {
+    "name": 374
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 458,
+  "fields": {
+    "name": 375
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 459,
+  "fields": {
+    "name": 382
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 460,
+  "fields": {
+    "name": 480
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 461,
+  "fields": {
+    "name": 352
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 462,
+  "fields": {
+    "name": 353
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 463,
+  "fields": {
+    "name": 370
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 464,
+  "fields": {
+    "name": 371
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 466,
+  "fields": {
+    "name": 372
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 467,
+  "fields": {
+    "name": 373
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 468,
+  "fields": {
+    "name": 526
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 469,
+  "fields": {
+    "name": 525
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 470,
+  "fields": {
+    "name": 524
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 472,
+  "fields": {
+    "name": 523
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 473,
+  "fields": {
+    "name": 522
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 474,
+  "fields": {
+    "name": 521
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 475,
+  "fields": {
+    "name": 208
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 476,
+  "fields": {
+    "name": 209
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 477,
+  "fields": {
+    "name": 213
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 478,
+  "fields": {
+    "name": 215
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 479,
+  "fields": {
+    "name": 409
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 480,
+  "fields": {
+    "name": 11
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 481,
+  "fields": {
+    "name": 12
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 482,
+  "fields": {
+    "name": 21
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 483,
+  "fields": {
+    "name": 38
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 484,
+  "fields": {
+    "name": 62
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 485,
+  "fields": {
+    "name": 73
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 486,
+  "fields": {
+    "name": 108
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 487,
+  "fields": {
+    "name": 112
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 488,
+  "fields": {
+    "name": 13
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 489,
+  "fields": {
+    "name": 239
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 490,
+  "fields": {
+    "name": 242
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 491,
+  "fields": {
+    "name": 243
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 492,
+  "fields": {
+    "name": 245
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 493,
+  "fields": {
+    "name": 447
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 494,
+  "fields": {
+    "name": 500
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 495,
+  "fields": {
+    "name": 345
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 496,
+  "fields": {
+    "name": 346
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 497,
+  "fields": {
+    "name": 347
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 498,
+  "fields": {
+    "name": 362
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 499,
+  "fields": {
+    "name": 3652
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 500,
+  "fields": {
+    "name": 376
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 501,
+  "fields": {
+    "name": 377
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 502,
+  "fields": {
+    "name": 393
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 503,
+  "fields": {
+    "name": 394
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 504,
+  "fields": {
+    "name": 396
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 505,
+  "fields": {
+    "name": 397
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 506,
+  "fields": {
+    "name": 399
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 507,
+  "fields": {
+    "name": 400
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 508,
+  "fields": {
+    "name": 402
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 509,
+  "fields": {
+    "name": 403
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 510,
+  "fields": {
+    "name": 218
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 511,
+  "fields": {
+    "name": 616
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 512,
+  "fields": {
+    "name": 536
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 513,
+  "fields": {
+    "name": 545
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 514,
+  "fields": {
+    "name": 673
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 515,
+  "fields": {
+    "name": 156
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 516,
+  "fields": {
+    "name": 431
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 517,
+  "fields": {
+    "name": 456
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 518,
+  "fields": {
+    "name": 537
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 519,
+  "fields": {
+    "name": 405
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 520,
+  "fields": {
+    "name": 411
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 521,
+  "fields": {
+    "name": 182
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 522,
+  "fields": {
+    "name": 188
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 523,
+  "fields": {
+    "name": 666
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 524,
+  "fields": {
+    "name": 177
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 525,
+  "fields": {
+    "name": 71
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 526,
+  "fields": {
+    "name": 19
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 527,
+  "fields": {
+    "name": 534
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 528,
+  "fields": {
+    "name": 642
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 529,
+  "fields": {
+    "name": 647
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 530,
+  "fields": {
+    "name": 478
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 531,
+  "fields": {
+    "name": 229
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 532,
+  "fields": {
+    "name": 176
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 533,
+  "fields": {
+    "name": 220
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 534,
+  "fields": {
+    "name": 575
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 535,
+  "fields": {
+    "name": 550
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 536,
+  "fields": {
+    "name": 160
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 537,
+  "fields": {
+    "name": 188
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 538,
+  "fields": {
+    "name": 407
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 539,
+  "fields": {
+    "name": 387
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 540,
+  "fields": {
+    "name": 184
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 541,
+  "fields": {
+    "name": 476
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 542,
+  "fields": {
+    "name": 549
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 543,
+  "fields": {
+    "name": 641
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 544,
+  "fields": {
+    "name": 221
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 545,
+  "fields": {
+    "name": 568
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 546,
+  "fields": {
+    "name": 450
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 547,
+  "fields": {
+    "name": 478
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 548,
+  "fields": {
+    "name": 644
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 549,
+  "fields": {
+    "name": 472
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 550,
+  "fields": {
+    "name": 477
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 551,
+  "fields": {
+    "name": 495
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 552,
+  "fields": {
+    "name": 558
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 553,
+  "fields": {
+    "name": 648
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 554,
+  "fields": {
+    "name": 606
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 555,
+  "fields": {
+    "name": 590
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 556,
+  "fields": {
+    "name": 407
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 557,
+  "fields": {
+    "name": 428
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 558,
+  "fields": {
+    "name": 583
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 559,
+  "fields": {
+    "name": 348
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 560,
+  "fields": {
+    "name": 181
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 561,
+  "fields": {
+    "name": 269
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 562,
+  "fields": {
+    "name": 694
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 563,
+  "fields": {
+    "name": 388
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 564,
+  "fields": {
+    "name": 216
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 565,
+  "fields": {
+    "name": 368
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 566,
+  "fields": {
+    "name": 539
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 567,
+  "fields": {
+    "name": 475
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 568,
+  "fields": {
+    "name": 225
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 569,
+  "fields": {
+    "name": 266
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 570,
+  "fields": {
+    "name": 179
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 571,
+  "fields": {
+    "name": 169
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 572,
+  "fields": {
+    "name": 473
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 573,
+  "fields": {
+    "name": 584
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 574,
+  "fields": {
+    "name": 532
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 575,
+  "fields": {
+    "name": 653
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 576,
+  "fields": {
+    "name": 547
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 577,
+  "fields": {
+    "name": 681
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 578,
+  "fields": {
+    "name": 643
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 579,
+  "fields": {
+    "name": 180
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 580,
+  "fields": {
+    "name": 653
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 581,
+  "fields": {
+    "name": 693
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 582,
+  "fields": {
+    "name": 410
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 583,
+  "fields": {
+    "name": 202
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 584,
+  "fields": {
+    "name": 634
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 585,
+  "fields": {
+    "name": 159
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 586,
+  "fields": {
+    "name": 192
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 587,
+  "fields": {
+    "name": 273
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 588,
+  "fields": {
+    "name": 541
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 589,
+  "fields": {
+    "name": 622
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 590,
+  "fields": {
+    "name": 542
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 591,
+  "fields": {
+    "name": 546
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 592,
+  "fields": {
+    "name": 561
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 593,
+  "fields": {
+    "name": 671
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 594,
+  "fields": {
+    "name": 117
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 595,
+  "fields": {
+    "name": 307
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 596,
+  "fields": {
+    "name": 195
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 597,
+  "fields": {
+    "name": 553
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 598,
+  "fields": {
+    "name": 550
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 599,
+  "fields": {
+    "name": 451
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 600,
+  "fields": {
+    "name": 540
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 601,
+  "fields": {
+    "name": 546
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 602,
+  "fields": {
+    "name": 668
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 603,
+  "fields": {
+    "name": 544
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 604,
+  "fields": {
+    "name": 692
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 605,
+  "fields": {
+    "name": 691
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 606,
+  "fields": {
+    "name": 224
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 607,
+  "fields": {
+    "name": 532
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 608,
+  "fields": {
+    "name": 306
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 609,
+  "fields": {
+    "name": 543
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 610,
+  "fields": {
+    "name": 453
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 611,
+  "fields": {
+    "name": 650
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 612,
+  "fields": {
+    "name": 1014
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 613,
+  "fields": {
+    "name": 557
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 614,
+  "fields": {
+    "name": 552
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 615,
+  "fields": {
+    "name": 429
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 616,
+  "fields": {
+    "name": 580
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 617,
+  "fields": {
+    "name": 305
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 618,
+  "fields": {
+    "name": 565
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 619,
+  "fields": {
+    "name": 585
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 620,
+  "fields": {
+    "name": 539
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 621,
+  "fields": {
+    "name": 588
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 622,
+  "fields": {
+    "name": 589
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 623,
+  "fields": {
+    "name": 590
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 624,
+  "fields": {
+    "name": 586
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 625,
+  "fields": {
+    "name": 535
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 626,
+  "fields": {
+    "name": 536
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 627,
+  "fields": {
+    "name": 537
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 628,
+  "fields": {
+    "name": 538
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 629,
+  "fields": {
+    "name": 542
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 630,
+  "fields": {
+    "name": 541
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 631,
+  "fields": {
+    "name": 540
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 632,
+  "fields": {
+    "name": 539
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 633,
+  "fields": {
+    "name": 543
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 634,
+  "fields": {
+    "name": 544
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 635,
+  "fields": {
+    "name": 545
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 636,
+  "fields": {
+    "name": 546
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 637,
+  "fields": {
+    "name": 550
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 638,
+  "fields": {
+    "name": 549
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 639,
+  "fields": {
+    "name": 548
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 640,
+  "fields": {
+    "name": 547
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 641,
+  "fields": {
+    "name": 305
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 642,
+  "fields": {
+    "name": 306
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 643,
+  "fields": {
+    "name": 350
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 644,
+  "fields": {
+    "name": 349
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 645,
+  "fields": {
+    "name": 348
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 646,
+  "fields": {
+    "name": 307
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 647,
+  "fields": {
+    "name": 561
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 648,
+  "fields": {
+    "name": 560
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 649,
+  "fields": {
+    "name": 559
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 650,
+  "fields": {
+    "name": 564
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 651,
+  "fields": {
+    "name": 563
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 652,
+  "fields": {
+    "name": 562
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 653,
+  "fields": {
+    "name": 621
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 654,
+  "fields": {
+    "name": 622
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 655,
+  "fields": {
+    "name": 623
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 656,
+  "fields": {
+    "name": 624
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 657,
+  "fields": {
+    "name": 628
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 658,
+  "fields": {
+    "name": 627
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 659,
+  "fields": {
+    "name": 626
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 660,
+  "fields": {
+    "name": 625
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 661,
+  "fields": {
+    "name": 672
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 662,
+  "fields": {
+    "name": 673
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 663,
+  "fields": {
+    "name": 674
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 664,
+  "fields": {
+    "name": 671
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 665,
+  "fields": {
+    "name": 670
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 666,
+  "fields": {
+    "name": 669
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 667,
+  "fields": {
+    "name": 581
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 668,
+  "fields": {
+    "name": 583
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 669,
+  "fields": {
+    "name": 584
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 670,
+  "fields": {
+    "name": 566
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 671,
+  "fields": {
+    "name": 567
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 672,
+  "fields": {
+    "name": 568
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 673,
+  "fields": {
+    "name": 569
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 674,
+  "fields": {
+    "name": 571
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 675,
+  "fields": {
+    "name": 572
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 676,
+  "fields": {
+    "name": 573
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 677,
+  "fields": {
+    "name": 574
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 678,
+  "fields": {
+    "name": 578
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 679,
+  "fields": {
+    "name": 577
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 680,
+  "fields": {
+    "name": 576
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 681,
+  "fields": {
+    "name": 575
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 682,
+  "fields": {
+    "name": 687
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 683,
+  "fields": {
+    "name": 686
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 684,
+  "fields": {
+    "name": 685
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 685,
+  "fields": {
+    "name": 684
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 686,
+  "fields": {
+    "name": 683
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 687,
+  "fields": {
+    "name": 682
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 688,
+  "fields": {
+    "name": 681
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 689,
+  "fields": {
+    "name": 680
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 690,
+  "fields": {
+    "name": 681
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 691,
+  "fields": {
+    "name": 680
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 692,
+  "fields": {
+    "name": 616
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 693,
+  "fields": {
+    "name": 615
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 694,
+  "fields": {
+    "name": 603
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 695,
+  "fields": {
+    "name": 601
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 696,
+  "fields": {
+    "name": 602
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 697,
+  "fields": {
+    "name": 592
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 698,
+  "fields": {
+    "name": 591
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 699,
+  "fields": {
+    "name": 600
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 700,
+  "fields": {
+    "name": 599
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 701,
+  "fields": {
+    "name": 597
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 702,
+  "fields": {
+    "name": 596
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 703,
+  "fields": {
+    "name": 595
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 704,
+  "fields": {
+    "name": 594
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 705,
+  "fields": {
+    "name": 593
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 706,
+  "fields": {
+    "name": 605
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 707,
+  "fields": {
+    "name": 6121
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 708,
+  "fields": {
+    "name": 6121
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 709,
+  "fields": {
+    "name": 612
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 710,
+  "fields": {
+    "name": 617
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 711,
+  "fields": {
+    "name": 618
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 712,
+  "fields": {
+    "name": 619
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 713,
+  "fields": {
+    "name": 611
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 714,
+  "fields": {
+    "name": 638
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 715,
+  "fields": {
+    "name": 637
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 716,
+  "fields": {
+    "name": 629
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 717,
+  "fields": {
+    "name": 630
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 718,
+  "fields": {
+    "name": 620
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 719,
+  "fields": {
+    "name": 631
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 720,
+  "fields": {
+    "name": 632
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 721,
+  "fields": {
+    "name": 189
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 722,
+  "fields": {
+    "name": 187
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 723,
+  "fields": {
+    "name": 608
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 724,
+  "fields": {
+    "name": 607
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 725,
+  "fields": {
+    "name": 613
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 726,
+  "fields": {
+    "name": 191
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 727,
+  "fields": {
+    "name": 640
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 728,
+  "fields": {
+    "name": 272
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 729,
+  "fields": {
+    "name": 598
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 730,
+  "fields": {
+    "name": 551
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 731,
+  "fields": {
+    "name": 556
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 732,
+  "fields": {
+    "name": 633
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 733,
+  "fields": {
+    "name": 582
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 734,
+  "fields": {
+    "name": 302
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 735,
+  "fields": {
+    "name": 303
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 736,
+  "fields": {
+    "name": 190
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 737,
+  "fields": {
+    "name": 186
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 738,
+  "fields": {
+    "name": 474
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 739,
+  "fields": {
+    "name": 234
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 740,
+  "fields": {
+    "name": 217
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 741,
+  "fields": {
+    "name": 494
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 742,
+  "fields": {
+    "name": 230
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 743,
+  "fields": {
+    "name": 207
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 744,
+  "fields": {
+    "name": 533
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 745,
+  "fields": {
+    "name": 666
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 746,
+  "fields": {
+    "name": 666
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 747,
+  "fields": {
+    "name": 406
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 748,
+  "fields": {
+    "name": 389
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 749,
+  "fields": {
+    "name": 645
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 750,
+  "fields": {
+    "name": 639
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 751,
+  "fields": {
+    "name": 690
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 752,
+  "fields": {
+    "name": 178
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 753,
+  "fields": {
+    "name": 163
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 754,
+  "fields": {
+    "name": 652
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 755,
+  "fields": {
+    "name": 214
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 756,
+  "fields": {
+    "name": 210
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 757,
+  "fields": {
+    "name": 193
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 758,
+  "fields": {
+    "name": 667
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 759,
+  "fields": {
+    "name": 667
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 760,
+  "fields": {
+    "name": 222
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 761,
+  "fields": {
+    "name": 222
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 762,
+  "fields": {
+    "name": 222
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 763,
+  "fields": {
+    "name": 222
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 764,
+  "fields": {
+    "name": 635
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 765,
+  "fields": {
+    "name": 636
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 766,
+  "fields": {
+    "name": 555
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 767,
+  "fields": {
+    "name": 646
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 768,
+  "fields": {
+    "name": 168
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 769,
+  "fields": {
+    "name": 271
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 770,
+  "fields": {
+    "name": 154
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 771,
+  "fields": {
+    "name": 576
+  }
+},
+{
+  "model": "cctv.slot_machine",
+  "pk": 772,
+  "fields": {
+    "name": 579
+  }
+}
+]

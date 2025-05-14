@@ -1,0 +1,114 @@
+[
+{
+  "model": "cctv.pokertable",
+  "pk": 1,
+  "fields": {
+    "poker_table": "AR1"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 2,
+  "fields": {
+    "poker_table": "AR2"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 3,
+  "fields": {
+    "poker_table": "BJ"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 4,
+  "fields": {
+    "poker_table": "PK1"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 5,
+  "fields": {
+    "poker_table": "PK2"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 6,
+  "fields": {
+    "poker_table": "PK3"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 7,
+  "fields": {
+    "poker_table": "PK4"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 8,
+  "fields": {
+    "poker_table": "PK5"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 9,
+  "fields": {
+    "poker_table": "PK6"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 10,
+  "fields": {
+    "poker_table": "PK7"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 11,
+  "fields": {
+    "poker_table": "PK8"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 12,
+  "fields": {
+    "poker_table": "PK9"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 13,
+  "fields": {
+    "poker_table": "Pk10"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 14,
+  "fields": {
+    "poker_table": "PK11"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 15,
+  "fields": {
+    "poker_table": "PK12"
+  }
+},
+{
+  "model": "cctv.pokertable",
+  "pk": 16,
+  "fields": {
+    "poker_table": "PK13"
+  }
+}
+]

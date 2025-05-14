@@ -89,3 +89,26 @@ def enviar_notificacion_reporte(reporte):
     #resultado = send_email(asunto, mensaje_html, destinatarios)
  
     #return resultado
+def enviar_notificacion_blacklist(blacklist):
+    asunto = f"CRC@CCTV Surveillance System (Notification of the end of the Blacklist period)."
+    
+    # Formato HTML para el mensaje
+    mensaje_html = f"""
+    <html>
+   <body>        
+        <h2> <strong>The customer has expired  their assigned blacklist period</strong> </h2>
+       <p><strong> 📅  Blacklisted Date:</strong> {blacklist.date}</p>          
+       <p><strong> 👤  Customer Name:</strong>  { blacklist.name}  { blacklist.surname}</p> 
+       <p><strong> 🌍  Branch:</strong>  { blacklist.location.location}</p> 
+       <p><strong> 🛑  Reason why he(she) was blacklisted:</strong> {blacklist.reason.reason}</p>       
+       <p><strong> 📌  Blacklisted by:</strong> {blacklist.blacklistby.name} {blacklist.blacklistby.surname}</p>       
+        <p><a href="{ 'http://200.125.163.182/blacklist/update/' + str(blacklist.id) }"  style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px;">  Update Blacklisted Customer </a></p>
+    </body>
+    </html>
+    """
+   
+    destinatarios=list(get_notification_emails_by_location(blacklist.location.id))   
+    if not destinatarios:      
+        return None 
+ 
+    resultado = send_email(asunto, mensaje_html, destinatarios)

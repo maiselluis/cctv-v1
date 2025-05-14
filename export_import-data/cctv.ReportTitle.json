@@ -1,0 +1,714 @@
+[
+{
+  "model": "cctv.reporttitle",
+  "pk": 1,
+  "fields": {
+    "type_report": 1,
+    "title": "Cash Desk Error"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 2,
+  "fields": {
+    "type_report": 1,
+    "title": "Clearing Winning Bet"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 3,
+  "fields": {
+    "type_report": 1,
+    "title": "Duplicate Payment"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 4,
+  "fields": {
+    "type_report": 1,
+    "title": "Failure to Collect Losing Bets"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 5,
+  "fields": {
+    "type_report": 1,
+    "title": "Failure to Pay Winning Bets"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 6,
+  "fields": {
+    "type_report": 1,
+    "title": "Improper Payment Information"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 7,
+  "fields": {
+    "type_report": 1,
+    "title": "Incorrect Data Entry"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 8,
+  "fields": {
+    "type_report": 1,
+    "title": "Incorrect Money / Chip Change"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 9,
+  "fields": {
+    "type_report": 1,
+    "title": "Incorrect Placed Call Bet"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 10,
+  "fields": {
+    "type_report": 1,
+    "title": "Justified Claim"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 11,
+  "fields": {
+    "type_report": 1,
+    "title": "Miscalculation"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 12,
+  "fields": {
+    "type_report": 1,
+    "title": "Misclearing"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 13,
+  "fields": {
+    "type_report": 1,
+    "title": "Misdealing"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 14,
+  "fields": {
+    "type_report": 1,
+    "title": "Misplaced Dolly"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 15,
+  "fields": {
+    "type_report": 1,
+    "title": "Over Error"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 16,
+  "fields": {
+    "type_report": 1,
+    "title": "Over Payment"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 17,
+  "fields": {
+    "type_report": 1,
+    "title": "Paying Losing Bet/ Push bet"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 18,
+  "fields": {
+    "type_report": 1,
+    "title": "Taking Winning/ Push Bet"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 19,
+  "fields": {
+    "type_report": 1,
+    "title": "Under Error"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 20,
+  "fields": {
+    "type_report": 1,
+    "title": "Under Payment"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 21,
+  "fields": {
+    "type_report": 2,
+    "title": "A-5 (SUITED)/O POINT"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 22,
+  "fields": {
+    "type_report": 2,
+    "title": "Accident"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 23,
+  "fields": {
+    "type_report": 2,
+    "title": "Aggressive Behavior"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 24,
+  "fields": {
+    "type_report": 2,
+    "title": "Barred Customer"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 25,
+  "fields": {
+    "type_report": 2,
+    "title": "Barring"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 26,
+  "fields": {
+    "type_report": 2,
+    "title": "Card Marking"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 27,
+  "fields": {
+    "type_report": 2,
+    "title": "Causing Damage"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 28,
+  "fields": {
+    "type_report": 2,
+    "title": "Cheating"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 29,
+  "fields": {
+    "type_report": 2,
+    "title": "Close Watch / Suspicious Customer"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 30,
+  "fields": {
+    "type_report": 2,
+    "title": "Close Watch/Employee(Acting Suspiciously)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 31,
+  "fields": {
+    "type_report": 2,
+    "title": "Close Watch/Employee(Tip Theft)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 32,
+  "fields": {
+    "type_report": 2,
+    "title": "Column Pushing"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 33,
+  "fields": {
+    "type_report": 2,
+    "title": "Counterfeit Money"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 34,
+  "fields": {
+    "type_report": 2,
+    "title": "Ex-Employees"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 35,
+  "fields": {
+    "type_report": 2,
+    "title": "Fight"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 36,
+  "fields": {
+    "type_report": 2,
+    "title": "Fraternization with Customers"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 37,
+  "fields": {
+    "type_report": 2,
+    "title": "Incorrect Soft Count"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 38,
+  "fields": {
+    "type_report": 2,
+    "title": "Incorrect Table Closing"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 39,
+  "fields": {
+    "type_report": 2,
+    "title": "Internal Theft"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 40,
+  "fields": {
+    "type_report": 2,
+    "title": "Intoxicated Customer"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 41,
+  "fields": {
+    "type_report": 2,
+    "title": "Late Bet"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 42,
+  "fields": {
+    "type_report": 2,
+    "title": "Lost & Found"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 43,
+  "fields": {
+    "type_report": 2,
+    "title": "Machine Malfunction"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 44,
+  "fields": {
+    "type_report": 2,
+    "title": "Misinformation"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 45,
+  "fields": {
+    "type_report": 2,
+    "title": "No Spin"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 46,
+  "fields": {
+    "type_report": 2,
+    "title": "Non Player"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 47,
+  "fields": {
+    "type_report": 2,
+    "title": "Opportunist"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 48,
+  "fields": {
+    "type_report": 2,
+    "title": "Progressive Jackpot"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 49,
+  "fields": {
+    "type_report": 2,
+    "title": "Royal / Straight Flush"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 50,
+  "fields": {
+    "type_report": 2,
+    "title": "Suspicious Activity"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 51,
+  "fields": {
+    "type_report": 2,
+    "title": "Theft"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 52,
+  "fields": {
+    "type_report": 2,
+    "title": "Unjustified Claim"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 53,
+  "fields": {
+    "type_report": 2,
+    "title": "Unjustified Claim(Opportunist)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 54,
+  "fields": {
+    "type_report": 2,
+    "title": "Wrong Till Balance"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 55,
+  "fields": {
+    "type_report": 3,
+    "title": "Card Reconstruction"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 56,
+  "fields": {
+    "type_report": 3,
+    "title": "Complimentary"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 57,
+  "fields": {
+    "type_report": 3,
+    "title": "Free Bar"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 58,
+  "fields": {
+    "type_report": 3,
+    "title": "Interim Soft Count"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 59,
+  "fields": {
+    "type_report": 3,
+    "title": "Malfunction of CCTV Equipment"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 60,
+  "fields": {
+    "type_report": 3,
+    "title": "Other"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 61,
+  "fields": {
+    "type_report": 4,
+    "title": "Betting Under/Over Table Limit"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 62,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Accepting Gifts From Patrons)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 63,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Disturbing Patrons)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 64,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Gaming Violations)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 65,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Late)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 66,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Policy Infraction)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 67,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Procedural Infraction)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 68,
+  "fields": {
+    "type_report": 4,
+    "title": "Close Watch/Employee(Sleeping On Duty)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 69,
+  "fields": {
+    "type_report": 4,
+    "title": "Customer Tracking"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 70,
+  "fields": {
+    "type_report": 4,
+    "title": "Early Table Closing"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 71,
+  "fields": {
+    "type_report": 4,
+    "title": "Failure to Check Money"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 72,
+  "fields": {
+    "type_report": 4,
+    "title": "Failure to Inform CCTV"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 73,
+  "fields": {
+    "type_report": 4,
+    "title": "Failure to Show Clean Hand"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 74,
+  "fields": {
+    "type_report": 4,
+    "title": "Gaming Violations"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 75,
+  "fields": {
+    "type_report": 4,
+    "title": "Gross Lack of Procedure"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 76,
+  "fields": {
+    "type_report": 4,
+    "title": "Incorrect Order of Payment"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 77,
+  "fields": {
+    "type_report": 4,
+    "title": "Incorrect Shuffle"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 78,
+  "fields": {
+    "type_report": 4,
+    "title": "Loitering (Staff)"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 79,
+  "fields": {
+    "type_report": 4,
+    "title": "Manpower Short"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 80,
+  "fields": {
+    "type_report": 4,
+    "title": "Sleeping On Duty"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 81,
+  "fields": {
+    "type_report": 4,
+    "title": "Taking Tip From Customer"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 82,
+  "fields": {
+    "type_report": 1,
+    "title": "Incorrect Soft Count"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 83,
+  "fields": {
+    "type_report": 2,
+    "title": "Other"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 86,
+  "fields": {
+    "type_report": 4,
+    "title": "Failure to check cards."
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 87,
+  "fields": {
+    "type_report": 1,
+    "title": "Paying Wrong Customer"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 88,
+  "fields": {
+    "type_report": 2,
+    "title": "Marijuana Consumption"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 89,
+  "fields": {
+    "type_report": 4,
+    "title": "Paying out of order"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 90,
+  "fields": {
+    "type_report": 1,
+    "title": "Incorrect Money/Chip Exchange"
+  }
+},
+{
+  "model": "cctv.reporttitle",
+  "pk": 91,
+  "fields": {
+    "type_report": 2,
+    "title": "Collusion"
+  }
+}
+]

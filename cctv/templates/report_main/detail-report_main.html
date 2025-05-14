@@ -103,7 +103,7 @@
                 <p><strong>USD Rate:</strong> {{ report.usd_rate }}</p>
                 <p><strong>Euro Rate:</strong> {{ report.euro_rate }}</p>
                 <p><strong>GBP Rate:</strong> {{ report.gbp_rate }}</p> 
-                <p><strong>Value:</strong> {{ report.value_us }}</p>       
+                <p><strong>Value(US):</strong> {{ report.value_us }}</p>       
                 <p><strong>CCTV Officer :</strong> {{ report.cctv_id }} ({{ report.cctv_id_id }})</p>
                 <p><strong>Money Paid:</strong> {{ report.money_paid }}</p>
                 <p><strong>Money Not Paid:</strong> {{ report.money_not_paid }}</p>
@@ -123,7 +123,7 @@
               </p> 
               </div>
     </div>
-
+{% if report.dubbed_to    %}
     <div  class="row g-4 mb-4">
       <h1>Video List</h1>
         {% for video in videos %}
@@ -152,6 +152,8 @@
               
           {% endfor %}
       </div>
+      {% endif %}
+
   </div>
  
   

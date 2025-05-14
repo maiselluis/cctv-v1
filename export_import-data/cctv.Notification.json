@@ -1,0 +1,26 @@
+[
+{
+  "model": "cctv.notification",
+  "pk": 1,
+  "fields": {
+    "location": 1,
+    "user": 10
+  }
+},
+{
+  "model": "cctv.notification",
+  "pk": 3,
+  "fields": {
+    "location": 2,
+    "user": 29
+  }
+},
+{
+  "model": "cctv.notification",
+  "pk": 4,
+  "fields": {
+    "location": 5,
+    "user": 20
+  }
+}
+]

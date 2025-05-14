@@ -24,23 +24,27 @@
  {%block content%}
 
 <div class="card card-primary card-outline mb-4">
-      <div class="card-header">
+  <div class="card-header">
       
-          <div class="container-fluid"> 
-            <div class="row">
-              <div class="btn-group" role="group" aria-label="Basic example">
-                {% if perms.cctv.add_counterfait %}
-                <a  class="btn btn-primary mb-2 bi-plus-lg"  href="{% url 'counterfeit-create' %}"   > Add Counterfeit </a >
-                  {%endif%}
-                <a  class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'counterfeit-by-day' %}" > Find by Date </a >   
-              </div>
-       
-          </div>
+    <div class="container-fluid"> 
+      <div class="row">
+        <div class="col-md-12">
+         <div class="card p-3 shadow-sm">
+        <div class="btn-group d-flex flex-wrap" role="group">
+          {% if perms.cctv.add_counterfait %}
+          <a  class="btn btn-primary mb-2 bi-plus-lg"  href="{% url 'counterfeit-create' %}"   > Add Counterfeit </a >
+            {%endif%}
+          <a  class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'counterfeit-by-day' %}" > Find by Date </a >   
+        </div>
+    </div>
+  </div>
+ 
+    </div>
 
-          </div>
+    </div>
 
 
-      </div>
+</div>
 
 
   <div style="overflow-x: auto;">
@@ -115,7 +119,12 @@ ajax:{
       },
 
       columns: [
-               { data: "id",orderable:true,searchable:true},    
+               { data: "id",orderable:true,searchable:true,
+               render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                 }
+
+               },    
 
                { data: "date",orderable:true,searchable:true, "render": function(data, type, row) {
                        return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
@@ -161,9 +170,9 @@ ajax:{
                                   }
                                   });
 
-                                  return `<a href="#" id="report-${data}">${data}</a>`;
+                                  return `<a href="#" class="text-blue fw-semibold text-decoration-none" id="report-${data}">${data}</a>`;
                               } else {
-                                  return `<a href="#">Not available</a>`;
+                                  return `<a href="#" class="text-blue fw-semibold text-decoration-none" >Not available</a>`;
                               }
                           }
                       },

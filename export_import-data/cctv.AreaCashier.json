@@ -1,0 +1,51 @@
+[
+{
+  "model": "cctv.areacashier",
+  "pk": 1,
+  "fields": {
+    "area_cashier": "Till 1"
+  }
+},
+{
+  "model": "cctv.areacashier",
+  "pk": 2,
+  "fields": {
+    "area_cashier": "Till 2"
+  }
+},
+{
+  "model": "cctv.areacashier",
+  "pk": 3,
+  "fields": {
+    "area_cashier": "Till 3"
+  }
+},
+{
+  "model": "cctv.areacashier",
+  "pk": 4,
+  "fields": {
+    "area_cashier": "Till 4"
+  }
+},
+{
+  "model": "cctv.areacashier",
+  "pk": 5,
+  "fields": {
+    "area_cashier": "Mainbank"
+  }
+},
+{
+  "model": "cctv.areacashier",
+  "pk": 6,
+  "fields": {
+    "area_cashier": "COUNTROOM"
+  }
+},
+{
+  "model": "cctv.areacashier",
+  "pk": 7,
+  "fields": {
+    "area_cashier": "VIP"
+  }
+}
+]

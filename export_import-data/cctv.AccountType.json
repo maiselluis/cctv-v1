@@ -1,0 +1,499 @@
+[
+{
+  "model": "cctv.accounttype",
+  "pk": 1,
+  "fields": {
+    "account_type": "Account Type"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 2,
+  "fields": {
+    "account_type": "Nota Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 3,
+  "fields": {
+    "account_type": "Deleted Transactions"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 4,
+  "fields": {
+    "account_type": "Petty Cash Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 5,
+  "fields": {
+    "account_type": "Transfer from Cage to Management"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 6,
+  "fields": {
+    "account_type": "Exchange"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 7,
+  "fields": {
+    "account_type": "Credit Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 8,
+  "fields": {
+    "account_type": "Discount Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 9,
+  "fields": {
+    "account_type": "Promotion Scratch Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 10,
+  "fields": {
+    "account_type": "Cash out"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 11,
+  "fields": {
+    "account_type": "Sport Betting Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 12,
+  "fields": {
+    "account_type": "Promotion Scratch Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 13,
+  "fields": {
+    "account_type": "Promotion Slots Mystery JP"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 14,
+  "fields": {
+    "account_type": "Sport Betting Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 15,
+  "fields": {
+    "account_type": "Deposit Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 16,
+  "fields": {
+    "account_type": "Complimentary Slot Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 17,
+  "fields": {
+    "account_type": "Complimentary Slot Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 18,
+  "fields": {
+    "account_type": "Transfer from Management to Cage"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 19,
+  "fields": {
+    "account_type": "Deposit Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 20,
+  "fields": {
+    "account_type": "Transfer to Mirage"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 21,
+  "fields": {
+    "account_type": "Complimentary LG Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 22,
+  "fields": {
+    "account_type": "Food & Beverage Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 23,
+  "fields": {
+    "account_type": "Sport Betting Result"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 24,
+  "fields": {
+    "account_type": "Petty Cash Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 25,
+  "fields": {
+    "account_type": "Banking Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 26,
+  "fields": {
+    "account_type": "Banking"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 27,
+  "fields": {
+    "account_type": "Nota Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 28,
+  "fields": {
+    "account_type": "Promotion Triple Seven"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 29,
+  "fields": {
+    "account_type": "Discount Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 30,
+  "fields": {
+    "account_type": "Hotel & Private Rooms Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 31,
+  "fields": {
+    "account_type": "Hotel & Private Rooms Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 32,
+  "fields": {
+    "account_type": "Credit Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 33,
+  "fields": {
+    "account_type": "Food & Beverage Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 34,
+  "fields": {
+    "account_type": "Complimentary LG Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 35,
+  "fields": {
+    "account_type": "Visa/Lynx"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 36,
+  "fields": {
+    "account_type": "Slots Ticket Cash Out"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 37,
+  "fields": {
+    "account_type": "Buy In"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 38,
+  "fields": {
+    "account_type": "Slots Jackpot"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 39,
+  "fields": {
+    "account_type": "Donation"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 40,
+  "fields": {
+    "account_type": "Overtime"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 41,
+  "fields": {
+    "account_type": "Salary advance"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 42,
+  "fields": {
+    "account_type": "Salary Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 43,
+  "fields": {
+    "account_type": "False Drop"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 44,
+  "fields": {
+    "account_type": "Cheque"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 45,
+  "fields": {
+    "account_type": "Slots Handpay"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 46,
+  "fields": {
+    "account_type": "Promotion"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 47,
+  "fields": {
+    "account_type": "Promotion LG Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 48,
+  "fields": {
+    "account_type": "Promotion Slots Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 49,
+  "fields": {
+    "account_type": "Employee Exchange"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 50,
+  "fields": {
+    "account_type": "Best Hand"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 51,
+  "fields": {
+    "account_type": "Points Redeemed"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 52,
+  "fields": {
+    "account_type": "Complimentary Birthday (SLOT)"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 53,
+  "fields": {
+    "account_type": "Complimentary Birthday (LG)"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 54,
+  "fields": {
+    "account_type": "Sports Betting Petty Cash Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 55,
+  "fields": {
+    "account_type": "Sports Betting Petty Cash Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 56,
+  "fields": {
+    "account_type": "Cigarette Sale"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 57,
+  "fields": {
+    "account_type": "Promotion Hot Seat"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 58,
+  "fields": {
+    "account_type": "Transfer from Chag to POS"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 59,
+  "fields": {
+    "account_type": "Transfer from POS to Chag"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 60,
+  "fields": {
+    "account_type": "Staff Loan Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 61,
+  "fields": {
+    "account_type": "Staff Loan Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 62,
+  "fields": {
+    "account_type": "Staff Advance Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 63,
+  "fields": {
+    "account_type": "Staff Advance Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 64,
+  "fields": {
+    "account_type": "Staff Deposit Received"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 65,
+  "fields": {
+    "account_type": "Staff Deposit Paid"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 66,
+  "fields": {
+    "account_type": "Bounced Check"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 67,
+  "fields": {
+    "account_type": "Target Payment"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 68,
+  "fields": {
+    "account_type": "Machine Malfunction"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 69,
+  "fields": {
+    "account_type": "Buy-in with Cheque"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 70,
+  "fields": {
+    "account_type": "Cheque Re-purchase"
+  }
+},
+{
+  "model": "cctv.accounttype",
+  "pk": 72,
+  "fields": {
+    "account_type": "Transfer from Aranguez to POS"
+  }
+}
+]

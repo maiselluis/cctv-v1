@@ -1,0 +1,100 @@
+[
+{
+  "model": "cctv.shift",
+  "pk": 1,
+  "fields": {
+    "shift": "08:00/16:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 2,
+  "fields": {
+    "shift": "10:00/18:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 3,
+  "fields": {
+    "shift": "11:00/20:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 4,
+  "fields": {
+    "shift": "16:00/00:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 5,
+  "fields": {
+    "shift": "17:00/02:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 6,
+  "fields": {
+    "shift": "18:00/03:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 7,
+  "fields": {
+    "shift": "19:00/04:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 8,
+  "fields": {
+    "shift": "20:00/04:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 9,
+  "fields": {
+    "shift": "21:00/06:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 10,
+  "fields": {
+    "shift": "22:00/06:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 11,
+  "fields": {
+    "shift": "24:00/08:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 12,
+  "fields": {
+    "shift": "Off"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 13,
+  "fields": {
+    "shift": "06:00/14:00"
+  }
+},
+{
+  "model": "cctv.shift",
+  "pk": 14,
+  "fields": {
+    "shift": "14:00/22:00"
+  }
+}
+]

@@ -1,0 +1,121 @@
+[
+{
+  "model": "cctv.department",
+  "pk": 1,
+  "fields": {
+    "name": "Slots"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 4,
+  "fields": {
+    "name": "Cash Desk"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 5,
+  "fields": {
+    "name": "Food and Beverage"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 6,
+  "fields": {
+    "name": "Kitchen"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 7,
+  "fields": {
+    "name": "Live Games"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 8,
+  "fields": {
+    "name": "Management"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 9,
+  "fields": {
+    "name": "P.R. and Reception"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 10,
+  "fields": {
+    "name": "Security"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 11,
+  "fields": {
+    "name": "Surveillance"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 12,
+  "fields": {
+    "name": "Admin"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 13,
+  "fields": {
+    "name": "I.T"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 14,
+  "fields": {
+    "name": "Technician"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 15,
+  "fields": {
+    "name": "Finance"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 16,
+  "fields": {
+    "name": "Housekeeping"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 17,
+  "fields": {
+    "name": "Maintenance"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 18,
+  "fields": {
+    "name": "Back Up"
+  }
+},
+{
+  "model": "cctv.department",
+  "pk": 19,
+  "fields": {
+    "name": "Sports Betting"
+  }
+}
+]

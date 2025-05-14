@@ -1,0 +1,3161 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2024-12-24T00:48:52.505Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "32",
+    "object_repr": "rbaliram",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2024-12-24T00:49:00.751Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "32",
+    "object_repr": "rbaliram",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2024-12-26T17:55:22.787Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Administrator",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2024-12-26T19:25:22.396Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "34",
+    "object_repr": "administrator",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2024-12-26T19:25:27.127Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "34",
+    "object_repr": "administrator",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2024-12-26T19:27:14.365Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "34",
+    "object_repr": "yasielsalazar88@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2024-12-28T17:58:10.933Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-01-03T14:12:55.774Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-01-03T14:13:26.213Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-01-03T14:14:04.819Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2025-01-03T14:14:29.097Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2025-01-03T14:14:43.757Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2025-01-03T14:15:11.816Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2025-01-03T14:15:24.939Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "supervisor-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2025-01-03T14:15:37.135Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2025-01-04T11:05:31.326Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2025-01-04T11:05:48.769Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2025-01-04T11:06:17.613Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2025-01-04T11:06:42.917Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2025-01-04T11:07:06.806Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2025-01-04T11:07:29.262Z",
+    "user": 34,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2025-01-04T13:18:50.444Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2025-01-04T13:20:25.345Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2025-01-04T13:20:42.710Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2025-01-04T13:25:58.923Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2025-01-04T13:55:28.623Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2025-01-06T21:48:11.152Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2025-01-08T22:19:15.793Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2025-01-08T22:19:32.244Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2025-01-09T20:54:23.383Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2025-01-10T20:04:21.613Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "slot-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2025-01-10T20:07:09.204Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "21",
+    "object_repr": "security-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2025-01-11T19:02:28.038Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2025-01-11T19:07:10.005Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "Administrator-arg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2025-01-11T19:08:43.655Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "administrator-arg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2025-01-11T19:09:49.016Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\", \"First name\", \"Last name\", \"Email address\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2025-01-11T19:11:08.697Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2025-01-11T19:12:51.415Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"Last login\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2025-01-11T19:14:35.585Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2025-01-11T19:15:37.125Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2025-01-11T19:20:33.995Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2025-01-11T19:22:04.888Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2025-01-11T19:51:26.874Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2025-01-11T19:52:17.424Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2025-01-11T19:53:23.142Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 203,
+  "fields": {
+    "action_time": "2025-01-12T14:02:10.868Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 204,
+  "fields": {
+    "action_time": "2025-01-12T14:05:07.920Z",
+    "user": 35,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 205,
+  "fields": {
+    "action_time": "2025-01-12T14:07:19.401Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 206,
+  "fields": {
+    "action_time": "2025-01-12T14:08:14.768Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 207,
+  "fields": {
+    "action_time": "2025-01-12T14:09:21.553Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "27",
+    "object_repr": "Administrator-arg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 208,
+  "fields": {
+    "action_time": "2025-01-12T14:09:33.791Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 209,
+  "fields": {
+    "action_time": "2025-01-12T22:31:25.368Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 210,
+  "fields": {
+    "action_time": "2025-01-13T11:25:03.966Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "15",
+    "object_repr": "pit-arg",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 211,
+  "fields": {
+    "action_time": "2025-01-13T11:32:55.085Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "28",
+    "object_repr": "pit-chg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 212,
+  "fields": {
+    "action_time": "2025-01-13T13:32:46.831Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "30",
+    "object_repr": "security-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 213,
+  "fields": {
+    "action_time": "2025-01-13T13:32:56.489Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "12",
+    "object_repr": "security-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 214,
+  "fields": {
+    "action_time": "2025-01-13T20:34:57.817Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 215,
+  "fields": {
+    "action_time": "2025-01-17T23:51:00.398Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 216,
+  "fields": {
+    "action_time": "2025-01-17T23:51:15.475Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 217,
+  "fields": {
+    "action_time": "2025-01-17T23:51:33.914Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 218,
+  "fields": {
+    "action_time": "2025-01-17T23:51:45.388Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 219,
+  "fields": {
+    "action_time": "2025-01-17T23:52:00.687Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 220,
+  "fields": {
+    "action_time": "2025-01-17T23:52:14.713Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 221,
+  "fields": {
+    "action_time": "2025-01-17T23:55:34.620Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "36",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 222,
+  "fields": {
+    "action_time": "2025-01-17T23:56:01.873Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "36",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 223,
+  "fields": {
+    "action_time": "2025-01-17T23:56:22.213Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "29",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 224,
+  "fields": {
+    "action_time": "2025-01-17T23:57:07.559Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "29",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 225,
+  "fields": {
+    "action_time": "2025-01-17T23:57:38.844Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "36",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 226,
+  "fields": {
+    "action_time": "2025-01-17T23:57:57.559Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "37",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 227,
+  "fields": {
+    "action_time": "2025-01-17T23:58:32.251Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "37",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 228,
+  "fields": {
+    "action_time": "2025-01-17T23:58:52.741Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "30",
+    "object_repr": "dutymanager-pos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 229,
+  "fields": {
+    "action_time": "2025-01-18T00:06:49.313Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "38",
+    "object_repr": "dutymanager-chg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 230,
+  "fields": {
+    "action_time": "2025-01-18T00:07:13.256Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "38",
+    "object_repr": "dutymanager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 231,
+  "fields": {
+    "action_time": "2025-01-18T00:07:28.428Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "38",
+    "object_repr": "dutymanager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 232,
+  "fields": {
+    "action_time": "2025-01-18T00:07:42.633Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "31",
+    "object_repr": "dutymanager-chg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 233,
+  "fields": {
+    "action_time": "2025-01-18T00:29:07.092Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "39",
+    "object_repr": "dutymanager-arg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 234,
+  "fields": {
+    "action_time": "2025-01-18T00:29:43.435Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "39",
+    "object_repr": "dutymanager-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 235,
+  "fields": {
+    "action_time": "2025-01-18T00:30:01.119Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "32",
+    "object_repr": "dutymanager-arg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 236,
+  "fields": {
+    "action_time": "2025-01-21T21:09:52.901Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 237,
+  "fields": {
+    "action_time": "2025-01-22T19:47:22.887Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 238,
+  "fields": {
+    "action_time": "2025-01-23T16:45:01.429Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 239,
+  "fields": {
+    "action_time": "2025-01-24T19:30:25.704Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 240,
+  "fields": {
+    "action_time": "2025-01-24T19:31:59.866Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 241,
+  "fields": {
+    "action_time": "2025-01-24T19:32:14.332Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 242,
+  "fields": {
+    "action_time": "2025-01-24T19:32:39.524Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "manager-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 243,
+  "fields": {
+    "action_time": "2025-01-24T19:37:04.285Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "supervisor-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 244,
+  "fields": {
+    "action_time": "2025-01-24T19:40:06.408Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 245,
+  "fields": {
+    "action_time": "2025-01-24T19:40:18.744Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 246,
+  "fields": {
+    "action_time": "2025-01-24T19:40:39.975Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "manager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 247,
+  "fields": {
+    "action_time": "2025-01-24T19:43:01.552Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 248,
+  "fields": {
+    "action_time": "2025-01-24T19:48:32.226Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 249,
+  "fields": {
+    "action_time": "2025-01-24T19:49:36.912Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 250,
+  "fields": {
+    "action_time": "2025-01-24T19:49:55.457Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "manager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 251,
+  "fields": {
+    "action_time": "2025-01-24T19:50:29.035Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 252,
+  "fields": {
+    "action_time": "2025-01-27T21:40:58.998Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 253,
+  "fields": {
+    "action_time": "2025-01-27T21:42:10.345Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 254,
+  "fields": {
+    "action_time": "2025-01-27T21:42:38.435Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "33",
+    "object_repr": "yunsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 255,
+  "fields": {
+    "action_time": "2025-01-27T21:44:24.919Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\", \"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 256,
+  "fields": {
+    "action_time": "2025-01-27T21:47:01.716Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 257,
+  "fields": {
+    "action_time": "2025-01-27T21:48:13.811Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 258,
+  "fields": {
+    "action_time": "2025-01-27T21:50:02.303Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 259,
+  "fields": {
+    "action_time": "2025-01-27T21:50:43.637Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 260,
+  "fields": {
+    "action_time": "2025-01-27T21:51:30.706Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 261,
+  "fields": {
+    "action_time": "2025-01-28T19:10:16.357Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 262,
+  "fields": {
+    "action_time": "2025-01-28T19:10:41.705Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 263,
+  "fields": {
+    "action_time": "2025-01-28T19:12:24.411Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 264,
+  "fields": {
+    "action_time": "2025-01-28T19:13:46.813Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 265,
+  "fields": {
+    "action_time": "2025-01-28T19:14:47.702Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "yunsal",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 266,
+  "fields": {
+    "action_time": "2025-01-28T19:15:06.305Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "41",
+    "object_repr": "yunsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 267,
+  "fields": {
+    "action_time": "2025-01-28T19:15:24.846Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "41",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 268,
+  "fields": {
+    "action_time": "2025-01-28T19:15:46.485Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "34",
+    "object_repr": "yunsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 269,
+  "fields": {
+    "action_time": "2025-01-28T19:16:03.048Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "34",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 270,
+  "fields": {
+    "action_time": "2025-01-28T19:16:41.645Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "41",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 271,
+  "fields": {
+    "action_time": "2025-01-29T00:21:14.056Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "35",
+    "object_repr": "rbaliram",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 272,
+  "fields": {
+    "action_time": "2025-01-29T14:40:52.750Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "41",
+    "object_repr": "yunsal",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 273,
+  "fields": {
+    "action_time": "2025-01-29T14:41:46.402Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "42",
+    "object_repr": "yunsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 274,
+  "fields": {
+    "action_time": "2025-01-29T14:42:28.692Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "36",
+    "object_repr": "yunsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 275,
+  "fields": {
+    "action_time": "2025-01-29T14:43:12.573Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "42",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 276,
+  "fields": {
+    "action_time": "2025-01-29T14:56:58.964Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "42",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 277,
+  "fields": {
+    "action_time": "2025-01-29T18:35:32.426Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "43",
+    "object_repr": "kadeem",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 278,
+  "fields": {
+    "action_time": "2025-01-29T18:36:01.624Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "37",
+    "object_repr": "kadeem",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 279,
+  "fields": {
+    "action_time": "2025-01-29T18:38:31.860Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "37",
+    "object_repr": "kadeem",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 280,
+  "fields": {
+    "action_time": "2025-01-29T18:38:47.037Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "43",
+    "object_repr": "kadeem",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 281,
+  "fields": {
+    "action_time": "2025-01-29T18:40:12.969Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "43",
+    "object_repr": "kadeem",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 282,
+  "fields": {
+    "action_time": "2025-01-29T18:46:50.549Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "42",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 283,
+  "fields": {
+    "action_time": "2025-01-29T19:48:53.061Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "43",
+    "object_repr": "kadeem",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 284,
+  "fields": {
+    "action_time": "2025-01-29T19:56:35.912Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "44",
+    "object_repr": "aaktas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 285,
+  "fields": {
+    "action_time": "2025-01-29T19:57:42.845Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "44",
+    "object_repr": "aaktas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 286,
+  "fields": {
+    "action_time": "2025-01-29T19:57:56.123Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "44",
+    "object_repr": "aaktas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 287,
+  "fields": {
+    "action_time": "2025-01-29T22:07:51.475Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "38",
+    "object_repr": "aaktas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 288,
+  "fields": {
+    "action_time": "2025-01-29T22:17:34.549Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "45",
+    "object_repr": "dbas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Staff status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 289,
+  "fields": {
+    "action_time": "2025-01-29T22:18:33.020Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "45",
+    "object_repr": "dbas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 290,
+  "fields": {
+    "action_time": "2025-01-29T22:19:46.017Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "45",
+    "object_repr": "dbas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 291,
+  "fields": {
+    "action_time": "2025-01-29T22:20:06.733Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "39",
+    "object_repr": "dbas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 292,
+  "fields": {
+    "action_time": "2025-01-29T22:26:20.059Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "46",
+    "object_repr": "syilmaz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 293,
+  "fields": {
+    "action_time": "2025-01-29T22:26:31.863Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "40",
+    "object_repr": "syilmaz",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 294,
+  "fields": {
+    "action_time": "2025-01-30T17:38:24.322Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "44",
+    "object_repr": "aaktas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 295,
+  "fields": {
+    "action_time": "2025-01-30T17:38:43.912Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "45",
+    "object_repr": "dbas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 296,
+  "fields": {
+    "action_time": "2025-01-31T18:48:39.950Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "41",
+    "object_repr": "rene",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 297,
+  "fields": {
+    "action_time": "2025-01-31T18:48:57.998Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "47",
+    "object_repr": "rene",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 298,
+  "fields": {
+    "action_time": "2025-01-31T18:49:15.933Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "47",
+    "object_repr": "rene",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 299,
+  "fields": {
+    "action_time": "2025-01-31T20:54:42.829Z",
+    "user": 47,
+    "content_type": 36,
+    "object_id": "41",
+    "object_repr": "rene",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 300,
+  "fields": {
+    "action_time": "2025-01-31T20:56:48.110Z",
+    "user": 47,
+    "content_type": 4,
+    "object_id": "47",
+    "object_repr": "rene",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 301,
+  "fields": {
+    "action_time": "2025-02-08T21:25:31.233Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "32",
+    "object_repr": "rbaliram",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 302,
+  "fields": {
+    "action_time": "2025-02-09T20:18:35.725Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "47",
+    "object_repr": "rene",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 303,
+  "fields": {
+    "action_time": "2025-02-09T20:18:46.597Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "32",
+    "object_repr": "rbaliram",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 304,
+  "fields": {
+    "action_time": "2025-02-10T22:10:34.832Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "42",
+    "object_repr": "kgreaves",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 305,
+  "fields": {
+    "action_time": "2025-02-10T22:10:49.206Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "48",
+    "object_repr": "kgreaves",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 306,
+  "fields": {
+    "action_time": "2025-02-10T22:12:58.333Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "48",
+    "object_repr": "kgreaves",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 307,
+  "fields": {
+    "action_time": "2025-02-10T22:25:20.145Z",
+    "user": 48,
+    "content_type": 36,
+    "object_id": "43",
+    "object_repr": "ikuloglu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 308,
+  "fields": {
+    "action_time": "2025-02-10T22:26:12.761Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "49",
+    "object_repr": "ikuloglu",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 309,
+  "fields": {
+    "action_time": "2025-02-10T22:29:45.079Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "49",
+    "object_repr": "ikuloglu",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 310,
+  "fields": {
+    "action_time": "2025-02-10T22:32:02.730Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "49",
+    "object_repr": "ikuloglu",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 311,
+  "fields": {
+    "action_time": "2025-02-18T18:40:26.518Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 312,
+  "fields": {
+    "action_time": "2025-02-18T18:40:53.632Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "supervisor-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 313,
+  "fields": {
+    "action_time": "2025-02-18T18:41:07.423Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 314,
+  "fields": {
+    "action_time": "2025-02-18T18:41:39.208Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 315,
+  "fields": {
+    "action_time": "2025-02-18T18:41:50.433Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 316,
+  "fields": {
+    "action_time": "2025-02-18T18:42:01.017Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 317,
+  "fields": {
+    "action_time": "2025-02-18T18:42:43.832Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 318,
+  "fields": {
+    "action_time": "2025-02-18T18:42:54.929Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 319,
+  "fields": {
+    "action_time": "2025-02-18T18:43:06.656Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 320,
+  "fields": {
+    "action_time": "2025-02-18T18:43:34.833Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "manager-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 321,
+  "fields": {
+    "action_time": "2025-02-18T18:43:44.976Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "manager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 322,
+  "fields": {
+    "action_time": "2025-02-18T18:43:54.513Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "manager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 323,
+  "fields": {
+    "action_time": "2025-02-18T18:44:26.899Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 324,
+  "fields": {
+    "action_time": "2025-02-18T18:44:37.865Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 325,
+  "fields": {
+    "action_time": "2025-02-18T18:44:48.305Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 326,
+  "fields": {
+    "action_time": "2025-02-18T19:17:48.911Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "50",
+    "object_repr": "purchase",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 327,
+  "fields": {
+    "action_time": "2025-02-18T19:18:08.404Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "44",
+    "object_repr": "purchase",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 328,
+  "fields": {
+    "action_time": "2025-02-18T19:24:46.831Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 329,
+  "fields": {
+    "action_time": "2025-02-18T19:24:58.622Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "supervisor-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 330,
+  "fields": {
+    "action_time": "2025-02-18T19:25:11.141Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 331,
+  "fields": {
+    "action_time": "2025-02-18T19:25:40.372Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 332,
+  "fields": {
+    "action_time": "2025-02-18T19:25:49.481Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 333,
+  "fields": {
+    "action_time": "2025-02-18T19:25:59.942Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 334,
+  "fields": {
+    "action_time": "2025-02-18T19:26:21.800Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 335,
+  "fields": {
+    "action_time": "2025-02-18T19:26:37.379Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 336,
+  "fields": {
+    "action_time": "2025-02-18T19:26:50.476Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 337,
+  "fields": {
+    "action_time": "2025-02-18T19:27:16.515Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "manager-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 338,
+  "fields": {
+    "action_time": "2025-02-18T19:27:28.830Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "manager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 339,
+  "fields": {
+    "action_time": "2025-02-18T19:27:39.791Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "manager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 340,
+  "fields": {
+    "action_time": "2025-02-18T19:29:31.455Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 341,
+  "fields": {
+    "action_time": "2025-02-18T19:29:41.754Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 342,
+  "fields": {
+    "action_time": "2025-02-18T19:29:52.729Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 343,
+  "fields": {
+    "action_time": "2025-02-20T18:55:52.497Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 344,
+  "fields": {
+    "action_time": "2025-02-20T19:03:23.786Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "51",
+    "object_repr": "ebeharry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 345,
+  "fields": {
+    "action_time": "2025-02-20T19:04:33.979Z",
+    "user": 32,
+    "content_type": 36,
+    "object_id": "45",
+    "object_repr": "ebeharry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 346,
+  "fields": {
+    "action_time": "2025-02-20T19:13:31.348Z",
+    "user": 51,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 347,
+  "fields": {
+    "action_time": "2025-02-20T19:14:26.132Z",
+    "user": 51,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 348,
+  "fields": {
+    "action_time": "2025-02-23T22:16:04.058Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "46",
+    "object_repr": "syilmaz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 349,
+  "fields": {
+    "action_time": "2025-02-23T22:16:16.086Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "49",
+    "object_repr": "ikuloglu",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 350,
+  "fields": {
+    "action_time": "2025-02-24T13:16:26.248Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Administrator-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 351,
+  "fields": {
+    "action_time": "2025-02-24T13:16:37.254Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 352,
+  "fields": {
+    "action_time": "2025-02-24T13:16:49.089Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Administrator-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 353,
+  "fields": {
+    "action_time": "2025-02-24T13:17:56.626Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "manager-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 354,
+  "fields": {
+    "action_time": "2025-02-24T13:18:12.587Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "manager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 355,
+  "fields": {
+    "action_time": "2025-02-24T13:18:26.624Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "manager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 356,
+  "fields": {
+    "action_time": "2025-02-24T13:19:19.556Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 357,
+  "fields": {
+    "action_time": "2025-02-24T13:19:29.256Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 358,
+  "fields": {
+    "action_time": "2025-02-27T15:51:10.625Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 359,
+  "fields": {
+    "action_time": "2025-02-27T15:51:27.474Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "supervisor-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 360,
+  "fields": {
+    "action_time": "2025-02-27T15:53:42.175Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 361,
+  "fields": {
+    "action_time": "2025-02-27T15:56:20.386Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 362,
+  "fields": {
+    "action_time": "2025-02-27T15:57:59.281Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 363,
+  "fields": {
+    "action_time": "2025-02-27T15:59:09.008Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 364,
+  "fields": {
+    "action_time": "2025-02-27T16:01:24.813Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 365,
+  "fields": {
+    "action_time": "2025-02-27T16:02:21.044Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 366,
+  "fields": {
+    "action_time": "2025-02-27T16:03:35.932Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 367,
+  "fields": {
+    "action_time": "2025-02-27T22:23:50.994Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "supervisor-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 368,
+  "fields": {
+    "action_time": "2025-02-27T22:24:03.281Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "supervisor-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 369,
+  "fields": {
+    "action_time": "2025-02-27T22:24:13.795Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "supervisor-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 370,
+  "fields": {
+    "action_time": "2025-02-27T22:25:00.102Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "officer1-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 371,
+  "fields": {
+    "action_time": "2025-02-27T22:25:13.656Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "officer2-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 372,
+  "fields": {
+    "action_time": "2025-02-27T22:25:36.239Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "officer2-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 373,
+  "fields": {
+    "action_time": "2025-02-27T22:25:49.336Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "officer1-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 374,
+  "fields": {
+    "action_time": "2025-02-27T22:26:08.296Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "officer1-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 375,
+  "fields": {
+    "action_time": "2025-02-27T22:26:20.266Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "officer2-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 376,
+  "fields": {
+    "action_time": "2025-03-02T18:49:18.117Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 377,
+  "fields": {
+    "action_time": "2025-03-02T18:50:12.638Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 378,
+  "fields": {
+    "action_time": "2025-03-08T16:33:20.570Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Administrator-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 379,
+  "fields": {
+    "action_time": "2025-03-10T22:08:49.823Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "50",
+    "object_repr": "purchase",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 380,
+  "fields": {
+    "action_time": "2025-03-13T18:31:30.290Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "mlestrada",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 381,
+  "fields": {
+    "action_time": "2025-03-19T15:09:30.721Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "manager-pos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 382,
+  "fields": {
+    "action_time": "2025-03-19T15:09:54.801Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "manager-arg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 383,
+  "fields": {
+    "action_time": "2025-03-19T15:10:22.984Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "manager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 384,
+  "fields": {
+    "action_time": "2025-03-19T15:10:48.955Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "mlestrada",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 385,
+  "fields": {
+    "action_time": "2025-03-19T15:11:00.822Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "1",
+    "object_repr": "manager-pos - Port of Spain",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 386,
+  "fields": {
+    "action_time": "2025-03-19T15:11:16.228Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "2",
+    "object_repr": "mlestrada - Port of Spain",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 387,
+  "fields": {
+    "action_time": "2025-03-19T15:11:26.821Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "3",
+    "object_repr": "manager-chg - Chaguanas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 388,
+  "fields": {
+    "action_time": "2025-03-19T15:11:41.477Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "4",
+    "object_repr": "manager-arg - Aranguez",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 389,
+  "fields": {
+    "action_time": "2025-03-19T15:11:58.404Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "5",
+    "object_repr": "mlestrada - Chaguanas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 390,
+  "fields": {
+    "action_time": "2025-03-19T15:12:11.836Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "6",
+    "object_repr": "mlestrada - Aranguez",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 391,
+  "fields": {
+    "action_time": "2025-03-19T19:23:11.953Z",
+    "user": 4,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "manager-chg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 392,
+  "fields": {
+    "action_time": "2025-03-22T20:47:43.654Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "42",
+    "object_repr": "yunsal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 393,
+  "fields": {
+    "action_time": "2025-03-22T20:47:52.667Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "46",
+    "object_repr": "syilmaz",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 394,
+  "fields": {
+    "action_time": "2025-03-22T20:48:10.005Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "45",
+    "object_repr": "dbas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 395,
+  "fields": {
+    "action_time": "2025-03-22T20:48:24.002Z",
+    "user": 48,
+    "content_type": 4,
+    "object_id": "49",
+    "object_repr": "ikuloglu",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 396,
+  "fields": {
+    "action_time": "2025-03-23T22:45:59.417Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "6",
+    "object_repr": "mlestrada - Aranguez",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 397,
+  "fields": {
+    "action_time": "2025-03-23T22:46:06.159Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "5",
+    "object_repr": "mlestrada - Chaguanas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 398,
+  "fields": {
+    "action_time": "2025-03-23T22:46:10.027Z",
+    "user": 4,
+    "content_type": 41,
+    "object_id": "2",
+    "object_repr": "mlestrada - Port of Spain",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 399,
+  "fields": {
+    "action_time": "2025-04-19T00:52:55.981Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "52",
+    "object_repr": "Bbiriz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 400,
+  "fields": {
+    "action_time": "2025-04-19T00:53:17.871Z",
+    "user": 32,
+    "content_type": 4,
+    "object_id": "52",
+    "object_repr": "Bbiriz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+  }
+}
+]

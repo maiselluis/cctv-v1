@@ -28,7 +28,8 @@
    <div style="overflow-x: auto;">
      <div class="card-header">
        <div class="container-fluid"> 
-         <div class="row">
+       <!--
+        <div class="row">
            <div class="btn-group" role="group" aria-label="Basic example">
              {% if perms.cctv.add_cash_desk_transaction %}
              <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'cash_desk_transactions-create' %}"> Add Transaction</a>
@@ -41,6 +42,24 @@
              <a class="btn btn-outline-success mb-2 bi bi-clock-history" href="{% url 'transaction-timeline'%}"> Timeline </a>
            </div>
          </div>
+        -->
+        <div class="row">
+          <div class="col-md-12">
+              <div class="card p-3 shadow-sm">
+                  <div class="btn-group d-flex flex-wrap" role="group">
+                      {% if perms.cctv.add_cash_desk_transaction %}
+                      <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'cash_desk_transactions-create' %}"> Add Transaction</a>
+                      {% endif %}
+                      <a class="btn btn-outline-dark mb-2 bi bi-calendar" href="{% url 'transactions-by-day' %}"> Find Transaction by Dates </a>
+                      <a class="btn btn-outline-dark mb-2 bi bi-emoji-angry" href="{% url 'customer-expense' %}"> Customer Expense </a>
+                      <a class="btn btn-outline-dark mb-2 bi bi-person-raised-hand" href="{% url 'customer-complimentary' %}"> Customer Complimentary </a>
+                      <a class="btn btn-outline-dark mb-2 bi bi-binoculars" href="{% url 'transactions-by-customer' %}"> Find Transaction by Customer </a>
+                      <a class="btn btn-outline-dark mb-2 bi bi-filter-square" href="{% url 'transactions-by-account'%}"> Find Transaction by Account Type </a>
+                      <a class="btn btn-outline-success mb-2 bi bi-clock-history" href="{% url 'transaction-timeline'%}"> Timeline </a>
+                  </div>
+              </div>
+          </div>
+        </div>
        </div>
      </div>
    </div>
@@ -101,7 +120,12 @@
                     { targets: [0, 1, 5, 8,9, 10, 11, 12, 13, 14, 15], className: "d-none d-md-table-cell" }
                   ],
            columns: [
-               { data: "transactions"},
+               { data: "transactions",
+               render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                 }
+
+               },
                { data: "area_cashier" },
                { data: "date", "render": function(data, type, row) {
                        return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");

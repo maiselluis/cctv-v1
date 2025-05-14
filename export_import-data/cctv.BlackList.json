@@ -1,0 +1,8876 @@
+[
+{
+  "model": "cctv.blacklist",
+  "pk": 2,
+  "fields": {
+    "name": "Justin",
+    "surname": "Leplat",
+    "blacklistby": 23,
+    "date": "2015-06-03",
+    "details": "--empty--",
+    "picture": "images/395.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 3,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-06-03",
+    "details": "--empty--",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 4,
+  "fields": {
+    "name": "Collin",
+    "surname": "Charles",
+    "blacklistby": 23,
+    "date": "2015-06-03",
+    "details": "--empty--",
+    "picture": "images/420.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 5,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-07-12",
+    "details": "--EMPTY--",
+    "picture": "images/393.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 6,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-07-17",
+    "details": "--EMPTY--",
+    "picture": "images/419.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 7,
+  "fields": {
+    "name": "Joel",
+    "surname": "Forde",
+    "blacklistby": 23,
+    "date": "2015-08-01",
+    "details": "--EMPTY--",
+    "picture": "images/418.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 8,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-09-23",
+    "details": "--EMPTY--",
+    "picture": "images/399.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 9,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-09-23",
+    "details": "--EMPTY--",
+    "picture": "images/417.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 10,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-10-23",
+    "details": "--EMPTY--",
+    "picture": "images/398.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 11,
+  "fields": {
+    "name": "Harol",
+    "surname": "Constantine",
+    "blacklistby": 75,
+    "date": "2015-10-30",
+    "details": "--EMPTY-",
+    "picture": "images/416.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 12,
+  "fields": {
+    "name": "Aaron",
+    "surname": "Wells",
+    "blacklistby": 4,
+    "date": "2015-11-11",
+    "details": "--EMPTY--",
+    "picture": "images/415.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 13,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-11-13",
+    "details": "--EMPTY--",
+    "picture": "images/414.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 14,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-11-26",
+    "details": "--EMPTY--",
+    "picture": "images/413.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 15,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2015-12-01",
+    "details": "--EMPTY--",
+    "picture": "images/412.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 16,
+  "fields": {
+    "name": "Kevon",
+    "surname": "Surette",
+    "blacklistby": 4,
+    "date": "2015-12-03",
+    "details": "--EMPTY--",
+    "picture": "images/411.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 17,
+  "fields": {
+    "name": "Wayne",
+    "surname": "Toolsie",
+    "blacklistby": 75,
+    "date": "2016-01-27",
+    "details": "Reinstated by Mr. Yasar on GD. 08-12-2023.",
+    "picture": "images/410.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 18,
+  "fields": {
+    "name": "Mohhamed",
+    "surname": "unknown",
+    "blacklistby": 4,
+    "date": "2016-05-30",
+    "details": "--EMPTY--",
+    "picture": "images/396.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 19,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-06-04",
+    "details": "--EMPTY--",
+    "picture": "images/397.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 20,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-06-29",
+    "details": "--EMPTY--",
+    "picture": "images/400.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 21,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-07-04",
+    "details": "--EMPTY--",
+    "picture": "images/401.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 22,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-07-13",
+    "details": "--EMPTY--",
+    "picture": "images/422.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 23,
+  "fields": {
+    "name": "Kyle",
+    "surname": "Wilson",
+    "blacklistby": 4,
+    "date": "2016-08-04",
+    "details": "Banned by management for pulling back cards.",
+    "picture": "images/394.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 24,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-08-26",
+    "details": "--EMPTY--",
+    "picture": "images/402.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 25,
+  "fields": {
+    "name": "Morrison",
+    "surname": "Morrison",
+    "blacklistby": 4,
+    "date": "2016-09-17",
+    "details": "--EMPTY--",
+    "picture": "images/408.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 26,
+  "fields": {
+    "name": "Elgeva",
+    "surname": "Williams",
+    "blacklistby": 4,
+    "date": "2016-09-17",
+    "details": "--EMPTY--",
+    "picture": "images/409.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 27,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-10-05",
+    "details": "--EMPTY--",
+    "picture": "images/403.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 28,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 75,
+    "date": "2016-10-06",
+    "details": "--EMPTY--",
+    "picture": "images/421.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 29,
+  "fields": {
+    "name": "Antonio",
+    "surname": "Kerrion",
+    "blacklistby": 4,
+    "date": "2016-10-07",
+    "details": "--EMPTY--",
+    "picture": "images/407.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 30,
+  "fields": {
+    "name": "Stanley",
+    "surname": "Quide",
+    "blacklistby": 4,
+    "date": "2016-10-13",
+    "details": "--EMPTY--",
+    "picture": "images/406.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 31,
+  "fields": {
+    "name": "Jovan",
+    "surname": "Wilson",
+    "blacklistby": 38,
+    "date": "2016-10-19",
+    "details": "He assulted a customer on blackjack.\r\nReinstated by Phillip",
+    "picture": "images/459.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 32,
+  "fields": {
+    "name": "Maston",
+    "surname": "Mollineaux",
+    "blacklistby": 75,
+    "date": "2016-11-06",
+    "details": "--EMPTY---",
+    "picture": "images/405.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 33,
+  "fields": {
+    "name": "Aleandro",
+    "surname": "Mills",
+    "blacklistby": 4,
+    "date": "2016-11-23",
+    "details": "Stealing credits from the slots machines",
+    "picture": "images/426.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 34,
+  "fields": {
+    "name": "Anthony",
+    "surname": "John",
+    "blacklistby": 4,
+    "date": "2016-11-25",
+    "details": "colluding with staff",
+    "picture": "images/425.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 35,
+  "fields": {
+    "name": "Felix",
+    "surname": "Williams",
+    "blacklistby": 4,
+    "date": "2016-12-01",
+    "details": "Aggressive behavior towards staff",
+    "picture": "images/424.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 36,
+  "fields": {
+    "name": "Ali",
+    "surname": "Faizool",
+    "blacklistby": 4,
+    "date": "2016-12-02",
+    "details": "--EMPTY---",
+    "picture": "images/423.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 37,
+  "fields": {
+    "name": "Nigel",
+    "surname": "Hurbert",
+    "blacklistby": 75,
+    "date": "2016-12-11",
+    "details": "Has pulled a gun on Randy on a previous occasion",
+    "picture": "images/392.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 38,
+  "fields": {
+    "name": "Johan",
+    "surname": "Peltier",
+    "blacklistby": 4,
+    "date": "2016-12-21",
+    "details": "marking cards",
+    "picture": "images/391.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 39,
+  "fields": {
+    "name": "krystal",
+    "surname": "Perry",
+    "blacklistby": 7,
+    "date": "2016-12-22",
+    "details": "Reinstate by Clarence. She is working in Chaguanas",
+    "picture": "images/390.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 40,
+  "fields": {
+    "name": "Ian",
+    "surname": "Nicholas",
+    "blacklistby": 272,
+    "date": "2017-01-13",
+    "details": "--EMPTY--",
+    "picture": "images/389.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 41,
+  "fields": {
+    "name": "Chevalier",
+    "surname": "Craig",
+    "blacklistby": 4,
+    "date": "2017-01-28",
+    "details": "Banned by management for loitering in casino.",
+    "picture": "images/387.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 42,
+  "fields": {
+    "name": "Adanna",
+    "surname": "Saunders",
+    "blacklistby": 4,
+    "date": "2017-01-28",
+    "details": "Banned by management for loitering in casino.",
+    "picture": "images/388.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 43,
+  "fields": {
+    "name": "Unknow",
+    "surname": "Unknow",
+    "blacklistby": 7,
+    "date": "2017-02-01",
+    "details": "1:26am duty manager called said he escorted said customer of black jack who was drunk and was begging other customers for money. Called received after incident took place.",
+    "picture": "images/386.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 44,
+  "fields": {
+    "name": "Sunita",
+    "surname": "Singh",
+    "blacklistby": 4,
+    "date": "2017-02-23",
+    "details": "cctv was informed by ms begum to black list customer who was playing on the machine for spitting in another customer face(18:45)",
+    "picture": "images/385.jpg",
+    "sex": 2,
+    "reason": 36,
+    "race": 20,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 45,
+  "fields": {
+    "name": "Gordon",
+    "surname": "Pierre",
+    "blacklistby": 23,
+    "date": "2017-02-24",
+    "details": "--EMPTY--",
+    "picture": "images/384.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 46,
+  "fields": {
+    "name": "Atiba",
+    "surname": "Rodrigues",
+    "blacklistby": 4,
+    "date": "2017-03-04",
+    "details": "Marking Cards.",
+    "picture": "images/383.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 47,
+  "fields": {
+    "name": "Narine",
+    "surname": "Ramroop",
+    "blacklistby": 4,
+    "date": "2017-03-10",
+    "details": "Banned by management for stealing customer`s money from slot machines",
+    "picture": "images/382.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 48,
+  "fields": {
+    "name": "Garvin",
+    "surname": "Stuart",
+    "blacklistby": 4,
+    "date": "2017-03-11",
+    "details": "info from the GM that he is black listed",
+    "picture": "images/381.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 49,
+  "fields": {
+    "name": "Robert",
+    "surname": "Ward",
+    "blacklistby": 272,
+    "date": "2017-03-24",
+    "details": "Banned by management for lofting in casino.",
+    "picture": "images/379.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 50,
+  "fields": {
+    "name": "Wendell",
+    "surname": "Matthias",
+    "blacklistby": 4,
+    "date": "2017-03-24",
+    "details": "Banned by GM for lofting around.",
+    "picture": "images/380.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 51,
+  "fields": {
+    "name": "Randy",
+    "surname": "Thomas",
+    "blacklistby": 22,
+    "date": "2017-04-04",
+    "details": "Marking cards Pk2.",
+    "picture": "images/378.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 52,
+  "fields": {
+    "name": "Peter",
+    "surname": "Niles",
+    "blacklistby": 272,
+    "date": "2017-04-09",
+    "details": "--EMPTY--",
+    "picture": "images/375.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 53,
+  "fields": {
+    "name": "Michelle",
+    "surname": "Baptiste",
+    "blacklistby": 272,
+    "date": "2017-04-09",
+    "details": "--EMPTY--",
+    "picture": "images/376.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 54,
+  "fields": {
+    "name": "Lester",
+    "surname": "Ford",
+    "blacklistby": 272,
+    "date": "2017-04-09",
+    "details": "--EMPTY--",
+    "picture": "images/377.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 55,
+  "fields": {
+    "name": "Anderson",
+    "surname": "Leonce",
+    "blacklistby": 4,
+    "date": "2017-04-12",
+    "details": "Banned by management for stealing promo tickets",
+    "picture": "images/374.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 57,
+  "fields": {
+    "name": "Syd",
+    "surname": "Berot",
+    "blacklistby": 22,
+    "date": "2017-04-15",
+    "details": "Was band by management",
+    "picture": "images/372.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 58,
+  "fields": {
+    "name": "Micheal",
+    "surname": "Bonadie",
+    "blacklistby": 23,
+    "date": "2017-04-26",
+    "details": "begging for money \r\naka brezz",
+    "picture": "images/371.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 59,
+  "fields": {
+    "name": "Rick",
+    "surname": "Pearson",
+    "blacklistby": 23,
+    "date": "2017-04-30",
+    "details": "held up one of our vip customer",
+    "picture": "images/369.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 60,
+  "fields": {
+    "name": "Keron",
+    "surname": "Frost",
+    "blacklistby": 4,
+    "date": "2017-04-30",
+    "details": "Banned by management for presenting fake credit card.",
+    "picture": "images/370.jpg",
+    "sex": 1,
+    "reason": 15,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 61,
+  "fields": {
+    "name": "Errol",
+    "surname": "Nero",
+    "blacklistby": 4,
+    "date": "2017-05-05",
+    "details": "--EMPTY--",
+    "picture": "images/369_1srrLYE.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 62,
+  "fields": {
+    "name": "Pandra",
+    "surname": "Williams",
+    "blacklistby": 4,
+    "date": "2017-05-13",
+    "details": "Banned by management for stealing credits from slots machine.",
+    "picture": "images/367.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 63,
+  "fields": {
+    "name": "Jogan bobby",
+    "surname": "Rajkumar",
+    "blacklistby": 4,
+    "date": "2017-05-19",
+    "details": "--EMPTY--",
+    "picture": "images/366.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 64,
+  "fields": {
+    "name": "Lucius",
+    "surname": "Juan",
+    "blacklistby": 4,
+    "date": "2017-05-26",
+    "details": "blacklisted by management",
+    "picture": "images/364.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 65,
+  "fields": {
+    "name": "Kavita",
+    "surname": "Mitchell",
+    "blacklistby": 4,
+    "date": "2017-05-26",
+    "details": "blacklisted by management",
+    "picture": "images/365.jpg",
+    "sex": 2,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 66,
+  "fields": {
+    "name": "O` neil",
+    "surname": "Ojoe",
+    "blacklistby": 4,
+    "date": "2017-05-31",
+    "details": "Banned by management for cheating on slots by promo tickets fraud.",
+    "picture": "images/363.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 67,
+  "fields": {
+    "name": "?????????",
+    "surname": "????",
+    "blacklistby": 23,
+    "date": "2017-06-02",
+    "details": "Disorderly conduct towards staff",
+    "picture": "images/362.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 68,
+  "fields": {
+    "name": "Rondey",
+    "surname": "Rondey",
+    "blacklistby": 4,
+    "date": "2017-06-07",
+    "details": "--EMPTY--",
+    "picture": "images/361.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 69,
+  "fields": {
+    "name": "David",
+    "surname": "Edward",
+    "blacklistby": 4,
+    "date": "2017-06-20",
+    "details": "--EMPTY--",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 70,
+  "fields": {
+    "name": "Troy",
+    "surname": "Rodgerez",
+    "blacklistby": 23,
+    "date": "2017-06-26",
+    "details": "uuknow to cctv",
+    "picture": "images/369_uj4MaIz.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 71,
+  "fields": {
+    "name": "noel",
+    "surname": "macfile",
+    "blacklistby": 272,
+    "date": "2017-06-29",
+    "details": "Noel was band on the said date for fighting  with a cost",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 72,
+  "fields": {
+    "name": "ali",
+    "surname": "rampersad",
+    "blacklistby": 22,
+    "date": "2017-07-06",
+    "details": "blacklisted by management..with immediate effect",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 8,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 73,
+  "fields": {
+    "name": "Abraham",
+    "surname": "Jack",
+    "blacklistby": 23,
+    "date": "2017-07-18",
+    "details": "--EMPTY--",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 74,
+  "fields": {
+    "name": "Marvin",
+    "surname": "Green",
+    "blacklistby": 7,
+    "date": "2017-07-28",
+    "details": "unruly behavior towards management.",
+    "picture": "images/355.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 75,
+  "fields": {
+    "name": "Dominic",
+    "surname": "Sudan",
+    "blacklistby": 4,
+    "date": "2017-08-04",
+    "details": "intoxicated and touching the female waitresses",
+    "picture": "images/354.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 76,
+  "fields": {
+    "name": "Cliff",
+    "surname": "Stewart",
+    "blacklistby": 23,
+    "date": "2017-08-08",
+    "details": "--EMPTY--",
+    "picture": "images/352.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 77,
+  "fields": {
+    "name": "Julien",
+    "surname": "Sherwood",
+    "blacklistby": 23,
+    "date": "2017-08-08",
+    "details": "--EMPTY--",
+    "picture": "images/353.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 78,
+  "fields": {
+    "name": "Nova",
+    "surname": "Lewis",
+    "blacklistby": 22,
+    "date": "2017-08-12",
+    "details": "Banned by management for stealing a cell phone.",
+    "picture": "images/351.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 79,
+  "fields": {
+    "name": "Arron",
+    "surname": "Lowe",
+    "blacklistby": 4,
+    "date": "2017-08-25",
+    "details": "--EMPTY--",
+    "picture": "images/350.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 80,
+  "fields": {
+    "name": "Terrence",
+    "surname": "Phillip",
+    "blacklistby": 272,
+    "date": "2017-08-26",
+    "details": "--EMPTY--",
+    "picture": "images/349.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 81,
+  "fields": {
+    "name": "Renald",
+    "surname": "Perceval",
+    "blacklistby": 4,
+    "date": "2017-08-28",
+    "details": "--EMPTY--",
+    "picture": "images/348.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 82,
+  "fields": {
+    "name": "unknown",
+    "surname": "unknown",
+    "blacklistby": 23,
+    "date": "2017-08-31",
+    "details": "DM Called at 0:25 Notifying CCTV that two customers are to blacklisted.",
+    "picture": "images/346.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 83,
+  "fields": {
+    "name": "Marlean",
+    "surname": "Gomez",
+    "blacklistby": 23,
+    "date": "2017-08-31",
+    "details": "DM Called at 0:25 Notifying CCTV that two customers are to be Blacklisted.",
+    "picture": "images/347.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 84,
+  "fields": {
+    "name": "Delano",
+    "surname": "Carimbocas",
+    "blacklistby": 22,
+    "date": "2017-09-03",
+    "details": "Begging customers for money.",
+    "picture": "images/345.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 85,
+  "fields": {
+    "name": "Francis",
+    "surname": "Dookie",
+    "blacklistby": 4,
+    "date": "2017-09-09",
+    "details": "Mr Francis on the above date had to separate incident at the casino they both involve Aggressive Behavior.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 86,
+  "fields": {
+    "name": "Noel",
+    "surname": "Harrigin",
+    "blacklistby": 4,
+    "date": "2017-09-15",
+    "details": "--EMPTY--",
+    "picture": "images/340.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 87,
+  "fields": {
+    "name": "Troy",
+    "surname": "Camron",
+    "blacklistby": 4,
+    "date": "2017-09-15",
+    "details": "--EMPTY--",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 88,
+  "fields": {
+    "name": "Clement",
+    "surname": "Blake",
+    "blacklistby": 4,
+    "date": "2017-09-15",
+    "details": "--EMPTY--",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 89,
+  "fields": {
+    "name": "Katelyn",
+    "surname": "Baptiste",
+    "blacklistby": 4,
+    "date": "2017-09-16",
+    "details": "--EMPTY--",
+    "picture": "images/341.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 90,
+  "fields": {
+    "name": "Bryan",
+    "surname": "Moze",
+    "blacklistby": 22,
+    "date": "2017-09-20",
+    "details": "Information received from DM is that customer was cursing other customers (including Ragoo) and was also disrespectful to one of the directors (Frank).",
+    "picture": "images/339.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 91,
+  "fields": {
+    "name": "Pariq",
+    "surname": "Noguera",
+    "blacklistby": 23,
+    "date": "2017-09-24",
+    "details": "--EMPTY--",
+    "picture": "images/338.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 92,
+  "fields": {
+    "name": "John",
+    "surname": "Griffith",
+    "blacklistby": 23,
+    "date": "2017-10-16",
+    "details": "DM and security called after customer was out the premises.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 93,
+  "fields": {
+    "name": "Juke",
+    "surname": "Burkely",
+    "blacklistby": 23,
+    "date": "2017-10-24",
+    "details": "Begging in slots Barry infromed CCTV",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 94,
+  "fields": {
+    "name": "Ainsley",
+    "surname": "Peter Clarke",
+    "blacklistby": 272,
+    "date": "2017-10-28",
+    "details": "Ainsley Peter Clarke was black listed for begging by Yasar Unsal",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 95,
+  "fields": {
+    "name": "Jody",
+    "surname": "Arneaude",
+    "blacklistby": 4,
+    "date": "2017-10-30",
+    "details": "--EMPTY--",
+    "picture": "images/334.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 96,
+  "fields": {
+    "name": "Shanise",
+    "surname": "Livingston",
+    "blacklistby": 4,
+    "date": "2017-10-31",
+    "details": "On the above date listed, Ms Sharise Livingston was banned by Ms. Begum for cheating.",
+    "picture": "images/333.jpg",
+    "sex": 2,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 97,
+  "fields": {
+    "name": "Marsha",
+    "surname": "Alexander-Khan",
+    "blacklistby": 75,
+    "date": "2017-11-05",
+    "details": "Borrowing customer money.",
+    "picture": "images/332.jpg",
+    "sex": 2,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 98,
+  "fields": {
+    "name": "Brian",
+    "surname": "Samaroo",
+    "blacklistby": 23,
+    "date": "2017-11-23",
+    "details": "aggressive behavior towards employees.",
+    "picture": "images/331.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 99,
+  "fields": {
+    "name": "Ian",
+    "surname": "coneaud",
+    "blacklistby": 83,
+    "date": "2017-11-24",
+    "details": "he was caught not playing and liming",
+    "picture": "images/330.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 100,
+  "fields": {
+    "name": "Antonio",
+    "surname": "Mitchel",
+    "blacklistby": 23,
+    "date": "2017-11-28",
+    "details": "--EMPTY--",
+    "picture": "images/328.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 101,
+  "fields": {
+    "name": "Andel",
+    "surname": "Delance",
+    "blacklistby": 23,
+    "date": "2017-12-01",
+    "details": "for not playing and looking suspious",
+    "picture": "images/325.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 102,
+  "fields": {
+    "name": "Daren",
+    "surname": "Slaten",
+    "blacklistby": 23,
+    "date": "2017-12-01",
+    "details": "not playing and looking suspious.",
+    "picture": "images/326.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 103,
+  "fields": {
+    "name": "Terry",
+    "surname": "Mendez",
+    "blacklistby": 4,
+    "date": "2017-12-01",
+    "details": "GM call cctv to infrom us that he is to be put on the blacklist.",
+    "picture": "images/327.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 104,
+  "fields": {
+    "name": "John Knolly",
+    "surname": "Edwars",
+    "blacklistby": 4,
+    "date": "2017-12-02",
+    "details": "CCTV was inform that the above customer was being rude and  disturbing the employee! He wasn’t Playing.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 105,
+  "fields": {
+    "name": "Jairo",
+    "surname": "Sandea",
+    "blacklistby": 23,
+    "date": "2017-12-05",
+    "details": "--EMPTY--",
+    "picture": "images/323.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 106,
+  "fields": {
+    "name": "unknowed",
+    "surname": "unknowed",
+    "blacklistby": 23,
+    "date": "2017-12-11",
+    "details": "DM infromed cctv that he not playing and after he leave he will be on the black list",
+    "picture": "images/321.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 107,
+  "fields": {
+    "name": "Denzil",
+    "surname": "Gonzales",
+    "blacklistby": 4,
+    "date": "2017-12-11",
+    "details": "Was blacklisted for switching cards.",
+    "picture": "images/322.jpg",
+    "sex": 1,
+    "reason": 5,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 108,
+  "fields": {
+    "name": "Conrad",
+    "surname": "Mutru",
+    "blacklistby": 4,
+    "date": "2017-12-20",
+    "details": "--EMPTY--",
+    "picture": "images/320.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 109,
+  "fields": {
+    "name": "Nigel",
+    "surname": "Williams",
+    "blacklistby": 4,
+    "date": "2017-12-22",
+    "details": "--EMPTY--",
+    "picture": "images/317.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 110,
+  "fields": {
+    "name": "Deon",
+    "surname": "Yearwood",
+    "blacklistby": 4,
+    "date": "2017-12-22",
+    "details": "--EMPTY--",
+    "picture": "images/318.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 111,
+  "fields": {
+    "name": "Akino",
+    "surname": "Mark",
+    "blacklistby": 4,
+    "date": "2017-12-22",
+    "details": "--EMPTY--",
+    "picture": "images/319.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 112,
+  "fields": {
+    "name": "Keith",
+    "surname": "Huggins",
+    "blacklistby": 272,
+    "date": "2017-12-24",
+    "details": "Marking cards.",
+    "picture": "images/316.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 113,
+  "fields": {
+    "name": "Dave",
+    "surname": "Richards",
+    "blacklistby": 23,
+    "date": "2017-12-27",
+    "details": "Unwilling to comply with company rules.",
+    "picture": "images/315.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 114,
+  "fields": {
+    "name": "nyla",
+    "surname": "patrick",
+    "blacklistby": 23,
+    "date": "2018-01-17",
+    "details": "Trying to thife credits from customer.",
+    "picture": "images/314.jpg",
+    "sex": 2,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 115,
+  "fields": {
+    "name": "unknowed",
+    "surname": "unknowed",
+    "blacklistby": 4,
+    "date": "2018-01-20",
+    "details": "staff companion",
+    "picture": "images/312.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 116,
+  "fields": {
+    "name": "unknowed",
+    "surname": "unknowed",
+    "blacklistby": 4,
+    "date": "2018-01-20",
+    "details": "staff companion",
+    "picture": "images/313.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 117,
+  "fields": {
+    "name": "Jermin",
+    "surname": "Jeffers",
+    "blacklistby": 4,
+    "date": "2018-01-29",
+    "details": "Cheating on BJ",
+    "picture": "images/306.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 118,
+  "fields": {
+    "name": "Sherlon",
+    "surname": "Lamont",
+    "blacklistby": 4,
+    "date": "2018-01-29",
+    "details": "Cheating on BJ",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 119,
+  "fields": {
+    "name": "Allan",
+    "surname": "Chin",
+    "blacklistby": 4,
+    "date": "2018-01-29",
+    "details": "CCTV was told that the customer was harassing staff.",
+    "picture": "images/308.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 120,
+  "fields": {
+    "name": "Kerron",
+    "surname": "King",
+    "blacklistby": 4,
+    "date": "2018-01-29",
+    "details": "Colluting with staff",
+    "picture": "images/309.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 121,
+  "fields": {
+    "name": "Richard",
+    "surname": "Chung",
+    "blacklistby": 4,
+    "date": "2018-01-29",
+    "details": "Colluting with Staff",
+    "picture": "images/310.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 122,
+  "fields": {
+    "name": "Sherise",
+    "surname": "Livinston",
+    "blacklistby": 4,
+    "date": "2018-01-31",
+    "details": "Card switching and bet capping.",
+    "picture": "images/305.jpg",
+    "sex": 2,
+    "reason": 5,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 123,
+  "fields": {
+    "name": "Alica",
+    "surname": "Carbol",
+    "blacklistby": 4,
+    "date": "2018-02-07",
+    "details": "Brought the Police for a customer.\r\nReinstated by Phillip.",
+    "picture": "images/304.jpg",
+    "sex": 2,
+    "reason": 11,
+    "race": 2,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 124,
+  "fields": {
+    "name": "April",
+    "surname": "April",
+    "blacklistby": 75,
+    "date": "2018-02-14",
+    "details": "She brought 18 $10.00 bills US$ fake.",
+    "picture": "images/303.jpg",
+    "sex": 2,
+    "reason": 10,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 125,
+  "fields": {
+    "name": "Marlon",
+    "surname": "Nelson",
+    "blacklistby": 4,
+    "date": "2018-02-21",
+    "details": "Playing Customers machine",
+    "picture": "images/302.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 126,
+  "fields": {
+    "name": "Curtis",
+    "surname": "Extavour",
+    "blacklistby": 75,
+    "date": "2018-02-25",
+    "details": "Begging everyone for money.",
+    "picture": "images/301.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 127,
+  "fields": {
+    "name": "Casey",
+    "surname": "Williams",
+    "blacklistby": 83,
+    "date": "2018-02-27",
+    "details": "Stealing",
+    "picture": "images/299.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 128,
+  "fields": {
+    "name": "Nehemiah",
+    "surname": "Gulston",
+    "blacklistby": 272,
+    "date": "2018-02-27",
+    "details": "Collusion with staff.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 129,
+  "fields": {
+    "name": "Ottis",
+    "surname": "Grazette",
+    "blacklistby": 83,
+    "date": "2018-02-28",
+    "details": "Loitering.",
+    "picture": "images/298.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 130,
+  "fields": {
+    "name": "Charmaine",
+    "surname": "Williams",
+    "blacklistby": 83,
+    "date": "2018-03-04",
+    "details": "Loitering",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 131,
+  "fields": {
+    "name": "Louise",
+    "surname": "De Gendre",
+    "blacklistby": 83,
+    "date": "2018-03-04",
+    "details": "Loitering.",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 132,
+  "fields": {
+    "name": "Jewel",
+    "surname": "Jack-Badnock",
+    "blacklistby": 7,
+    "date": "2018-03-23",
+    "details": "--EMPTY--",
+    "picture": "images/jewel.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 133,
+  "fields": {
+    "name": "Agustine",
+    "surname": "Henry",
+    "blacklistby": 75,
+    "date": "2018-05-14",
+    "details": "Being disrespectful to the duty manager.",
+    "picture": "images/294.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 134,
+  "fields": {
+    "name": "Steven",
+    "surname": "Murray",
+    "blacklistby": 252,
+    "date": "2018-05-25",
+    "details": "--EMPTY--",
+    "picture": "images/293.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 135,
+  "fields": {
+    "name": "Adrianna",
+    "surname": "Roberts",
+    "blacklistby": 22,
+    "date": "2018-05-27",
+    "details": "Customer placed her bet and then removed it after the dealer turned over her cards.",
+    "picture": "images/292.jpg",
+    "sex": 2,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 136,
+  "fields": {
+    "name": "Curwin",
+    "surname": "Murray",
+    "blacklistby": 4,
+    "date": "2018-06-06",
+    "details": "Non playing,begging customers for money.",
+    "picture": "images/291.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 137,
+  "fields": {
+    "name": "Ainley",
+    "surname": "Diaz",
+    "blacklistby": 75,
+    "date": "2018-06-07",
+    "details": "Stealing Phone.",
+    "picture": "images/289.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 138,
+  "fields": {
+    "name": "Robert",
+    "surname": "Gift",
+    "blacklistby": 23,
+    "date": "2018-06-07",
+    "details": "Begging customers for money and also taking money from the casino.",
+    "picture": "images/290.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 139,
+  "fields": {
+    "name": "Jennifer Jacinta",
+    "surname": "Chow",
+    "blacklistby": 23,
+    "date": "2018-06-08",
+    "details": "Loitering and crazy.",
+    "picture": "images/288.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 140,
+  "fields": {
+    "name": "Nestor",
+    "surname": "Mitchell",
+    "blacklistby": 23,
+    "date": "2018-06-13",
+    "details": "Suspicious behavior.",
+    "picture": "images/287.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 141,
+  "fields": {
+    "name": "Jilllian",
+    "surname": "Saunders",
+    "blacklistby": 22,
+    "date": "2018-06-16",
+    "details": "Blacklisted by DM for being disrespectful to staff and management.",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 142,
+  "fields": {
+    "name": "Kenneth",
+    "surname": "Williams",
+    "blacklistby": 22,
+    "date": "2018-06-17",
+    "details": "Stole a $700. Ticket and left the Building.",
+    "picture": "images/285.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 143,
+  "fields": {
+    "name": "Daryl",
+    "surname": "Roach",
+    "blacklistby": 4,
+    "date": "2018-06-23",
+    "details": "CCTV did not get any info as to why he was blacklisted.",
+    "picture": "images/284.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 144,
+  "fields": {
+    "name": "Karen",
+    "surname": "James",
+    "blacklistby": 272,
+    "date": "2018-07-13",
+    "details": "It was brought to the GM attentions that this customer have been begging the players.",
+    "picture": "images/282.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 145,
+  "fields": {
+    "name": "Sean",
+    "surname": "Henry",
+    "blacklistby": 252,
+    "date": "2018-07-13",
+    "details": "It was brought to the attenion of the GM that this individual haven't been playing any games.",
+    "picture": "images/283.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 146,
+  "fields": {
+    "name": "Levi",
+    "surname": "John",
+    "blacklistby": 4,
+    "date": "2018-07-17",
+    "details": "Customer was aggressive and also appears to be mentally unstable.",
+    "picture": "images/281.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 147,
+  "fields": {
+    "name": "Anton",
+    "surname": "Crawford",
+    "blacklistby": 272,
+    "date": "2018-07-19",
+    "details": "CCTV was inform customer wasn't playing.",
+    "picture": "images/280.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 148,
+  "fields": {
+    "name": "kareem",
+    "surname": "Cooper",
+    "blacklistby": 23,
+    "date": "2018-07-25",
+    "details": "--EMPTY--",
+    "picture": "images/kareem_cooper.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 149,
+  "fields": {
+    "name": "Joy",
+    "surname": "Butts-Boland",
+    "blacklistby": 7,
+    "date": "2018-07-31",
+    "details": "CCTV was informed customer got aggressive with PR.",
+    "picture": "images/278.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 150,
+  "fields": {
+    "name": "Mark",
+    "surname": "Sabga",
+    "blacklistby": 4,
+    "date": "2018-08-03",
+    "details": "Directors decision.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 151,
+  "fields": {
+    "name": "Ahmad",
+    "surname": "Guerra",
+    "blacklistby": 23,
+    "date": "2018-08-16",
+    "details": "CCTV was informed by Rene of Guerra blacklist.",
+    "picture": "images/276.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 152,
+  "fields": {
+    "name": "Jason",
+    "surname": "Delice",
+    "blacklistby": 23,
+    "date": "2018-09-16",
+    "details": "--EMPTY--",
+    "picture": "images/275.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 153,
+  "fields": {
+    "name": "Ian",
+    "surname": "Willams",
+    "blacklistby": 4,
+    "date": "2018-09-23",
+    "details": "Ian was found puncturing another customer's car.",
+    "picture": "images/274.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 154,
+  "fields": {
+    "name": "Andy",
+    "surname": "Nayak",
+    "blacklistby": 4,
+    "date": "2018-09-28",
+    "details": "Begging customers for money.",
+    "picture": "images/273.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 155,
+  "fields": {
+    "name": "Micheal",
+    "surname": "Pierre",
+    "blacklistby": 23,
+    "date": "2018-10-01",
+    "details": "Aggressive behaviour and disturbing customers",
+    "picture": "images/270.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 156,
+  "fields": {
+    "name": "Emirt",
+    "surname": "Emirt",
+    "blacklistby": 23,
+    "date": "2018-10-01",
+    "details": "Aggressive Behavior towards staff.",
+    "picture": "images/271.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 157,
+  "fields": {
+    "name": "John",
+    "surname": "Khan",
+    "blacklistby": 23,
+    "date": "2018-10-01",
+    "details": "It was brought to the attention of CCTV that this cusomer was acting Aggressive towards staff.",
+    "picture": "images/272.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 158,
+  "fields": {
+    "name": "Donavan",
+    "surname": "Lewis",
+    "blacklistby": 4,
+    "date": "2018-11-13",
+    "details": "Mr. Lewis was blacklisted for harassing customers and also had a hygiene problem.",
+    "picture": "images/269.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 159,
+  "fields": {
+    "name": "Drian",
+    "surname": "Jackson",
+    "blacklistby": 75,
+    "date": "2018-12-05",
+    "details": "CCTV was informed Mr. Jackson was disturbing customers and not playing.",
+    "picture": "images/268.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 160,
+  "fields": {
+    "name": "Nantango",
+    "surname": "Inniss",
+    "blacklistby": 4,
+    "date": "2018-12-07",
+    "details": "Blacklisted by management for corrupting dealers.",
+    "picture": "images/266.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 161,
+  "fields": {
+    "name": "Kevon",
+    "surname": "Antoine",
+    "blacklistby": 4,
+    "date": "2018-12-07",
+    "details": "Blacklisted by management for corrupting dealers.",
+    "picture": "images/267.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 162,
+  "fields": {
+    "name": "Damian",
+    "surname": "Rogers",
+    "blacklistby": 23,
+    "date": "2018-12-31",
+    "details": "Mr. Rogers was black listed for being aggressive with Mr. Yunus. Reinstated by Mr. Yasar on GD. 27-01-2025.",
+    "picture": "images/265.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 163,
+  "fields": {
+    "name": "Ezekiel",
+    "surname": "Benjamin",
+    "blacklistby": 252,
+    "date": "2019-01-12",
+    "details": "Mister Benjanin was blacklisted for verbally and sexually harassing two waitresses.",
+    "picture": "images/466.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 164,
+  "fields": {
+    "name": "Manuel",
+    "surname": "Pantin",
+    "blacklistby": 4,
+    "date": "2019-01-16",
+    "details": "Smelling real stink! Burning people nose.",
+    "picture": "images/263.jpg",
+    "sex": 1,
+    "reason": 18,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 165,
+  "fields": {
+    "name": "Wendy",
+    "surname": "Bravo",
+    "blacklistby": 272,
+    "date": "2019-01-25",
+    "details": "It was brought to the attention of the DM that this customer was not playing.",
+    "picture": "images/427.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 166,
+  "fields": {
+    "name": "Akella",
+    "surname": "Bravo",
+    "blacklistby": 6,
+    "date": "2019-01-25",
+    "details": "Non-Playing.",
+    "picture": "images/428.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 167,
+  "fields": {
+    "name": "Shaquille",
+    "surname": "Charles",
+    "blacklistby": 23,
+    "date": "2019-02-12",
+    "details": "Begging for everything.",
+    "picture": "images/430.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 168,
+  "fields": {
+    "name": "Crystal",
+    "surname": "Gazzet",
+    "blacklistby": 272,
+    "date": "2019-03-08",
+    "details": "Customer place a tie bet after dealer revealed her cards.",
+    "picture": "images/431.jpg",
+    "sex": 2,
+    "reason": 8,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 169,
+  "fields": {
+    "name": "Zarida",
+    "surname": "Bodington",
+    "blacklistby": 22,
+    "date": "2019-04-02",
+    "details": "Blacklisted by Aysun for stealing credits on a machine.",
+    "picture": "images/432.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 12,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 170,
+  "fields": {
+    "name": "Robert",
+    "surname": "Hernandez",
+    "blacklistby": 23,
+    "date": "2019-04-03",
+    "details": "Mad Behavior. Reinstated by Philip.",
+    "picture": "images/433.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 171,
+  "fields": {
+    "name": "Sean",
+    "surname": "Charles",
+    "blacklistby": 22,
+    "date": "2019-04-18",
+    "details": "Attempting to cash out another customer credit from a machine.",
+    "picture": "images/434.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 172,
+  "fields": {
+    "name": "Carl",
+    "surname": "De Sliver",
+    "blacklistby": 75,
+    "date": "2019-04-27",
+    "details": "Bad behavior.",
+    "picture": "images/435.jpg",
+    "sex": 1,
+    "reason": 21,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 173,
+  "fields": {
+    "name": "Crystal",
+    "surname": "Williams",
+    "blacklistby": 4,
+    "date": "2019-04-29",
+    "details": "Was seen placing a tie bet after the dealer cards turned up.",
+    "picture": "images/436.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 174,
+  "fields": {
+    "name": "Covin",
+    "surname": "Charles",
+    "blacklistby": 272,
+    "date": "2019-05-19",
+    "details": "--EMPTY--",
+    "picture": "images/437.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 175,
+  "fields": {
+    "name": "Antonia",
+    "surname": "Pompe",
+    "blacklistby": 4,
+    "date": "2019-05-31",
+    "details": "Apparently she is begging everybody for money.",
+    "picture": "images/438.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 176,
+  "fields": {
+    "name": "Leslie",
+    "surname": "Ford",
+    "blacklistby": 38,
+    "date": "2019-06-04",
+    "details": "Was using obscene.",
+    "picture": "images/439.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 177,
+  "fields": {
+    "name": "Harrette",
+    "surname": "Garrick",
+    "blacklistby": 75,
+    "date": "2019-06-10",
+    "details": "She was blacklisted before for switching cards",
+    "picture": "images/440.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 178,
+  "fields": {
+    "name": "Sade",
+    "surname": "Mark",
+    "blacklistby": 75,
+    "date": "2019-06-13",
+    "details": "Scamming a customer of her winnings.",
+    "picture": "images/441.jpg",
+    "sex": 2,
+    "reason": 34,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 179,
+  "fields": {
+    "name": "Kerwin",
+    "surname": "Stewart",
+    "blacklistby": 75,
+    "date": "2019-06-13",
+    "details": "Scamming a customer of her winning.",
+    "picture": "images/442.jpg",
+    "sex": 1,
+    "reason": 34,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 180,
+  "fields": {
+    "name": "Kendra",
+    "surname": "Jones",
+    "blacklistby": 75,
+    "date": "2019-06-13",
+    "details": "Scamming",
+    "picture": "images/443.jpg",
+    "sex": 2,
+    "reason": 34,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 181,
+  "fields": {
+    "name": "Jason",
+    "surname": "Campbell",
+    "blacklistby": 272,
+    "date": "2019-06-16",
+    "details": "No reason was given by the DM for the banning of this customer",
+    "picture": "images/444.jpg",
+    "sex": 1,
+    "reason": 34,
+    "race": 12,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 182,
+  "fields": {
+    "name": "William",
+    "surname": "Mc Kenzie",
+    "blacklistby": 22,
+    "date": "2019-07-12",
+    "details": "Obsence language against staff",
+    "picture": "images/445.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 183,
+  "fields": {
+    "name": "Trevor",
+    "surname": "John",
+    "blacklistby": 22,
+    "date": "2019-07-22",
+    "details": "Threatening security staff.",
+    "picture": "images/446.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 184,
+  "fields": {
+    "name": "Nicholas",
+    "surname": "Ramcharan",
+    "blacklistby": 22,
+    "date": "2019-07-22",
+    "details": "Threatening security staff.",
+    "picture": "images/447.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 185,
+  "fields": {
+    "name": "Antonio",
+    "surname": "Dookie",
+    "blacklistby": 22,
+    "date": "2019-07-22",
+    "details": "Threatening security staff.",
+    "picture": "images/448.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 186,
+  "fields": {
+    "name": "Marjorie",
+    "surname": "Williams",
+    "blacklistby": 22,
+    "date": "2019-07-27",
+    "details": "Information passed on to CCTV via DM",
+    "picture": "images/449.jpg",
+    "sex": 2,
+    "reason": 18,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 187,
+  "fields": {
+    "name": "Ramesh",
+    "surname": "Ramsaran",
+    "blacklistby": 252,
+    "date": "2019-08-03",
+    "details": "He was not playing on machines or tables, he was loafing off of the casino. He was also verbally abusive to slots staff and Food and Beverage manager Mauricia",
+    "picture": "images/450.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 19,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 188,
+  "fields": {
+    "name": "Marc",
+    "surname": "White",
+    "blacklistby": 38,
+    "date": "2019-08-06",
+    "details": "Mr.White cashed out another customer's ticket on the machine.",
+    "picture": "images/451.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 189,
+  "fields": {
+    "name": "Eloy",
+    "surname": "Burge",
+    "blacklistby": 22,
+    "date": "2019-09-01",
+    "details": "Taking  pictures of  a female staff and inquiring about opening and closing hours of the Casino.",
+    "picture": "images/452.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 190,
+  "fields": {
+    "name": "Roger",
+    "surname": "Patrick",
+    "blacklistby": 272,
+    "date": "2019-09-23",
+    "details": "Mr Patrick was drunk and also being disrespectful to staff.",
+    "picture": "images/453.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 191,
+  "fields": {
+    "name": "Meshack",
+    "surname": "Edwards",
+    "blacklistby": 252,
+    "date": "2019-10-02",
+    "details": "Mr. Edwards was blacklisted for stealing another customer`s cellphone.  He is also using the name (Micheal Edwards) to enter the casino.",
+    "picture": "images/454.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 192,
+  "fields": {
+    "name": "Matino",
+    "surname": "Rodriguez",
+    "blacklistby": 252,
+    "date": "2019-10-04",
+    "details": "Mr. Rodriguez was black listed for stealing another \r\ncustomer's money off their machine on the 29th Aug. 2019",
+    "picture": "images/455.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 193,
+  "fields": {
+    "name": "Melissa",
+    "surname": "Richardson",
+    "blacklistby": 252,
+    "date": "2019-10-14",
+    "details": "they have been buying in with Visa and cash out the Total buy in later on.",
+    "picture": "images/456.jpg",
+    "sex": 2,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 194,
+  "fields": {
+    "name": "Paula",
+    "surname": "De Abreu",
+    "blacklistby": 252,
+    "date": "2019-10-14",
+    "details": "they have been buying in with Visa and cash out the Total buy in later on.",
+    "picture": "images/457.jpg",
+    "sex": 2,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 195,
+  "fields": {
+    "name": "Kyron harding",
+    "surname": "kyron sinanan",
+    "blacklistby": 252,
+    "date": "2019-10-14",
+    "details": "they have been buying in with Visa and cash out the Total buy in later on.",
+    "picture": "images/458.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 196,
+  "fields": {
+    "name": "Sheryl",
+    "surname": "Beckles",
+    "blacklistby": 38,
+    "date": "2019-10-18",
+    "details": "Miss Beckles was blacklisted for theifing another customers chips on a table while the customer went to the bathroom",
+    "picture": "images/460.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 197,
+  "fields": {
+    "name": "Nyron",
+    "surname": "Greenidge",
+    "blacklistby": 22,
+    "date": "2019-10-21",
+    "details": "Customer was drinking and liming and harassing other customers",
+    "picture": "images/461.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 198,
+  "fields": {
+    "name": "Kourtney",
+    "surname": "Lucas",
+    "blacklistby": 272,
+    "date": "2019-11-02",
+    "details": "Begging customers for money.",
+    "picture": "images/462.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 199,
+  "fields": {
+    "name": "Martin",
+    "surname": "Hunter",
+    "blacklistby": 252,
+    "date": "2019-11-10",
+    "details": "Mr.Hunter was being Very aggressive towards the staff.",
+    "picture": "images/463.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 200,
+  "fields": {
+    "name": "Taisha",
+    "surname": "Bannister",
+    "blacklistby": 252,
+    "date": "2019-11-13",
+    "details": "She threatened to beat the slots supervisor.",
+    "picture": "images/464.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 201,
+  "fields": {
+    "name": "Josanne",
+    "surname": "Chance",
+    "blacklistby": 272,
+    "date": "2019-11-29",
+    "details": "Apparently she has been blacklist 3 years ago. Mr. Unsal claimed to have blacklisted her a second time before this.\r\nTherefore this is her third time being blacklisted for aggressivce behaviour, using obscene language and possible mental problems.",
+    "picture": "images/465.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 202,
+  "fields": {
+    "name": "Kevin",
+    "surname": "Livingston",
+    "blacklistby": 38,
+    "date": "2019-12-31",
+    "details": "Mr Livingston was blacklisted for stealing another customer`s ticket and cashing it out.",
+    "picture": "images/471.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 203,
+  "fields": {
+    "name": "Precious",
+    "surname": "Brewster",
+    "blacklistby": 272,
+    "date": "2020-01-07",
+    "details": "Ms. Boster was blacklisted for stealing  Company's property.",
+    "picture": "images/467.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 204,
+  "fields": {
+    "name": "Kelly",
+    "surname": "Alexander",
+    "blacklistby": 272,
+    "date": "2020-01-07",
+    "details": "Ms. Kelly was blacklisted for stealing  Company's property.",
+    "picture": "images/468.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 205,
+  "fields": {
+    "name": "Abby",
+    "surname": "Oliver",
+    "blacklistby": 272,
+    "date": "2020-01-07",
+    "details": "Ms. Oliver  was    blacklisted for stealing Company’s property.",
+    "picture": "images/469.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 206,
+  "fields": {
+    "name": "Ioahakah",
+    "surname": "Oliver",
+    "blacklistby": 272,
+    "date": "2020-01-07",
+    "details": "Ms.Ioahakah was blacklisted for stealing Company's property.",
+    "picture": "images/470.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 207,
+  "fields": {
+    "name": "Onika",
+    "surname": "D'abreau",
+    "blacklistby": 22,
+    "date": "2020-01-17",
+    "details": "Credit card fraud",
+    "picture": "images/472.jpg",
+    "sex": 2,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 208,
+  "fields": {
+    "name": "Anika",
+    "surname": "James",
+    "blacklistby": 272,
+    "date": "2020-01-17",
+    "details": "for fraud with credit/ linx card at cash desk",
+    "picture": "images/473.jpg",
+    "sex": 2,
+    "reason": 33,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 209,
+  "fields": {
+    "name": "Natasha",
+    "surname": "Mitchell",
+    "blacklistby": 272,
+    "date": "2020-01-17",
+    "details": "for fraud with credit/ linx card at cash desk",
+    "picture": "images/474.jpg",
+    "sex": 2,
+    "reason": 32,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 210,
+  "fields": {
+    "name": "SOUL",
+    "surname": "--UNKNOW--",
+    "blacklistby": 272,
+    "date": "2020-02-01",
+    "details": "Fighting in sport betting",
+    "picture": "images/475.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 211,
+  "fields": {
+    "name": "John",
+    "surname": "Benthum",
+    "blacklistby": 165,
+    "date": "2022-09-17",
+    "details": "Aggressive behaviour.",
+    "picture": "images/476.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 212,
+  "fields": {
+    "name": "Christopher",
+    "surname": "Hall",
+    "blacklistby": 22,
+    "date": "2022-09-24",
+    "details": "Mr. Hall was blacklisted for stealing another customer`s chips on table games.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 213,
+  "fields": {
+    "name": "Anton",
+    "surname": "Bruce",
+    "blacklistby": 1021,
+    "date": "2022-09-30",
+    "details": "Customer cashed out another customer's ticket.",
+    "picture": "images/478.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 214,
+  "fields": {
+    "name": "Terry",
+    "surname": "Folks",
+    "blacklistby": 1021,
+    "date": "2022-10-18",
+    "details": "Mr. Folks was seen acting aggressively towards customers and staff members.",
+    "picture": "images/486.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 215,
+  "fields": {
+    "name": "Nicole",
+    "surname": "Richardson",
+    "blacklistby": 272,
+    "date": "2022-11-24",
+    "details": "Miss Richardson was banned for  aggressive behavior.",
+    "picture": "images/479.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 216,
+  "fields": {
+    "name": "Lirong",
+    "surname": "Pang",
+    "blacklistby": 272,
+    "date": "2022-11-28",
+    "details": "Clarence Blacklisted.",
+    "picture": "images/480.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 6,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 217,
+  "fields": {
+    "name": "Jeleen",
+    "surname": "Richard",
+    "blacklistby": 272,
+    "date": "2022-12-05",
+    "details": "Stole a ticket from machine.",
+    "picture": "images/483.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 218,
+  "fields": {
+    "name": "Richard",
+    "surname": "Maraldo",
+    "blacklistby": 272,
+    "date": "2022-12-05",
+    "details": "thiefing tickets from machine.",
+    "picture": "images/484.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 219,
+  "fields": {
+    "name": "Marlon",
+    "surname": "Louis",
+    "blacklistby": 165,
+    "date": "2022-12-14",
+    "details": "Mr. Luis was blacklisted for masturbating.",
+    "picture": "images/485.jpg",
+    "sex": 1,
+    "reason": 31,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 220,
+  "fields": {
+    "name": "Kayanne",
+    "surname": "Alexender",
+    "blacklistby": 38,
+    "date": "2022-12-21",
+    "details": "Blacklisted for stealing customer phone and purse.",
+    "picture": "images/487.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 221,
+  "fields": {
+    "name": "Neil",
+    "surname": "Alexander",
+    "blacklistby": 38,
+    "date": "2022-12-21",
+    "details": "Blacklisted for stealing customer phone and purse.",
+    "picture": "images/488.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 222,
+  "fields": {
+    "name": "Keemal",
+    "surname": "Jackson",
+    "blacklistby": 272,
+    "date": "2022-12-26",
+    "details": "He entered POS branch while being blacklisted in Chaguanas branch.",
+    "picture": "images/489.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 223,
+  "fields": {
+    "name": "Ali",
+    "surname": "Layla",
+    "blacklistby": 272,
+    "date": "2023-01-18",
+    "details": "He is try to manipulate our currency system.",
+    "picture": "images/490.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 224,
+  "fields": {
+    "name": "Chevon",
+    "surname": "Lezama",
+    "blacklistby": 272,
+    "date": "2023-02-04",
+    "details": "Mr Lezama stole Kevin Ross card and cashed out 100 from it.",
+    "picture": "images/491.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 225,
+  "fields": {
+    "name": "Trevon",
+    "surname": "Williams",
+    "blacklistby": 272,
+    "date": "2023-02-07",
+    "details": "Blacklisted by mr Yasar",
+    "picture": "images/495.jpg",
+    "sex": 1,
+    "reason": 30,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 226,
+  "fields": {
+    "name": "Martha Catherine",
+    "surname": "Espinoza",
+    "blacklistby": 272,
+    "date": "2023-02-24",
+    "details": "No reason given.",
+    "picture": "images/MArtha.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 227,
+  "fields": {
+    "name": "Darren",
+    "surname": "James",
+    "blacklistby": 272,
+    "date": "2023-02-27",
+    "details": "Blacklisted by my Yasar",
+    "picture": "images/493.jpg",
+    "sex": 1,
+    "reason": 30,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 228,
+  "fields": {
+    "name": "Tyrell",
+    "surname": "Shore",
+    "blacklistby": 272,
+    "date": "2023-02-27",
+    "details": "Blacklisted by mr Yasar",
+    "picture": "images/494.jpg",
+    "sex": 1,
+    "reason": 30,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 229,
+  "fields": {
+    "name": "Jameel",
+    "surname": "Garcia",
+    "blacklistby": 272,
+    "date": "2023-02-27",
+    "details": "Blacklisted by mr Yasar.",
+    "picture": "images/496.jpg",
+    "sex": 1,
+    "reason": 30,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 230,
+  "fields": {
+    "name": "Derrick",
+    "surname": "Bouchelle",
+    "blacklistby": 272,
+    "date": "2023-03-11",
+    "details": "Mr. Bouchelle was blacklisted for using obscene language in the casino.",
+    "picture": "images/497.jpg",
+    "sex": 1,
+    "reason": 29,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 231,
+  "fields": {
+    "name": "Wayne",
+    "surname": "John",
+    "blacklistby": 272,
+    "date": "2023-03-11",
+    "details": "Mr. John was blacklisted for being a non-playing customer.",
+    "picture": "images/498_zdlFQv6.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 232,
+  "fields": {
+    "name": "Otis",
+    "surname": "Jack",
+    "blacklistby": 1021,
+    "date": "2023-04-11",
+    "details": "Blacklisted for begging and hygine",
+    "picture": "images/500_3mvdO0G.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 233,
+  "fields": {
+    "name": "Collin",
+    "surname": "Collymore",
+    "blacklistby": 38,
+    "date": "2023-04-12",
+    "details": "Aggressive Behavior…….",
+    "picture": "images/501.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 234,
+  "fields": {
+    "name": "Jaime",
+    "surname": "Jack",
+    "blacklistby": 272,
+    "date": "2023-04-20",
+    "details": "Jaime Jack wasn't playing and was going to playing customers begging them for money. This has been a frequent habit from her and should not be encouraged.  DM (Mr. Ali) was informed about this situation.",
+    "picture": "images/502.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 235,
+  "fields": {
+    "name": "Richard",
+    "surname": "Regis",
+    "blacklistby": 272,
+    "date": "2023-04-27",
+    "details": "Blacklisted by Mr. Yasar for being a non playing customer.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 237,
+  "fields": {
+    "name": "Patrick",
+    "surname": "Ransome",
+    "blacklistby": 272,
+    "date": "2023-04-27",
+    "details": "Blacklisted by mr.Yasar for being a non playing customer.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 238,
+  "fields": {
+    "name": "Julian",
+    "surname": "Gomes",
+    "blacklistby": 272,
+    "date": "2023-04-27",
+    "details": "Blacklisted by mr. Yasar for being a non playing customer.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 239,
+  "fields": {
+    "name": "Marsha",
+    "surname": "Marjorie",
+    "blacklistby": 272,
+    "date": "2023-05-08",
+    "details": "--EMPTY--",
+    "picture": "images/500.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 240,
+  "fields": {
+    "name": "Shuan",
+    "surname": "Liang",
+    "blacklistby": 272,
+    "date": "2023-05-20",
+    "details": "Customer walked in an just sat in vip room for a lengthly time on his phone making the playing customers uncomfortable.",
+    "picture": "images/511.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 6,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 241,
+  "fields": {
+    "name": "Khaleel",
+    "surname": "Ramkisoon",
+    "blacklistby": 272,
+    "date": "2023-05-22",
+    "details": "Non Playing.",
+    "picture": "images/512.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 242,
+  "fields": {
+    "name": "Selwyn",
+    "surname": "Legall",
+    "blacklistby": 272,
+    "date": "2023-05-28",
+    "details": "Seiwyn was blacklisted for his personal hygine.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 7,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 243,
+  "fields": {
+    "name": "Victor",
+    "surname": "Cupid",
+    "blacklistby": 38,
+    "date": "2023-06-06",
+    "details": "Blacklisted for non playing.",
+    "picture": "images/514.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 244,
+  "fields": {
+    "name": "Jessel",
+    "surname": "Chrysostom",
+    "blacklistby": 1021,
+    "date": "2023-06-07",
+    "details": "Mr.Jessel was verbally abusive towards Slot staff and Security.\r\n\r\nHe was also heard making treats to burn down the building.",
+    "picture": "images/515.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 245,
+  "fields": {
+    "name": "Jullian",
+    "surname": "Williams",
+    "blacklistby": 272,
+    "date": "2023-07-08",
+    "details": "Non playing.",
+    "picture": "images/516.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 246,
+  "fields": {
+    "name": "Sin Clair",
+    "surname": "Thompson",
+    "blacklistby": 272,
+    "date": "2023-07-14",
+    "details": "Mr. Thompson has been urinating on him self all over the Casino for the past few months.",
+    "picture": "images/517.jpg",
+    "sex": 1,
+    "reason": 7,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 247,
+  "fields": {
+    "name": "Antonio",
+    "surname": "Jacob",
+    "blacklistby": 272,
+    "date": "2023-07-17",
+    "details": "Non playing customer.",
+    "picture": "images/518.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 248,
+  "fields": {
+    "name": "Marissa",
+    "surname": "Alexander",
+    "blacklistby": 272,
+    "date": "2023-07-18",
+    "details": "Taking customers chips and betting it.",
+    "picture": "images/510.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 249,
+  "fields": {
+    "name": "Mr. Terrance",
+    "surname": "Charles",
+    "blacklistby": 38,
+    "date": "2023-07-21",
+    "details": "Hi All,\r\n\r\nPlease be informed Mr. Terrance Charles has been blacklisted. Management has been \r\nobserving Mr. Charles for the past couple days and he is not playing he just sits by\r\nthe dining area or stands by Tables all day.\r\n\r\nRegards,\r\nRhonda",
+    "picture": "images/519.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 250,
+  "fields": {
+    "name": "Kenroy",
+    "surname": "Williams",
+    "blacklistby": 272,
+    "date": "2023-07-21",
+    "details": "Mr. Williams were intoxicated and initiate arguments with other customers.",
+    "picture": "images/520.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 251,
+  "fields": {
+    "name": "Kurt",
+    "surname": "Butler",
+    "blacklistby": 272,
+    "date": "2023-07-22",
+    "details": "Mr. Butler was just occupying machines without playing.",
+    "picture": "images/521.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 252,
+  "fields": {
+    "name": "Sheheeda",
+    "surname": "De Silver",
+    "blacklistby": 272,
+    "date": "2023-07-27",
+    "details": "Non player.",
+    "picture": "images/522.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 253,
+  "fields": {
+    "name": "Lyndon",
+    "surname": "Votor",
+    "blacklistby": 4,
+    "date": "2023-07-28",
+    "details": "Was blacklisted by Miss Begum from all locations.\r\n\r\nNo reason given.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 254,
+  "fields": {
+    "name": "Fitzalbert",
+    "surname": "Victor",
+    "blacklistby": 38,
+    "date": "2023-07-30",
+    "details": "Mr. Victor was caught playing on another players machine and cashed out the ticket.",
+    "picture": "images/524.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 255,
+  "fields": {
+    "name": "Leah",
+    "surname": "Murren",
+    "blacklistby": 38,
+    "date": "2023-08-05",
+    "details": "Threatening staff and customers.",
+    "picture": "images/525.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 256,
+  "fields": {
+    "name": "Wanda",
+    "surname": "Jones",
+    "blacklistby": 1034,
+    "date": "2023-08-11",
+    "details": "Blacklisted by DM Ali.\r\nFor provoking staff and constantly causing problems.",
+    "picture": "images/526.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 257,
+  "fields": {
+    "name": "Noreen",
+    "surname": "John",
+    "blacklistby": 1324,
+    "date": "2023-08-11",
+    "details": "Blacklisted by Slots Manager Philip.\r\nVerbally abusing other customers.\r\n\r\nReinstated by Timucin Aksu",
+    "picture": "images/Noreen_J.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 258,
+  "fields": {
+    "name": "Ingrid",
+    "surname": "Navarro",
+    "blacklistby": 272,
+    "date": "2023-08-11",
+    "details": "Blacklisted by Slots Manager Philip.\r\nNon player.",
+    "picture": "images/528.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 259,
+  "fields": {
+    "name": "St Elmo",
+    "surname": "Charles",
+    "blacklistby": 272,
+    "date": "2023-08-11",
+    "details": "Blacklisted by Slots Manager Philip.\r\nNon player.",
+    "picture": "images/529.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 260,
+  "fields": {
+    "name": "Miranda",
+    "surname": "Kerr",
+    "blacklistby": 38,
+    "date": "2023-08-14",
+    "details": "Mrs. Miranda was blacklisted for disturbing customers in the slots area.",
+    "picture": "images/530.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 261,
+  "fields": {
+    "name": "Will",
+    "surname": "Williams",
+    "blacklistby": 4,
+    "date": "2023-08-29",
+    "details": "Reinstated on GD. 19-04-25 by Ms. Begum.",
+    "picture": "images/531.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 262,
+  "fields": {
+    "name": "Ziggy",
+    "surname": "Grant",
+    "blacklistby": 272,
+    "date": "2023-08-31",
+    "details": "--EMPTY--",
+    "picture": "images/532.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 263,
+  "fields": {
+    "name": "Kervin",
+    "surname": "Ross",
+    "blacklistby": 1168,
+    "date": "2023-09-02",
+    "details": "--EMPTY--",
+    "picture": "images/533.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 264,
+  "fields": {
+    "name": "Phillip",
+    "surname": "Ali",
+    "blacklistby": 1168,
+    "date": "2023-09-03",
+    "details": "--EMPTY--",
+    "picture": "images/535.jpg",
+    "sex": 1,
+    "reason": 28,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 266,
+  "fields": {
+    "name": "Celsus",
+    "surname": "Patrick",
+    "blacklistby": 1168,
+    "date": "2023-09-08",
+    "details": "--EMPTY--",
+    "picture": "images/536.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 267,
+  "fields": {
+    "name": "Lorenzo",
+    "surname": "Smith",
+    "blacklistby": 272,
+    "date": "2023-09-09",
+    "details": "Reinstated on GD. 30-01-2024 by Mr. Levent.",
+    "picture": "images/537_eBobouA.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 268,
+  "fields": {
+    "name": "Roslyn",
+    "surname": "Beauman",
+    "blacklistby": 1034,
+    "date": "2023-09-24",
+    "details": "--EMPTY--",
+    "picture": "images/538.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 269,
+  "fields": {
+    "name": "Tricia",
+    "surname": "Mahabir",
+    "blacklistby": 1034,
+    "date": "2023-10-01",
+    "details": "--EMPTY--",
+    "picture": "images/539.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 270,
+  "fields": {
+    "name": "Sarah",
+    "surname": "Mahabir",
+    "blacklistby": 1034,
+    "date": "2023-10-01",
+    "details": "--EMPTY--",
+    "picture": "images/540.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 271,
+  "fields": {
+    "name": "Lena",
+    "surname": "Ramirez",
+    "blacklistby": 1034,
+    "date": "2023-10-01",
+    "details": "--EMPTY--",
+    "picture": "images/541.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 272,
+  "fields": {
+    "name": "ALEANA",
+    "surname": "ST LOUIS",
+    "blacklistby": 38,
+    "date": "2023-10-10",
+    "details": "Smoking weed in the casino smoking area.",
+    "picture": "images/543.jpg",
+    "sex": 2,
+    "reason": 2,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 273,
+  "fields": {
+    "name": "KURLENE",
+    "surname": "CROMATHY",
+    "blacklistby": 38,
+    "date": "2023-10-10",
+    "details": "Smoking weed in the casino smoking area.",
+    "picture": "images/544.jpg",
+    "sex": 2,
+    "reason": 2,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 274,
+  "fields": {
+    "name": "Angelique",
+    "surname": "Pierre",
+    "blacklistby": 1021,
+    "date": "2023-10-18",
+    "details": "Stole tickets from the slot pit, which were left over credits from slot machines.",
+    "picture": "images/545.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 275,
+  "fields": {
+    "name": "Duran",
+    "surname": "Felician",
+    "blacklistby": 1034,
+    "date": "2023-10-21",
+    "details": "Also black listed because of hygiene issues.",
+    "picture": "images/546.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 276,
+  "fields": {
+    "name": "Narquita",
+    "surname": "Gilkes",
+    "blacklistby": 1034,
+    "date": "2023-10-22",
+    "details": "Narquita was blacklisted for entering the casino only to eat and to drink alcoholic beverages.",
+    "picture": "images/Narquita_Gilkes.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 277,
+  "fields": {
+    "name": "Shannon",
+    "surname": "Eckstein",
+    "blacklistby": 1034,
+    "date": "2023-10-22",
+    "details": "Mr. Shannon was blacklisted for entering the casino only to eat and to drink alcoholic beverages.",
+    "picture": "images/548.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 278,
+  "fields": {
+    "name": "Tamara",
+    "surname": "John",
+    "blacklistby": 1021,
+    "date": "2023-10-26",
+    "details": "Also black listed because of non playing.",
+    "picture": "images/549.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 279,
+  "fields": {
+    "name": "Joseph",
+    "surname": "Ambrose",
+    "blacklistby": 1021,
+    "date": "2023-10-29",
+    "details": "Footages were circulating that he is stealing.",
+    "picture": "images/550.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 280,
+  "fields": {
+    "name": "Stacey",
+    "surname": "Campbell",
+    "blacklistby": 38,
+    "date": "2023-11-07",
+    "details": "Also got blacklisted because of requesting food & drinks without playing.",
+    "picture": "images/551.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 281,
+  "fields": {
+    "name": "Khalifar",
+    "surname": "Ford",
+    "blacklistby": 1168,
+    "date": "2023-11-08",
+    "details": "He also comes in to consume food and drinks without playing and to watching adult videos on his cellphone.",
+    "picture": "images/552.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 282,
+  "fields": {
+    "name": "Karen",
+    "surname": "James",
+    "blacklistby": 6,
+    "date": "2018-07-13",
+    "details": "It was brought to the GM attention that this customer have been begging money from the players.",
+    "picture": "images/282.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 283,
+  "fields": {
+    "name": "Sean",
+    "surname": "Henry",
+    "blacklistby": 252,
+    "date": "2018-07-13",
+    "details": "It was brought to the GM's attention that this individual haven't been playing any games.",
+    "picture": "images/283.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 7,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 284,
+  "fields": {
+    "name": "Alex",
+    "surname": "Williams",
+    "blacklistby": 272,
+    "date": "2023-11-10",
+    "details": "--EMPTY--",
+    "picture": "images/555.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 285,
+  "fields": {
+    "name": "Jerome",
+    "surname": "Rogis",
+    "blacklistby": 272,
+    "date": "2023-11-10",
+    "details": "--EMPTY--",
+    "picture": "images/556.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 286,
+  "fields": {
+    "name": "Donnel",
+    "surname": "Olivel",
+    "blacklistby": 272,
+    "date": "2023-11-10",
+    "details": "--EMPTY--",
+    "picture": "images/557.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 287,
+  "fields": {
+    "name": "Gail",
+    "surname": "Castanada",
+    "blacklistby": 4,
+    "date": "2023-11-11",
+    "details": "--EMPTY--",
+    "picture": "images/558.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 288,
+  "fields": {
+    "name": "Melissa",
+    "surname": "Stewart",
+    "blacklistby": 38,
+    "date": "2023-11-12",
+    "details": "--EMPTY---",
+    "picture": "images/559.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 289,
+  "fields": {
+    "name": "Michael",
+    "surname": "Baptiste",
+    "blacklistby": 38,
+    "date": "2023-11-12",
+    "details": "Consuming food and drinks.",
+    "picture": "images/560.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 290,
+  "fields": {
+    "name": "Anthony",
+    "surname": "Joseph",
+    "blacklistby": 38,
+    "date": "2023-11-12",
+    "details": "Consuming food and drinks.",
+    "picture": "images/561.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 291,
+  "fields": {
+    "name": "Nigel",
+    "surname": "Cruickshank",
+    "blacklistby": 1168,
+    "date": "2023-11-17",
+    "details": "Consuming food and drinks.",
+    "picture": "images/562.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 292,
+  "fields": {
+    "name": "Karen",
+    "surname": "Mc David",
+    "blacklistby": 38,
+    "date": "2023-11-18",
+    "details": "Ms. Mc David was blacklisted for a series of incidents and complains received. Ms Karen also brought the police into the casino on 18-11-2023 for a customer who she had a personal matter (not casino related) with.",
+    "picture": "images/karen.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 293,
+  "fields": {
+    "name": "Adriano",
+    "surname": "Corporan",
+    "blacklistby": 1324,
+    "date": "2023-11-19",
+    "details": "Also blacklisted because of threatening staff.",
+    "picture": "images/564.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 294,
+  "fields": {
+    "name": "Denisha",
+    "surname": "Ramirez",
+    "blacklistby": 4,
+    "date": "2023-11-23",
+    "details": "Blacklisted in Chaguanas also for being rude towards staff.",
+    "picture": "images/565.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 295,
+  "fields": {
+    "name": "Marsha",
+    "surname": "Munroe",
+    "blacklistby": 4,
+    "date": "2023-11-23",
+    "details": "Blacklisted in Chaguanas also for being rude towards staff.",
+    "picture": "images/566.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 296,
+  "fields": {
+    "name": "Sheakema",
+    "surname": "Murray",
+    "blacklistby": 1168,
+    "date": "2023-11-30",
+    "details": "Also a low gamer and because of hygienic problems.",
+    "picture": "images/567.jpg",
+    "sex": 2,
+    "reason": 2,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 297,
+  "fields": {
+    "name": "Darsyl",
+    "surname": "Francois",
+    "blacklistby": 1021,
+    "date": "2023-12-02",
+    "details": "Also a low gamer.",
+    "picture": "images/568.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 298,
+  "fields": {
+    "name": "Sharmaine",
+    "surname": "Toolsie",
+    "blacklistby": 1021,
+    "date": "2023-12-09",
+    "details": "--EMPTY--",
+    "picture": "images/569.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 299,
+  "fields": {
+    "name": "Yu Shi",
+    "surname": "Tang",
+    "blacklistby": 272,
+    "date": "2023-12-12",
+    "details": "He also comes in to eat and drink only.",
+    "picture": "images/570.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 6,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 300,
+  "fields": {
+    "name": "Mitch",
+    "surname": "Moore",
+    "blacklistby": 272,
+    "date": "2023-12-14",
+    "details": "Tried to exchange US$1,500 counterfeit money.",
+    "picture": "images/571.jpg",
+    "sex": 1,
+    "reason": 10,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 301,
+  "fields": {
+    "name": "Ferron",
+    "surname": "Santos",
+    "blacklistby": 272,
+    "date": "2023-12-15",
+    "details": "Information received that the previous blacklist Mitch Moore received the US$1,500 counterfeit money from the mentioned name above.",
+    "picture": "images/noimage_xMNG05D.jpg",
+    "sex": 1,
+    "reason": 10,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 302,
+  "fields": {
+    "name": "Alexcia",
+    "surname": "Taylor",
+    "blacklistby": 1168,
+    "date": "2023-12-20",
+    "details": "Also got blacklisted for going around the casino marking customers who were playing money.",
+    "picture": "images/573_hQA1zYS.jpg",
+    "sex": 2,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 303,
+  "fields": {
+    "name": "Roxane",
+    "surname": "Theodore",
+    "blacklistby": 1021,
+    "date": "2024-01-01",
+    "details": "Also black listed because of non playing and disturbing customers.",
+    "picture": "images/574.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 304,
+  "fields": {
+    "name": "Stella",
+    "surname": "Ramdial",
+    "blacklistby": 38,
+    "date": "2024-01-13",
+    "details": "Also black listed because of begging money.",
+    "picture": "images/576.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 305,
+  "fields": {
+    "name": "Junior",
+    "surname": "Lewis",
+    "blacklistby": 272,
+    "date": "2024-01-13",
+    "details": "Low gaming, consuming food and drinks.",
+    "picture": "images/577.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 306,
+  "fields": {
+    "name": "Murat",
+    "surname": "Kolcak",
+    "blacklistby": 1168,
+    "date": "2024-01-26",
+    "details": "Blacklisted for card swichting and hand mucker.",
+    "picture": "images/578.jpg",
+    "sex": 1,
+    "reason": 5,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 307,
+  "fields": {
+    "name": "Unknown",
+    "surname": "Unknown",
+    "blacklistby": 1168,
+    "date": "2024-01-26",
+    "details": "Together with the card switcher Mr. Murat Kolcak.",
+    "picture": "images/579.jpg",
+    "sex": 2,
+    "reason": 5,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 308,
+  "fields": {
+    "name": "Unknown",
+    "surname": "Unknown",
+    "blacklistby": 1168,
+    "date": "2024-01-26",
+    "details": "She came together with the card switcher Mr. Murat Kolcak.",
+    "picture": "images/580.jpg",
+    "sex": 2,
+    "reason": 5,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 309,
+  "fields": {
+    "name": "Farouk",
+    "surname": "Ali",
+    "blacklistby": 1168,
+    "date": "2024-01-26",
+    "details": "Blacklisted for being dishonest and also for being a low gamer.",
+    "picture": "images/581.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 310,
+  "fields": {
+    "name": "Claude",
+    "surname": "Walters",
+    "blacklistby": 1168,
+    "date": "2024-01-26",
+    "details": "Also disturbing other customers at the tables.",
+    "picture": "images/582.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 311,
+  "fields": {
+    "name": "Dionne M.J.",
+    "surname": "Thomas",
+    "blacklistby": 1021,
+    "date": "2024-01-29",
+    "details": "Consuming food and drinks.",
+    "picture": "images/583.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 312,
+  "fields": {
+    "name": "Rajestry",
+    "surname": "Ramsalal",
+    "blacklistby": 38,
+    "date": "2024-02-01",
+    "details": "Begging money.",
+    "picture": "images/584.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 313,
+  "fields": {
+    "name": "Romel",
+    "surname": "Kirk",
+    "blacklistby": 272,
+    "date": "2024-02-01",
+    "details": "Non playing.",
+    "picture": "images/585.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 314,
+  "fields": {
+    "name": "Andre",
+    "surname": "Bernard",
+    "blacklistby": 1324,
+    "date": "2024-02-02",
+    "details": "He cashed out another customer's credits.",
+    "picture": "images/586.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 315,
+  "fields": {
+    "name": "Sherron",
+    "surname": "Joseph",
+    "blacklistby": 1168,
+    "date": "2024-02-09",
+    "details": "He is known as one of the gang leaders in POS.",
+    "picture": "images/587.jpg",
+    "sex": 1,
+    "reason": 27,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 316,
+  "fields": {
+    "name": "Dylan",
+    "surname": "Akal",
+    "blacklistby": 1324,
+    "date": "2024-02-21",
+    "details": "Mr. Akal was black listed for acting aggressively and also using obscene language.",
+    "picture": "images/588.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 317,
+  "fields": {
+    "name": "Karen",
+    "surname": "Amirian",
+    "blacklistby": 4,
+    "date": "2024-02-22",
+    "details": "Hacker, cheating with electronic devices.",
+    "picture": "images/589.jpg",
+    "sex": 1,
+    "reason": 26,
+    "race": 17,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 318,
+  "fields": {
+    "name": "Maksym",
+    "surname": "Zhurba",
+    "blacklistby": 4,
+    "date": "2024-02-22",
+    "details": "Hacker, cheating with electronic devices.",
+    "picture": "images/590.jpg",
+    "sex": 1,
+    "reason": 26,
+    "race": 15,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 319,
+  "fields": {
+    "name": "Alina",
+    "surname": "Borodina",
+    "blacklistby": 4,
+    "date": "2024-02-22",
+    "details": "Hacker, cheating with electronic devices.",
+    "picture": "images/591.jpg",
+    "sex": 2,
+    "reason": 26,
+    "race": 15,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 320,
+  "fields": {
+    "name": "Oleksii",
+    "surname": "Borodina",
+    "blacklistby": 4,
+    "date": "2024-02-22",
+    "details": "Hacker, cheating with electronic devices.",
+    "picture": "images/592.jpg",
+    "sex": 1,
+    "reason": 26,
+    "race": 15,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 321,
+  "fields": {
+    "name": "Gleb",
+    "surname": "Petrov",
+    "blacklistby": 4,
+    "date": "2024-02-22",
+    "details": "Hacker, cheating with electronic devices.",
+    "picture": "images/593.jpg",
+    "sex": 1,
+    "reason": 26,
+    "race": 16,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 322,
+  "fields": {
+    "name": "Ardon",
+    "surname": "Mason",
+    "blacklistby": 38,
+    "date": "2024-02-23",
+    "details": "Got caught trying to print out another customer's ticket.",
+    "picture": "images/594.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 323,
+  "fields": {
+    "name": "Kevin",
+    "surname": "Morris",
+    "blacklistby": 1324,
+    "date": "2024-02-24",
+    "details": "--EMPTY--",
+    "picture": "images/595.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 324,
+  "fields": {
+    "name": "Samuel",
+    "surname": "Morris",
+    "blacklistby": 1324,
+    "date": "2024-02-24",
+    "details": "--EMPTY--",
+    "picture": "images/596.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 325,
+  "fields": {
+    "name": "Michael",
+    "surname": "Reid",
+    "blacklistby": 1324,
+    "date": "2024-02-24",
+    "details": "--EMPTY--",
+    "picture": "images/597.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 326,
+  "fields": {
+    "name": "Curtis",
+    "surname": "Smith",
+    "blacklistby": 272,
+    "date": "2024-02-26",
+    "details": "Consuming food and drinks.",
+    "picture": "images/598.jpg",
+    "sex": 1,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 327,
+  "fields": {
+    "name": "Leonora",
+    "surname": "Fraser",
+    "blacklistby": 1325,
+    "date": "2024-02-29",
+    "details": "Cashing out another customer's ticket.",
+    "picture": "images/599.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 328,
+  "fields": {
+    "name": "Leon",
+    "surname": "Adams",
+    "blacklistby": 1325,
+    "date": "2024-02-29",
+    "details": "Together with previous blacklist, for cashing out another customer's ticket.",
+    "picture": "images/600.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 329,
+  "fields": {
+    "name": "Ruben",
+    "surname": "Garib",
+    "blacklistby": 1021,
+    "date": "2024-03-03",
+    "details": "Was intoxicated at the table.",
+    "picture": "images/601.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 331,
+  "fields": {
+    "name": "Madonna",
+    "surname": "Durant",
+    "blacklistby": 1325,
+    "date": "2024-03-24",
+    "details": "Mrs. Durant was blacklisted for harassing and disturbing customers.",
+    "picture": "images/Madonna_Durant.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 332,
+  "fields": {
+    "name": "Rashad",
+    "surname": "Rabah",
+    "blacklistby": 1021,
+    "date": "2024-03-25",
+    "details": "Smoking marihuana in the smoking area.",
+    "picture": "images/Rashad_Rabah.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 334,
+  "fields": {
+    "name": "Winston",
+    "surname": "Glasgow",
+    "blacklistby": 23,
+    "date": "2024-03-27",
+    "details": "Blacklisted for leaving children in car unattended and coming in the casino.",
+    "picture": "images/Winston_Glasgow.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 335,
+  "fields": {
+    "name": "Joanne",
+    "surname": "Henderson",
+    "blacklistby": 23,
+    "date": "2024-03-24",
+    "details": "Negative Actions",
+    "picture": "images/Joanne_Henderson_Blacklisted.jpg",
+    "sex": 2,
+    "reason": 35,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 336,
+  "fields": {
+    "name": "Jada",
+    "surname": "Mc Eachine",
+    "blacklistby": 1034,
+    "date": "2024-03-22",
+    "details": "Negative Actions",
+    "picture": "images/Jada_Mc_Eachine_Blacklisted.jpg",
+    "sex": 2,
+    "reason": 35,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 337,
+  "fields": {
+    "name": "Natalie",
+    "surname": "George",
+    "blacklistby": 23,
+    "date": "2024-03-27",
+    "details": "Blacklisted for leaving children in car unattended and coming in the casino.",
+    "picture": "images/Natalie_George.jpg",
+    "sex": 2,
+    "reason": 35,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 338,
+  "fields": {
+    "name": "Jordell",
+    "surname": "Edwards",
+    "blacklistby": 3,
+    "date": "2024-03-16",
+    "details": "Unkown",
+    "picture": "images/Jordell.jpg",
+    "sex": 2,
+    "reason": 35,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 339,
+  "fields": {
+    "name": "Shaffika",
+    "surname": "Jordan",
+    "blacklistby": 3,
+    "date": "2024-03-16",
+    "details": "Unknown",
+    "picture": "images/Shaffika.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 340,
+  "fields": {
+    "name": "Ruthven",
+    "surname": "Gomez",
+    "blacklistby": 23,
+    "date": "2024-03-04",
+    "details": "Unknown",
+    "picture": "images/Ruthven_Gomez.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 341,
+  "fields": {
+    "name": "Dwayne",
+    "surname": "Quashie",
+    "blacklistby": 23,
+    "date": "2024-03-29",
+    "details": "Backlisted for behaving aggressively in Live Games.",
+    "picture": "images/dwanye.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 342,
+  "fields": {
+    "name": "Samuel",
+    "surname": "Morris",
+    "blacklistby": 1324,
+    "date": "2024-02-24",
+    "details": "Blacklisted for Inappropriate behavior",
+    "picture": "images/Samuel.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 4,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 344,
+  "fields": {
+    "name": "Curt",
+    "surname": "Nabbie",
+    "blacklistby": 1130,
+    "date": "2024-02-01",
+    "details": "MR Nabbie was seen cashing out machine #398,ticket belonging to Buffy Duncan .",
+    "picture": "images/Curt_Nabbie.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 345,
+  "fields": {
+    "name": "Mike",
+    "surname": "Moses",
+    "blacklistby": 23,
+    "date": "2024-01-26",
+    "details": "Blacklisted for having sexual conversation with staff about coming to work (prostitution)for him.",
+    "picture": "images/MIKE_MOSES.jpg",
+    "sex": 1,
+    "reason": 20,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 346,
+  "fields": {
+    "name": "Moses",
+    "surname": "Andrews",
+    "blacklistby": 23,
+    "date": "2024-01-08",
+    "details": "Unknown",
+    "picture": "images/Moses_Andrews.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 347,
+  "fields": {
+    "name": "Fay",
+    "surname": "Modeste",
+    "blacklistby": 1130,
+    "date": "2023-12-23",
+    "details": "Casino worker .",
+    "picture": "images/Fay_Modeste.jpg",
+    "sex": 2,
+    "reason": 6,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 348,
+  "fields": {
+    "name": "Kim",
+    "surname": "Dyer",
+    "blacklistby": 27,
+    "date": "2023-12-21",
+    "details": "Blacklisted for stealing a customer's money in a machine.",
+    "picture": "images/Kim_Dyer.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 349,
+  "fields": {
+    "name": "Sarfraz",
+    "surname": "Mohammed",
+    "blacklistby": 23,
+    "date": "2023-12-12",
+    "details": "Blacklisted for disorderly Conduct.",
+    "picture": "images/Sarfraz_Mohammed.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 350,
+  "fields": {
+    "name": "Syamkaram",
+    "surname": "Singh",
+    "blacklistby": 1130,
+    "date": "2023-02-12",
+    "details": "Theft",
+    "picture": "images/SayamKaram_Singh.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 351,
+  "fields": {
+    "name": "Davindra",
+    "surname": "Dhanoo",
+    "blacklistby": 23,
+    "date": "2023-11-24",
+    "details": "Blacklisted for begging and vaping on the tables after he was warned about it twice.",
+    "picture": "images/Davindra_Dhanoo.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 352,
+  "fields": {
+    "name": "Kim",
+    "surname": "Willams",
+    "blacklistby": 23,
+    "date": "2023-11-24",
+    "details": "Begging Money",
+    "picture": "images/Kim_Willams_.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 353,
+  "fields": {
+    "name": "Marsha",
+    "surname": "Munroe",
+    "blacklistby": 23,
+    "date": "2023-11-23",
+    "details": "Aggressive Behavior",
+    "picture": "images/Marsha_Munroe_.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 354,
+  "fields": {
+    "name": "Dinesha",
+    "surname": "Ramirez",
+    "blacklistby": 23,
+    "date": "2023-11-23",
+    "details": "Aggressive Behavior",
+    "picture": "images/Dinesha_Ramirez_.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 355,
+  "fields": {
+    "name": "Danny",
+    "surname": "Amada",
+    "blacklistby": 23,
+    "date": "2023-11-07",
+    "details": "Blacklisted from both locations for stealing.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 356,
+  "fields": {
+    "name": "Natazia",
+    "surname": "Pascall",
+    "blacklistby": 23,
+    "date": "2023-11-07",
+    "details": "Blacklisted from both locations for stealing.",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 357,
+  "fields": {
+    "name": "Curtis",
+    "surname": "Noel",
+    "blacklistby": 23,
+    "date": "2023-11-04",
+    "details": "Unknown",
+    "picture": "images/Curtis_Noel.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 358,
+  "fields": {
+    "name": "Betty",
+    "surname": "Stewart",
+    "blacklistby": 23,
+    "date": "2023-11-03",
+    "details": "Begging Money",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 359,
+  "fields": {
+    "name": "Ancil",
+    "surname": "Reeds",
+    "blacklistby": 27,
+    "date": "2023-10-22",
+    "details": "Smoking marijuana  joint in customer smoke room",
+    "picture": "images/Ancil_Reeds.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 360,
+  "fields": {
+    "name": "Jason",
+    "surname": "Ali",
+    "blacklistby": 23,
+    "date": "2023-10-17",
+    "details": "Unknow",
+    "picture": "images/Jason_Ali.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 361,
+  "fields": {
+    "name": "Allan",
+    "surname": "Pernell",
+    "blacklistby": 27,
+    "date": "2023-10-23",
+    "details": "Non Playing",
+    "picture": "images/Allan_Pernell.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 362,
+  "fields": {
+    "name": "Ravi",
+    "surname": "Badal",
+    "blacklistby": 1130,
+    "date": "2023-10-11",
+    "details": "Mr Badal was blacklisted for stealing another customer's money that was in a machine.",
+    "picture": "images/Ravi_badal.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 363,
+  "fields": {
+    "name": "Chelsea",
+    "surname": "Peter",
+    "blacklistby": 1130,
+    "date": "2023-10-11",
+    "details": "Non Playing",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 364,
+  "fields": {
+    "name": "Akadia",
+    "surname": "Girod",
+    "blacklistby": 1130,
+    "date": "2023-10-23",
+    "details": "Non Playing",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 365,
+  "fields": {
+    "name": "Anastasia",
+    "surname": "George",
+    "blacklistby": 1130,
+    "date": "2023-10-11",
+    "details": "Non Playing",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 366,
+  "fields": {
+    "name": "Rachael",
+    "surname": "Straker",
+    "blacklistby": 23,
+    "date": "2023-05-10",
+    "details": "Non Playing",
+    "picture": "images/Rachael_Straker.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 367,
+  "fields": {
+    "name": "Rick",
+    "surname": "Straker",
+    "blacklistby": 23,
+    "date": "2023-05-10",
+    "details": "Non Playing",
+    "picture": "images/Rick_Straker.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 368,
+  "fields": {
+    "name": "Garnett",
+    "surname": "Albright",
+    "blacklistby": 27,
+    "date": "2023-09-27",
+    "details": "Customer requested that he be added to the Blacklist",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 35,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 369,
+  "fields": {
+    "name": "Jesse J",
+    "surname": "Joucoo",
+    "blacklistby": 4,
+    "date": "2023-09-20",
+    "details": "He broke the glass  door in the restroom.",
+    "picture": "images/Jesse_Joucoo.jpg",
+    "sex": 1,
+    "reason": 7,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 370,
+  "fields": {
+    "name": "Lyndon",
+    "surname": "Votor",
+    "blacklistby": 4,
+    "date": "2023-07-27",
+    "details": "SLANDERING CASINO NAME .",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 371,
+  "fields": {
+    "name": "Nizamodeen",
+    "surname": "Ishak",
+    "blacklistby": 1130,
+    "date": "2023-07-13",
+    "details": "Customer was blacklisted for damaging the cards after losing bet.",
+    "picture": "images/Nizamodeen_Ishak.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 373,
+  "fields": {
+    "name": "Micheal",
+    "surname": "Valverde",
+    "blacklistby": 22,
+    "date": "2019-11-19",
+    "details": "Contact Management.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 38,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 374,
+  "fields": {
+    "name": "Karan",
+    "surname": "Jadoo",
+    "blacklistby": 22,
+    "date": "2019-11-30",
+    "details": "Endangerment to staff",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 38,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 375,
+  "fields": {
+    "name": "Cliff",
+    "surname": "Latchman",
+    "blacklistby": 7,
+    "date": "2019-12-01",
+    "details": "Customer was under watch for marking cards from previous occasions.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 376,
+  "fields": {
+    "name": "Mervin",
+    "surname": "Blair",
+    "blacklistby": 7,
+    "date": "2019-12-14",
+    "details": "Threating staff.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 377,
+  "fields": {
+    "name": "Richard",
+    "surname": "Miller",
+    "blacklistby": 7,
+    "date": "2020-01-31",
+    "details": "Card Marking",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 378,
+  "fields": {
+    "name": "Leonardo",
+    "surname": "Puckerin",
+    "blacklistby": 7,
+    "date": "2020-01-31",
+    "details": "Card Marking",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 379,
+  "fields": {
+    "name": "Gareth",
+    "surname": "Devinish",
+    "blacklistby": 4,
+    "date": "2020-01-02",
+    "details": "Aggressive towards staff .",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 380,
+  "fields": {
+    "name": "Wayne",
+    "surname": "Lastique",
+    "blacklistby": 4,
+    "date": "2020-10-02",
+    "details": "Begging other playing patrons for money.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 381,
+  "fields": {
+    "name": "Dave",
+    "surname": "Seebaran",
+    "blacklistby": 4,
+    "date": "2020-10-02",
+    "details": "Very Aggressive towards Pit staff.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 382,
+  "fields": {
+    "name": "Sonny",
+    "surname": "Bieassar",
+    "blacklistby": 4,
+    "date": "2020-03-13",
+    "details": "Placing insurance after 5th card.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 383,
+  "fields": {
+    "name": "Webb",
+    "surname": "Webb",
+    "blacklistby": 4,
+    "date": "2020-06-29",
+    "details": "Begging Money\r\nPlacing insurance after 5th card.",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 384,
+  "fields": {
+    "name": "Brandon",
+    "surname": "Nanlal",
+    "blacklistby": 252,
+    "date": "2019-07-20",
+    "details": "Aggressive Behavior",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 385,
+  "fields": {
+    "name": "Annette",
+    "surname": "Joseph",
+    "blacklistby": 23,
+    "date": "2023-08-07",
+    "details": "Rubbing down machines and money with unknown substance.",
+    "picture": "images/Annette_Joseph.jpg",
+    "sex": 2,
+    "reason": 7,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 386,
+  "fields": {
+    "name": "Summer",
+    "surname": "Norman",
+    "blacklistby": 23,
+    "date": "2023-08-07",
+    "details": "Rubbing down money and machines with an unknown substance.",
+    "picture": "images/Summer_Norman.jpg",
+    "sex": 2,
+    "reason": 7,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 387,
+  "fields": {
+    "name": "Devanand",
+    "surname": "Devanand",
+    "blacklistby": 23,
+    "date": "2023-08-07",
+    "details": "Causing Damage",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 7,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 388,
+  "fields": {
+    "name": "Andre Augustine",
+    "surname": "Henry",
+    "blacklistby": 27,
+    "date": "2018-05-14",
+    "details": "Aggressive Behavior",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 389,
+  "fields": {
+    "name": "Kamika",
+    "surname": "Martin",
+    "blacklistby": 4,
+    "date": "2023-06-15",
+    "details": "Casino Employee",
+    "picture": "images/Kamika_Martin.jpg",
+    "sex": 2,
+    "reason": 6,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 390,
+  "fields": {
+    "name": "Marsha",
+    "surname": "Amoroso",
+    "blacklistby": 4,
+    "date": "2020-07-20",
+    "details": "Littering the smoke room with cigarette butts.",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 391,
+  "fields": {
+    "name": "Algernon",
+    "surname": "Spencer",
+    "blacklistby": 23,
+    "date": "2023-04-27",
+    "details": "Bad Behavior Disturbing Customers",
+    "picture": "images/Algernon_Spencer.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 392,
+  "fields": {
+    "name": "Jessel",
+    "surname": "Duncan",
+    "blacklistby": 27,
+    "date": "2023-03-31",
+    "details": "Mr. Ramnarine blacklisted Ms. Duncan for stealing chips from another customer (Merle Mungru).",
+    "picture": "images/Jessel_Duncan.jpg",
+    "sex": 2,
+    "reason": 11,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 393,
+  "fields": {
+    "name": "Ann Marie",
+    "surname": "Boodram",
+    "blacklistby": 4,
+    "date": "2023-03-15",
+    "details": "Intoxicated",
+    "picture": "images/Ann_Marie_Boodram.jpg",
+    "sex": 2,
+    "reason": 17,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 394,
+  "fields": {
+    "name": "Erol",
+    "surname": "Boodram",
+    "blacklistby": 4,
+    "date": "2023-03-15",
+    "details": "Intoxicated",
+    "picture": "images/Errol_Boodram.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 395,
+  "fields": {
+    "name": "Leo",
+    "surname": "Assoon",
+    "blacklistby": 4,
+    "date": "2023-03-09",
+    "details": "Ms. Begum informed CCTV that Mr. Assoon was blacklisted for smoking a cigarette in front of the Cash desk.",
+    "picture": "images/Leo_Assoon.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 396,
+  "fields": {
+    "name": "Donald",
+    "surname": "Donald",
+    "blacklistby": 4,
+    "date": "2023-03-03",
+    "details": "Wanted in connection for crimes . Danger to staff and customers alike.",
+    "picture": "images/Donald_Snaggs.jpg",
+    "sex": 1,
+    "reason": 39,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 397,
+  "fields": {
+    "name": "Junior",
+    "surname": "Joseph",
+    "blacklistby": 4,
+    "date": "2020-07-27",
+    "details": "Not Playing",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 40,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 398,
+  "fields": {
+    "name": "Vashtie",
+    "surname": "Primlal",
+    "blacklistby": 759,
+    "date": "2020-07-24",
+    "details": "Playing other patrons credits on machines.",
+    "picture": "images/noimage.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 399,
+  "fields": {
+    "name": "Deolal",
+    "surname": "Sugrim",
+    "blacklistby": 4,
+    "date": "2021-01-23",
+    "details": "An argument over shrimp with the DM",
+    "picture": "images/noimage.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 400,
+  "fields": {
+    "name": "Joseph",
+    "surname": "Torres",
+    "blacklistby": 4,
+    "date": "2023-01-23",
+    "details": "Drunk and Spitting all over the casino.",
+    "picture": "images/Joseph_Torress.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 401,
+  "fields": {
+    "name": "Paula",
+    "surname": "Basdeo",
+    "blacklistby": 4,
+    "date": "2023-01-18",
+    "details": "Money Laundering",
+    "picture": "images/Paula_Basdeo.jpg",
+    "sex": 2,
+    "reason": 41,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 402,
+  "fields": {
+    "name": "Jin  Yu",
+    "surname": "Yang",
+    "blacklistby": 4,
+    "date": "2022-12-14",
+    "details": "Threw a glass at Yu Jian Mei.",
+    "picture": "images/Jin_Yu_Yang.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 6,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 403,
+  "fields": {
+    "name": "Robbie",
+    "surname": "Kissoon",
+    "blacklistby": 4,
+    "date": "2022-12-08",
+    "details": "Asking other players for money to bet.",
+    "picture": "images/Robbie_Kissoon_.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 404,
+  "fields": {
+    "name": "Melissa",
+    "surname": "Joseph",
+    "blacklistby": 75,
+    "date": "2022-10-02",
+    "details": "Playing another customer's money.",
+    "picture": "images/Melissa_Joseph.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 405,
+  "fields": {
+    "name": "Parmanand",
+    "surname": "Gosine",
+    "blacklistby": 4,
+    "date": "2022-09-06",
+    "details": "He didn’t sign in his fire arm.",
+    "picture": "images/Parmanand_Gosine.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 406,
+  "fields": {
+    "name": "Samuel",
+    "surname": "Ramlogan",
+    "blacklistby": 4,
+    "date": "2022-08-24",
+    "details": "Stealing another customers phone.",
+    "picture": "images/Samuel_Ramlogan.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 407,
+  "fields": {
+    "name": "Andrea",
+    "surname": "Ali",
+    "blacklistby": 1325,
+    "date": "2024-03-29",
+    "details": "Cashout customer ticket",
+    "picture": "images/Andrea_Ali.png",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 408,
+  "fields": {
+    "name": "Ato",
+    "surname": "Donawa",
+    "blacklistby": 1168,
+    "date": "2024-03-30",
+    "details": "Mr. Donawa was blacklisted for hitting customer Kevin St. John in his face on poker 1 table.",
+    "picture": "images/Ato_Donawa.png",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 409,
+  "fields": {
+    "name": "Rosa",
+    "surname": "Stephen",
+    "blacklistby": 272,
+    "date": "2024-03-31",
+    "details": "Miss Stephen was blacklisted for cashing out another customer's ticket.",
+    "picture": "images/Rosa_Stephen.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 410,
+  "fields": {
+    "name": "Yeon",
+    "surname": "De Freitas",
+    "blacklistby": 1021,
+    "date": "2024-04-01",
+    "details": "Mr. De Freitas was blacklisted for aggressive behavior.",
+    "picture": "images/Yeon_De_Freitas.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 411,
+  "fields": {
+    "name": "Caren",
+    "surname": "Sanka",
+    "blacklistby": 272,
+    "date": "2024-04-05",
+    "details": "Low Gaming, begging customer",
+    "picture": "images/Karen_Sanka_TmZoIiC.jpg",
+    "sex": 2,
+    "reason": 25,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 412,
+  "fields": {
+    "name": "Bertram",
+    "surname": "Granger",
+    "blacklistby": 272,
+    "date": "2024-04-06",
+    "details": "At about 22:57 Mr. Granger took Mr. Raynold John players card and requested for a cash back (point redemption).\r\nThe amount on the card was $1100. He couldn’t give any reasonable explanation to his action. \r\nAlso, he’s a very low player who comes in to eat and drink.\r\nFor the above reasons he’s blacklisted indefinitely.\r\nPlease be guided accordingly.",
+    "picture": "images/Bertram.jpg",
+    "sex": 1,
+    "reason": 40,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 413,
+  "fields": {
+    "name": "Peter",
+    "surname": "Fletcher",
+    "blacklistby": 4,
+    "date": "2024-04-12",
+    "details": "Fraternization with the staff",
+    "picture": "images/Peter_Fletcher.jpg",
+    "sex": 1,
+    "reason": 31,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 414,
+  "fields": {
+    "name": "Kendall",
+    "surname": "George",
+    "blacklistby": 4,
+    "date": "2024-04-23",
+    "details": "Fraternization with staff",
+    "picture": "images/Kendall_George.jpg",
+    "sex": 1,
+    "reason": 42,
+    "race": 20,
+    "duration": 7,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 415,
+  "fields": {
+    "name": "Althea V",
+    "surname": "James",
+    "blacklistby": 75,
+    "date": "2024-04-24",
+    "details": "Loitering in the casino",
+    "picture": "images/Althea_V_James.jpg",
+    "sex": 2,
+    "reason": 40,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 416,
+  "fields": {
+    "name": "Ezekiel",
+    "surname": "Dandass",
+    "blacklistby": 75,
+    "date": "2024-04-24",
+    "details": "Loitering",
+    "picture": "images/Ezekiel_Dandass.jpg",
+    "sex": 1,
+    "reason": 40,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 417,
+  "fields": {
+    "name": "Jason",
+    "surname": "De Silva",
+    "blacklistby": 38,
+    "date": "2024-04-25",
+    "details": "Mr. De Silva was blacklisted for aggressive behavior at the reception area.",
+    "picture": "images/Jason_De_Silva.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 418,
+  "fields": {
+    "name": "Sheldon",
+    "surname": "Parris",
+    "blacklistby": 1034,
+    "date": "2024-05-02",
+    "details": "Sheldon Parris was blacklisted by Ali Atkas for marking of cards on LG area",
+    "picture": "images/Sheldon_Parris.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 419,
+  "fields": {
+    "name": "Hardai",
+    "surname": "Cleaver",
+    "blacklistby": 1034,
+    "date": "2024-05-02",
+    "details": "Hardai Cleaver was blacklisted by Ali Atkas for playing out another customer money on machine.",
+    "picture": "images/Hardai_Cleaver.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 420,
+  "fields": {
+    "name": "Krishna",
+    "surname": "Joseph",
+    "blacklistby": 75,
+    "date": "2024-05-08",
+    "details": "Mr Krishna was blacklisted for card marking",
+    "picture": "images/Krishna_Joseph_aPl4TIk.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 421,
+  "fields": {
+    "name": "Sunil",
+    "surname": "John",
+    "blacklistby": 38,
+    "date": "2024-05-06",
+    "details": "Mr. John always comes to the casino Intoxicated and using Obscene Language he goes by the name Levi John also.",
+    "picture": "images/Sunil_John_Aka_Levi.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 422,
+  "fields": {
+    "name": "Larry",
+    "surname": "Andrews",
+    "blacklistby": 272,
+    "date": "2024-05-19",
+    "details": "Low gaming",
+    "picture": "images/Micheal.jpg",
+    "sex": 1,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 424,
+  "fields": {
+    "name": "Michael P",
+    "surname": "Joseph",
+    "blacklistby": 272,
+    "date": "2024-05-19",
+    "details": "Mr. Andrews is a very low gamer and also eat and drink.",
+    "picture": "images/Larry.jpg",
+    "sex": 1,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 425,
+  "fields": {
+    "name": "Agahta",
+    "surname": "Nanton",
+    "blacklistby": 272,
+    "date": "2024-05-31",
+    "details": "Low Gaming, also begging customer",
+    "picture": "images/Agatha_Nanton.jpg",
+    "sex": 2,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 426,
+  "fields": {
+    "name": "Tracy",
+    "surname": "Bruno",
+    "blacklistby": 1168,
+    "date": "2024-06-03",
+    "details": "She took the money which fell from a customer's pocket.",
+    "picture": "images/POS_06_90_Reception_-_2_main_20240530205841_9.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 427,
+  "fields": {
+    "name": "Roxanne",
+    "surname": "Coutou",
+    "blacklistby": 1168,
+    "date": "2024-06-05",
+    "details": "She got upset and aggressive about the outcome of a review on a table.",
+    "picture": "images/NVR_08_118_Smoking_Room-PTZ_main_20240605124327_22_hHgCS1p.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 428,
+  "fields": {
+    "name": "Kemar",
+    "surname": "Jackson",
+    "blacklistby": 4,
+    "date": "2024-06-07",
+    "details": "Theft",
+    "picture": "images/Kemar_Jackson.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 429,
+  "fields": {
+    "name": "Teneeka",
+    "surname": "Bruno",
+    "blacklistby": 4,
+    "date": "2024-06-07",
+    "details": "Daughter of Blacklist # 426, they were together in the casino.",
+    "picture": "images/TENEEKA_BRUNO_002.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 430,
+  "fields": {
+    "name": "Michael",
+    "surname": "Lewis",
+    "blacklistby": 4,
+    "date": "2024-06-07",
+    "details": "Theft",
+    "picture": "images/Michael_Lewis.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 431,
+  "fields": {
+    "name": "Nacaki",
+    "surname": "Goksel",
+    "blacklistby": 4,
+    "date": "2024-06-10",
+    "details": "Member of Royal Princess Casino",
+    "picture": "images/Nacakci_Goksel.jpg",
+    "sex": 1,
+    "reason": 31,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 432,
+  "fields": {
+    "name": "Sami",
+    "surname": "Yumer",
+    "blacklistby": 4,
+    "date": "2024-06-10",
+    "details": "Member of Royal Princess Casino",
+    "picture": "images/Sami_Yumer.jpg",
+    "sex": 1,
+    "reason": 31,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 433,
+  "fields": {
+    "name": "Turan",
+    "surname": "Okten",
+    "blacklistby": 4,
+    "date": "2024-06-10",
+    "details": "Member of Royal Princess Casino",
+    "picture": "images/Turan_Okten.jpg",
+    "sex": 1,
+    "reason": 31,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 434,
+  "fields": {
+    "name": "Nigel",
+    "surname": "Mahabir",
+    "blacklistby": 1168,
+    "date": "2024-06-21",
+    "details": "Customer was blacklisted because of topping up his winning bet.",
+    "picture": "images/Nigel_Mahabir.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 435,
+  "fields": {
+    "name": "Harrikrishen",
+    "surname": "Baldew",
+    "blacklistby": 4,
+    "date": "2024-06-26",
+    "details": "Arguing with staff.",
+    "picture": "images/HARRIKRISHEN_BALDEW_K6i69Xs.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 436,
+  "fields": {
+    "name": "Chelsea",
+    "surname": "Webb",
+    "blacklistby": 272,
+    "date": "2024-07-04",
+    "details": "Low gamer.",
+    "picture": "images/Chelsea_Webb.jpg",
+    "sex": 2,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 437,
+  "fields": {
+    "name": "Simonia",
+    "surname": "O'Neil",
+    "blacklistby": 272,
+    "date": "2024-07-04",
+    "details": "Low gamer.",
+    "picture": "images/Simonia_ONeil.jpg",
+    "sex": 2,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 438,
+  "fields": {
+    "name": "Jeirnelle",
+    "surname": "Waldron",
+    "blacklistby": 272,
+    "date": "2024-07-04",
+    "details": "Low gamer.",
+    "picture": "images/Jeirnelle_Waldron.jpg",
+    "sex": 2,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 439,
+  "fields": {
+    "name": "Kerrylyn",
+    "surname": "Mc Millian",
+    "blacklistby": 38,
+    "date": "2024-07-07",
+    "details": "Ms. Mc Millian is an employee of Princess Casino.",
+    "picture": "images/KERRYLYN_MC_MILLIAN.jpg",
+    "sex": 2,
+    "reason": 6,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 440,
+  "fields": {
+    "name": "Simon",
+    "surname": "Merry",
+    "blacklistby": 1021,
+    "date": "2024-07-12",
+    "details": "Aggressive behavior",
+    "picture": "images/Simon_Merry.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 441,
+  "fields": {
+    "name": "Lyndon",
+    "surname": "Andrews",
+    "blacklistby": 1435,
+    "date": "2024-07-15",
+    "details": "Blacklisted because of a phone theft on GD. 21-05-2024.",
+    "picture": "images/Lyndon_Andrews.png",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 442,
+  "fields": {
+    "name": "Shazim",
+    "surname": "Jamalidin",
+    "blacklistby": 4,
+    "date": "2024-07-18",
+    "details": "Cashed out credits from another customer.",
+    "picture": "images/Shazim_Jamalidin.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 443,
+  "fields": {
+    "name": "Reynold",
+    "surname": "Ragoo",
+    "blacklistby": 4,
+    "date": "2024-07-18",
+    "details": "Complicity for theft, together with blacklist # 442",
+    "picture": "images/Reynold_Ragoo.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 444,
+  "fields": {
+    "name": "Ruhat",
+    "surname": "Unknown",
+    "blacklistby": 1435,
+    "date": "2024-07-25",
+    "details": "Casino Employee of Princess Casino.",
+    "picture": "images/Ruhat.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 445,
+  "fields": {
+    "name": "Veysel",
+    "surname": "Unknown",
+    "blacklistby": 1435,
+    "date": "2024-07-25",
+    "details": "Casino Employee of Princess Casino.",
+    "picture": "images/Veysel.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 446,
+  "fields": {
+    "name": "Hamdi Mehmet",
+    "surname": "Yahyaoglu",
+    "blacklistby": 29,
+    "date": "2024-07-28",
+    "details": "Employee at Princess Casino",
+    "picture": "images/Haudi_Mehmet_Yahyaoglu.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 447,
+  "fields": {
+    "name": "Raphael",
+    "surname": "Felicean",
+    "blacklistby": 1021,
+    "date": "2024-07-31",
+    "details": "Low gaming and harassing staff",
+    "picture": "images/POS_05_68_Pit_1_main_20240801025840_13.jpg",
+    "sex": 1,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 448,
+  "fields": {
+    "name": "Jason",
+    "surname": "Bernard",
+    "blacklistby": 1034,
+    "date": "2024-07-31",
+    "details": "Threatening dealer at the table.",
+    "picture": "images/Asa_Guevara.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 449,
+  "fields": {
+    "name": "Reba",
+    "surname": "Huggins",
+    "blacklistby": 1034,
+    "date": "2024-07-31",
+    "details": "Threatening dealer at the table.",
+    "picture": "images/Reba_Huggins.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 450,
+  "fields": {
+    "name": "Enes",
+    "surname": "Asik",
+    "blacklistby": 272,
+    "date": "2024-08-02",
+    "details": "Casino Employee.",
+    "picture": "images/Enes_Asik.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 452,
+  "fields": {
+    "name": "Mehmet",
+    "surname": "Camci",
+    "blacklistby": 272,
+    "date": "2024-08-02",
+    "details": "Casino Employee.",
+    "picture": "images/Mehmet_Camci.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 453,
+  "fields": {
+    "name": "Deneice",
+    "surname": "Paria",
+    "blacklistby": 1021,
+    "date": "2024-08-04",
+    "details": "Threatening staff and suspect for credit card fraud.",
+    "picture": "images/Deneice_Paria.jpg",
+    "sex": 2,
+    "reason": 38,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 455,
+  "fields": {
+    "name": "Shenice Simone",
+    "surname": "Dariel",
+    "blacklistby": 1325,
+    "date": "2024-08-05",
+    "details": "Comes in the casino to swipe, did not play where after she cashed out at the kiosk.",
+    "picture": "images/Shenice_Simone_Dariel_710aSrH.jpg",
+    "sex": 2,
+    "reason": 31,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 456,
+  "fields": {
+    "name": "Idrizov",
+    "surname": "Erdal",
+    "blacklistby": 1034,
+    "date": "2024-08-05",
+    "details": "Princess Casino Employee",
+    "picture": "images/1.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 457,
+  "fields": {
+    "name": "Florin Nicolea",
+    "surname": "Anton",
+    "blacklistby": 272,
+    "date": "2024-08-07",
+    "details": "Cheating",
+    "picture": "images/Florin-Nicolae_Anton.png",
+    "sex": 1,
+    "reason": 8,
+    "race": 21,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 458,
+  "fields": {
+    "name": "Vitalie",
+    "surname": "Covaliu",
+    "blacklistby": 272,
+    "date": "2024-08-07",
+    "details": "Cheating",
+    "picture": "images/Vitalie_Covaliu.png",
+    "sex": 1,
+    "reason": 8,
+    "race": 21,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 459,
+  "fields": {
+    "name": "Jeanelle",
+    "surname": "Joseph",
+    "blacklistby": 38,
+    "date": "2024-08-08",
+    "details": "Casino Employee.",
+    "picture": "images/JENELLE_JOSEPH.jpg",
+    "sex": 2,
+    "reason": 6,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 460,
+  "fields": {
+    "name": "Eligah",
+    "surname": "Derevenaux",
+    "blacklistby": 75,
+    "date": "2024-08-12",
+    "details": "Begging",
+    "picture": "images/Eligah_Derevenaux.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 461,
+  "fields": {
+    "name": "Cecil",
+    "surname": "Dick",
+    "blacklistby": 1435,
+    "date": "2024-08-18",
+    "details": "Disturbing customer",
+    "picture": "images/Cecil_Dick.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 462,
+  "fields": {
+    "name": "Hassana",
+    "surname": "Muhammad",
+    "blacklistby": 1435,
+    "date": "2024-08-18",
+    "details": "Casino employee",
+    "picture": "images/NVR_02_29_Reception_PTZ_main_20240818030544_2.jpg",
+    "sex": 2,
+    "reason": 6,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 463,
+  "fields": {
+    "name": "Feraz",
+    "surname": "Mohammed",
+    "blacklistby": 759,
+    "date": "2024-08-26",
+    "details": "He attempted to steal another customer promotional points",
+    "picture": "images/Feraz_Mohammed.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 464,
+  "fields": {
+    "name": "Cietoya",
+    "surname": "Harrington",
+    "blacklistby": 1034,
+    "date": "2024-08-24",
+    "details": "Non player",
+    "picture": "images/Cietoya_Harrington.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 465,
+  "fields": {
+    "name": "Elliot",
+    "surname": "Francois",
+    "blacklistby": 38,
+    "date": "2024-08-28",
+    "details": "Threatening Staff",
+    "picture": "images/Elliot_Francois.jpg",
+    "sex": 1,
+    "reason": 38,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 466,
+  "fields": {
+    "name": "Roger",
+    "surname": "Liddelow",
+    "blacklistby": 38,
+    "date": "2024-08-31",
+    "details": "Cursing management and disturbing other players.",
+    "picture": "images/Roger_Liddelow.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 467,
+  "fields": {
+    "name": "Jameel",
+    "surname": "Mohammed",
+    "blacklistby": 4,
+    "date": "2024-08-31",
+    "details": "Collusion with Staff",
+    "picture": "images/Jameel_Mohammed.jpg",
+    "sex": 1,
+    "reason": 9,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 468,
+  "fields": {
+    "name": "Brandon",
+    "surname": "Madray",
+    "blacklistby": 4,
+    "date": "2024-09-03",
+    "details": "Following a customer after she left the premises",
+    "picture": "images/Brandon_Madray.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 4,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 469,
+  "fields": {
+    "name": "Augustine",
+    "surname": "James",
+    "blacklistby": 4,
+    "date": "2024-09-03",
+    "details": "Following a customer after she left the premises",
+    "picture": "images/Augustine_James.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 4,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 470,
+  "fields": {
+    "name": "Myrilla",
+    "surname": "Livingston",
+    "blacklistby": 272,
+    "date": "2024-09-17",
+    "details": "she was observed inserting here card into Mr. Devon Hinds machine to accumulate points. Ms. Livingston has been warned on numerous occasions not to indulge in this practice, and also not to disturb playing customers.",
+    "picture": "images/Myrilla_Livingston.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 471,
+  "fields": {
+    "name": "Aaronn",
+    "surname": "Caracciolo",
+    "blacklistby": 38,
+    "date": "2024-09-26",
+    "details": "Cheating on live games",
+    "picture": "images/Aaronn_Cacciolo.jpg",
+    "sex": 1,
+    "reason": 8,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 472,
+  "fields": {
+    "name": "Courtney",
+    "surname": "Joseph",
+    "blacklistby": 1168,
+    "date": "2024-09-26",
+    "details": "He has been blacklisted for Harassment towards staff",
+    "picture": "images/bl.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 473,
+  "fields": {
+    "name": "Don",
+    "surname": "Cole",
+    "blacklistby": 1255,
+    "date": "2024-09-28",
+    "details": "Aggressive behavior and begging..",
+    "picture": "images/Don_Cole.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 474,
+  "fields": {
+    "name": "Lawrence",
+    "surname": "Stowe",
+    "blacklistby": 272,
+    "date": "2024-09-30",
+    "details": "Mr. Stowe was blacklisted for harassment towards staff.",
+    "picture": "images/Lawrence_Stowe.jpg",
+    "sex": 1,
+    "reason": 42,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 475,
+  "fields": {
+    "name": "Sharnon",
+    "surname": "Guerra",
+    "blacklistby": 1255,
+    "date": "2024-09-30",
+    "details": "Stealing.",
+    "picture": "images/Shanon_Guerra_.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 476,
+  "fields": {
+    "name": "Kerron",
+    "surname": "Williams",
+    "blacklistby": 759,
+    "date": "2024-10-03",
+    "details": "Aggressive Behavior",
+    "picture": "images/CHG_08_113_PTZ_RECEPTION101.113_main_20241002210211_8.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 477,
+  "fields": {
+    "name": "Chantal",
+    "surname": "Pollard",
+    "blacklistby": 759,
+    "date": "2024-10-03",
+    "details": "Aggressive Behavior",
+    "picture": "images/CHG_08_113_PTZ_RECEPTION101.113_main_20240930222540_8.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 478,
+  "fields": {
+    "name": "Yunus",
+    "surname": "Alptekin",
+    "blacklistby": 4,
+    "date": "2024-10-06",
+    "details": "Mr Alptekin were blacklisted as per Company CEO.",
+    "picture": "images/Yunus_Alptekin.jpg",
+    "sex": 1,
+    "reason": 14,
+    "race": 18,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 479,
+  "fields": {
+    "name": "Keiron",
+    "surname": "Anthony",
+    "blacklistby": 38,
+    "date": "2024-10-12",
+    "details": "Aggressive Behavior,",
+    "picture": "images/Keiron_Anthony.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 480,
+  "fields": {
+    "name": "Stephen",
+    "surname": "Hernandez",
+    "blacklistby": 38,
+    "date": "2024-10-12",
+    "details": "Aggressive Behavior,",
+    "picture": "images/stephen.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 4,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 481,
+  "fields": {
+    "name": "Shane",
+    "surname": "Alleyne",
+    "blacklistby": 759,
+    "date": "2024-10-21",
+    "details": "Theft of customer money",
+    "picture": "images/CHG_08_117__ESCALATOR_FACIAL_101.117_main_20241020185209_8.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 482,
+  "fields": {
+    "name": "Junior",
+    "surname": "Antoine",
+    "blacklistby": 759,
+    "date": "2024-10-26",
+    "details": "Inappropriate behavior, urinating on casino floors",
+    "picture": "images/Junior_Antoine.jpg",
+    "sex": 1,
+    "reason": 31,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 483,
+  "fields": {
+    "name": "Lisha",
+    "surname": "Birsingh",
+    "blacklistby": 23,
+    "date": "2024-04-05",
+    "details": "Dishonest Behavior",
+    "picture": "images/IMG_20241103_192811.jpg",
+    "sex": 2,
+    "reason": 44,
+    "race": 20,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 484,
+  "fields": {
+    "name": "Damien",
+    "surname": "St.Louis",
+    "blacklistby": 1168,
+    "date": "2024-11-07",
+    "details": "Mr. St. Louis tried to kidnap one of the waitresses.",
+    "picture": "images/Damien_St_Louis.jpg",
+    "sex": 1,
+    "reason": 38,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 485,
+  "fields": {
+    "name": "Maxine",
+    "surname": "Jessop",
+    "blacklistby": 1435,
+    "date": "2024-11-10",
+    "details": "Mrs. Jessop was blacklisted for being an accomplice to a cellphone that was stolen by fellow customer Ambira Rogers.",
+    "picture": "images/Maxine_Jessop.jpg",
+    "sex": 2,
+    "reason": 23,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 486,
+  "fields": {
+    "name": "Ambria",
+    "surname": "Rojas",
+    "blacklistby": 1435,
+    "date": "2024-11-09",
+    "details": "Phone Theft.",
+    "picture": "images/Ambira_Rogers.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 487,
+  "fields": {
+    "name": "Amair",
+    "surname": "Khais",
+    "blacklistby": 1168,
+    "date": "2024-11-11",
+    "details": "Tried to exchange US$450 which was counterfeit money at the cash desk.",
+    "picture": "images/AMIR_KHAIS.JPG",
+    "sex": 1,
+    "reason": 10,
+    "race": 22,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 488,
+  "fields": {
+    "name": "Kwasi",
+    "surname": "Webster",
+    "blacklistby": 4,
+    "date": "2024-12-08",
+    "details": "He was blacklisted since 13-04-17 for card marking.",
+    "picture": "images/KWASI_WEBSTER.jpg",
+    "sex": 1,
+    "reason": 4,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 489,
+  "fields": {
+    "name": "Kamaria",
+    "surname": "Leon",
+    "blacklistby": 4,
+    "date": "2024-12-08",
+    "details": "Begging money and also a non-player.",
+    "picture": "images/Kamaria_Leon.jpg",
+    "sex": 2,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 490,
+  "fields": {
+    "name": "Khalid",
+    "surname": "Williams",
+    "blacklistby": 1324,
+    "date": "2024-12-09",
+    "details": "Mr. Williams was blacklisted for stealing from another customer.",
+    "picture": "images/Khalid_Williams_R1HgYM4.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 491,
+  "fields": {
+    "name": "Brian",
+    "surname": "Constantine",
+    "blacklistby": 38,
+    "date": "2024-12-13",
+    "details": "Mr. Constantine was backlisted for stealing another customer ticket.",
+    "picture": "images/Brian_Constantine_A7ePvs5.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 492,
+  "fields": {
+    "name": "Jessika",
+    "surname": "Camacho",
+    "blacklistby": 38,
+    "date": "2024-12-15",
+    "details": "Aggressive Behavior towards the manager. Reinstated by Mr. Levent.\r\nShe got blacklisted again on GD. 10-03-2025 because she tried to exchange cards with Kenny John.",
+    "picture": "images/Jessika_Camacho.jpg",
+    "sex": 2,
+    "reason": 1,
+    "race": 14,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 493,
+  "fields": {
+    "name": "Kenny",
+    "surname": "John",
+    "blacklistby": 38,
+    "date": "2024-12-15",
+    "details": "Two players touching the same cards then he got aggressive with the manager. Reinstated by Mr. Levent.\r\nHe got blacklisted again on GD. 10-03-2025 because he tried to exchange cards with Jessika Camacho.",
+    "picture": "images/Kenny_John.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 494,
+  "fields": {
+    "name": "Nestor",
+    "surname": "Timothy",
+    "blacklistby": 38,
+    "date": "2024-12-30",
+    "details": "Mr. Timothy was seen putting an illegal substance into a \r\nCigarette (cocaine) by the roulette machine.",
+    "picture": "images/Nestor_Timothy_2.jpg",
+    "sex": 1,
+    "reason": 2,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 495,
+  "fields": {
+    "name": "Maston",
+    "surname": "Mollineaux",
+    "blacklistby": 1435,
+    "date": "2024-12-30",
+    "details": "Mr. Molineux was so intoxicated that he defecated in the smoking room",
+    "picture": "images/Maston_Mollineaux.jpg",
+    "sex": 1,
+    "reason": 17,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 497,
+  "fields": {
+    "name": "Zafer",
+    "surname": "Urcan",
+    "blacklistby": 1034,
+    "date": "2025-01-01",
+    "details": "Casino employee (Princess)",
+    "picture": "images/ZAFER_URCAN_UmgKnwk.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 498,
+  "fields": {
+    "name": "Justin",
+    "surname": "Vieira",
+    "blacklistby": 1324,
+    "date": "2025-01-08",
+    "details": "He was blacklisted because of his inappropriate behavior and he was using foul language.",
+    "picture": "images/Justin_Vieira.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 11,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 499,
+  "fields": {
+    "name": "Zaid",
+    "surname": "Sookoor",
+    "blacklistby": 75,
+    "date": "2025-01-17",
+    "details": "Faults accusation and seeking compensation",
+    "picture": "images/Zaid_Sookoor.jpg",
+    "sex": 1,
+    "reason": 44,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 500,
+  "fields": {
+    "name": "Peter",
+    "surname": "Mehase",
+    "blacklistby": 1255,
+    "date": "2025-01-19",
+    "details": "Stealing and playing with another customer chips",
+    "picture": "images/Peter_Mehase.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 501,
+  "fields": {
+    "name": "Amaru",
+    "surname": "Arnold",
+    "blacklistby": 1034,
+    "date": "2025-01-18",
+    "details": "Spend hours in the casino and doesn't play.",
+    "picture": "images/AMARU_ARNOLD.png",
+    "sex": 1,
+    "reason": 19,
+    "race": 3,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 502,
+  "fields": {
+    "name": "JOYCE",
+    "surname": "RAMDASS",
+    "blacklistby": 748,
+    "date": "2005-01-21",
+    "details": "non player",
+    "picture": "images/Joyce_Ramdass.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 19,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 503,
+  "fields": {
+    "name": "Shirmaine",
+    "surname": "Seetaram",
+    "blacklistby": 748,
+    "date": "2025-01-21",
+    "details": "Non player.",
+    "picture": "images/Shirmaine_Seetaram.jpg",
+    "sex": 2,
+    "reason": 19,
+    "race": 19,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 504,
+  "fields": {
+    "name": "JOHN-PETER",
+    "surname": "DOS-SANTOS",
+    "blacklistby": 748,
+    "date": "1980-01-04",
+    "details": "",
+    "picture": "images/192.168.100.250_162_CUSTOMER_FACIAL_CAM_main_20250129170419_2.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 11,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 505,
+  "fields": {
+    "name": "DEXTER",
+    "surname": "EDWARDS",
+    "blacklistby": 3,
+    "date": "2025-01-24",
+    "details": "They were also intoxicated and disturbing customers.",
+    "picture": "images/2.png",
+    "sex": 1,
+    "reason": 1,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 506,
+  "fields": {
+    "name": "RION",
+    "surname": "MAHARAJ",
+    "blacklistby": 3,
+    "date": "2025-01-24",
+    "details": "They were also intoxicated and disturbing customers.",
+    "picture": "images/4.png",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 507,
+  "fields": {
+    "name": "IAN",
+    "surname": "MAHARAJ",
+    "blacklistby": 3,
+    "date": "2025-01-24",
+    "details": "They were also intoxicated and disturbing customers.",
+    "picture": "images/1.png",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 508,
+  "fields": {
+    "name": "NIGEL",
+    "surname": "MAHARAJ",
+    "blacklistby": 3,
+    "date": "2025-01-24",
+    "details": "They were also intoxicated and disturbing customers.",
+    "picture": "images/5.png",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 509,
+  "fields": {
+    "name": "RAHEEM",
+    "surname": "ALI",
+    "blacklistby": 3,
+    "date": "2025-01-24",
+    "details": "They were also intoxicated and disturbing customers.",
+    "picture": "images/3.png",
+    "sex": 1,
+    "reason": 1,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 510,
+  "fields": {
+    "name": "PATRICE",
+    "surname": "HOSPAEDALES",
+    "blacklistby": 748,
+    "date": "2025-02-04",
+    "details": "",
+    "picture": "images/PATRICE_HOSPEDALES.jpg",
+    "sex": 2,
+    "reason": 14,
+    "race": 3,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 511,
+  "fields": {
+    "name": "VICTOR",
+    "surname": "BROWN",
+    "blacklistby": 38,
+    "date": "2025-02-10",
+    "details": "He also got aggressive with a female customer who did not lend him money.",
+    "picture": "images/VICTOR_BROWN.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 512,
+  "fields": {
+    "name": "Robert Matthew",
+    "surname": "Millian",
+    "blacklistby": 1099,
+    "date": "2025-02-13",
+    "details": "Acting Suspicious.",
+    "picture": "images/Robert_Matthew_Millian.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 11,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 513,
+  "fields": {
+    "name": "Jose Javier",
+    "surname": "Pinto",
+    "blacklistby": 1099,
+    "date": "2025-02-13",
+    "details": "Acting Suspicious.",
+    "picture": "images/Jose_Javier_Pinto.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 11,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 514,
+  "fields": {
+    "name": "Kleiber Abraham",
+    "surname": "Pinto",
+    "blacklistby": 1099,
+    "date": "2025-02-13",
+    "details": "Acting suspicious.",
+    "picture": "images/Kleiber_Abraham_Pinto_EbzOv4l.jpg",
+    "sex": 1,
+    "reason": 23,
+    "race": 11,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 515,
+  "fields": {
+    "name": "LECHELLE",
+    "surname": "SAMUEL",
+    "blacklistby": 75,
+    "date": "2025-02-18",
+    "details": "Placed a tie bet on Rhum 32 after she noticed had a tie.",
+    "picture": "images/Lechelle_Samule.jpg",
+    "sex": 2,
+    "reason": 8,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 516,
+  "fields": {
+    "name": "Darius",
+    "surname": "Kerr",
+    "blacklistby": 3,
+    "date": "2025-02-19",
+    "details": "He was a Dealer in Five Star who stole cash chips.",
+    "picture": "images/Kerr_Darius.png",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 517,
+  "fields": {
+    "name": "Sharkira",
+    "surname": "Ragoonanan",
+    "blacklistby": 75,
+    "date": "2025-03-01",
+    "details": "Soliciting customer and not gambling.",
+    "picture": "images/Shakira_Ragoonanan.jpg",
+    "sex": 2,
+    "reason": 13,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 518,
+  "fields": {
+    "name": "Clief Anthony",
+    "surname": "Hipolite",
+    "blacklistby": 75,
+    "date": "2025-03-06",
+    "details": "Blacklisted for stealing other costumers tickets from slots machines.",
+    "picture": "images/C._Anthony.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 519,
+  "fields": {
+    "name": "JIAN TIAN",
+    "surname": "YAN",
+    "blacklistby": 1034,
+    "date": "2025-03-09",
+    "details": "Causing damages and problems in casino.",
+    "picture": "images/Jian_Tian_Yan_dnaUfgd.jpg",
+    "sex": 1,
+    "reason": 1,
+    "race": 6,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 520,
+  "fields": {
+    "name": "Yasha",
+    "surname": "Hercules",
+    "blacklistby": 1034,
+    "date": "2025-03-16",
+    "details": "Yasha Hercules was seen spending a lot of time being in the casino constantly demanding money from other players.",
+    "picture": "images/YASHA.jpg",
+    "sex": 1,
+    "reason": 3,
+    "race": 11,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 521,
+  "fields": {
+    "name": "Sherwin",
+    "surname": "Dickson",
+    "blacklistby": 272,
+    "date": "2025-03-21",
+    "details": "Low gamer and disturbing other customers.",
+    "picture": "images/sHERWIN_Dickson_82OG3uE.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 522,
+  "fields": {
+    "name": "Hasely",
+    "surname": "Ferret",
+    "blacklistby": 272,
+    "date": "2025-03-21",
+    "details": "Low gamer and disturbing customers.",
+    "picture": "images/Hasely_Ferret_41sa5ip.jpg",
+    "sex": 1,
+    "reason": 13,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 523,
+  "fields": {
+    "name": "Radha Dookoo",
+    "surname": "Ramroop",
+    "blacklistby": 759,
+    "date": "2025-03-23",
+    "details": "The costumer mention above was blacklisted because of stealing other costumers credit at the slot machine and adding it for herself.",
+    "picture": "images/Radha_Dookoo_Ramroop.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 524,
+  "fields": {
+    "name": "Don",
+    "surname": "Di Siguineau",
+    "blacklistby": 272,
+    "date": "2025-03-24",
+    "details": "Low gamer and disturbing other customers for cash",
+    "picture": "images/Don_Di_Siguineau.jpg",
+    "sex": 1,
+    "reason": 19,
+    "race": 4,
+    "duration": 4,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 525,
+  "fields": {
+    "name": "TINELLE",
+    "surname": "SEAFORTH",
+    "blacklistby": 272,
+    "date": "2025-03-28",
+    "details": "Low gaming and hanging around playing customers",
+    "picture": "images/TINELLE_SEAFORTH.jpg",
+    "sex": 2,
+    "reason": 25,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 526,
+  "fields": {
+    "name": "ROGER WILLIAM",
+    "surname": "DUNCAN",
+    "blacklistby": 1255,
+    "date": "2025-02-28",
+    "details": "BEING DISRESPECTFUL TO STAFF MEMBERS",
+    "picture": "images/ROGER_WILLIAM_DUNCAN.png",
+    "sex": 1,
+    "reason": 43,
+    "race": 3,
+    "duration": 6,
+    "location": 5
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 527,
+  "fields": {
+    "name": "Jamie",
+    "surname": "Smith",
+    "blacklistby": 759,
+    "date": "2025-04-03",
+    "details": "Taking other costumers money, without permission and playing with it at the gaming table.",
+    "picture": "images/Jamie_Smith.jpg",
+    "sex": 1,
+    "reason": 44,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 528,
+  "fields": {
+    "name": "Kendell",
+    "surname": "Blake",
+    "blacklistby": 759,
+    "date": "2025-04-07",
+    "details": "Low gamer and staff harassment",
+    "picture": "images/Kendell_Blake_PrcmdQN.jpg",
+    "sex": 1,
+    "reason": 43,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 529,
+  "fields": {
+    "name": "Ertugrul",
+    "surname": "Ceviz",
+    "blacklistby": 38,
+    "date": "2025-04-15",
+    "details": "Manager for Princess Casino",
+    "picture": "images/Ertugrul_Ceviz_VtWFXyb.jpg",
+    "sex": 1,
+    "reason": 6,
+    "race": 18,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 530,
+  "fields": {
+    "name": "Adunni",
+    "surname": "Simmons",
+    "blacklistby": 759,
+    "date": "2025-04-20",
+    "details": "Playing customer chips",
+    "picture": "images/Adunni__Simmons.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 531,
+  "fields": {
+    "name": "Sugrim",
+    "surname": "Ramkumar",
+    "blacklistby": 1034,
+    "date": "2025-04-22",
+    "details": "He was blacklisted for stealing other customer credit in the slot machine.",
+    "picture": "images/CHG_04_58_PTZ_SLOT_101.58_main_20250422184729_6.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 2,
+    "duration": 6,
+    "location": 2
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 532,
+  "fields": {
+    "name": "Sade",
+    "surname": "Primus",
+    "blacklistby": 1637,
+    "date": "2025-04-22",
+    "details": "",
+    "picture": "images/Sade_Primus.jpg",
+    "sex": 2,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 533,
+  "fields": {
+    "name": "Nathan",
+    "surname": "Mc Call",
+    "blacklistby": 1637,
+    "date": "2025-04-22",
+    "details": "",
+    "picture": "images/Nathan_Mc_Call.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+},
+{
+  "model": "cctv.blacklist",
+  "pk": 534,
+  "fields": {
+    "name": "Wendell",
+    "surname": "Brown",
+    "blacklistby": 1637,
+    "date": "2025-04-22",
+    "details": "",
+    "picture": "images/Wendell_Brown.jpg",
+    "sex": 1,
+    "reason": 24,
+    "race": 3,
+    "duration": 6,
+    "location": 1
+  }
+}
+]

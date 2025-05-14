@@ -1,0 +1,184 @@
+[
+{
+  "model": "cctv.reportorigination",
+  "pk": 1,
+  "fields": {
+    "origination": "ACCOUNTS"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 2,
+  "fields": {
+    "origination": "BAR"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 3,
+  "fields": {
+    "origination": "BAR SUP."
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 4,
+  "fields": {
+    "origination": "BOD"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 5,
+  "fields": {
+    "origination": "CASH DESK"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 6,
+  "fields": {
+    "origination": "CCTV"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 7,
+  "fields": {
+    "origination": "CUSTOMER"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 8,
+  "fields": {
+    "origination": "DEALER"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 9,
+  "fields": {
+    "origination": "DUTY MNG."
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 10,
+  "fields": {
+    "origination": "GM"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 11,
+  "fields": {
+    "origination": "HOTEL\\ADMIN"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 12,
+  "fields": {
+    "origination": "INSPECTOR"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 13,
+  "fields": {
+    "origination": "KITCHEN"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 14,
+  "fields": {
+    "origination": "MARKETING"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 15,
+  "fields": {
+    "origination": "PITBOSS"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 16,
+  "fields": {
+    "origination": "PR"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 17,
+  "fields": {
+    "origination": "RECEPTION"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 18,
+  "fields": {
+    "origination": "SECURITY"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 19,
+  "fields": {
+    "origination": "SECURITY MNG."
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 20,
+  "fields": {
+    "origination": "SECURITY SUP."
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 21,
+  "fields": {
+    "origination": "SLOT"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 22,
+  "fields": {
+    "origination": "SLOT SUPERVISOR"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 23,
+  "fields": {
+    "origination": "SLOTS MNG."
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 24,
+  "fields": {
+    "origination": "SPORTS BETTING"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 25,
+  "fields": {
+    "origination": "MAINTENANCE"
+  }
+},
+{
+  "model": "cctv.reportorigination",
+  "pk": 26,
+  "fields": {
+    "origination": "Casino Manager"
+  }
+}
+]

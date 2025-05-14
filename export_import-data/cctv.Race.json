@@ -1,0 +1,156 @@
+[
+{
+  "model": "cctv.race",
+  "pk": 1,
+  "fields": {
+    "race": "Dutch"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 2,
+  "fields": {
+    "race": "Indian"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 3,
+  "fields": {
+    "race": "African"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 4,
+  "fields": {
+    "race": "Creole"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 5,
+  "fields": {
+    "race": "Maroon"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 6,
+  "fields": {
+    "race": "Chinese"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 7,
+  "fields": {
+    "race": "European"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 8,
+  "fields": {
+    "race": "Jew"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 9,
+  "fields": {
+    "race": "Lebanon"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 10,
+  "fields": {
+    "race": "Brazilian"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 11,
+  "fields": {
+    "race": "Mixed"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 12,
+  "fields": {
+    "race": "White"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 13,
+  "fields": {
+    "race": "Javanese"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 14,
+  "fields": {
+    "race": "Latin"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 15,
+  "fields": {
+    "race": "Ukraine"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 16,
+  "fields": {
+    "race": "Russian"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 17,
+  "fields": {
+    "race": "Swedish"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 18,
+  "fields": {
+    "race": "Turkish"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 19,
+  "fields": {
+    "race": "Indian Decent"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 20,
+  "fields": {
+    "race": "East Indian"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 21,
+  "fields": {
+    "race": "Romanian"
+  }
+},
+{
+  "model": "cctv.race",
+  "pk": 22,
+  "fields": {
+    "race": "Syrian"
+  }
+}
+]

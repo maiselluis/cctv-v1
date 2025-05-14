@@ -160,7 +160,6 @@ class ReportOrigination(models.Model):
        verbose_name_plural = "Report Originations"
        db_table='tb_report_origination'
        get_latest_by ='id'
-    
    
      
 class Report(models.Model):
@@ -425,11 +424,11 @@ class DailyExeption(models.Model):
    location=models.ForeignKey("Location",on_delete=models.PROTECT,related_name='fk_location_daily_exception',verbose_name='Location')
    employee=models.ForeignKey('Staff',on_delete=models.PROTECT,verbose_name='Employeee',related_name='employee_daily_exception')
    exception_type=models.ForeignKey("ExceptionType", on_delete=models.PROTECT,verbose_name='Exeption Type',related_name='fk_daily_exception')
-   daily_from=models.TimeField(verbose_name='From')
-   daily_to=models.TimeField(verbose_name='To')
+   daily_from=models.TimeField(verbose_name='From',null=True,blank=True)
+   daily_to=models.TimeField(verbose_name='To',null=True,blank=True)
    total_hours=models.DecimalField(max_digits=5, decimal_places=2, editable=False)
-   old_shift=models.TimeField(verbose_name='Old Shift')
-   new_shift=models.TimeField(verbose_name='New Shift')
+   old_shift=models.TimeField(verbose_name='Old Shift',null=True,blank=True)
+   new_shift=models.TimeField(verbose_name='New Shift',null=True,blank=True)
    detail=models.TextField(max_length=255,verbose_name='Detail')
    
 
@@ -479,8 +478,7 @@ class DailyExeption(models.Model):
    def get_delete_url(self):
        return reverse('daily_exeption-delete',args=[(str(self.id))])
  
-  
-  
+   
 class Department(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.TextField(max_length=255,verbose_name='Department')
@@ -566,6 +564,7 @@ class BlackList(models.Model):
     race =models.ForeignKey("Race",verbose_name=("race"),on_delete=models.PROTECT)
     duration =models.ForeignKey("Duration",verbose_name=("duration"),on_delete=models.PROTECT)
     location=models.ForeignKey("Location",verbose_name=("location"), on_delete=models.PROTECT, default=1)
+    notified=models.BooleanField(default=False)
     
     
     def __str__(self):

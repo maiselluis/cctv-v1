@@ -487,7 +487,7 @@ class CreateReportForm(ModelForm):
             attrs={'class': 'form-select','placeholder': 'Casino Area',}
       ))
       duty_manager = forms.ModelChoiceField(  
-            required=True,
+            required=False,
             label='Duty Manager',
         queryset=Staff.objects.all().order_by('name'), 
         widget=forms.Select(
@@ -644,18 +644,18 @@ class CreateReportForm(ModelForm):
             
              super().__init__(*args, **kwargs)
                # Filtrar el campo 'categoria' para que solo muestre ciertas categorías
-             self.fields['duty_manager'].queryset = Staff.objects.filter(   Q(active=1)  &   ( Q(location_id=3 )  | Q(location_id=self.initial['location_id'])) & Q(department__exact=8) ).order_by('name')  
+             self.fields['duty_manager'].queryset = Staff.objects.filter(     ( Q(location_id=3 )  | Q(location_id=self.initial['location_id'])) & Q(department__exact=8) ).order_by('name')  
             # self.fields['duty_manager1'].queryset = Staff.objects.filter(   Q(active=1)  &   ( Q(location_id=3 )  | Q(location_id=self.initial['location_id'])) & Q(department__exact=8) ).order_by('name')      
-             self.fields['pittboss'].queryset =  Staff.objects.filter( Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3)) ).exclude(department=8).order_by('name')
+             self.fields['pittboss'].queryset =  Staff.objects.filter(  ( Q(location_id=self.initial['location_id']) | Q(location_id=3)) ).exclude(department=8).order_by('name')
              #self.fields['supervisor'].queryset =  Staff.objects.filter( Q(department__exact=7) & Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3)) ).order_by('name')
-             self.fields['inspector'].queryset = Staff.objects.filter( Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).exclude(department=8).order_by('name')
+             self.fields['inspector'].queryset = Staff.objects.filter(  ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).order_by('name')
            #  self.fields['senior'].queryset = Staff.objects.filter(  Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).order_by('name')
-             self.fields['dealer'].queryset = Staff.objects.filter( Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).exclude(department=8).order_by('name')
+             self.fields['dealer'].queryset = Staff.objects.filter(  ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).exclude(department=8).order_by('name')
            #  self.fields['cashier'].queryset = Staff.objects.filter(Q(department__exact=4) & Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).order_by('name')
            #  self.fields['attendant'].queryset = Staff.objects.filter(Q(department__exact=1) & Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).order_by('name')
-             self.fields['other'].queryset = Staff.objects.filter( Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) | Q(location_id=4) )).order_by('name').order_by('name')
+             self.fields['other'].queryset = Staff.objects.filter(  ( Q(location_id=self.initial['location_id']) | Q(location_id=3) | Q(location_id=4) )).order_by('name').order_by('name')
            #  self.fields['other1'].queryset = Staff.objects.filter( Q(active=1) & ( Q(location_id=self.initial['location_id']) | Q(location_id=3) )).order_by('name').order_by('name')
-             self.fields['cctv_id'].queryset = Staff.objects.filter( Q(department__exact=11) & Q(active=1) & Q(location_id= self.initial['location_id']) | Q(location_id=4) ).order_by('name')
+             self.fields['cctv_id'].queryset = Staff.objects.filter( Q(department__exact=11)  & Q(location_id= self.initial['location_id']) | Q(location_id=4) ).order_by('name')
              self.fields['customer'].queryset = Customer.objects.filter( Q(location_id= self.initial['location_id'])).order_by('customer')
             
 
@@ -740,6 +740,7 @@ class CreateDailyShiftForm(ModelForm):
       
       supervisor = forms.ModelChoiceField(
              label='Supervisor',
+             required=False,
             queryset=Staff.objects.all().order_by('name'),
             widget=forms.Select(
                 
@@ -1043,7 +1044,7 @@ class FilterTtransactionsByCustomer(forms.Form):
             )
        
        customer = forms.ModelChoiceField(
-             required=True,
+             required=False,
               queryset= Customer.objects.none(),
         
                   widget=forms.Select(
@@ -1082,7 +1083,8 @@ class   FilterTransactionsByType(forms.Form):
             queryset=AccountType.objects.all()  , 
             widget=forms.Select(
                          attrs={'placeholder':'Account Type','class': 'form-select'}
-                   )   
+                   )  ,
+                   required=False,  
                   )
         
         location = forms.ModelChoiceField(
@@ -1110,7 +1112,7 @@ class CustomerExpenseForm(forms.Form):
     
         )
        customer = forms.ModelChoiceField(
-             required=True,
+             required=False,
              label='Customer',
               queryset=Customer.objects.all(),
          widget=forms.Select(
@@ -1147,7 +1149,7 @@ class CustomerComplimentaryForm(forms.Form):
     
         )
        customer = forms.ModelChoiceField(
-             required=True,
+             required=False,
               queryset=Customer.objects.all(),
         widget=forms.Select(
                          attrs={'placeholder':'Customer','class': 'form-select'}

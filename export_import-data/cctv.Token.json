@@ -1,0 +1,37 @@
+[
+{
+  "model": "cctv.token",
+  "pk": 1,
+  "fields": {
+    "token": "Cash"
+  }
+},
+{
+  "model": "cctv.token",
+  "pk": 2,
+  "fields": {
+    "token": "Cheque"
+  }
+},
+{
+  "model": "cctv.token",
+  "pk": 3,
+  "fields": {
+    "token": "Chip"
+  }
+},
+{
+  "model": "cctv.token",
+  "pk": 4,
+  "fields": {
+    "token": "Non-Neg"
+  }
+},
+{
+  "model": "cctv.token",
+  "pk": 5,
+  "fields": {
+    "token": "Ticket"
+  }
+}
+]

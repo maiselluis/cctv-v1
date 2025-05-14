@@ -1,0 +1,310 @@
+[
+{
+  "model": "cctv.reason",
+  "pk": 1,
+  "fields": {
+    "reason": "Aggressive Behavior"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 2,
+  "fields": {
+    "reason": "Alcohol / Drug Problem"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 3,
+  "fields": {
+    "reason": "Begging Money"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 4,
+  "fields": {
+    "reason": "Card marking"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 5,
+  "fields": {
+    "reason": "Card Switching"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 6,
+  "fields": {
+    "reason": "Casino Employee"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 7,
+  "fields": {
+    "reason": "Causing Damage"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 8,
+  "fields": {
+    "reason": "Cheating"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 9,
+  "fields": {
+    "reason": "Collusion"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 10,
+  "fields": {
+    "reason": "Counterfeit Money"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 11,
+  "fields": {
+    "reason": "Crime against Customer/Staff"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 12,
+  "fields": {
+    "reason": "Disease"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 13,
+  "fields": {
+    "reason": "Disturbing Customers"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 14,
+  "fields": {
+    "reason": "Ex-Employee"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 15,
+  "fields": {
+    "reason": "Fake Money"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 16,
+  "fields": {
+    "reason": "Family's Request"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 17,
+  "fields": {
+    "reason": "Intoxicated"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 18,
+  "fields": {
+    "reason": "Minor"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 19,
+  "fields": {
+    "reason": "Non Playing"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 20,
+  "fields": {
+    "reason": "Prostution"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 21,
+  "fields": {
+    "reason": "Related to Casino Staff"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 22,
+  "fields": {
+    "reason": "Student"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 23,
+  "fields": {
+    "reason": "Suspicious"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 24,
+  "fields": {
+    "reason": "Theft"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 25,
+  "fields": {
+    "reason": "Low Gaming"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 26,
+  "fields": {
+    "reason": "Hacker"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 27,
+  "fields": {
+    "reason": "Gang Leader/member"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 28,
+  "fields": {
+    "reason": "dress code"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 29,
+  "fields": {
+    "reason": "Obscene Language"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 30,
+  "fields": {
+    "reason": "Gang Member"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 31,
+  "fields": {
+    "reason": "Other"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 32,
+  "fields": {
+    "reason": "credit/ linx card fraud"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 33,
+  "fields": {
+    "reason": "links and credit card fraud"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 34,
+  "fields": {
+    "reason": "Scamming"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 35,
+  "fields": {
+    "reason": "unknown"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 36,
+  "fields": {
+    "reason": "spit in a customer face"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 37,
+  "fields": {
+    "reason": "Speaking Bad of Casino"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 38,
+  "fields": {
+    "reason": "Staff Endangerment"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 39,
+  "fields": {
+    "reason": "Flagged By Police"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 40,
+  "fields": {
+    "reason": "Loitering"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 41,
+  "fields": {
+    "reason": "Money Laundering"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 42,
+  "fields": {
+    "reason": "Fraternization"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 43,
+  "fields": {
+    "reason": "Inappropriate Behavior"
+  }
+},
+{
+  "model": "cctv.reason",
+  "pk": 44,
+  "fields": {
+    "reason": "Dishonest Behavior"
+  }
+}
+]

@@ -23,20 +23,25 @@
  {%block content%}
 
 <div class="card card-primary card-outline mb-4">
-  <div class="card-header">
-    <div class="container-fluid"> 
-      <div class="row">
-          <div class="col-sm-6">
-          {%if perms.cctv.add_blacklist%}
-            <div class="btn-group" role="group">
-              <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'blacklist-create' %}"> Add BlackList </a>
-          </div>
-          {%endif%}
-          </div>
-   </div>
-    </div>
+    <div class="card-header">
+        <div class="container-fluid"> 
+                <div class="row">
+                        <div class="col-md-12">
+                                    <div class="card p-3 shadow-sm">
+                                        <div class="btn-group d-flex flex-wrap" role="group">
+                                            <div class="col-sm-6">
+                                            {%if perms.cctv.add_blacklist%}
+                                        
+                                                <a class="btn btn-primary mb-2 bi bi-plus-lg" href="{% url 'blacklist-create' %}"> Add BlackList </a>
+                                            
+                                            {%endif%}
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+            </div>
+        </div>
   </div>
-
 
 <div class="card-body">
   <div class="table-responsive">

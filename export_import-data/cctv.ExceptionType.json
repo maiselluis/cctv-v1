@@ -1,0 +1,184 @@
+[
+{
+  "model": "cctv.exceptiontype",
+  "pk": 2,
+  "fields": {
+    "exeption_type": "Absent"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 3,
+  "fields": {
+    "exeption_type": "AL"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 4,
+  "fields": {
+    "exeption_type": "Called Out"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 5,
+  "fields": {
+    "exeption_type": "DIL"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 6,
+  "fields": {
+    "exeption_type": "House Off"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 7,
+  "fields": {
+    "exeption_type": "Late"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 8,
+  "fields": {
+    "exeption_type": "Late(No Deduction)"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 9,
+  "fields": {
+    "exeption_type": "Maternity Leave"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 10,
+  "fields": {
+    "exeption_type": "NCNS"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 11,
+  "fields": {
+    "exeption_type": "New Employee"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 12,
+  "fields": {
+    "exeption_type": "Other"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 13,
+  "fields": {
+    "exeption_type": "Over Time"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 14,
+  "fields": {
+    "exeption_type": "Resigned"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 15,
+  "fields": {
+    "exeption_type": "Sent Home"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 16,
+  "fields": {
+    "exeption_type": "Shift Change"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 17,
+  "fields": {
+    "exeption_type": "Shift End"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 18,
+  "fields": {
+    "exeption_type": "Shift Start"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 19,
+  "fields": {
+    "exeption_type": "SHome(No Deduction)"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 20,
+  "fields": {
+    "exeption_type": "Sick Call"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 21,
+  "fields": {
+    "exeption_type": "Sick with Note"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 22,
+  "fields": {
+    "exeption_type": "Suspended"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 23,
+  "fields": {
+    "exeption_type": "Termination"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 24,
+  "fields": {
+    "exeption_type": "Unpaid"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 25,
+  "fields": {
+    "exeption_type": "Vacation"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 26,
+  "fields": {
+    "exeption_type": "Written Warning"
+  }
+},
+{
+  "model": "cctv.exceptiontype",
+  "pk": 27,
+  "fields": {
+    "exeption_type": "Left Early"
+  }
+}
+]

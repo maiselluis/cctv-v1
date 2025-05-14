@@ -21,10 +21,10 @@ from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
 from django.db.models import Value, F, CharField,Count
 from django.db.models.functions import Concat, Trim, Coalesce
 import json
-
-
-
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth import get_user_model
 from django.db.models import ProtectedError
+from dateutil.relativedelta import relativedelta
 
 
 
@@ -39,6 +39,17 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from .forms import LoginForm
 from django.contrib.auth.decorators import login_required
+
+#Mostrar el log de login de los usuarios
+@staff_member_required
+def user_last_login_view(request):
+    User = get_user_model()
+    users = User.objects.all().order_by('-last_login')
+    return render(request, 'admin/cctv/user_last_login.html', {
+        'title': 'Last user login',
+        'app_label': 'cctv',  # 👈 Esto activa la selección de la app en el panel lateral
+        'users': users
+    })
 
 
 @login_required
@@ -1197,8 +1208,8 @@ def dashboard(request):
 
 
  
-      blacklisted=BlackList.objects.count()
-      staff=Staff.objects.count()
+      blacklisted=BlackList.objects.exclude(duration=7).count()
+      staff=Staff.objects.filter(active=True).count()
       counterfeit=Counterfait.objects.count()
       pokerpayout=Poker_Payout.objects.count()
       activeCustomerPOS=get_unique_customers_count(1)
@@ -4605,30 +4616,164 @@ class DetailCashDeskTransactionsView(LoginRequiredMixin,PermissionRequiredMixin,
 @login_required
 def FilterTransactionsByDateView(request):   
 
-     if request.user.is_superuser:        
-         user_location=None
-     else:
-        user_location=request.user.userprofile.location    
+  #   if request.user.is_superuser:        
+   #      user_location=None
+   #  else:
+    #    user_location=request.user.userprofile.location    
      
-     form=FilterTransactionsByDate(request.GET or None,  initial={'location': user_location})  
+   #  form=FilterTransactionsByDate(request.GET or None,  initial={'location': user_location})  
  
-     if form.is_valid():
-        if user_location:
-            transactions=Cash_Desk_Transaction.objects.filter(location=request.user.userprofile.location)
-        else:
-             transactions=Cash_Desk_Transaction.objects.all()
+     #if form.is_valid():
+    #    if user_location:
+   #         transactions=Cash_Desk_Transaction.objects.filter(location=request.user.userprofile.location)
+     #   else:
+    #         transactions=Cash_Desk_Transaction.objects.all()
 
         
-        date_begin = form.cleaned_data.get('date_begin')      
-        date_end = form.cleaned_data.get('date_end')        
+    #    date_begin = form.cleaned_data.get('date_begin')      
+    #    date_end = form.cleaned_data.get('date_end')        
              
-        if date_begin and date_end :        
-          transactions=transactions.filter(date__range=(date_begin, date_end))  
-     else:
-         transactions=None
-         form=FilterTransactionsByDate(request.GET or None,  initial={'location': user_location})
+    #    if date_begin and date_end :        
+   #       transactions=transactions.filter(date__range=(date_begin, date_end))  
+  #   else:
+  #       transactions=None
+  #       form=FilterTransactionsByDate(request.GET or None,  initial={'location': user_location})
 
-     return render(request, 'cash_desk_transactions/find_transaction_by_date.html', {'form': form, 'transactions': transactions})
+  #   return render(request, 'cash_desk_transactions/find_transaction_by_date.html', {'form': form, 'transactions': transactions})
+    user_location = None if request.user.is_superuser else request.user.userprofile.location
+    today = now().date()
+    if not request.GET:
+        initial_data = {
+            'location': user_location,
+            'date_begin': today,
+            'date_end': today,
+        }
+        form = FilterTransactionsByDate(initial=initial_data)
+    else:
+        form = FilterTransactionsByDate(request.GET.copy(), initial={'location': user_location})
+
+    transactions = Cash_Desk_Transaction.objects.filter(location=user_location) if user_location else Cash_Desk_Transaction.objects.all()
+
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        if not form.is_valid():
+            return JsonResponse({'error': 'Invalid form data', 'form_errors': form.errors}, status=400)
+
+        draw = int(request.GET.get('draw', 1))
+        start = int(request.GET.get('start', 0))
+        length = int(request.GET.get('length', 10))
+
+        date_begin = form.cleaned_data.get('date_begin')
+        date_end = form.cleaned_data.get('date_end')
+
+        if date_begin and date_end:
+            transactions = transactions.filter(date__range=(date_begin, date_end))     
+
+       
+        
+        search_value = request.GET.get('search[value]', '').strip()
+        if search_value:
+            transactions = transactions.annotate(
+                        autorized_by_fullname=Concat(
+                            F('autorized_by__name'), 
+                            Value(' '), 
+                            F('autorized_by__surname'), 
+                            output_field=CharField()
+                        )
+                    )
+            transactions = transactions.annotate(
+                        employee_fullname=Concat(
+                            F('employee__name'), 
+                            Value(' '), 
+                            F('employee__surname'), 
+                            output_field=CharField()
+                        )
+                    )
+            transactions = transactions.filter(
+            
+                Q(area_cashier__area_cashier__icontains=search_value) |
+                Q(location__location__icontains=search_value)|
+                Q(customer__customer__icontains=search_value) |
+                Q(date__icontains=search_value) |
+                Q(time__icontains=search_value) |
+                Q(account_type__account_type__icontains=search_value) |
+                Q(token__token__icontains=search_value) |
+                Q(tt_dolar__icontains=search_value) |
+                Q(usd_dolar__icontains=search_value) |
+                Q(euro_dolar__icontains=search_value) |
+                Q(gbp_dolar__icontains=search_value) |
+                Q(cad_dolar__icontains=search_value) |
+                Q(autorized_by_fullname__icontains=search_value) |
+                Q(employee_fullname__icontains=search_value)|
+                Q(machine_no__name__icontains=search_value)            
+            )
+
+    
+        order_column_index = request.GET.get('order[0][column]', '0')
+        order_dir = request.GET.get('order[0][dir]', 'asc')
+
+        column_map = {
+            '0': 'transactions',
+            '1':'area_cashier',
+            '2': 'date',  
+            '3': 'time',  
+            '4': 'account_type__account_type',  
+            '5': 'token__token',  
+            '6': 'tt_dolar',
+            '7': 'usd_dolar',
+            '8': 'euro_dolar',
+            '9': 'gbp_dolar',
+            '10':'cad_dolar',
+            '11':'autorized_by__name',
+            '12':'machine_no',
+            '13':'employee__name',
+            '14':'customer__customer',
+            '15':'location__location'
+        }
+
+
+        order_field = column_map.get(order_column_index, 'transactions')
+        if order_dir == 'desc':
+            order_field = f"-{order_field}"
+
+        transactions = transactions.order_by(order_field)
+        total_records = Cash_Desk_Transaction.objects.count()
+        filtered_records = transactions.count()
+        transactions = transactions[start:start + length]
+             
+        
+
+        data = [{
+              
+                "area_cashier":str(tx.area_cashier),
+                "date": tx.date,
+                "time": tx.time,
+                "account_type": tx.account_type.account_type if tx.account_type else "",
+                "token": tx.token.token if tx.token else "",
+                "tt_dolar": tx.tt_dolar if tx.tt_dolar else "",
+                "usd_dolar": tx.usd_dolar if tx.usd_dolar else "0.0",
+                "euro_dolar": tx.euro_dolar if tx.euro_dolar else "0.0",
+                "gbp_dolar": tx.gbp_dolar if tx.gbp_dolar else "0.0",
+                "cad_dolar": tx.cad_dolar if tx.cad_dolar else "0.0",
+                "autorized_by": str(tx.autorized_by) if tx.autorized_by else "",
+                "machine_no":str(tx.machine_no) if tx.machine_no else "",
+                "employee":str( tx.employee) if tx.employee else "",
+                "customer":str( tx.customer) if tx.customer else "",                
+                "location": str(tx.location) if tx.location else "",
+               
+            } for tx in transactions]
+
+        return JsonResponse({
+            'draw': draw,
+            'recordsTotal': total_records,
+            'recordsFiltered': filtered_records,
+            'data': data
+        })
+
+    return render(request, 'cash_desk_transactions/find_transaction_by_date.html', {
+        'form': form,
+        'transactions': transactions.filter(date=today)[:50],  
+    })
+
 
 @login_required
 def FilterTransactionsByCustomerView(request): 
@@ -5790,7 +5935,7 @@ class ListCounterfaitView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
                 '9': 'employee__name', 
                 '10':'customer__customer',
                 '11': 'notes',
-                '12':'location___location'
+                '12':'location__location'
             }
 
 
@@ -6129,6 +6274,7 @@ class CreateDailyExeptionView(LoginRequiredMixin,PermissionRequiredMixin,Success
 
      def get_initial(self):
         initial = super().get_initial()
+        initial['daily_from'] = datetime.datetime.now()
         initial['date'] = datetime.datetime.now()
         
         if self.request.user.is_superuser:
@@ -6644,4 +6790,16 @@ def SynopsisSupplies(request):
           supplies=supplies.filter( request_for__exact=request_for)
 
     return render(request, 'supplies/synopsis_supplies.html', {'form': form, 'supplies': supplies})
-    
+
+def get_end_date(start_date, duration):    
+    if duration == 1:
+        return start_date + relativedelta(months=1)
+    elif duration == 2:
+        return start_date + relativedelta(months=2)
+    elif duration == 3:
+        return start_date + relativedelta(months=3)
+    elif duration == 4:
+        return start_date + relativedelta(months=6)
+    elif duration == 5:
+        return start_date + relativedelta(years=1)
+    return None  

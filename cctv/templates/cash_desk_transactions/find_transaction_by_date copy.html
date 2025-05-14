@@ -1,0 +1,284 @@
+{% extends 'base.html'%}
+ {% block title %} CCTV @ CRC |   Find Transaction By Dates
+ {% endblock%}
+ {%block content_header%}
+ <div class="app-content-header"> <!--begin::Container-->
+  <div class="container-fluid"> <!--begin::Row-->
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 class="mb-0">CASH DESK TRANSACTIONS - FIND BY DATES</h3>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-end">
+          <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page"> <a  href={% url 'cash_desk_transactions-list' %}>Cash Desk Transactions</a> </li>
+          <li class="breadcrumb-item">Find  by Dates</li>
+         </ol>
+      </div>
+    </div> <!--end::Row-->
+  </div> <!--end::Container-->
+ </div>
+ {%endblock%}
+
+ {%block content%}
+
+ <div class="card card-primary card-outline mb-4">
+  <div style="overflow-x: auto;">
+  <div class="card-header">
+    
+    <form method="get" > 
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-end">   
+         <div  class="col-sm-auto d-flex justify-content-end"> 
+            {{ form.location}}
+           </div> 
+          <div  class="col-sm-auto d-flex justify-content-end align-self-center">                  
+            <label class="card-title">{{ form.date_begin.label_tag }} </label>            
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end"> 
+        {{ form.date_begin}}
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end align-self-center">     
+          <label class="card-title">{{ form.date_end.label_tag }}</label> 
+        </div> 
+        <div  class="col-sm-auto d-flex justify-content-end">     
+          {{ form.date_end }}
+        </div> 
+        <div  class="col-sm-auto">     
+          <button class="btn btn-primary"  type="submit"> Find</button>               
+        
+        </div>   
+        <div class="col-sm-auto">
+                       
+          <button class="btn btn-outline-dark bi-filetype-pdf" data-url="{% url 'transaction_view' %}" type="button"   onclick="openReport(this)">PDF</button>
+        
+        </div>                      
+    
+      </div>                  
+      </div>                                                  
+      
+    </form>  
+       
+</div>
+  </div>
+<div style="overflow-x: auto;">
+     <div class="card-body">  
+        
+        {% if transactions%}
+
+       <h2>Results:</h2>  
+            
+       <table class="table table-bordered table-hover table-sm" id="transactionsbydate" >
+           <thead>
+             <tr >
+             <!--  <th>#</th>                         -->
+               <th>Date</th>
+               <th>Time</th>
+               <th>Cashier Location </th>
+               <th>Account Type</th>  
+               <th>Customer</th>                
+               <th>Token</th>
+               <th>TTD</th>                            
+               <th> USD </th>
+               <th> EURO </th>
+               <th> GBP </th>
+               <th> CAD </th>
+               <th> Employee </th>
+               <th>Machine No</th>
+               <th> Autorized by </th> 
+               <th>Branch</th>         
+              
+              </tr>
+           </thead>
+           <tbody>
+               {% for transactions in transactions %}
+     
+             <tr>
+             <!--  <td>{{ transactions.transactions }}</td>                            -->
+               <td>{{ transactions.date|date:'d-m-Y' }}</td>
+               <td>{{ transactions.time|time:"g:iA" }}</td>
+               <td>{{ transactions.area_cashier }}</td>
+               <td>{{ transactions.account_type }}</td> 
+               {%if transactions.customer  %}
+               <td>{{ transactions.customer }}</td>  
+               {%else%}
+               <td></td> 
+               {%endif%}      
+               <td>{{ transactions.token }}</td>
+               <td>{{ transactions.tt_dolar }}</td>
+               <td>{{ transactions.usd_dolar }}</td>    
+               <td>{{ transactions.euro_dolar }}</td>  
+               <td>{{ transactions.gbp_dolar }}</td> 
+               
+               <td>{{ transactions.cad_dolar }}</td>   
+               {%if transactions.employee %}                          
+               <td>{{ transactions.employee }}</td> 
+               {%else%}
+               <td></td> 
+               {%endif%}
+               {%if transactions.machine_no %}
+               <td>{{transactions.machine_no}}</td>
+               {% else %}
+               <th></th>
+               {%endif%}
+
+               {% if transactions.autorized_by %}   
+               <td>{{ transactions.autorized_by }}</td> 
+               {%else%}
+               <td></td> 
+               {%endif%}
+               <td>{{ transactions.location }}</td>    
+                                                
+              
+             </tr>
+     
+           
+             {% endfor %}
+            
+           </tbody>
+           <tfoot>
+            <tr>
+                <th>Total</th>
+                <th colspan="5"></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+               
+                <th colspan="4"></th>
+                
+                
+            </tr>
+        </tfoot>
+     
+         </table>
+        {%else%}
+        <li>Select date range.</li>
+        <li>No  Transactions  betwen days found!</li>
+        {%endif%}
+    
+     </div>
+</div>
+     <div class="card-footer">
+       
+       <a class="btn btn-secondary mb-2 bi-chevron"  href="{% url 'cash_desk_transactions-list' %}" > <i class="bi bi-arrow-left"> </i> Back</a> 
+            
+        
+           </div>
+     
+     </div>
+
+    
+    
+     <script>
+
+$(document).ready(function () {
+    
+   
+    var table = $('#transactionsbydate').DataTable({
+      "order": [[0, 'desc']] ,
+      oLanguage: {
+                      oPaginate: {
+                        sNext: 'Next <i class="fas fa-angle-double-right"></i>',
+                        sPrevious: '<i class="fas fa-angle-double-left"></i> Previous',
+                        sFirst: '<i class="fas fa-angle-double-left"></i> First',
+                        sLast: '<i class="fas fa-angle-double-left"></i> Last',
+
+                      }
+                                       },
+  
+  columnDefs: [
+     
+      
+     {
+       orderable: true,targets:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+      },
+      { 
+        searchable: true,targets:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+        },
+        
+    ],
+
+
+        footerCallback: function (row, data, start, end, display) {
+            var api = this.api();
+
+            // Función para convertir a número
+            var intVal = function (i) {
+                return typeof i === 'string'
+                    ? i.replace(/[\$,]/g, '') * 1
+                    : typeof i === 'number'
+                    ? i
+                    : 0;
+            };
+
+            // Calcular totales por columna
+            var totalUSD = api
+                .column(7)
+                .data()
+                .reduce(function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0);
+
+            var totalEuro = api
+                .column(8)
+                .data()
+                .reduce(function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0);
+
+            var totalTT = api
+                .column(6)
+                .data()
+                .reduce(function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0);
+
+            var totalCAD = api
+                .column(10)
+                .data()
+                .reduce(function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0);
+                var totalGBP = api
+                .column(9)
+                .data()
+                .reduce(function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0);
+
+            // Mostrar totales en el footer
+            $(api.column(7).footer()).html(totalUSD.toFixed(2));
+            $(api.column(8).footer()).html(totalEuro.toFixed(2));
+            $(api.column(6).footer()).html(totalTT.toFixed(2));
+            $(api.column(10).footer()).html(totalCAD.toFixed(2));
+            $(api.column(9).footer()).html(totalGBP.toFixed(2));
+        },
+    });
+
+  
+
+});
+     </script>
+
+   <script>
+ function openReport(button) {
+ // Obtén la URL base del atributo data-url
+  const baseUrl = button.getAttribute('data-url');
+
+  // Obtén los valores de los campos de fecha
+  const dateBegin  = document.querySelector('[name="date_begin"]').value;
+  const dateEnd = document.querySelector('[name="date_end"]').value;
+  const location = document.querySelector('[name="location"]').value;
+
+
+  // Construye la URL con los parámetros
+  const fullUrl = `${baseUrl}?location=${location}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`;
+
+  // Abre la URL en una nueva ventana o pestaña
+  window.open(fullUrl, '_blank');
+}
+   </script>
+  
+ {% endblock %}

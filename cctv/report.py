@@ -16,6 +16,7 @@ from reportlab.lib.units import mm
 from django.db.models import Sum
 from reportlab.lib.colors import red,black
 from django.db.models import Q
+from reportlab.platypus import Preformatted
 
 def generate_report(request,report):
          
@@ -304,7 +305,7 @@ def generate_report(request,report):
      # doc.save()
       return response
 
-def generate_daily_shift (request,id):
+
      # Configuración del PDF
       response = HttpResponse(content_type='application/pdf')
       response['Content-Disposition'] = 'inline; filename="cliente_reporte.pdf"'
@@ -460,6 +461,125 @@ def generate_daily_shift (request,id):
      # doc.save()
       return response
 
+def generate_daily_shift(request, id):
+    # Configuración del PDF
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'inline; filename="cliente_reporte.pdf"'
+    # Crear un documento
+    doc = SimpleDocTemplate(response, pagesize=letter)
+
+    # Obtener estilos de muestra
+    styles = getSampleStyleSheet()
+    normal_style = styles['Normal']
+    header = styles['Heading3']
+
+    # Crear elementos del reporte
+    elements = []
+    loacation = ''
+    branch = ''
+
+    dat = DailyShift.objects.filter(id=id).values('detail', 'location_id')
+
+    for data in dat:
+        loc = Location.objects.filter(id=data['location_id']).values('location').first()
+        if loc:
+            branch = loc['location']
+
+        elements.append(Spacer(0, 200))
+        paragraph_text = ("Detail:")
+
+        elements.append(Paragraph(paragraph_text, header))
+        elements.append(Spacer(0, 3))
+
+        data['detail'] = data['detail'].replace('\r', '\n')
+
+        elements.append(Preformatted(data['detail'], normal_style))
+
+    def draw_text_short(canvas, doc):
+        width, height = letter
+        image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
+
+        full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
+        image = ImageReader(full_path)
+        canvas.drawImage(image, 100, height - 100, width=60, height=70)
+        canvas.setFont("Times-Bold", 18)
+        canvas.drawString(width / 2 - 80, height - 50, "Club Royal Caribbean")
+        canvas.drawString((width / 2) - 80, height - 70, "CCTV Daily Shift Report")
+        canvas.drawString((width / 2) - 50, height - 90, branch)
+
+        datos = DailyShift.objects.filter(id=id).values('date', 'usd_rate', 'euro_rate', 'gbp_rate', 'casino_open', 'casino_close', 'shift_id',
+                                                        'officer1_id', 'officer2_id', 'supervisor_id')
+
+        for data in datos:
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(50, height - 130, "Date")
+            canvas.setFont("Times-Roman", 12)
+            canvas.drawString(50, height - 150, str(data["date"]))
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(120, height - 130, "Casino Open")
+            canvas.setFont("Times-Roman", 12)
+            canvas.drawString(120, height - 150, str(data['casino_open']))
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(210, height - 130, "Casino Close")
+            canvas.setFont("Times-Roman", 12)
+
+            canvas.drawString(210, height - 150, str(data['casino_close']))
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(320, height - 130, "USD Rate")
+            canvas.setFont("Times-Roman", 12)
+            canvas.drawString(320, height - 150, str(data['usd_rate']))
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(400, height - 130, "EURO Rate")
+            canvas.setFont("Times-Roman", 12)
+            canvas.drawString(400, height - 150, str(data['euro_rate']))
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(480, height - 130, "GBP Rate")
+            canvas.setFont("Times-Roman", 12)
+            canvas.drawString(480, height - 150, str(data['gbp_rate']))
+
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(50, height - 180, "Name")
+            canvas.setFont("Times-Roman", 12)
+            supervisor = Staff.objects.filter(id=data['supervisor_id']).values('name', 'surname', 'position').first()
+            if supervisor:
+                pos = Position.objects.filter(id=supervisor['position']).values('name').first()
+                canvas.drawString(250, height - 200, str(pos['name']))
+                canvas.drawString(400, height - 200, str(data['supervisor_id']))
+                canvas.drawString(50, height - 200, str(supervisor['name']) + ' ' + str(supervisor['surname']))
+            officer1 = Staff.objects.filter(id=data['officer1_id']).values('name', 'surname', 'position').first()
+            if officer1:
+                pos = Position.objects.filter(id=officer1['position']).values('name').first()
+                canvas.drawString(250, height - 220, str(pos['name']))
+                canvas.drawString(400, height - 220, str(data['officer1_id']))
+
+                canvas.drawString(50, height - 220, str(officer1['name']) + ' ' + str(officer1['surname']))
+            officer2 = Staff.objects.filter(id=data['officer2_id']).values('name', 'surname', 'position').first()
+            if officer2:
+                pos = Position.objects.filter(id=officer2['position']).values('name').first()
+                canvas.drawString(250, height - 240, str(pos['name']))
+                canvas.drawString(400, height - 240, str(data['officer2_id']))
+                canvas.drawString(50, height - 240, str(officer2['name']) + ' ' + str(officer2['surname']))
+
+            canvas.setFont("Times-Bold", 14)
+            canvas.drawString(250, height - 180, "Position")
+            canvas.drawString(400, height - 180, "Id")
+
+        # Pie de página
+        page_number_text = f"Page {canvas.getPageNumber()}"
+        canvas.setFont("Times-Roman", 10)
+        canvas.drawRightString(180 * mm, 8 * mm, page_number_text)
+        canvas.drawString(5 * mm, 8 * mm, "This report has been generated automatically by CRC@Surveillance System")
+
+    def draw_footer(canvas, doc):
+        # Add footer on each page
+        page_number_text = f"Page {canvas.getPageNumber()}"
+        canvas.setFont("Times-Roman", 10)
+        canvas.drawRightString(180 * mm, 8 * mm, page_number_text)
+        canvas.drawString(5 * mm, 8 * mm, "This report has been generated automatically by CRC@Surveillance System")
+
+    doc.build(elements, onFirstPage=draw_text_short, onLaterPages=draw_footer)
+
+    return response
 def generate_cash_desk_transaction(request):
    
     location_idform=request.GET.get('location')
@@ -522,7 +642,7 @@ def generate_cash_desk_transaction(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     
     # Title
@@ -544,7 +664,7 @@ def generate_cash_desk_transaction(request):
     p.drawString(x_start+80 , y_start, "Customer")
     p.drawString(x_start+200 , y_start, "Location")
     p.drawString(x_start+250 , y_start, "Token")
-    p.drawString(x_start+290 , y_start, "TT$")
+    p.drawString(x_start+290 , y_start, "$TT")
     p.drawString(x_start+330 , y_start, "USD")
     p.drawString(x_start+360 , y_start, "EURO")
     p.drawString(x_start+400 , y_start, "CAD")
@@ -714,7 +834,7 @@ def generate_poker_payouts(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -772,8 +892,8 @@ def generate_poker_payouts(request):
         p.drawString(x_start , y_start, str(record['date']))
         p.drawString(x_start+col_width , y_start, str(record['time'].strftime('%H:%M')))
         p.drawString(x_start+90 , y_start, str(table['poker_table']))
-        p.drawString(x_start+130 , y_start, str('TT$'+ str( record['bet'])))
-        p.drawString(x_start+180 , y_start, str('TT$'+ str( record['payout'])))
+        p.drawString(x_start+130 , y_start, str('$TT'+ str( record['bet'])))
+        p.drawString(x_start+180 , y_start, str('$TT'+ str( record['payout'])))
 
         if custom:
             p.setFont("Times-Roman", 8)   
@@ -805,36 +925,30 @@ def generate_poker_payouts(request):
                 underline_y = y_start - 2  # Slightly below the text
                 p.line(x_start + 90, underline_y, x_start + 235, underline_y)
                 p.drawString(x_start+90 , y_start, "Sum:")
-                p.drawString(x_start+130 , y_start, str('TT$'+str(entry['t_bet'])))
-                p.drawString(x_start+180 , y_start, str('TT$'+ str( entry['t_payout'])))
-                p.setFont("Times-Roman", 10)
+                p.drawString(x_start+130 , y_start, str('$TT'+str(entry['t_bet'])))
+                p.drawString(x_start+180 , y_start, str('$TT'+ str( entry['t_payout'])))
+              
                
 
         combination_name=combination
-        p.setFont("Times-Roman", 10)
-        p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
-        page_number_text = f"Page {p.getPageNumber()}"
-          # Set the position of the page number
-        p.drawRightString(260 * mm, 10 * mm, page_number_text)
-       # first_time=False
+      
         y_start -= row_height
         if y_start < 50:  # Check if space is running out
           page_number_text = f"Page {p.getPageNumber()}"
-          # Set the position of the page number
-          p.drawRightString(260 * mm, 10 * mm, page_number_text)
-          # Finalize the PDF
-          p.showPage()  # Add a new page
-          page_number_text = f"Page {p.getPageNumber()}"
-          # Set the position of the page number
-          p.drawRightString(240 * mm, 10 * mm, page_number_text)
-          # Finalize the PDF
-          y_start=height - 50
-        #  image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
-        #  full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
-       #   image = ImageReader(full_path)
-      #    p.drawImage(image, 0, 0, width=width, height=height)
-
        
+          p.drawRightString(260 * mm, 10 * mm, page_number_text)
+          p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
+          p.drawRightString(260 * mm, 10 * mm, page_number_text)      
+          p.showPage()  
+          p.setFont("Times-Roman", 9)  
+          y_start=height - 50
+      
+    p.setFont("Times-Roman", 9)
+    p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
+    page_number_text = f"Page {p.getPageNumber()}"
+    # Set the position of the page number
+    p.drawRightString(260 * mm, 10 * mm, page_number_text)
+    # first_time=False    
     p.save()
     return response
 
@@ -885,7 +999,7 @@ def generate_daily_exception(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
     
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -1045,7 +1159,7 @@ def generate_counterfeit(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -1064,14 +1178,14 @@ def generate_counterfeit(request):
     
     p.drawString(x_start , y_start, "Date")
     p.drawString(x_start+col_width , y_start, "Location")     
-    p.drawString(x_start+90 , y_start, "TT$")    
-    p.drawString(x_start+140 , y_start, "USD")
-    p.drawString(x_start+180 , y_start, "EURO")
+    p.drawString(x_start+90 , y_start, "$TT")    
+    p.drawString(x_start+160 , y_start, "USD")
+    p.drawString(x_start+190 , y_start, "EURO")
     p.drawString(x_start+230 , y_start, "GBP")
     p.drawString(x_start+260 , y_start, "Serial No")
-    p.drawString(x_start+310 , y_start, "Cashier")
+    p.drawString(x_start+320 , y_start, "Cashier")
     p.drawString(x_start+400 , y_start, "Customer")
-    p.drawString(x_start+510 , y_start, "Branch")  
+    p.drawString(x_start+520 , y_start, "Branch")  
     p.drawString(x_start+570 , y_start, "Notes")  
     p.setFont("Times-Roman", 10) 
     underline_y_below = y_start - 3  # Ligeramente debajo del texto
@@ -1088,22 +1202,25 @@ def generate_counterfeit(request):
         area_cashier=AreaCashier.objects.filter(id=record['area_cashier']).values('area_cashier').first()
         custom=Customer.objects.filter(id=record['customer_id']).values('customer').first()
         employee=Staff.objects.filter(id=record['employee_id']).values('name', 'surname').first()
-       
+        p.setFont("Times-Roman", 9)
         p.drawString(x_start , y_start, str(record['date']))
         p.drawString(x_start+col_width , y_start, str(area_cashier['area_cashier']))
-        p.drawString(x_start+90 , y_start, str('TT$'+ str(record['tt_dolar'])))
-        p.drawString(x_start+140 , y_start, str('$'+str(record['usd_dolar'])))
-        p.drawString(x_start+180 , y_start, str('$'+ str(record['euro_dolar'])))
+        p.drawString(x_start+110 , y_start, str('$TT'+ str(record['tt_dolar'])))
+        p.drawString(x_start+160 , y_start, str('$'+str(record['usd_dolar'])))
+        p.drawString(x_start+190 , y_start, str('$'+ str(record['euro_dolar'])))
         p.drawString(x_start+230 , y_start, str('$'+ str( record['gbp_dolar'])))
         p.drawString(x_start+260 , y_start, str(record['serial_number']))      
        
         if location:
-             p.drawString(x_start+510 , y_start, str(location['location']))
+             p.setFont("Times-Roman", 9)
+             p.drawString(x_start+520 , y_start, str(location['location']))
         p.drawString(x_start+570 , y_start, str(record['notes']))
         if custom:
+             p.setFont("Times-Roman", 9)
              p.drawString(x_start+400 , y_start, str(custom['customer']))
         if employee:
-            p.drawString(x_start+310 , y_start,str( employee['name'] +' ' +employee['surname'] ))
+            p.setFont("Times-Roman", 9)
+            p.drawString(x_start+320 , y_start,str( employee['name'] +' ' +employee['surname'] ))
 
         if date_begin and date_end:
             result = counterfeit_summary(date_begin, date_end,location_idform) 
@@ -1129,9 +1246,9 @@ def generate_counterfeit(request):
     y_start-=row_height
     p.drawString(x_start+50 , y_start, "Sum:")
     result = counterfeit_summary(date_begin, date_end,location_idform)
-    p.drawString(x_start+90 , y_start, str( '$'+ str(result['tt_dolar'])))
-    p.drawString(x_start+140 , y_start, str('$'+ str( result['tt_us_dolar'])))
-    p.drawString(x_start+180 , y_start, str('$'+ str( result['tt_euro_dolar'])))
+    p.drawString(x_start+110 , y_start, str( '$'+ str(result['tt_dolar'])))
+    p.drawString(x_start+160 , y_start, str('$'+ str( result['tt_us_dolar'])))
+    p.drawString(x_start+190 , y_start, str('$'+ str( result['tt_euro_dolar'])))
     p.drawString(x_start+230 , y_start, str('$'+ str( result['tt_gbp'])))              
     p.setFont("Times-Roman", 10)        
 
@@ -1204,7 +1321,7 @@ def generate_cd_error(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     # Title
     p.setFont("Times-Bold", 18)
     p.drawString(width/2-80, height - 50, "Club Royal Caribbean")
@@ -1222,7 +1339,7 @@ def generate_cd_error(request):
     p.drawString(x_start , y_start, "Date")
     p.drawString(x_start+col_width , y_start, "Time")
     p.drawString(x_start+100 , y_start, "Location")
-    p.drawString(x_start+150 , y_start, "TT$")
+    p.drawString(x_start+150 , y_start, "$TT")
     p.drawString(x_start+200 , y_start, "USD")
     p.drawString(x_start+250 , y_start, "Euro")
     p.drawString(x_start+290 , y_start, "Cashier")
@@ -1503,7 +1620,7 @@ def generate_daily_exception_by_employee(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 50, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -1600,18 +1717,13 @@ def generate_daily_exception_by_employee(request):
        
         y_start -= row_height+5
         if y_start < 50:  # Check if space is running out
+          p.setFont("Times-Roman", 11)
           page_number_text = f"Page {p.getPageNumber()}"
          
-          p.drawRightString(260 * mm, 8 * mm, page_number_text)
+          p.drawRightString(200 * mm, 8 * mm, page_number_text)
           p.drawString(5 * mm, 8 * mm, "This report has been generated automatically by CRC@Surveillance System")       
           p.showPage()      
-          y_start=height - 50
-       #   image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
-               
-       #   full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
-      #    image = ImageReader(full_path)
-        
-        #  p.drawImage(image, 0, 0, width=width, height=height)
+          y_start=height - 50     
           p.setFont("Times-Roman", 11)
 
     page_number_text = f"Page {p.getPageNumber()}"
@@ -1688,7 +1800,7 @@ def generate_report_by_date(request):
         image_path = "/static/background-crc.jpg"  # Resolve the path to the static file               
         full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
         image = ImageReader(full_path)        
-        p.drawImage(image, 100, height-100, width=60, height=70)
+        p.drawImage(image, 100, height-100, width=60, height=60)
 
         # Draw details
         p.setFont("Times-Bold", 14)
@@ -1938,10 +2050,7 @@ def generate_cash_desk_transaction_customer_expense(request):
     location_idform=request.GET.get('location')
     date_begin = request.GET.get('date_begin')
     date_end = request.GET.get('date_end') 
-    custom = Customer.objects.filter(id=customer_id).values('customer').first() 
-
-
-    
+    custom = Customer.objects.filter(id=customer_id).values('customer').first()    
    
     
     def get_cash_desk_summary(start_date, end_date, account_type_id,location,customer):    # Realizar la consulta
@@ -2005,7 +2114,7 @@ def generate_cash_desk_transaction_customer_expense(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)    
+    p.drawImage(image, 100, height-100, width=60, height=60)    
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -2028,7 +2137,7 @@ def generate_cash_desk_transaction_customer_expense(request):
     p.drawString(x_start+col_width+20 , y_start, "Time")    
     p.drawString(x_start+120 , y_start, "Location")
     p.drawString(x_start+180 , y_start, "Token")
-    p.drawString(x_start+240 , y_start, "TT$")
+    p.drawString(x_start+240 , y_start, "$TT")
     p.drawString(x_start+300 , y_start, "USD")
     p.drawString(x_start+360 , y_start, "EURO")
     p.drawString(x_start+400 , y_start, "CAD")
@@ -2102,7 +2211,7 @@ def generate_cash_desk_transaction_customer_expense(request):
             
               
 
-                p.drawString(x_start+220 , y_start, str('TT$ ')+str( entry['tt_total']))
+                p.drawString(x_start+220 , y_start, str('$TT')+str( entry['tt_total']))
                 p.drawString(x_start+295 , y_start, str(entry['usd_total']))
                 p.drawString(x_start+355 , y_start, str(entry['euro_total']))
                 p.drawString(x_start+395 , y_start, str(entry['cad_total']))
@@ -2225,7 +2334,7 @@ def generate_cash_desk_transaction_customer_cumplimentary(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file               
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)        
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     
     # Title
@@ -2249,7 +2358,7 @@ def generate_cash_desk_transaction_customer_cumplimentary(request):
     p.drawString(x_start+col_width+20 , y_start, "Time")    
     p.drawString(x_start+120 , y_start, "Location")
     p.drawString(x_start+180 , y_start, "Token")
-    p.drawString(x_start+240 , y_start, "TT$")
+    p.drawString(x_start+240 , y_start, "$TT")
     p.drawString(x_start+300 , y_start, "USD")
     p.drawString(x_start+360 , y_start, "EURO")
     p.drawString(x_start+400 , y_start, "CAD")
@@ -2323,7 +2432,7 @@ def generate_cash_desk_transaction_customer_cumplimentary(request):
             
               
 
-                p.drawString(x_start+220 , y_start, str('TT$ ')+str( entry['tt_total']))
+                p.drawString(x_start+220 , y_start, str('$TT')+str( entry['tt_total']))
                 p.drawString(x_start+295 , y_start, str(entry['usd_total']))
                 p.drawString(x_start+355 , y_start, str(entry['euro_total']))
                 p.drawString(x_start+395 , y_start, str(entry['cad_total']))
@@ -2363,7 +2472,7 @@ def generate_cash_desk_transaction_customer_cumplimentary(request):
             
               
 
-                p.drawString(x_start+220 , y_start, str('TT$ ')+str( entry['tt_total']))
+                p.drawString(x_start+220 , y_start, str('$TT')+str( entry['tt_total']))
                 p.drawString(x_start+295 , y_start, str(entry['usd_total']))
                 p.drawString(x_start+355 , y_start, str(entry['euro_total']))
                 p.drawString(x_start+395 , y_start, str(entry['cad_total']))
@@ -2451,7 +2560,7 @@ def generate_cash_desk_transaction_by_customer(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file               
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)        
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     
     # Title
@@ -2475,7 +2584,7 @@ def generate_cash_desk_transaction_by_customer(request):
     p.drawString(x_start+col_width+20 , y_start, "Time")    
     p.drawString(x_start+120 , y_start, "Location")
     p.drawString(x_start+180 , y_start, "Token")
-    p.drawString(x_start+240 , y_start, "TT$")
+    p.drawString(x_start+240 , y_start, "$TT")
     p.drawString(x_start+300 , y_start, "USD")
     p.drawString(x_start+360 , y_start, "EURO")
     p.drawString(x_start+400 , y_start, "CAD")
@@ -2549,7 +2658,7 @@ def generate_cash_desk_transaction_by_customer(request):
             
               
 
-                p.drawString(x_start+220 , y_start, str('TT$ ')+str( entry['tt_total']))
+                p.drawString(x_start+220 , y_start, str('$TT ')+str( entry['tt_total']))
                 p.drawString(x_start+295 , y_start, str(entry['usd_total']))
                 p.drawString(x_start+355 , y_start, str(entry['euro_total']))
                 p.drawString(x_start+395 , y_start, str(entry['cad_total']))
@@ -2589,7 +2698,7 @@ def generate_cash_desk_transaction_by_customer(request):
             
               
 
-                p.drawString(x_start+220 , y_start, str('TT$ ')+str( entry['tt_total']))
+                p.drawString(x_start+220 , y_start, str('$TT ')+str( entry['tt_total']))
                 p.drawString(x_start+295 , y_start, str(entry['usd_total']))
                 p.drawString(x_start+355 , y_start, str(entry['euro_total']))
                 p.drawString(x_start+395 , y_start, str(entry['cad_total']))
@@ -2673,7 +2782,7 @@ def generate_cash_desk_transaction_by_account_type(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)   
+    p.drawImage(image, 100, height-100, width=60, height=60)   
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -2696,7 +2805,7 @@ def generate_cash_desk_transaction_by_account_type(request):
     p.drawString(x_start+col_width+10 , y_start, "Time")    
     p.drawString(x_start+110 , y_start, "Location")
     p.drawString(x_start+170 , y_start, "Token")
-    p.drawString(x_start+220 , y_start, "TT$")
+    p.drawString(x_start+220 , y_start, "$TT")
     p.drawString(x_start+270 , y_start, "USD")
     p.drawString(x_start+310 , y_start, "EURO")
     p.drawString(x_start+360 , y_start, "CAD")
@@ -2769,12 +2878,13 @@ def generate_cash_desk_transaction_by_account_type(request):
                 p.drawString(x_start+180 , y_start, "Sum:")
             
               
+              
 
-                p.drawString(x_start+220 , y_start, str('TT$ ')+str( entry['tt_total']))
-                p.drawString(x_start+295 , y_start, str(entry['usd_total']))
-                p.drawString(x_start+355 , y_start, str(entry['euro_total']))
-                p.drawString(x_start+395 , y_start, str(entry['cad_total']))
-                p.drawString(x_start+435 , y_start, str(entry['gbp_total']))
+                p.drawString(x_start+220 , y_start, str('$TT ')+str( entry['tt_total']))
+                p.drawString(x_start+295 , y_start, str('$USD ')+str(entry['usd_total']))
+                p.drawString(x_start+355 , y_start, str('EUR')+str(entry['euro_total']))
+                p.drawString(x_start+395 , y_start, str('CAD')+ str(entry['cad_total']))
+                p.drawString(x_start+435 , y_start, str('GBP')+ str(entry['gbp_total']))
                 p.setFont("Times-Roman", 9)
 
 
@@ -2782,18 +2892,13 @@ def generate_cash_desk_transaction_by_account_type(request):
       
         y_start -= row_height
         if y_start < 50:  # Check if space is running out
+        
           page_number_text = f"Page {p.getPageNumber()}"
           p.setFont("Times-Roman", 10)
-          p.drawRightString(260 * mm, 8 * mm, page_number_text)
+          p.drawRightString(250 * mm, 8 * mm, page_number_text)
           p.drawString(5 * mm, 8 * mm, "This report has been generated automatically by CRC@Surveillance System")       
           p.showPage()      
-          y_start=height - 50
-         # image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
-               
-       #   full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
-        #  image = ImageReader(full_path)
-        
-        #  p.drawImage(image, 0, 0, width=width, height=height)
+          y_start=height - 50       
           p.setFont("Times-Roman", 10)
        
   
@@ -2849,7 +2954,7 @@ def generate_daily_exception_by_type(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -3055,7 +3160,7 @@ def generate_poker_payouts_synopsis_staff(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -3125,8 +3230,8 @@ def generate_poker_payouts_synopsis_staff(request):
         p.drawString(x_start , y_start, str(record['date']))
         p.drawString(x_start+col_width , y_start, str(record['time'].strftime('%H:%M')))
         p.drawString(x_start+90 , y_start, str(table['poker_table']))
-        p.drawString(x_start+130 , y_start, str('TT$'+ str( record['bet'])))
-        p.drawString(x_start+180 , y_start, str('TT$'+ str( record['payout'])))
+        p.drawString(x_start+130 , y_start, str('$TT'+ str( record['bet'])))
+        p.drawString(x_start+180 , y_start, str('$TT'+ str( record['payout'])))
 
         if custom:
             p.setFont("Times-Roman", 9)   
@@ -3159,8 +3264,8 @@ def generate_poker_payouts_synopsis_staff(request):
                 underline_y = y_start - 2  # Slightly below the text
                 p.line(x_start + 90, underline_y, x_start + 235, underline_y)
                 p.drawString(x_start+90 , y_start, "Sum:")
-                p.drawString(x_start+130 , y_start, str('TT$'+str(entry['t_bet'])))
-                p.drawString(x_start+180 , y_start, str('TT$'+ str( entry['t_payout'])))
+                p.drawString(x_start+130 , y_start, str('$TT'+str(entry['t_bet'])))
+                p.drawString(x_start+180 , y_start, str('$TT'+ str( entry['t_payout'])))
                 p.setFont("Times-Roman", 10)
                
 
@@ -3175,16 +3280,9 @@ def generate_poker_payouts_synopsis_staff(request):
           p.drawRightString(260 * mm, 10 * mm, page_number_text)
           # Finalize the PDF
           p.showPage()  # Add a new page
-          page_number_text = f"Page {p.getPageNumber()}"
-          # Set the position of the page number
-          p.drawRightString(240 * mm, 10 * mm, page_number_text)
-          # Finalize the PDF
+         
           y_start=height - 50
-        #  image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
-        #  full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
-       #   image = ImageReader(full_path)
-      #    p.drawImage(image, 0, 0, width=width, height=height)
-
+       
     p.setFont("Times-Roman", 10)
     p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
     page_number_text = f"Page {p.getPageNumber()}"
@@ -3261,7 +3359,7 @@ def generate_poker_payouts_combination(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -3331,8 +3429,8 @@ def generate_poker_payouts_combination(request):
         p.drawString(x_start , y_start, str(record['date']))
         p.drawString(x_start+col_width , y_start, str(record['time'].strftime('%H:%M')))
         p.drawString(x_start+90 , y_start, str(table['poker_table']))
-        p.drawString(x_start+130 , y_start, str('TT$'+ str( record['bet'])))
-        p.drawString(x_start+180 , y_start, str('TT$'+ str( record['payout'])))
+        p.drawString(x_start+130 , y_start, str('$TT'+ str( record['bet'])))
+        p.drawString(x_start+180 , y_start, str('$TT'+ str( record['payout'])))
 
         if custom:
             p.setFont("Times-Roman", 9)   
@@ -3365,8 +3463,8 @@ def generate_poker_payouts_combination(request):
                 underline_y = y_start - 2  # Slightly below the text
                 p.line(x_start + 90, underline_y, x_start + 235, underline_y)
                 p.drawString(x_start+90 , y_start, "Sum:")
-                p.drawString(x_start+130 , y_start, str('TT$'+str(entry['t_bet'])))
-                p.drawString(x_start+180 , y_start, str('TT$'+ str( entry['t_payout'])))
+                p.drawString(x_start+130 , y_start, str('$TT'+str(entry['t_bet'])))
+                p.drawString(x_start+180 , y_start, str('$TT'+ str( entry['t_payout'])))
                 p.setFont("Times-Roman", 10)
                
 
@@ -3468,7 +3566,7 @@ def generate_poker_payouts_customer(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -3538,8 +3636,8 @@ def generate_poker_payouts_customer(request):
         p.drawString(x_start , y_start, str(record['date']))
         p.drawString(x_start+col_width , y_start, str(record['time'].strftime('%H:%M')))
         p.drawString(x_start+90 , y_start, str(table['poker_table']))
-        p.drawString(x_start+130 , y_start, str('TT$'+ str( record['bet'])))
-        p.drawString(x_start+180 , y_start, str('TT$'+ str( record['payout'])))
+        p.drawString(x_start+130 , y_start, str('$TT'+ str( record['bet'])))
+        p.drawString(x_start+180 , y_start, str('$TT'+ str( record['payout'])))
 
         if custom:
             p.setFont("Times-Roman", 9)   
@@ -3574,8 +3672,8 @@ def generate_poker_payouts_customer(request):
                 underline_y = y_start - 2  # Slightly below the text
                 p.line(x_start + 90, underline_y, x_start + 235, underline_y)
                 p.drawString(x_start+90 , y_start, "Sum:")
-                p.drawString(x_start+130 , y_start, str('TT$'+str(entry['t_bet'])))
-                p.drawString(x_start+180 , y_start, str('TT$'+ str( entry['t_payout'])))
+                p.drawString(x_start+130 , y_start, str('$TT'+str(entry['t_bet'])))
+                p.drawString(x_start+180 , y_start, str('$TT'+ str( entry['t_payout'])))
                 p.setFont("Times-Roman", 10)
                
 
@@ -3670,7 +3768,7 @@ def generate_cd_error_synopsis(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     # Title
     p.setFont("Times-Bold", 18)
     p.drawString((width/2)-130, height - 50, "Club Royal Caribbean")
@@ -3688,7 +3786,7 @@ def generate_cd_error_synopsis(request):
     p.drawString(x_start , y_start, "Date")
     p.drawString(x_start+col_width , y_start, "Time")
     p.drawString(x_start+100 , y_start, "Location")
-    p.drawString(x_start+150 , y_start, "TT$")
+    p.drawString(x_start+150 , y_start, "$TT")
     p.drawString(x_start+200 , y_start, "USD")
     p.drawString(x_start+250 , y_start, "Euro")
     p.drawString(x_start+290 , y_start, "Cashier")
@@ -3908,7 +4006,7 @@ def generate_report_synopsis_cctv(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file               
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)        
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -4031,15 +4129,15 @@ def generate_report_synopsis_cctv(request):
                 p.line(x_start + 290, underline_y, x_start + 630, underline_y)
                 p.drawString(x_start+290 , y_start, "Sum:")
                 if entry['t_value'] is not None:
-                    p.drawString(x_start+360 , y_start, str('TT$'+str(round(entry['t_value'],2))))
+                    p.drawString(x_start+360 , y_start, str('$USD'+str(round(entry['t_value'],2))))
                 if entry['t_mrecov'] is not None:
-                    p.drawString(x_start+420 , y_start, str('TT$'+ str( round(entry['t_mrecov'],2))))
+                    p.drawString(x_start+420 , y_start, str('$TT'+ str( round(entry['t_mrecov'],2))))
                 if entry['t_mnotrecov'] is not None:
-                    p.drawString(x_start+480 , y_start, str('TT$'+ str( round(entry['t_mnotrecov'],2))))
+                    p.drawString(x_start+480 , y_start, str('$TT'+ str( round(entry['t_mnotrecov'],2))))
                 if entry['t_mpaid'] is not None:
-                    p.drawString(x_start+540 , y_start, str('TT$'+ str( round(entry['t_mpaid'],2))))
+                    p.drawString(x_start+540 , y_start, str('$TT'+ str( round(entry['t_mpaid'],2))))
                 if entry['t_mnotpaid'] is not None:
-                    p.drawString(x_start+590 , y_start, str('TT$'+ str( round(entry['t_mnotpaid'],2))))
+                    p.drawString(x_start+590 , y_start, str('$TT'+ str( round(entry['t_mnotpaid'],2))))
               
                 p.setFont("Times-Roman", 10)
                 y_start -= row_height
@@ -4080,15 +4178,15 @@ def generate_report_synopsis_cctv(request):
     p.line(x_start + 200, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+200 , y_start, "Grand Total:")
     if results['t_value'] is not None:
-        p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
+        p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
     if results['t_mrecov'] is not None:
-        p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
+        p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
     if results['t_mnotrecov'] is not None:
-        p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
+        p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
     if results['t_mpaid'] is not None:
-        p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
+        p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
     if results['t_mnotpaid'] is not None:
-        p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+        p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
 
                 
 
@@ -4213,7 +4311,7 @@ def generate_report_synopsis_dealer(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -4340,15 +4438,15 @@ def generate_report_synopsis_dealer(request):
                 p.line(x_start + 290, underline_y, x_start + 630, underline_y)
                 p.drawString(x_start+290 , y_start, "Sum:")
                 if entry['t_value'] is not None:
-                    p.drawString(x_start+360 , y_start, str('TT$'+str(round(entry['t_value'],2))))
+                    p.drawString(x_start+360 , y_start, str('$USD'+str(round(entry['t_value'],2))))
                 if entry['t_mrecov'] is not None:
-                    p.drawString(x_start+420 , y_start, str('TT$'+ str( round(entry['t_mrecov'],2))))
+                    p.drawString(x_start+420 , y_start, str('$TT'+ str( round(entry['t_mrecov'],2))))
                 if entry['t_mnotrecov'] is not None:
-                    p.drawString(x_start+480 , y_start, str('TT$'+ str( round(entry['t_mnotrecov'],2))))
+                    p.drawString(x_start+480 , y_start, str('$TT'+ str( round(entry['t_mnotrecov'],2))))
                 if entry['t_mpaid'] is not None:
-                    p.drawString(x_start+540 , y_start, str('TT$'+ str( round(entry['t_mpaid'],2))))
+                    p.drawString(x_start+540 , y_start, str('$TT'+ str( round(entry['t_mpaid'],2))))
                 if entry['t_mnotpaid'] is not None:
-                    p.drawString(x_start+590 , y_start, str('TT$'+ str( round(entry['t_mnotpaid'],2))))
+                    p.drawString(x_start+590 , y_start, str('$TT'+ str( round(entry['t_mnotpaid'],2))))
               
                 p.setFont("Times-Roman", 10)
                 y_start -= row_height
@@ -4388,15 +4486,15 @@ def generate_report_synopsis_dealer(request):
     p.line(x_start + 200, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+200 , y_start, "Grand Total:")
     if results['t_value'] is not None:
-        p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
+        p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
     if results['t_mrecov'] is not None:
-        p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
+        p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
     if results['t_mnotrecov'] is not None:
-        p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
+        p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
     if results['t_mpaid'] is not None:
-        p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
+        p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
     if results['t_mnotpaid'] is not None:
-        p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+        p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
 
                 
 
@@ -4521,7 +4619,7 @@ def generate_report_synopsis_inspector(request):
                
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -4695,15 +4793,15 @@ def generate_report_synopsis_inspector(request):
     p.line(x_start + 200, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+200 , y_start, "Grand Total:")
     if results['t_value'] is not None:
-        p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
+        p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
     if results['t_mrecov'] is not None:
-        p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
+        p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
     if results['t_mnotrecov'] is not None:
-        p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
+        p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
     if results['t_mpaid'] is not None:
-        p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
+        p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
     if results['t_mnotpaid'] is not None:
-        p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+        p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
 
                 
 
@@ -4828,7 +4926,7 @@ def generate_report_synopsis_pitboss(request):
                
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -4995,15 +5093,15 @@ def generate_report_synopsis_pitboss(request):
     p.line(x_start + 200, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+200 , y_start, "Grand Total:")
     if results['t_value'] is not None:
-        p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
+        p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
     if results['t_mrecov'] is not None:
-        p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
+        p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
     if results['t_mnotrecov'] is not None:
-        p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
+        p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
     if results['t_mpaid'] is not None:
-        p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
+        p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
     if results['t_mnotpaid'] is not None:
-        p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+        p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
        
     p.setFont("Times-Roman", 10)
     p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
@@ -5125,7 +5223,7 @@ def generate_report_synopsis_title(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -5294,15 +5392,15 @@ def generate_report_synopsis_title(request):
     p.line(x_start + 250, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+250 , y_start, "Grand Total:")
     if results['t_value'] is not None:
-        p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
+        p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
     if results['t_mrecov'] is not None:
-        p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
+        p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
     if results['t_mnotrecov'] is not None:
-        p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
+        p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
     if results['t_mpaid'] is not None:
-        p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
+        p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
     if results['t_mnotpaid'] is not None:
-        p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+        p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
        
     p.setFont("Times-Roman", 10)
     p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
@@ -5417,7 +5515,7 @@ def generate_report_synopsis_overpayment(request):
     image_path = "/static/background-crc.jpg"  # Resolve the path to the static file               
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)        
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -5528,11 +5626,11 @@ def generate_report_synopsis_overpayment(request):
                 p.line(x_start + 290, underline_y, x_start + 630, underline_y)
                 p.drawString(x_start+290 , y_start, "Sum:")
                 if entry['t_value']:
-                    p.drawString(x_start+360 , y_start, str('TT$'+str(round(entry['t_value'],2))))
-                p.drawString(x_start+420 , y_start, str('TT$'+ str( round(entry['t_mrecov'],2))))
-                p.drawString(x_start+480 , y_start, str('TT$'+ str( round(entry['t_mnotrecov'],2))))
-                p.drawString(x_start+540 , y_start, str('TT$'+ str( round(entry['t_mpaid'],2))))
-                p.drawString(x_start+590 , y_start, str('TT$'+ str( round(entry['t_mnotpaid'],2))))
+                    p.drawString(x_start+360 , y_start, str('$USD'+str(round(entry['t_value'],2))))
+                p.drawString(x_start+420 , y_start, str('$TT'+ str( round(entry['t_mrecov'],2))))
+                p.drawString(x_start+480 , y_start, str('$TT'+ str( round(entry['t_mnotrecov'],2))))
+                p.drawString(x_start+540 , y_start, str('$TT'+ str( round(entry['t_mpaid'],2))))
+                p.drawString(x_start+590 , y_start, str('$TT'+ str( round(entry['t_mnotpaid'],2))))
               
                 p.setFont("Times-Roman", 10)
                 y_start -= row_height
@@ -5568,11 +5666,11 @@ def generate_report_synopsis_overpayment(request):
     underline_y = y_start - 2  # Slightly below the text
     p.line(x_start + 200, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+200 , y_start, "Grand Total:")
-    p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
-    p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
-    p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
-    p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
-    p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+    p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
+    p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
+    p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
+    p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
+    p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
 
     p.setFont("Times-Roman", 10)
     p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
@@ -5688,7 +5786,7 @@ def generate_report_synopsis_underpayment(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -5799,11 +5897,11 @@ def generate_report_synopsis_underpayment(request):
                 p.line(x_start + 290, underline_y, x_start + 630, underline_y)
                 p.drawString(x_start+290 , y_start, "Sum:")
                 if entry['t_value']:
-                    p.drawString(x_start+360 , y_start, str('TT$'+str(round(entry['t_value'],2))))
-                p.drawString(x_start+420 , y_start, str('TT$'+ str( round(entry['t_mrecov'],2))))
-                p.drawString(x_start+480 , y_start, str('TT$'+ str( round(entry['t_mnotrecov'],2))))
-                p.drawString(x_start+540 , y_start, str('TT$'+ str( round(entry['t_mpaid'],2))))
-                p.drawString(x_start+590 , y_start, str('TT$'+ str( round(entry['t_mnotpaid'],2))))
+                    p.drawString(x_start+360 , y_start, str('$USD'+str(round(entry['t_value'],2))))
+                p.drawString(x_start+420 , y_start, str('$TT'+ str( round(entry['t_mrecov'],2))))
+                p.drawString(x_start+480 , y_start, str('$TT'+ str( round(entry['t_mnotrecov'],2))))
+                p.drawString(x_start+540 , y_start, str('$TT'+ str( round(entry['t_mpaid'],2))))
+                p.drawString(x_start+590 , y_start, str('$TT'+ str( round(entry['t_mnotpaid'],2))))
               
                 p.setFont("Times-Roman", 10)
                 y_start -= row_height
@@ -5839,11 +5937,11 @@ def generate_report_synopsis_underpayment(request):
     underline_y = y_start - 2  # Slightly below the text
     p.line(x_start + 200, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+200 , y_start, "Grand Total:")
-    p.drawString(x_start+360 , y_start, str('TT$'+str(round(results['t_value'],2))))
-    p.drawString(x_start+420 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
-    p.drawString(x_start+480 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
-    p.drawString(x_start+540 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
-    p.drawString(x_start+590 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+    p.drawString(x_start+360 , y_start, str('$USD'+str(round(results['t_value'],2))))
+    p.drawString(x_start+420 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
+    p.drawString(x_start+480 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
+    p.drawString(x_start+540 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
+    p.drawString(x_start+590 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
 
     p.setFont("Times-Roman", 10)
     p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")
@@ -5920,7 +6018,7 @@ def generate_report_synopsis_summary(request):
     full_path = os.path.join(settings.BASE_DIR, image_path.strip('/'))  # For absolute paths
     image = ImageReader(full_path)
         
-    p.drawImage(image, 100, height-100, width=60, height=70)
+    p.drawImage(image, 100, height-100, width=60, height=60)
     
     # Title
     p.setFont("Times-Bold", 18)
@@ -6021,15 +6119,15 @@ def generate_report_synopsis_summary(request):
     p.line(x_start + 250, underline_y, x_start + 630, underline_y)
     p.drawString(x_start+250 , y_start, "Grand Total:")
     if results['t_value'] is not None:
-        p.drawString(x_start+350 , y_start, str('TT$'+str(round(results['t_value'],2))))
+        p.drawString(x_start+350 , y_start, str('$USD'+str(round(results['t_value'],2))))
     if results['t_mrecov'] is not None:
-        p.drawString(x_start+410 , y_start, str('TT$'+ str( round(results['t_mrecov'],2))))
+        p.drawString(x_start+410 , y_start, str('$TT'+ str( round(results['t_mrecov'],2))))
     if results['t_mnotrecov'] is not None:
-        p.drawString(x_start+470 , y_start, str('TT$'+ str( round(results['t_mnotrecov'],2))))
+        p.drawString(x_start+470 , y_start, str('$TT'+ str( round(results['t_mnotrecov'],2))))
     if results['t_mpaid'] is not None:
-        p.drawString(x_start+530 , y_start, str('TT$'+ str( round(results['t_mpaid'],2))))
+        p.drawString(x_start+530 , y_start, str('$TT'+ str( round(results['t_mpaid'],2))))
     if results['t_mnotpaid'] is not None:
-        p.drawString(x_start+580 , y_start, str('TT$'+ str( round(results['t_mnotpaid'],2))))
+        p.drawString(x_start+580 , y_start, str('$TT'+ str( round(results['t_mnotpaid'],2))))
        
     p.setFont("Times-Roman", 10)
     p.drawString(50, 30, "This report has been generated automatically by CRC@Surveillance System")

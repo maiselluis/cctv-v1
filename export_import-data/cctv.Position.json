@@ -1,0 +1,986 @@
+[
+{
+  "model": "cctv.position",
+  "pk": 8,
+  "fields": {
+    "name": "Cashier 1",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 9,
+  "fields": {
+    "name": "Cashier 2",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 10,
+  "fields": {
+    "name": "Cashier Trainee",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 11,
+  "fields": {
+    "name": "Cash Desk Supervisor 1",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 12,
+  "fields": {
+    "name": "Cash Desk Supervisor 2",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 13,
+  "fields": {
+    "name": "Expat Cash Desk Supervisor",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 14,
+  "fields": {
+    "name": "Cash Desk Manager",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 15,
+  "fields": {
+    "name": "Cash Desk Supervisor 2",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 16,
+  "fields": {
+    "name": "Purchase Officer",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 17,
+  "fields": {
+    "name": "Financial Controller",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 18,
+  "fields": {
+    "name": "Executive Secretary",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 19,
+  "fields": {
+    "name": "Executive Secretary",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 20,
+  "fields": {
+    "name": "Head Chef",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 21,
+  "fields": {
+    "name": "Accounting Officer 1",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 22,
+  "fields": {
+    "name": "Accounting Officer 2",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 23,
+  "fields": {
+    "name": "Human Resource Assistant",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 24,
+  "fields": {
+    "name": "Stock Trainee",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 25,
+  "fields": {
+    "name": "Accounting Officer Trainee",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 26,
+  "fields": {
+    "name": "Food and Beverage Manager",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 27,
+  "fields": {
+    "name": "Technician Trainee",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 28,
+  "fields": {
+    "name": "Food and Beverage Supervisor 2",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 29,
+  "fields": {
+    "name": "Food and Beverage Supervisor 1",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 30,
+  "fields": {
+    "name": "Top Bartender",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 31,
+  "fields": {
+    "name": "Housekeeper 1",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 32,
+  "fields": {
+    "name": "Waitress 1",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 33,
+  "fields": {
+    "name": "Housekeeper 2",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 34,
+  "fields": {
+    "name": "Waitress 2",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 35,
+  "fields": {
+    "name": "Bartender 1",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 36,
+  "fields": {
+    "name": "Chef",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 37,
+  "fields": {
+    "name": "Casino Manager",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 38,
+  "fields": {
+    "name": "Cook 2",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 39,
+  "fields": {
+    "name": "Chef Supervisor 2",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 40,
+  "fields": {
+    "name": "Porter 2",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 41,
+  "fields": {
+    "name": "Porter",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 42,
+  "fields": {
+    "name": "Inspector 1",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 43,
+  "fields": {
+    "name": "Inspector 2",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 44,
+  "fields": {
+    "name": "Dealer 1",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 45,
+  "fields": {
+    "name": "PIT",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 46,
+  "fields": {
+    "name": "Pit Boss 2",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 47,
+  "fields": {
+    "name": "Dealer 2",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 48,
+  "fields": {
+    "name": "Dealer 3",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 49,
+  "fields": {
+    "name": "Expat Pit Boss",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 50,
+  "fields": {
+    "name": "Dealer Trainee",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 51,
+  "fields": {
+    "name": "Expat Inspector 1",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 52,
+  "fields": {
+    "name": "Security Supervisor",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 53,
+  "fields": {
+    "name": "Security Manager",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 54,
+  "fields": {
+    "name": "Security Officer 1",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 55,
+  "fields": {
+    "name": "Security Officer 2",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 56,
+  "fields": {
+    "name": "Security Officer 3",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 57,
+  "fields": {
+    "name": "Parking Attendant",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 58,
+  "fields": {
+    "name": "Stock Controller 2",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 59,
+  "fields": {
+    "name": "Technician 2",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 60,
+  "fields": {
+    "name": "Slot Attendant 1",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 61,
+  "fields": {
+    "name": "Slot Attendant 2",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 62,
+  "fields": {
+    "name": "Slot Assistant Manager",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 63,
+  "fields": {
+    "name": "Slot Supervisor 1",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 64,
+  "fields": {
+    "name": "Slot Attendant Trainee",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 65,
+  "fields": {
+    "name": "Expat Head Technician",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 66,
+  "fields": {
+    "name": "Head Technician",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 67,
+  "fields": {
+    "name": "Slot Technician 2",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 68,
+  "fields": {
+    "name": "Graphic Designer",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 69,
+  "fields": {
+    "name": "Receptionist Trainee",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 70,
+  "fields": {
+    "name": "Public Relations Officer 1",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 71,
+  "fields": {
+    "name": "Public Relations Trainee",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 72,
+  "fields": {
+    "name": "Receptionist Trainee",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 73,
+  "fields": {
+    "name": "Director of Surveillance",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 74,
+  "fields": {
+    "name": "Chef Supervisor",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 75,
+  "fields": {
+    "name": "General Manager",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 76,
+  "fields": {
+    "name": "Shift Manager",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 77,
+  "fields": {
+    "name": "Assistant Casino Manager 1",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 78,
+  "fields": {
+    "name": "Assistant Casino Manager",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 80,
+  "fields": {
+    "name": "Surveillance Supervisor 1",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 81,
+  "fields": {
+    "name": "Surveillance Officer 1",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 82,
+  "fields": {
+    "name": "Surveillance Supervisor 2",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 83,
+  "fields": {
+    "name": "Surveillance Officer 2",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 84,
+  "fields": {
+    "name": "Expat Assistant Surveillance Manager",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 85,
+  "fields": {
+    "name": "Surveillance Trainee",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 86,
+  "fields": {
+    "name": "I.T. Technician Supervisor",
+    "department": 13
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 87,
+  "fields": {
+    "name": "I.T. Technician 3",
+    "department": 13
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 88,
+  "fields": {
+    "name": "I.T. Technician 2",
+    "department": 13
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 89,
+  "fields": {
+    "name": "Handyman 1",
+    "department": 14
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 90,
+  "fields": {
+    "name": "Surveillance Manager",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 91,
+  "fields": {
+    "name": "Marketing Manager",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 92,
+  "fields": {
+    "name": "Assistant Casino Manager 2",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 93,
+  "fields": {
+    "name": "Stock Controller 1",
+    "department": 15
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 94,
+  "fields": {
+    "name": "I.T. Technician Trainee",
+    "department": 13
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 95,
+  "fields": {
+    "name": "Receptionist 1",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 96,
+  "fields": {
+    "name": "Receptionist 2",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 97,
+  "fields": {
+    "name": "Bartender 2",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 98,
+  "fields": {
+    "name": "Public Relations Officer 2",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 99,
+  "fields": {
+    "name": "Slot Technician 3",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 100,
+  "fields": {
+    "name": "Chef Supervisor 1",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 101,
+  "fields": {
+    "name": "Receptionist Supervisor",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 102,
+  "fields": {
+    "name": "Assistant Security Manager",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 103,
+  "fields": {
+    "name": "Security Supervisor 2",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 104,
+  "fields": {
+    "name": "Sports Betting Security",
+    "department": 10
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 105,
+  "fields": {
+    "name": "Head Supervisor",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 106,
+  "fields": {
+    "name": "Public Relations Manager",
+    "department": 9
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 107,
+  "fields": {
+    "name": "Handyman 2",
+    "department": 17
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 108,
+  "fields": {
+    "name": "General Manager's Secretary",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 109,
+  "fields": {
+    "name": "Administrative Officer 2",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 110,
+  "fields": {
+    "name": "Top Waitress",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 111,
+  "fields": {
+    "name": "Expat Slot Attendant",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 112,
+  "fields": {
+    "name": "Pit Boss 1",
+    "department": 7
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 113,
+  "fields": {
+    "name": "Slot Supervisor 2",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 114,
+  "fields": {
+    "name": "Chief Operating Officer",
+    "department": 8
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 116,
+  "fields": {
+    "name": "Human Resource Manager",
+    "department": 12
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 117,
+  "fields": {
+    "name": "Top Housekeeper",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 118,
+  "fields": {
+    "name": "Expat Surveillance Manager",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 119,
+  "fields": {
+    "name": "Slot Manager",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 120,
+  "fields": {
+    "name": "Porter 1",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 121,
+  "fields": {
+    "name": "Cook 1",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 122,
+  "fields": {
+    "name": "Cook 3",
+    "department": 6
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 123,
+  "fields": {
+    "name": "I.T. Technician 1",
+    "department": 13
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 124,
+  "fields": {
+    "name": "Slot Supervisor 2",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 125,
+  "fields": {
+    "name": "Surveillance Officer 3",
+    "department": 11
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 126,
+  "fields": {
+    "name": "Handyman 1",
+    "department": 17
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 127,
+  "fields": {
+    "name": "Sport Betting Attendant",
+    "department": 19
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 128,
+  "fields": {
+    "name": "BARTENDER 2",
+    "department": 5
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 129,
+  "fields": {
+    "name": "Expat Slot Manager",
+    "department": 1
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 130,
+  "fields": {
+    "name": "Assistant Cash Desk Manager",
+    "department": 4
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 131,
+  "fields": {
+    "name": "Accounting Manager",
+    "department": 15
+  }
+},
+{
+  "model": "cctv.position",
+  "pk": 132,
+  "fields": {
+    "name": "Accounting Manager",
+    "department": 15
+  }
+}
+]

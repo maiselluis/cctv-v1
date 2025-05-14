@@ -1,0 +1,121 @@
+[
+{
+  "model": "cctv.pokercombination",
+  "pk": 1,
+  "fields": {
+    "poker_combination": "0 points"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 2,
+  "fields": {
+    "poker_combination": "1 to 3"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 3,
+  "fields": {
+    "poker_combination": "4 to 7"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 4,
+  "fields": {
+    "poker_combination": "47 Points"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 5,
+  "fields": {
+    "poker_combination": "48 Points"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 6,
+  "fields": {
+    "poker_combination": "49 Points"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 7,
+  "fields": {
+    "poker_combination": "50 Points"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 8,
+  "fields": {
+    "poker_combination": "8 to 11"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 9,
+  "fields": {
+    "poker_combination": "Ace to 5"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 10,
+  "fields": {
+    "poker_combination": "Flush"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 11,
+  "fields": {
+    "poker_combination": "Four of a Kind"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 12,
+  "fields": {
+    "poker_combination": "Full House"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 13,
+  "fields": {
+    "poker_combination": "Mini Royal Flush"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 14,
+  "fields": {
+    "poker_combination": "Royal Flush"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 15,
+  "fields": {
+    "poker_combination": "Straight Flush"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 16,
+  "fields": {
+    "poker_combination": "Three of a kind"
+  }
+},
+{
+  "model": "cctv.pokercombination",
+  "pk": 17,
+  "fields": {
+    "poker_combination": "Tripple Seven Same Suit"
+  }
+}
+]

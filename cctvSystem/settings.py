@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-++=jvq2f4foa*#z60md5)45&&w8ev(cw***0xaic3i0o3@hrkt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1','192.168.101.101','131.100.37.184','192.168.102.247','200.125.163.182','www.surveillance.crc.com']
 
 CSRF_TRUSTED_ORIGINS = [
@@ -93,6 +93,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'crcCCTV_db.db',
     }
 }
+
+#DATABASES = {
+#   "default": {
+#    "ENGINE": "django.db.backends.postgresql",
+#   "NAME": "crc_db",
+#    "USER": "mlestrada",
+#   "PASSWORD": "Remate123*+",
+#   "HOST": "localhost",
+#    "PORT": "5432",
+#  }
+#}
 
 #Email settings
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
@@ -185,6 +196,16 @@ JAZZMIN_SETTINGS = {
         "cctv.userprofile": "fas fa-user-check",       # Icono de grupos
         "cctv.notification": "fas fa-bell"  # Icono de base de datos
     
+            },
+    "custom_links": {
+        "cctv": [
+            {
+                "name": "Last user login",
+                "url": "user_last_login",  # Nombre de la URL definida en urls.py
+                "icon": "fas fa-clock",    # Puedes cambiar el icono si quieres
+                "permissions": ["auth.view_user"],  # Asegura que solo los que pueden ver usuarios lo vean
             }
+        ]
+    }
    
 }

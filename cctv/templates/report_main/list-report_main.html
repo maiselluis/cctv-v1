@@ -27,26 +27,30 @@
 
 <div class="card card-primary card-outline mb-4">
   <div style="overflow-x: auto;">
-      <div class="card-header">
+    <div class="card-header">
       
-          <div class="container-fluid"> 
-            <div class="row">
-              <div class="btn-group" role="group" aria-label="Basic example">
-                {% if perms.cctv.add_report %}
-                <a  class="btn btn-primary mb-2 bi-plus-lg"  href="{% url 'report-create' %}"   > Add Report </a >
-                {%endif%}
+      <div class="container-fluid"> 
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card p-3 shadow-sm">
+              <div class="btn-group d-flex flex-wrap" role="group">
+            {% if perms.cctv.add_report %}
+            <a  class="btn btn-primary mb-2 bi-plus-lg"  href="{% url 'report-create' %}"   > Add Report </a >
+            {%endif%}
 
-                  <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'filter-report' %}" > Find Report by Date </a >   
-                  <a   class="btn btn-outline-dark mb-2 bi-binoculars"  href="{% url 'filter-report-id' %}"   > Find Report by Report No. </a >
-                  <a   class="btn btn-outline-dark mb-2 bi-filter-square"  href="{%  url 'filter-report-type' %}"> Find Report by  Report Type </a >
-              </div>
-       
+              <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'filter-report' %}" > Find Report by Date </a >   
+              <a   class="btn btn-outline-dark mb-2 bi-binoculars"  href="{% url 'filter-report-id' %}"   > Find Report by Report No. </a >
+              <a   class="btn btn-outline-dark mb-2 bi-filter-square"  href="{%  url 'filter-report-type' %}"> Find Report by  Report Type </a >
           </div>
-
-          </div>
-
+            </div>
+        </div>
+   
+      </div>
 
       </div>
+
+
+  </div>
 </div>
 
   <div style="overflow-x: auto;">
@@ -129,7 +133,14 @@ $(document).ready(function () {
   
       columnDefs: [{ targets: [0,3, 5,6,7,8,9], className: "d-none d-md-table-cell" }],
       columns: [
-               { data: "report_nro",orderable:true,searchable:true},    
+               { data: "report_nro",
+               orderable:true,
+               searchable:true,
+               render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                 }
+               
+               },    
 
                { data: "date",orderable:true,searchable:true, "render": function(data, type, row) {
                        return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");

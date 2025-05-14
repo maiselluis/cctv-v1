@@ -25,21 +25,26 @@
  {%block content%}
 
 <div class="card card-primary card-outline mb-4">
-<div class="card-header">
+  <div class="card-header">
 
-  <div class="container-fluid"> 
-    <div class="row">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        {% if perms.cctv.add_cash_desk_error %}
-        <a  class="btn btn-primary bi bi-plus-lg "  href="{%  url 'cash_desk_error-create' %}"   > Add  Cash Desk Error</a >
-          {% endif %}
-          <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'cash_desk_error-by-day'%}" > Find by Date </a > 
-          <a   class="btn btn-outline-dark bi bi-calendar"  href="{% url 'synopsis_cashier' %}" > Synopsis Cashier </a > 
-      
-      </div>
- </div>
+    <div class="container-fluid"> 
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card p-3 shadow-sm">
+  
+            <div class="btn-group d-flex flex-wrap" role="group">
+          {% if perms.cctv.add_cash_desk_error %}
+          <a  class="btn btn-primary bi bi-plus-lg "  href="{%  url 'cash_desk_error-create' %}"   > Add  Cash Desk Error</a >
+            {% endif %}
+            <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'cash_desk_error-by-day'%}" > Find by Date </a > 
+            <a   class="btn btn-outline-dark bi bi-calendar"  href="{% url 'synopsis_cashier' %}" > Synopsis Cashier </a > 
+        
+        </div>
+          </div>
+        </div>
+   </div>
+    </div>
   </div>
-</div>
 
   
 
@@ -121,7 +126,13 @@
                     { targets: [10], className: "text-center align-middle" }
                   ],
       columns:[
-               { data: "id",orderable:true,searchable:true},
+               { data: "id",
+               orderable:true,
+               searchable:true,
+               render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                 }
+              },
              
                { data: "date",orderable:true,searchable:true ,
                render: function(data, type, row) {
@@ -172,9 +183,9 @@
                                   }
                                   });
 
-                                  return `<a href="#" id="report-${data}">${data}</a>`;
+                                  return `<a href="#" class="text-blue fw-semibold text-decoration-none" id="report-${data}">${data}</a>`;
                               } else {
-                                  return `<a href="#">Not available</a>`;
+                                  return `<a href="#" class="text-blue fw-semibold text-decoration-none">Not available</a>`;
                               }
                           }
                       },

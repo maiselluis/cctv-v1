@@ -1,0 +1,254 @@
+[
+{
+  "model": "cctv.counterfait",
+  "pk": 2,
+  "fields": {
+    "date": "2025-01-04",
+    "location": 1,
+    "area_cashier": 1,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "EH258618",
+    "report_nro": 1,
+    "notes": "The bill was confiscated.",
+    "employee": 1189,
+    "customer": 23385
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 3,
+  "fields": {
+    "date": "2025-01-18",
+    "location": 2,
+    "area_cashier": 1,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "EH258618",
+    "report_nro": 0,
+    "notes": "",
+    "employee": 1477,
+    "customer": 11644
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 4,
+  "fields": {
+    "date": "2025-02-01",
+    "location": 5,
+    "area_cashier": 6,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "DT507986",
+    "report_nro": 20,
+    "notes": "",
+    "employee": null,
+    "customer": null
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 5,
+  "fields": {
+    "date": "2025-02-08",
+    "location": 5,
+    "area_cashier": 1,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "PC546606",
+    "report_nro": 31,
+    "notes": "",
+    "employee": 1584,
+    "customer": 38690
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 6,
+  "fields": {
+    "date": "2025-02-22",
+    "location": 2,
+    "area_cashier": 2,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "AU613005",
+    "report_nro": 94,
+    "notes": "",
+    "employee": 1695,
+    "customer": 7727
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 7,
+  "fields": {
+    "date": "2025-02-23",
+    "location": 2,
+    "area_cashier": 3,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "EH258618",
+    "report_nro": 93,
+    "notes": "",
+    "employee": 1476,
+    "customer": 38232
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 8,
+  "fields": {
+    "date": "2025-03-08",
+    "location": 5,
+    "area_cashier": 6,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "DT507986",
+    "report_nro": 85,
+    "notes": "",
+    "employee": 1811,
+    "customer": null
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 9,
+  "fields": {
+    "date": "2025-03-08",
+    "location": 2,
+    "area_cashier": 3,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "DT507986",
+    "report_nro": 0,
+    "notes": "",
+    "employee": 1695,
+    "customer": 8084
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 10,
+  "fields": {
+    "date": "2025-03-16",
+    "location": 1,
+    "area_cashier": 2,
+    "usd_dolar": 200.0,
+    "tt_dolar": 0.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "CJ61755341A  and CJ61755388A",
+    "report_nro": 123,
+    "notes": "Both bills were confiscated.",
+    "employee": 1189,
+    "customer": null
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 11,
+  "fields": {
+    "date": "2025-03-31",
+    "location": 1,
+    "area_cashier": 3,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "EH258618",
+    "report_nro": 151,
+    "notes": "The bill was confiscated.",
+    "employee": 199,
+    "customer": 4260
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 12,
+  "fields": {
+    "date": "2025-04-02",
+    "location": 5,
+    "area_cashier": 6,
+    "usd_dolar": 0.0,
+    "tt_dolar": 200.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "AU613005",
+    "report_nro": 127,
+    "notes": "",
+    "employee": 1036,
+    "customer": null
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 13,
+  "fields": {
+    "date": "2025-04-01",
+    "location": 2,
+    "area_cashier": 6,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "AU613005",
+    "report_nro": 0,
+    "notes": "100 was found while doing LG count",
+    "employee": 1331,
+    "customer": null
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 14,
+  "fields": {
+    "date": "2025-04-18",
+    "location": 5,
+    "area_cashier": 1,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "AB532476",
+    "report_nro": 128,
+    "notes": "",
+    "employee": 1036,
+    "customer": 35308
+  }
+},
+{
+  "model": "cctv.counterfait",
+  "pk": 15,
+  "fields": {
+    "date": "2025-04-19",
+    "location": 1,
+    "area_cashier": 1,
+    "usd_dolar": 0.0,
+    "tt_dolar": 100.0,
+    "euro_dolar": 0.0,
+    "gbp_dolar": 0.0,
+    "serial_number": "DE207700",
+    "report_nro": 187,
+    "notes": "Bill was exchanged.",
+    "employee": 1239,
+    "customer": 40199
+  }
+}
+]

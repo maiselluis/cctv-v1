@@ -27,14 +27,20 @@
   <div class="card-header">
     <div class="container-fluid"> 
       <div class="row">
-        <div class="btn-group" role="group" aria-label="Basic example">
+        <div class="col-md-12">
+          <div class="card p-3 shadow-sm">
+              <div class="btn-group d-flex flex-wrap" role="group">
+          
           {% if perms.cctv.add_dailyexeption %}
           <a  class="btn btn-primary mb-2 bi bi-plus-lg"  href="{% url 'daily_exeption-create' %}"> Add Daily Exception</a >
             {%endif%}
           <a   class="btn btn-outline-dark mb-2 bi bi-calendar"  href="{% url 'daily_exeption-by-day' %}" > Find by Dates </a >
           <a   class="btn btn-outline-dark mb-2 bi bi-ban"  href="{%  url 'daily_exeption-by-exeption' %}" > Find by Exception Type </a >
           <a   class="btn btn-outline-dark mb-2 bi bi-people"  href="{% url 'daily_exeption-by-employee'%}"> Find by Employee </a >   
-       </div> 
+            </div> 
+          </div>
+        </div>       
+
       </div>
     </div>   
   </div>
@@ -102,7 +108,12 @@ $(document).ready(function () {
                       }
                     },
       columns: [
-               { data: "id",orderable:true,searchable:true},    
+               { data: "id",orderable:true,searchable:true,
+               render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                  }
+
+               },    
 
                { data: "date",orderable:true,searchable:true, render: function(data, type, row) {
                 if (data){

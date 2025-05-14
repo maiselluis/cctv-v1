@@ -25,20 +25,27 @@
  {%block content%}
 
 <div class="card card-primary card-outline mb-4">
-  <div class="card-header">
-    <div class="container-fluid"> 
-      <div class="row">
-          <div class="col-sm-6">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              {%if perms.cctv.add_staff %}
-              <a class="btn btn-primary mb-2 bi-plus-lg" href="{% url 'staff-create' %}"> Add Staff</a>
-              {%endif%}
-          </div>
-          </div>
-   </div>
-    </div>
-
-  </div>
+    <div class="card-header">
+        <div class="container-fluid"> 
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card p-3 shadow-sm">
+               <div class="btn-group d-flex flex-wrap" role="group">
+    
+              <div class="col-sm-6">
+                
+                  {%if perms.cctv.add_staff %}
+                  <a class="btn btn-primary mb-2 bi-plus-lg" href="{% url 'staff-create' %}"> Add Staff</a>
+                  {%endif%}
+        
+              </div>
+               </div>
+                </div>
+            </div>
+              </div>
+        </div>
+    
+      </div>
 
 {%if object_list %}
 <div style="overflow-x: auto;">

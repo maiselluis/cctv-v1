@@ -1,0 +1,16 @@
+[
+{
+  "model": "cctv.sex",
+  "pk": 1,
+  "fields": {
+    "sex": "MALE"
+  }
+},
+{
+  "model": "cctv.sex",
+  "pk": 2,
+  "fields": {
+    "sex": "FEMALE"
+  }
+}
+]

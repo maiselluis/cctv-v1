@@ -1,0 +1,51 @@
+[
+{
+  "model": "cctv.duration",
+  "pk": 1,
+  "fields": {
+    "duration": "1 Month"
+  }
+},
+{
+  "model": "cctv.duration",
+  "pk": 2,
+  "fields": {
+    "duration": "2 Months"
+  }
+},
+{
+  "model": "cctv.duration",
+  "pk": 3,
+  "fields": {
+    "duration": "3 Months"
+  }
+},
+{
+  "model": "cctv.duration",
+  "pk": 4,
+  "fields": {
+    "duration": "6 Months"
+  }
+},
+{
+  "model": "cctv.duration",
+  "pk": 5,
+  "fields": {
+    "duration": "1 Year"
+  }
+},
+{
+  "model": "cctv.duration",
+  "pk": 6,
+  "fields": {
+    "duration": "Indefinite"
+  }
+},
+{
+  "model": "cctv.duration",
+  "pk": 7,
+  "fields": {
+    "duration": "Reinstated"
+  }
+}
+]

@@ -353,4 +353,9 @@ path('supplies_synopsis/', SynopsisSupplies, name='supplies_synopsis'),
 
 #Timeline
 path('transaction_timeline/', transaction_timeline, name='transaction-timeline'),
+
+
+#mostrar el login dfe ultimos acceso de lo susuarios
+path('last_login/', user_last_login_view, name='user_last_login'),
+
 ]

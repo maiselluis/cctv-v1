@@ -26,25 +26,30 @@
 
 <div class="card card-primary card-outline mb-4">
   <div style="overflow-x: auto;">
-<div class="card-header">
+    <div class="card-header">
 
-  <div class="container-fluid"> 
-    <div class="row">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        {%if perms.cctv.add_poker_payout%}
-        <a  class="btn btn-primary bi bi-plus-lg "  href="{%  url 'poker_payouts-create' %}"   > Add  Poker Payout</a >
-          {%endif%}
-         
-        <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'poker_payouts-by-day'%}" > Find Poker Payout by Date </a > 
-        <a   class="btn btn-outline-dark bi bi-calendar"  href="  {%  url 'synopsis-staff' %} " >   Synopsis Staff</a > 
-         <a   class="btn btn-outline-dark bi bi-calendar"  href=" {% url 'poker_payout-combination' %}" > Find Poker Payout Combinations </a > 
-          <a   class="btn btn-outline-dark bi bi-calendar"  href=" {%  url 'poker_payout-customer' %}" >  Find Poker Payout Customer</a > 
-
-      
+      <div class="container-fluid"> 
+        <div class="row">
+    
+          <div class="col-md-12">
+            <div class="card p-3 shadow-sm">
+              <div class="btn-group d-flex flex-wrap" role="group">
+            {%if perms.cctv.add_poker_payout%}
+            <a  class="btn btn-primary bi bi-plus-lg "  href="{%  url 'poker_payouts-create' %}"   > Add  Poker Payout</a >
+              {%endif%}
+             
+            <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'poker_payouts-by-day'%}" > Find Poker Payout by Date </a > 
+            <a   class="btn btn-outline-dark bi bi-calendar"  href="  {%  url 'synopsis-staff' %} " >   Synopsis Staff</a > 
+             <a   class="btn btn-outline-dark bi bi-calendar"  href=" {% url 'poker_payout-combination' %}" > Find Poker Payout Combinations </a > 
+              <a   class="btn btn-outline-dark bi bi-calendar"  href=" {%  url 'poker_payout-customer' %}" >  Find Poker Payout Customer</a > 
+    
+          
+          </div>
+            </div>
+          </div>
+     </div>
       </div>
- </div>
-  </div>
-</div>
+    </div>
   </div>
   
 
@@ -123,7 +128,12 @@ var  poker_payoutsT=$('#poker_payoutsT').DataTable(
                       }
         },
         columns: [
-               { data: "id",orderable:true,searchable:true},    
+               { data: "id",orderable:true,searchable:true,
+               render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                 }
+
+               },    
 
                { data: "date",orderable:true,searchable:true, "render": function(data, type, row) {
                        return moment(data, "YYYY-MM-DD").format("DD-MM-YYYY");
