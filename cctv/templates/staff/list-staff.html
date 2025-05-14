@@ -124,7 +124,11 @@ $(document).ready(function () {
         ],
         columns: [
 
-            { data: "id", searchable: true, orderable: true },
+            { data: "id", searchable: true, orderable: true,
+            render: function(data, type, row, meta) {
+                         return ` <a class="text-blue fw-semibold text-decoration-none" href="${row.detail_url}" target="_blank">${data}</a>`;
+                 }
+             },
             {
                 data: "photo",
                 searchable: false,

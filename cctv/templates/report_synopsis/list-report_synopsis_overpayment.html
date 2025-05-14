@@ -96,7 +96,7 @@
 
               <tr>
                 <td>{{ object.date|date:'d-m-Y' }}</td>
-                <td>{{ object.report_nro }}</td>
+                <td> <a href="{% url 'report-detail' object.report%}" target="_blank"  class="text-blue fw-semibold text-decoration-none">    {{ object.report_nro }} </a></td>
                 <td>{{ object.cctv_id }}</td>          
                 <td>{{ object.report_title }}</td>    
                 <td>{{ object.dealer }}</td>       
@@ -238,14 +238,7 @@ function openReport(button) {
  const dateBegin  = document.querySelector('[name="date_begin"]').value;
  const dateEnd = document.querySelector('[name="date_end"]').value;
  const location = document.querySelector('[name="location"]').value; 
-
-
-
  const fullUrl = `${baseUrl}?location=${location}&date_begin=${encodeURIComponent(dateBegin)}&date_end=${encodeURIComponent(dateEnd)}`; 
-
-
-
-
  window.open(fullUrl, '_blank');
 }
   </script>

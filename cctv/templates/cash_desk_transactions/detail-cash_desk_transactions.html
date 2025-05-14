@@ -1,5 +1,5 @@
 {% extends 'base.html'%} 
-{% block title %} CCTV @ CRC |Cash Desk Transactions Detail {{ object.token }} 
+{% block title %} CCTV @ CRC | Cash Desk Transactions Detail {{ object.token }} 
 {% endblock %}
 {%block content_header%}
 <div class="app-content-header"> <!--begin::Container-->
@@ -22,92 +22,74 @@
 {%block content%}
 
 <div class="card  card-primary card-outline mb-5">
-  <!--iv style="overflow-x: auto;">
- iv class="card-header">
-        <nav class="app-header navbar navbar-expand ">
-            <div class="container-fluid">
-                <ul class="navbar-nav">
-                
-                </ul>
-                <ul class="navbar-nav">
-                
-                    <li class="nav-link float-end">
-                        <a  class=" btn btn-outline-dark bi-filetype-pdf"  href="#"   >  PDF </a >
-                    </li>
-                    <li class="nav-link float-end">
-                        <a  class=" btn btn-outline-dark bi bi-file-excel"  href="#"   >  Excel </a >
-                    </li>                      
-                </ul>  
-        </div>
-    </nav>  
-        
-    
-    </div>   
-
-</div>-->
-         <div style="overflow-x: auto;">
-                <div class="card-body">  
-                    <div class="row">
-                        <div class="col-sm-4">
-                
-                        </div>
-                        <div class="col-sm-6">
-                        
-                            <div class="row text-left g-2 mb-2">
+   
+                <div class="card-body text-center my-5">
+                    <div class="row justify-content-center">                       
+                   
+                        <div class="col-md-8">
+                          <ul class="list-group list-group text-start shadow">
                                 
-                                <h5> Transactions: <strong>{{ object.transactions }}</strong> </h5>
-                                <h5> Cashier Location: <strong>{{ object.area_cashier }}</strong> </h5>
-                                <H5> Date:<strong> {{ object.date|date:'d-m-Y' }} </strong></H5>
-                                <h5>Time:<strong> {{ object.time|time:"g:i A"}}</strong></h5>
-                                <h5>   Account Type: <strong> {{ object.account_type }} </strong></h5>
-                                <h5>  Token: <strong>  {{ object.token }} </strong></h5>
-                                <h5>  TT Dolar: <strong>  {{ object.tt_dolar }} </strong></h5>
-                                <h5>  USD Dolar: <strong>  {{ object.usd_dolar }} </strong></h5>
+                                <li  class="list-group-item list-hover"> <strong>  Transactions:</strong> {{ object.transactions }}</li>
+                                <li  class="list-group-item list-hover"> <strong>  Cashier Location:</strong> {{ object.area_cashier }}</li>
+                                <li  class="list-group-item list-hover"> <strong>  Date:</strong> {{ object.date|date:'d-m-Y' }} </li>
+                                <li  class="list-group-item list-hover"> <strong>  Time:</strong> {{ object.name}} {{ object.time}}</li>
+                                <li  class="list-group-item list-hover"> <strong>  Account Type: </strong> {{ object.account_type }}</li>
+                                <li  class="list-group-item list-hover"> <strong>  Token: </strong>  {{ object.token }} </li>
+                                <li  class="list-group-item list-hover"> <strong>  TT Dolar: </strong>  {{ object.tt_dolar }}</li> 
+                                <li  class="list-group-item list-hover"> <strong>  USD Dolar:  </strong> {{ object.usd_dolar }}   </li>                            
+                                <li  class="list-group-item list-hover"> <strong>  EURO Dolar:  </strong>  {{ object.euro_dolar }}</li>
+                                <li  class="list-group-item list-hover"> <strong>  GBP Dolar:  </strong>  {{ object.gbp_dolar}}</li>
+                                <li  class="list-group-item list-hover"> <strong>   CAD Dolar: </strong>   {{ object.cad_dolar }}</li>
+                                <li  class="list-group-item list-hover"> 
+                                    <strong>  Autorized by: </strong>
                                 
-                                <h5>  EURO Dolar:  <strong>  {{ object.euro_dolar }}</strong></h5>
-                                <h5>  GBP Dolar:  <strong>  {{ object.gbp_dolar}}</strong></h5>
-                                <h5>  CAD Dolar:  <strong>  {{ object.cad_dolar }}</strong></h5>
-                                <h5>  Autorized by: 
-                                     <strong> 
                                         {%if object.autorized_by  %}
                                          {{ object.autorized_by }}
                                          {%endif%}
-                                        </strong></h5>
-                                <h5>  Employee:  <strong>
+                                        </strong></li>
+                                 <li  class="list-group-item list-hover"> 
+                                    <strong> Employee:  </strong>
                                     {%if object.employee %}
                                       {{ object.employee }} 
                                       {%endif%}
-                                    </strong></h5>
-                                <h5>  Customer:  <strong> 
+                                 </li>
+                                <li  class="list-group-item list-hover">  <strong> Customer:  </strong> 
                                     {%if object.customer %}
                                      {{ object.customer }} 
                                      {%endif%}
-                                    </strong></h5> 
-
-                                      <h5> Machine No.
-                                      {% if object.machine_no %}
-                                        <strong>
+                                    </li>
+                                      <li  class="list-group-item list-hover"> 
+                                         <strong>Machine No.</strong> 
+                                     {% if object.machine_no %}                                        
                                         {{object.machine_no}}
-                                        </strong></h5>
-                                        {% endif %}
-                                   
+                                      </li>
+                                     {%endif%}                             
+                             
                                     
-                                    <h5> Detail: <strong>
+                                  <li  class="list-group-item list-hover">  <strong>  Detail: </strong>
                                         {% if   object.detail  %} 
                                          <textarea class="form-control"   name="contenido" rows="5" cols="10" readonly>{{  object.detail|safe }}</textarea>
                                          {%endif%}
-                                        </strong></h5>
-                                    
+                                  </li>
+                          </ul> 
                                     
                             </div>
                         </div>
-                    </div>
-                </div>
+                </div>             
             
-            </div>
-        <div class="card-footer">
-            <a class="btn btn-secondary"  href="{% url 'cash_desk_transactions-list' %}" > <i class="bi bi-arrow-left"> </i> Back</a>
-        </div>
-</div>
+          
+                    <div class="card-footer">
+                        <a class="btn btn-secondary"  href="{% url 'cash_desk_transactions-list' %}" > <i class="bi bi-arrow-left"> </i> Back</a>
+                    </div>
+          </div>
+    </div>
+
+
+    <style>
+        .list-hover:hover {
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+    </style>
 
 {%endblock%}

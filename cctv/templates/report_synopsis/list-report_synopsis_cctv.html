@@ -99,10 +99,9 @@
 
         <tr >
           <td>{{ object.date|date:'d-m-Y' }}</td>
-          <td>{{ object.report_nro }}</td>
+          <td> <a href="{% url 'report-detail' object.report%}" target="_blank"  class="text-blue fw-semibold text-decoration-none">    {{ object.report_nro }} </a></td>
           <td>{{ object.cctv_id }}</td> 
-          <td>{{ object.report_title }}</td> 
-         
+          <td>{{ object.report_title }}</td>          
           <td>{{ object.origination }}</td> 
           <td>{{ object.value_us }}</td> 
           <td> {{ object.money_recovered }}</td>

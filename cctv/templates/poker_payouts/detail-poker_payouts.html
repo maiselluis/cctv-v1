@@ -22,41 +22,42 @@
 {%block content%}
 
 <div class="card  card-primary card-outline mb-5">
-<div class="card-header">
-  
-</div>
-<div class="card-body">  
-    <div class="row">
-        <div class="col-sm-4">
-
-        </div>
-        <div class="col-sm-6">
-           
-            <div class="row text-left g-2 mb-2">
-                <H5> Date:<strong> {{ object.date|date:'d-m-Y' }} </strong></H5>
-                <h5>Time:<strong>  {{ object.time|time:"g:i A"}}</strong></h5>              
-                <h5> Table: <strong>{{ object.table }}</strong> </h5>
-                <h5> Combination: <strong> {{ object.combination }} </strong></h5>
-                <h5> Bet : <strong>  {{ object.bet }} </strong></h5>
-                <h5> Payout: <strong>  {{ object.payout }} </strong></h5>
-                <h5> Customer: <strong>  {{ object.customer }} </strong></h5>
-                <h5>  Dealer:  <strong>  {{ object.dealer }}</strong></h5>
-                <h5>  Inspector:  <strong>  {{ object.inspector}}</strong></h5>
-                <h5>  PitBoss:  <strong>  {{ object.pitboss }}</strong></h5>
-               
-                       
-                    
+    <div class="card-body text-center my-5">  
+            <div class="row justify-content-center">       
+            
+                <div class="col-sm-6">           
+                    <div class="row text-left g-2 mb-2">
+                        <ul class="list-group list-group text-start shadow">
+                        <li class="list-group-item list-hover">    <strong>  Date: </strong>{{ object.date|date:'d-m-Y' }} 
+                        <li class="list-group-item list-hover">     <strong>Time: </strong>{{ object.name}} {{ object.time}}             
+                        <li class="list-group-item list-hover">     <strong>Table: </strong>{{ object.table }}
+                        <li class="list-group-item list-hover">    <strong> Combination:</strong>  {{ object.combination }} 
+                        <li class="list-group-item list-hover">    <strong> Bet :   </strong>{{ object.bet }} 
+                        <li class="list-group-item list-hover">    <strong> Payout:  </strong> {{ object.payout }} 
+                        <li class="list-group-item list-hover">    <strong> Customer: </strong>  {{ object.customer }} 
+                        <li class="list-group-item list-hover">    <strong> Dealer:   </strong> {{ object.dealer }}
+                        <li class="list-group-item list-hover">    <strong> Inspector:  </strong>  {{ object.inspector}}
+                        <li class="list-group-item list-hover">   <strong>  PitBoss: </strong>  {{ object.pitboss }}
+                             <li class="list-group-item list-hover">   <strong>  Branch: </strong>  {{ object.location }}
+                    </ul>
+                            
+                            
+                    </div>
+                </div>
             </div>
+      </div>
+   
+        <div class="card-footer">
+            <a class="btn btn-secondary" href="{% url 'poker_payouts-list'%} "><i class="bi bi-arrow-left"> </i> Back</a>
         </div>
     </div>
 
-
-</div>
-
-
-
-<div class="card-footer">
-    <a class="btn btn-secondary" href="{% url 'poker_payouts-list'%} "><i class="bi bi-arrow-left"> </i> Back</a>
-</div>
-
+    <style>
+        .list-hover:hover {
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+       
+    </style>
 {%endblock%}
+

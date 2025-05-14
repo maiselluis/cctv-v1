@@ -13,7 +13,7 @@
                   <li class="breadcrumb-item"><a  href={% url 'index' %}>Home</a></li>
                   <li class="breadcrumb-item"><a  href={% url 'counterfeit-list' %}>  Counterfeit Money</a></li>
                   <li class="breadcrumb-item active" aria-current="page">
-                 Add
+                 Detail
                   </li>
 
               </ol>
@@ -25,53 +25,67 @@
 
  {%block content%}
  <div class="card  card-primary card-outline mb-5">
- <div class="card-body">  
-  <div class="row">
-      <div class="col-sm-4">
+  <!--   <div class="card-header">
+                    <nav class="app-header navbar navbar-expand ">
+                        <div class="container-fluid">                       
+                        
+                        <div class="container-fluid d-flex justify-content-end">                        
+                          <a  class=" btn btn-outline-dark bi-filetype-pdf"  href="#"   >Export PDF </a >
+                        </div>                      
+                     
+                      </div>
+                  </nav>      
+                  
+          </div>
+        -->
+ <div class="card-body text-center my-5">  
+         <div class="row justify-content-center">
 
-      </div>
-      <div class="col-sm-6">
+    
+      <div class="col-md-8">
          
-          <div class="row text-left g-2 mb-2">
-               
+       
               
-              <H5> Date:<strong> {{ counterfeit.date|date:'d-m-Y' }} </strong></H5>  
-              <h5> Location: <strong>{{ counterfeit.area_cashier }}</strong> </h5>           
-              <h5> Report #: <strong> {{ counterfeit.report_nro }} </strong></h5>
-              <h5>  Branch: <strong>  {{ counterfeit.location }} </strong></h5>
-              <h5>  USD: <strong>  {{ counterfeit.usd_dolar }} </strong></h5>
-              <h5>   TTD: <strong>  {{ counterfeit.tt_dolar }} </strong></h5>
-              <h5>   EURO : <strong>  {{ counterfeit.euro_dolar }} </strong></h5>
-              <h5>   GBP : <strong>  {{ counterfeit.gbp_dolar }} </strong></h5>
-              <h5>   Cashier : <strong> 
+          <ul class="list-group list-group text-start shadow">
+       
+             <li class="list-group-item list-hover">  <strong>  Date:</strong> {{ counterfeit.date|date:'d-m-Y' }}  </li>
+            <li class="list-group-item list-hover">   <strong>   Location:</strong> {{ counterfeit.area_cashier }}   </li>         
+            <li class="list-group-item list-hover">    <strong>  Report #:</strong>  {{ counterfeit.report_nro }} </li>
+          <li class="list-group-item list-hover">     <strong>    Branch:</strong>   {{ counterfeit.location }} </li>
+          <li class="list-group-item list-hover">     <strong>   USD:</strong>   {{ counterfeit.usd_dolar }} </li>
+            <li class="list-group-item list-hover">   <strong>     TTD:</strong>   {{ counterfeit.tt_dolar }} </li>
+           <li class="list-group-item list-hover">      <strong>   EURO :</strong>   {{ counterfeit.euro_dolar }} </li>
+           <li class="list-group-item list-hover">      <strong>   GBP :</strong>  {{ counterfeit.gbp_dolar }} </li>
+           <li class="list-group-item list-hover">      <strong>   Cashier :</strong> 
                 {% if counterfeit.employee %}
                  {{ counterfeit.employee }}
                 {% endif %}
-
-                 </strong></h5>
-                 <h5>   Customer : <strong> 
+         </li>
+                
+         <li class="list-group-item list-hover">           <strong>  Customer : </strong>
                     {% if counterfeit.customer %}
                      {{ counterfeit.customer }}
                     {% endif %}
-    
-                     </strong></h5>
-              <h5>   Serial Number : <strong>  {{ counterfeit.serial_number }} </strong></h5>
-              <h5>   Notes : <strong>  {{ counterfeit.notes }} </strong></h5>
+         </li>
+                    
+          <li class="list-group-item list-hover">       <strong> Serial Number :</strong>   {{ counterfeit.serial_number }} </li>
+             <li class="list-group-item list-hover">       <strong>  Notes : </strong> {{ counterfeit.notes }} </li>
+          </ul> 
 
-              
-             
-             
-                     
-                  
-          </div>
-      </div>
   </div>
-
+</div>  
 
 </div>
 <div class="card-footer">
     <a class="btn btn-secondary" href={% url 'counterfeit-list'%} > <i class="bi bi-arrow-left"> </i> Back</a>
 </div>
 </div>
+
+<style>
+  .list-hover:hover {
+      background-color: #e1e3e6;
+      transition: background-color 0.3s ease-in-out;
+  }
+</style>
 
 {%endblock%}

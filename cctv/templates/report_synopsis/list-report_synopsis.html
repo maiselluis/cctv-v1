@@ -65,8 +65,7 @@
           <th>Money Not Recovered($TT) </th>
           <th>Money Paid($TT)</th> 
           <th>Money Not Paid($TT)</th>     
-          <th>Footage</th>   
-             
+          <th>Footage</th>               
           <th>Branch</th>                 
         
         </tr>
@@ -76,7 +75,7 @@
 
         <tr >
           <td>{{ object.date|date:'d-m-Y' }}</td>
-          <td>{{ object.report_nro }}</td>
+          <td> <a href="{% url 'report-detail' object.report%}" target="_blank"  class="text-blue fw-semibold text-decoration-none">    {{ object.report_nro }} </a></td>
           <td>{{ object.report_title }}</td> 
           <td>{{ object.origination }}</td> 
           <td>$TT{{ object.value_us }}</td> 

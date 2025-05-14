@@ -100,7 +100,7 @@
 
         <tr>
           <td>{{ object.date|date:'d-m-Y' }}</td>
-          <td>{{ object.report_nro }}</td>
+          <td> <a href="{% url 'report-detail' object.report%}" target="_blank"  class="text-blue fw-semibold text-decoration-none">    {{ object.report_nro }} </a></td>
           <td>{{ object.pittboss }}</td> 
           <td>{{ object.report_title }}</td>          
           <td>{{ object.origination }}</td> 
@@ -109,7 +109,6 @@
           <td>{{ object.money_not_recovered }}</td>
           <td>{{ object.money_paid }}</td>
           <td>{{ object.money_not_paid }}</td>
-
           <td>{{ object.location }}</td>
           
     
