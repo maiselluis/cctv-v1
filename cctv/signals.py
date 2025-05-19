@@ -1,4 +1,4 @@
-from .utils import enviar_notificacion_reporte,enviar_notificacion_blacklist
+from .utils import enviar_notificacion_reporte,enviar_notificacion_blacklist,enviar_notificacion_create_user
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.db.backends.signals import connection_created
@@ -36,3 +36,8 @@ def check_blacklist_on_login(sender, user, request, **kwargs):
                 enviar_notificacion_blacklist(entry)               
                 entry.notified = True
                 entry.save()
+
+@receiver(post_save,sender=User)
+def notify_user_created(sender, instance, created, **kwargs):
+    if created:
+       enviar_notificacion_create_user(instance)

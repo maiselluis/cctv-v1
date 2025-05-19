@@ -80,7 +80,8 @@
           {% for report in report%}
   
           <tr >
-            <td>{{ report.report_nro }}</td>
+            <!-- <td>{{ report.report_nro }}</td>-->
+            <td> <a href="{% url 'report-detail' report.report%}" target="_blank"  class="text-blue fw-semibold text-decoration-none">    {{ report.report_nro }} </a></td>
             <td>{{ report.date|date:'d-m-Y' }}</td>
             <td>{{ report.time|time:"g:iA" }}</td>         
             <td>{{ report.report_type }}</td> 

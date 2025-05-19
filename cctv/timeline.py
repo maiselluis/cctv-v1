@@ -11,6 +11,8 @@ def transaction_timeline(request):
     if not request.user.is_superuser:
         user_location = getattr(request.user.userprofile, "location", None)
         location_id = getattr(user_location, "id", None)
+    else:
+        location_id = request.GET.get("location")   
 
     form = FilterTtransactionsByTimeLine(request.GET or None, initial={"location": user_location, "location_id": location_id} )
 
@@ -23,6 +25,9 @@ def transaction_timeline(request):
         date_begin = form.cleaned_data.get("date_begin")
         date_end = form.cleaned_data.get("date_end")
         customer_id = form.cleaned_data.get("customer")
+
+        if location_id:
+            transactions = transactions.filter(location_id=location_id) 
 
         if date_begin and date_end:
             transactions = transactions.filter(date__range=(date_begin, date_end))

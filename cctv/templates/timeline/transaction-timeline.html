@@ -154,13 +154,7 @@
         <form method="get"> 
             <div class="container-fluid">
                 <div class="row d-flex justify-content-end"> 
-                    <div class="col-sm-auto d-flex align-items-center"> 
-                        <label class="card-title text-start"> <strong> Transactions by Customers Timeline </strong></label>
-                    </div>
-    
-                    <div class="col-sm-auto d-flex justify-content-end"> 
-                        {{ form.location }}
-                    </div>
+                 
     
                     <div class="col-sm-auto d-flex align-items-center">                  
                         <label class="card-title text-start">{{ form.date_begin.label_tag }}</label>            
@@ -175,7 +169,16 @@
                     <div class="col-sm-auto d-flex justify-content-end">     
                         {{ form.date_end }}
                     </div> 
-    
+                    {% if user.is_superuser%}
+                    <div class="col-sm-auto d-flex align-items-center"> 
+                       <label class="card-title text-start">{{ form.location.label_tag }}</label>            
+                   </div>
+                
+                   <div class="col-sm-auto d-flex justify-content-end"> 
+                       {{ form.location }}
+                   </div>
+                   {% endif %}
+
                     <div class="col-sm-auto d-flex align-items-center">                  
                         <label class="card-title text-start">{{ form.customer.label_tag }}</label>            
                     </div> 
@@ -262,6 +265,14 @@
         items.forEach((item) => {
             observer.observe(item);
         });
+
+          //recargar el firmulario con el branch seleccionado
+          const locationField = document.querySelector("select[name='location']");
+        if (locationField) {
+            locationField.addEventListener("change", function() {
+                this.form.submit(); // recarga el formulario automáticamente al cambiar location
+            });
+        }
     });
     </script>
     

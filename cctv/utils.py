@@ -112,3 +112,19 @@ def enviar_notificacion_blacklist(blacklist):
         return None 
  
     resultado = send_email(asunto, mensaje_html, destinatarios)
+
+
+def enviar_notificacion_create_user(user):
+        asunto = f"CRC@CCTV Surveillance System (New User Created)"        
+        # Formato HTML para el mensaje
+        mensaje_html = f"""
+        <html>
+          <body>        
+            <h2> <strong>New user created in the system</strong> </h2>
+        <p><strong> 👤  User Name:</strong>  { user.username}</p>          
+        <p><strong> 📧  Email:</strong>  { user.email}</p>            
+          </body>
+        </html>
+        """
+        destinatarios=['mestrada@clubroyalcaribbean.net']    
+        send_email(asunto, mensaje_html, destinatarios)

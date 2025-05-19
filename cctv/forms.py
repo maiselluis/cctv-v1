@@ -2454,7 +2454,10 @@ class FilterTtransactionsByTimeLine(forms.Form):
             queryset=Location.objects.all(), 
             required=False, 
             label='Branch',
-            widget=forms.HiddenInput()
+           # widget=forms.HiddenInput()
+            widget=forms.Select(
+                         attrs={'placeholder':'Branch','class': 'form-select'}
+                   )   
             )
        
        customer = forms.ModelChoiceField(
