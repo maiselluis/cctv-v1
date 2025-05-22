@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% block title %}CCTV @ CRC | Poker Payout Concurrency Staff{% endblock %}
+{% load static %}
+
+{% block content_header %}
+<div class="app-content-header"> 
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2 align-items-center">
+            <div class="col-sm-6">
+                <h1 class="m-0">Poker Payouts - Concurrency Staff</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'poker_payouts-list' %}">Poker Payouts</a></li>
+                    <li class="breadcrumb-item active">Concurrency Staff</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card card-primary card-outline mb-4">
+                <div class="card-header">
+                    <h3 class="card-title mb-0">Filter Options</h3>
+                </div>
+                <div class="card-body">
+                    <form method="get" class="row g-3 align-items-end">
+                        <div class="col-md-2">
+                            <label for="start_date" class="form-label">Start Date</label>
+                            <input type="date" name="start_date" id="start_date" value="{{ start_date|date:'Y-m-d' }}" class="form-control" />
+                        </div>
+                        <div class="col-md-2">
+                            <label for="end_date" class="form-label">End Date</label>
+                            <input type="date" name="end_date" id="end_date" value="{{ end_date|date:'Y-m-d' }}" class="form-control" />
+                        </div>
+                        <div class="col-md-2">
+                            <label for="location" class="form-label">Branchs</label>
+                            <select name="location" id="location" class="form-select">
+                            {% if user.is_superuser %}
+                               <option value="">All Branchs</option>
+                            {% endif %}
+                               
+
+                                {% for location in locations %}
+                                    <option value="{{ location.id }}" {% if location.id|stringformat:"s" == selected_location|stringformat:"s" %}selected{% endif %}>{{ location.location }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="customer" class="form-label">Customers</label>
+                            <select name="customer" id="customer" class="form-select">
+                                <option value="">All Customers</option>
+                                {% for customer in customers %}
+                                    <option value="{{ customer.id }}" {% if customer.id|stringformat:"s" == selected_customer|stringformat:"s" %}selected{% endif %}>{{ customer.customer }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100">Filter</button>
+                        </div>
+                    </form>
+                </div>
+
+  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">
+                        Staff coincidences with poker payments
+                   
+                    </h3>
+                    <div class="ms-auto">
+                        <button id="downloadconcurrencyChart" class="btn btn-outline-success btn-sm" data-chart-id="concurrencyChart">
+                            <i class="fas fa-download"></i> Save
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="cotainer">
+
+                
+                    {% if message %}
+                        <div class="alert alert-info mb-3" role="alert">
+                            <em>{{ message }}</em>
+                        </div>
+                    {% endif %}
+                    {% if labels %}
+                        <div class="chart-responsive">
+                            <canvas id="concurrencyChart" width="800" height="400"></canvas>
+                        </div>
+                    {% else %}
+                        <p class="text-muted text-center mb-0">No data available for the selected filters.</p>
+                    {% endif %}
+                </div>
+    </div>
+            </div>
+
+      
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    {% if labels %}
+    const ctx = document.getElementById('concurrencyChart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: {{ labels|safe }},
+            datasets: [
+                {
+                    label: 'Dealer',
+                    backgroundColor: 'rgba(255, 87, 34, 0.95)', // Hot orange for Dealer
+                    data: {{ dealer_data|safe }}
+                },
+                {
+                    label: 'Inspector',
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    data: {{ inspector_data|safe }}
+                },
+                {
+                    label: 'Pitboss',
+                    backgroundColor: 'rgba(255, 206, 86, 0.7)',
+                    data: {{ pitboss_data|safe }}
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' }
+            },
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    document.getElementById('downloadconcurrencyChart').addEventListener('click', function () {
+        const imageBase64 = chart.toBase64Image();
+        const link = document.createElement('a');
+        link.href = imageBase64;
+        link.download = 'concurrency_staff.png';
+        link.click();
+    });
+    {% endif %}
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const locationSelect = document.getElementById('location');
+        const customerSelect = document.getElementById('customer');
+        if (locationSelect) {
+            locationSelect.addEventListener('change', function() {
+                this.form.submit();
+            });
+        }
+        if (customerSelect) {
+            customerSelect.addEventListener('change', function() {
+                this.form.submit();
+            });
+        }
+    });
+</script>
+{% endblock %}

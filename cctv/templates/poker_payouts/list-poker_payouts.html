@@ -40,8 +40,11 @@
              
             <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'poker_payouts-by-day'%}" > Find Poker Payout by Date </a > 
             <a   class="btn btn-outline-dark bi bi-calendar"  href="  {%  url 'synopsis-staff' %} " >   Synopsis Staff</a > 
-             <a   class="btn btn-outline-dark bi bi-calendar"  href=" {% url 'poker_payout-combination' %}" > Find Poker Payout Combinations </a > 
-              <a   class="btn btn-outline-dark bi bi-calendar"  href=" {%  url 'poker_payout-customer' %}" >  Find Poker Payout Customer</a > 
+            <a   class="btn btn-outline-dark bi bi-calendar"  href=" {% url 'poker_payout-combination' %}" > Find Poker Payout Combinations </a > 
+            <a   class="btn btn-outline-dark bi bi-calendar"  href=" {%  url 'poker_payout-customer' %}" >  Find Poker Payout Customer</a > 
+            <a class="btn btn-outline-success bi bi-bar-chart-line fw-bold px-4"
+                style="background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%); border-width:2px; box-shadow:0 2px 8px rgba(86, 171, 47, 0.15); color: #fff;" 
+               href="{% url 'poker_payout_concurrency' %}">  Graphics</a>
     
           
           </div>

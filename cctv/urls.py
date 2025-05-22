@@ -241,6 +241,7 @@ urlpatterns = [
     path('poker_payouts/synopsis_staff', FilterSynopsisStaffView,name='synopsis-staff'),
     path('poker_payout/payout_combination',FilterPokerPayoutCombinationView,name='poker_payout-combination'),
     path('poker_payout/payout_customer',FilterPokerPayoutCustomerView,name='poker_payout-customer'),
+    path('poker-payout/concurrencia/', poker_payout_concurrency_view, name='poker_payout_concurrency'),
     
 
 

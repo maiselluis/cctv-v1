@@ -25,6 +25,8 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import get_user_model
 from django.db.models import ProtectedError
 from dateutil.relativedelta import relativedelta
+from datetime import date, timedelta, datetime
+from collections import Counter
 
 
 
@@ -6803,3 +6805,98 @@ def get_end_date(start_date, duration):
     elif duration == 5:
         return start_date + relativedelta(years=1)
     return None  
+
+
+def poker_payout_concurrency_view(request):
+    start_date_str = request.GET.get('start_date')
+    end_date_str = request.GET.get('end_date')
+    customer_id = request.GET.get('customer')
+    location_id = request.GET.get('location')
+
+    if not start_date_str or not end_date_str:
+        end_date = date.today()
+        start_date = end_date - timedelta(days=6)
+    else:
+        try:
+            start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
+            end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date()
+        except ValueError:
+            end_date = date.today()
+            start_date = end_date - timedelta(days=6)
+
+    qs = Poker_Payout.objects.select_related('customer', 'dealer', 'inspector', 'pitboss').all()
+
+    if location_id:
+        qs = qs.filter(location_id=location_id)
+
+    if customer_id:
+        qs = qs.filter(customer_id=customer_id)
+
+    qs = qs.filter(date__gte=start_date, date__lte=end_date)
+
+    # Obtener los customers con al menos un Poker_Payout asociado (según filtros)
+    payout_customer_ids = Poker_Payout.objects.all()
+    if location_id:
+        payout_customer_ids = payout_customer_ids.filter(location_id=location_id)
+    payout_customer_ids = payout_customer_ids.values_list('customer_id', flat=True).distinct()
+
+    # Obtener customers válidos según si es superusuario o no
+    if request.user.is_superuser:
+        customers = Customer.objects.filter(pk__in=payout_customer_ids)
+        locations = Location.objects.all()
+    else:
+        user_location = request.user.userprofile.location
+        location_id = user_location.id  # aseguramos que se use
+        customers = Customer.objects.filter(location=user_location, pk__in=payout_customer_ids)
+        locations = Location.objects.filter(location=user_location.location)
+
+    if not qs.exists():
+        context = {
+            'customers': customers,
+            'locations': locations,
+            'selected_customer': int(customer_id) if customer_id else None,
+            'selected_location': int(location_id) if location_id else None,
+            'start_date': start_date,
+            'end_date': end_date,
+            'message': 'No data found for the selected filters.',
+            'labels': [],
+            'dealer_data': [],
+            'inspector_data': [],
+            'pitboss_data': [],
+        }
+        return render(request, 'poker_payouts/concurrency_chart.html', context)
+
+    # Construir listas para los roles con contadores
+    dealer_names = []
+    inspector_names = []
+    pitboss_names = []
+
+    for payout in qs:
+        dealer_names.append(f"{payout.dealer.name if payout.dealer else ''} {payout.dealer.surname if payout.dealer else ''}".strip())
+        inspector_names.append(f"{payout.inspector.name if payout.inspector else ''} {payout.inspector.surname if payout.inspector else ''}".strip())
+        pitboss_names.append(f"{payout.pitboss.name if payout.pitboss else ''} {payout.pitboss.surname if payout.pitboss else ''}".strip())
+
+    dealer_counts = Counter(dealer_names)
+    inspector_counts = Counter(inspector_names)
+    pitboss_counts = Counter(pitboss_names)
+
+    # Unificar etiquetas para el eje X
+    labels = sorted(set(dealer_counts.keys()) | set(inspector_counts.keys()) | set(pitboss_counts.keys()))
+
+    def get_counts(counts, labels):
+        return [counts.get(label, 0) for label in labels]
+
+    context = {
+        'customers': customers,
+        'locations': locations,
+        'selected_customer': int(customer_id) if customer_id else None,
+        'selected_location': int(location_id) if location_id else None,
+        'start_date': start_date,
+        'end_date': end_date,
+        'labels': labels,
+        'dealer_data': get_counts(dealer_counts, labels),
+        'inspector_data': get_counts(inspector_counts, labels),
+        'pitboss_data': get_counts(pitboss_counts, labels),
+    }
+
+    return render(request, 'poker_payouts/concurrency_chart.html', context)
