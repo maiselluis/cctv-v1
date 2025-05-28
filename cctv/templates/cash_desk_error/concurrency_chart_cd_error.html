@@ -8,12 +8,12 @@
     <div class="container-fluid">
         <div class="row mb-2 align-items-center">
             <div class="col-sm-6">
-                <h1 class="m-0">Poker Payouts - Concurrency Staff</h1>
+                <h1 class="m-0">Cash Desk Error - Concurrency Staff</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'poker_payouts-list' %}">Poker Payouts</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'poker_payouts-list' %}">Cash Desk Errors</a></li>
                     <li class="breadcrumb-item active">Concurrency Staff</li>
                 </ol>
             </div>
@@ -54,26 +54,18 @@
                                 {% endfor %}
                             </select>
                         </div>
-                        <div class="col-md-2">
-                            <label for="customer" class="form-label">Customers</label>
-                            <select name="customer" id="customer" class="form-select">
-                                <option value="">All Customers</option>
-                                {% for customer in customers %}
-                                    <option value="{{ customer.id }}" {% if customer.id|stringformat:"s" == selected_customer|stringformat:"s" %}selected{% endif %}>{{ customer.customer }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
+                    
                         <div class="col-md-2">
                             <button type="submit" class="btn btn-primary w-100">Filter</button>
                         </div>
                     </form>
                 </div>
 
-  <div class="card-header d-flex justify-content-between align-items-center">
-                    <h4 class="card-title mb-0">
-                      <p> Staff coincidences.</p> 
+                 <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">
+                        Staff coincidences with cash desk errors
                    
-                    </h4>
+                    </h3>
                     <div class="ms-auto">
                         <button id="downloadconcurrencyChart" class="btn btn-outline-success btn-sm" data-chart-id="concurrencyChart">
                             <i class="fas fa-download"></i> Save
@@ -81,23 +73,23 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="cotainer">
+                        <div class="cotainer">
 
-                
-                    {% if message %}
-                        <div class="alert alert-info mb-3" role="alert">
-                            <em>{{ message }}</em>
-                        </div>
-                    {% endif %}
-                    {% if labels %}
-                        <div class="chart-responsive">
-                            <canvas id="concurrencyChart" width="800" height="400"></canvas>
-                        </div>
-                    {% else %}
-                        <p class="text-muted text-center mb-0">No data available for the selected filters.</p>
-                    {% endif %}
-                </div>
-    </div>
+                    
+                        {% if message %}
+                            <div class="alert alert-info mb-3" role="alert">
+                                <em>{{ message }}</em>
+                            </div>
+                        {% endif %}
+                        {% if labels %}
+                            <div class="chart-responsive">
+                                <canvas id="concurrencyChart" width="800" height="400"></canvas>
+                            </div>
+                        {% else %}
+                            <p class="text-muted text-center mb-0">No data available for the selected filters.</p>
+                        {% endif %}
+                    </div>
+                  </div>
             </div>
 
       
@@ -115,20 +107,16 @@
             labels: {{ labels|safe }},
             datasets: [
                 {
-                    label: 'Dealer',
-                    backgroundColor: 'rgba(255, 87, 34, 0.95)', // Hot orange for Dealer
-                    data: {{ dealer_data|safe }}
+                    label: 'Cashier',
+                    backgroundColor: 'rgba(75, 192, 192, 0.85)',
+                    data: {{ cashier_data|safe }}
                 },
                 {
-                    label: 'Inspector',
-                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
-                    data: {{ inspector_data|safe }}
-                },
-                {
-                    label: 'Pitboss',
-                    backgroundColor: 'rgba(255, 206, 86, 0.7)',
-                    data: {{ pitboss_data|safe }}
+                    label: 'Supervisor',
+                    backgroundColor: 'rgba(54, 162, 235, 0.85)',
+                    data: {{ supervisor_data|safe }}
                 }
+               
             ]
         },
         options: {
@@ -146,7 +134,7 @@
         const imageBase64 = chart.toBase64Image();
         const link = document.createElement('a');
         link.href = imageBase64;
-        link.download = 'concurrency_staff.png';
+        link.download = 'concurrency_cd_error_staff.png';
         link.click();
     });
     {% endif %}
@@ -154,36 +142,27 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const locationSelect = document.getElementById('location');
-        const customerSelect = document.getElementById('customer');
         const start_dateSelect= document.getElementById('start_date');
-        const end_dateSelect = document.getElementById('end_date');
+        const end_dateSelect= document.getElementById('end_date');
 
+      
         if (locationSelect) {
             locationSelect.addEventListener('change', function() {
                 this.form.submit();
             });
         }
-        if (customerSelect) {
-            customerSelect.addEventListener('change', function() {
+       if (start_dateSelect) {
+            start_dateSelect.addEventListener('change', function() {
                 this.form.submit();
             });
         }
 
-        if (start_dateSelect){
-
-            start_dateSelect.addEventListener('change', function(){
-                this.form.submit()
-            })
+          if (end_dateSelect) {
+            end_dateSelect.addEventListener('change', function() {
+                this.form.submit();
+            });
         }
-
-       if (end_dateSelect){
-          end_dateSelect.addEventListener('change', function(){
-            this.form.submit();
-        })
-           
-       }
-
-
+     
     });
 </script>
 {% endblock %}

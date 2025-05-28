@@ -230,6 +230,7 @@ urlpatterns = [
     path('cd_error_by_day/', FilterCdErrorByDateView,name='cash_desk_error-by-day'),
     path('synopsis_cashier/', FilterSynopsisCashierView,name='synopsis_cashier'),
     path('get_report_id/<str:report_value>/<str:location>/', get_report_id, name='get_report_id'),
+    path('cd_error_concurrency/',cd_error_concurrency,name='cd_error_concurrency'),
 
      #Poker Payouts
     path('poker_payouts/',ListPokerPayoutsView.as_view(),name='poker_payouts-list')  , 

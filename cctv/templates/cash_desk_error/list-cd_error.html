@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
- {% block title %} CCTV @ CRC |   Cash Desk Error List 
+ {% block title %} CCTV @ CRC | Cash Desk Error List 
  {% endblock%}
 
  {%block content_header%}
@@ -38,6 +38,9 @@
             {% endif %}
             <a   class="btn btn-outline-dark  bi bi-calendar"  href="{% url 'cash_desk_error-by-day'%}" > Find by Date </a > 
             <a   class="btn btn-outline-dark bi bi-calendar"  href="{% url 'synopsis_cashier' %}" > Synopsis Cashier </a > 
+            <a class="btn btn-outline-success bi bi-bar-chart-line fw-bold px-4"
+              style="background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%); border-width:2px; box-shadow:0 2px 8px rgba(86, 171, 47, 0.15); color: #fff;" 
+             href="{% url 'cd_error_concurrency' %}">  Graphics</a>
         
         </div>
           </div>

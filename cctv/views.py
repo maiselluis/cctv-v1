@@ -25,13 +25,8 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import get_user_model
 from django.db.models import ProtectedError
 from dateutil.relativedelta import relativedelta
-from datetime import date, timedelta, datetime
+from datetime import date, timedelta
 from collections import Counter
-
-
-
-
-
 
 
 # Create your views here.
@@ -6818,23 +6813,14 @@ def poker_payout_concurrency_view(request):
         start_date = end_date - timedelta(days=6)
     else:
         try:
-            start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
-            end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date()
+            start_date = datetime.datetime.strptime(start_date_str, '%Y-%m-%d').date()
+            end_date = datetime.datetime.strptime(end_date_str, '%Y-%m-%d').date()
         except ValueError:
             end_date = date.today()
             start_date = end_date - timedelta(days=6)
 
     qs = Poker_Payout.objects.select_related('customer', 'dealer', 'inspector', 'pitboss').all()
-
-    if location_id:
-        qs = qs.filter(location_id=location_id)
-
-    if customer_id:
-        qs = qs.filter(customer_id=customer_id)
-
-    qs = qs.filter(date__gte=start_date, date__lte=end_date)
-
-    # Obtener los customers con al menos un Poker_Payout asociado (según filtros)
+      # Obtener los customers con al menos un Poker_Payout asociado (según filtros)
     payout_customer_ids = Poker_Payout.objects.all()
     if location_id:
         payout_customer_ids = payout_customer_ids.filter(location_id=location_id)
@@ -6849,6 +6835,17 @@ def poker_payout_concurrency_view(request):
         location_id = user_location.id  # aseguramos que se use
         customers = Customer.objects.filter(location=user_location, pk__in=payout_customer_ids)
         locations = Location.objects.filter(location=user_location.location)
+   
+    
+    if location_id:
+        qs = qs.filter(location_id=location_id)
+
+    if customer_id:
+        qs = qs.filter(customer_id=customer_id)
+
+    qs = qs.filter(date__gte=start_date, date__lte=end_date)
+
+  
 
     if not qs.exists():
         context = {
@@ -6900,3 +6897,78 @@ def poker_payout_concurrency_view(request):
     }
 
     return render(request, 'poker_payouts/concurrency_chart.html', context)
+
+
+def cd_error_concurrency(request):
+    start_date_str = request.GET.get('start_date')
+    end_date_str = request.GET.get('end_date')
+    location_id = request.GET.get('location')
+
+    if not start_date_str or not end_date_str:
+        end_date = date.today()
+        start_date = end_date - timedelta(days=6)
+    else:
+        try:
+            start_date = datetime.datetime.strptime(start_date_str, '%Y-%m-%d').date()
+            end_date = datetime.datetime.strptime(end_date_str, '%Y-%m-%d').date()
+        except ValueError:
+            end_date = date.today()
+            start_date = end_date - timedelta(days=6)
+
+    qs = Cash_Desk_Error.objects.select_related('cashier', 'supervisor').all()
+
+    if request.user.is_superuser:
+        locations = Location.objects.all()
+    else:
+        user_location = request.user.userprofile.location
+        location_id = user_location.id
+        locations = Location.objects.filter(location=user_location.location)
+
+    if location_id:
+        qs = qs.filter(location_id=location_id)
+
+    qs = qs.filter(date__gte=start_date, date__lte=end_date)     
+
+    if not qs.exists():
+        context = {
+            'locations': locations,
+            'selected_location': int(location_id) if location_id else None,
+            'start_date': start_date,
+            'end_date': end_date,
+            'message': 'No data found for the selected filters.',
+            'labels': [],
+            'cashier_data': [],
+            'supervisor_data': [],
+        }
+        return render(request, 'cash_desk_error/concurrency_chart_cd_error.html', context)
+
+    cashier_names = []
+    supervisor_names = []
+
+    for cd_error in qs:
+        cashier_names.append(
+            f"{cd_error.cashier.name if cd_error.cashier else ''} {cd_error.cashier.surname if cd_error.cashier else ''}".strip()
+        )
+        supervisor_names.append(
+            f"{cd_error.supervisor.name if cd_error.supervisor else ''} {cd_error.supervisor.surname if cd_error.supervisor else ''}".strip()
+        )
+
+    cashier_counts = Counter(cashier_names)
+    supervisor_counts = Counter(supervisor_names)
+
+    labels = sorted(set(cashier_counts.keys()) | set(supervisor_counts.keys()))
+
+    def get_counts(counts, labels):
+        return [counts.get(label, 0) for label in labels]
+
+    context = {
+        'locations': locations,
+        'selected_location': int(location_id) if location_id else None,
+        'start_date': start_date,
+        'end_date': end_date,
+        'labels': labels,
+        'cashier_data': get_counts(cashier_counts, labels),
+        'supervisor_data': get_counts(supervisor_counts, labels),
+    }
+
+    return render(request, 'cash_desk_error/concurrency_chart_cd_error.html', context)
