@@ -679,10 +679,14 @@ class FilterReport(forms.Form):
         )
        location = forms.ModelChoiceField(
         queryset=Location.objects.all(), 
+                        
         required=False, 
         label='Branch',
-        widget=forms.HiddenInput()
+   
+        widget=forms.Select(
+              attrs={'class': 'form-select'}
          )
+       )
        
    
      

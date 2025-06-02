@@ -2,12 +2,15 @@ from .utils import enviar_notificacion_reporte,enviar_notificacion_blacklist,env
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.db.backends.signals import connection_created
-from .models import Report,BlackList
+from .models import Report,BlackList,UserLocation
 from django.contrib.auth.signals import user_logged_in
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.utils import timezone
 from .views import get_end_date
+#para obtener localizacion del usuario conectado
+from django.http import JsonResponse
+from .views import get_client_ip,get_location_from_ip
 
 @receiver(post_save, sender=Report)
 def notificar_nuevo_reporte(sender, instance, created, **kwargs):
@@ -41,3 +44,20 @@ def check_blacklist_on_login(sender, user, request, **kwargs):
 def notify_user_created(sender, instance, created, **kwargs):
     if created:
        enviar_notificacion_create_user(instance)
+#esto esat funcionando vbienperop la api no es libre
+@receiver(user_logged_in,sender=User)
+def user_location_view(sender, user, request, **kwargs):
+    ip = get_client_ip(request)   
+    location = get_location_from_ip(ip)  
+
+    user_location = UserLocation( 
+                                 ip=location.get('ip') ,
+                                 user=user.username,
+                                 latitude=location.get('latitude'),
+                                 longitude=location.get('longitude'),
+                                 city=location.get('city'),
+                                 region=location.get('region'),
+                                 country=location.get('country'), 
+                                )
+    user_location.save()
+  

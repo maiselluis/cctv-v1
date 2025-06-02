@@ -837,3 +837,43 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.location.location}"
+    
+class UserLocation(models.Model):
+    ip = models.GenericIPAddressField()
+    user = models.CharField(max_length=100, null=True, blank=True)
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
+    city = models.CharField(max_length=100, null=True, blank=True)
+    region = models.CharField(max_length=100, null=True, blank=True)
+    country = models.CharField(max_length=100, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+   
+    class Meta:
+        db_table="tb_user_location"       
+        ordering = ["-user"]  
+
+    def __str__(self):
+        return f"{self.user} - {self.ip}- {self.city}"
+    
+
+
+class UserActionLog(models.Model):
+    ACTION_CHOICES = (
+        ('CREATE', 'Create'),
+        ('UPDATE', 'Update'),
+        ('DELETE', 'Delete'),
+        ('VIEW', 'View'),
+    )
+    class Meta:
+        db_table = 'tb_user_action_log'
+        ordering = ['-timestamp']
+        verbose_name = "User Action Log"           
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name='user_actions')
+    action = models.CharField(max_length=10, choices=ACTION_CHOICES)
+    url = models.CharField(max_length=255)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    extra_info = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.action} - {self.url}"

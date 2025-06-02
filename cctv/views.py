@@ -27,6 +27,11 @@ from django.db.models import ProtectedError
 from dateutil.relativedelta import relativedelta
 from datetime import date, timedelta
 from collections import Counter
+#saber localizacion del usuario conectado
+import requests
+#para registrar los actions de ,o susuarios
+from .mixins import UserActionLogMixin
+from .utils import log_user_action_decorator
 
 
 # Create your views here.
@@ -3585,28 +3590,24 @@ class DetailPokerTableView(LoginRequiredMixin,PermissionRequiredMixin,DetailView
 
 #DailyReport-----Begin
 
-class ListReportView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListReportView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      template_name='report_main/list-report_main.html'
      model=Report
      permission_required = 'cctv.view_report'
-     
+     #para el action user
+     action_type = 'VIEW'
+     extra_info = "Report List"
 
      def dispatch(self, request, *args, **kwargs):
+            if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+             self.log_action(request)
             if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
                 messages.error(self.request, "No profile associated with the user was found")
                 return redirect(self.login_url)
                 
             return super().dispatch(request, *args, **kwargs)
-     
-     #def get_queryset(self):
-      #  if self.request.user.is_superuser:
-       #     qs=Report.objects.all()                
-       # else:
-        #    qs=Report.objects.filter(location=self.request.user.userprofile.location).order_by('-report')     
-        
-       # return qs
     
      def get_queryset(self):        
         if self.request.user.is_superuser:
@@ -3743,7 +3744,7 @@ class ListReportView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
      
    
       
-class CreateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,CreateView):
+class CreateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,CreateView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      model=Report
@@ -3752,6 +3753,7 @@ class CreateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessage
      success_url = reverse_lazy("report-list") 
      permission_required = 'cctv.add_report'
      success_message = "The Daily Report was Added successfully."
+     action_type = 'CREATE'
 
      def get_initial(self):      
         initial = super().get_initial()
@@ -3783,15 +3785,17 @@ class CreateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessage
              return redirect('report-create')  
         
          form.instance.location = userprofile
-         return super().form_valid(form)
+         response = super().form_valid(form)
+         self.extra_info = f"Created the ID report: {self.object.report}"
+         self.log_action(self.request)
+         return response
 
 
-     def form_invalid(self, form):
-       
+     def form_invalid(self, form):       
         messages.error(self.request, "An error has occurred.Contact the administrator.")
         return super().form_invalid(form)	  
       
-class UpdateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView):
+class UpdateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView,UserActionLogMixin):
       login_url = '/accounts/login/'
       redirect_field_name = 'redirect_to' 
       model=Report
@@ -3800,13 +3804,14 @@ class UpdateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessage
       success_url = reverse_lazy("report-list") 
       permission_required = 'cctv.change_report'
       success_message = "The Daily Report was Updated successfully."
+      action_type = 'UPDATE'
       
       def get_initial(self):      
         initial = super().get_initial()        
         if self.request.user.is_superuser:
             initial['location_id']=None
         else:
-            initial['location_id'] = self.request.user.userprofile.location_id         
+            initial['location_id'] = self.request.user.userprofile.location_id       
        
        
         return initial
@@ -3817,15 +3822,16 @@ class UpdateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessage
          except UserProfile.DoesNotExist:               
                 return self.form_invalid(form)          
        
-         form.instance.location = userprofile       
+         form.instance.location = userprofile   
+         self.extra_info = f"Update the ID report: {self.object.report}"
+         self.log_action(self.request)    
          return super().form_valid(form)
-
 
       def form_invalid(self, form):
         messages.error(self.request, "You do not have an associated profile. Please create a profile first.")
         return super().form_invalid(form)	    
 
-class DeleteReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,DeleteView):
+class DeleteReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,DeleteView,UserActionLogMixin):
        login_url = '/accounts/login/'
        redirect_field_name = 'redirect_to' 
        model=Report
@@ -3834,25 +3840,31 @@ class DeleteReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessage
        success_url = reverse_lazy("report-list")
        permission_required = 'cctv.delete_report'    
        success_message = "The Daily Report was Deleted successfully."
+       action_type = 'DELETE'
+      
+       def dispatch(self, request, *args, **kwargs):
+        if not hasattr(request.user, 'userprofile') and not request.user.is_superuser:
+            messages.error(request, "No profile associated with the user was found")
+            return redirect(self.login_url)
+        return super().dispatch(request, *args, **kwargs)
 
-       def form_valid(self, form):
-         try:
-            userprofile = self.request.user.userprofile.location
-           
-         except UserProfile.DoesNotExist:
-               
-                return self.form_invalid(form)          
-       
-    
-       
-         return super().form_valid(form)
+       def post(self, request, *args, **kwargs):
+        obj = self.get_object()
+        try:
+            _ = request.user.userprofile.location
+        except UserProfile.DoesNotExist:
+            messages.error(
+                request,
+                "You do not have an associated profile. Please create a profile first."
+            )
+            return redirect('report-list')
 
+        self.extra_info = f"Deleted report ID: {obj.pk}"
+        self.log_action(request)  # 🔥 Aquí sí se ejecutará antes del delete
+        return super().post(request, *args, **kwargs)
 
-       def form_invalid(self, form):
-        messages.error(self.request, "You do not have an associated profile. Please create a profile first.")
-        return super().form_invalid(form)	   
        
-class DetailReportView(LoginRequiredMixin,PermissionRequiredMixin,DetailView):
+class DetailReportView(LoginRequiredMixin,PermissionRequiredMixin,DetailView,UserActionLogMixin):
     login_url = '/accounts/login/'
     redirect_field_name = 'redirect_to' 
     model = Report
@@ -3866,24 +3878,28 @@ class DetailReportView(LoginRequiredMixin,PermissionRequiredMixin,DetailView):
         report = self.get_object()  # Obtener el objeto Report actual
         context['videos'] = ReportVideo.objects.filter(report_id=report)
         return context
-
+@log_user_action_decorator(action='VIEW', extra_info='Find Report by Date')
 @login_required
 def FilterReportView(request):
     if request.user.is_superuser:
-         report=Report.objects.all()
+         report=Report.objects.all().order_by('-date')
          user_location=''
     else:
-        report=Report.objects.filter(location=request.user.userprofile.location)
+        report=Report.objects.filter(location=request.user.userprofile.location).order_by('-date')
         user_location=request.user.userprofile.location 
             
     form=FilterReport(request.GET or None,  initial={'location': user_location})
     if form.is_valid():             
              date_begin = form.cleaned_data.get('date_begin')      
-             date_end = form.cleaned_data.get('date_end')        
-             if date_begin and date_end :        
-                 report=report.filter(date__range=(date_begin, date_end))    
-    return render(request, 'report_main/filter_report_select.html', {'form': form, 'report': report})
+             date_end = form.cleaned_data.get('date_end')   
 
+             location=form.cleaned_data.get('location')
+             if date_begin and date_end :        
+                 report=report.filter(date__range=(date_begin, date_end)).order_by('-date') 
+             if location:
+                 report=report.filter(location=location).order_by('-date') 
+    return render(request, 'report_main/filter_report_select.html', {'form': form, 'report': report})
+@log_user_action_decorator(action='VIEW', extra_info='Find Report by Report No')
 @login_required
 def FilterReportByIdView(request):
     
@@ -3900,7 +3916,7 @@ def FilterReportByIdView(request):
              if report_id :
                  report=report.filter(report_nro__iexact=report_id)   
     return render(request, 'report_main/filter_by_id.html', {'form': form, 'report': report})
-    
+@log_user_action_decorator(action='VIEW', extra_info='Find Report by Report Type')        
 @login_required
 def FilterReportByTypeView(request):
      if request.user.is_superuser:
@@ -6972,3 +6988,36 @@ def cd_error_concurrency(request):
     }
 
     return render(request, 'cash_desk_error/concurrency_chart_cd_error.html', context)
+
+
+
+#Saber la localizacion de dond se copnecta el usuario
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
+def get_location_from_ip(ip):
+        try:
+            headers = {
+                "User-Agent": "Mozilla/5.0"
+            }
+            url = f'https://ipapi.co/{ip}/json/'
+            response = requests.get(url, headers=headers, timeout=5)
+            data = response.json()
+          
+            return {
+                'ip': data.get('ip'),  # usa el valor de la respuesta
+                'latitude': data.get('latitude'),
+                'longitude': data.get('longitude'),
+                'city': data.get('city'),
+                'region': data.get('region'),
+                'country': data.get('country_name'),
+            }
+        except Exception as e:
+            print("Error:", e)
+            return None

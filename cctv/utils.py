@@ -4,6 +4,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from django.conf import settings
 from django.contrib.auth.models import User
+#para el action user
+from .models import UserActionLog
+from functools import wraps
 
 def send_email(subject, html_message, recipient_list):
     sender_email = settings.EMAIL_HOST_USER
@@ -128,3 +131,19 @@ def enviar_notificacion_create_user(user):
         """
         destinatarios=['mestrada@clubroyalcaribbean.net']    
         send_email(asunto, mensaje_html, destinatarios)
+
+#para el action  de los usuarios
+def log_user_action_decorator(action, extra_info=""):
+    def decorator(view_func):
+        @wraps(view_func)
+        def _wrapped_view(request, *args, **kwargs):
+            if request.user.is_authenticated:
+                UserActionLog.objects.create(
+                    user=request.user,
+                    action=action,
+                    url=request.path,
+                    extra_info=extra_info
+                )
+            return view_func(request, *args, **kwargs)
+        return _wrapped_view
+    return decorator
