@@ -53,7 +53,7 @@ def user_last_login_view(request):
         'users': users
     })
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Profile') 
 @login_required
 def profile_view(request):
     return render(request, 'profile.html', {'user': request.user})
@@ -288,14 +288,19 @@ class RemovePermissionView(RedirectView):
        #    qs=Staff.objects.filter(Q(location_id=3 )  | Q(location=self.request.user.userprofile.location ) )
      #   return qs
 
-class ListStaffView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class ListStaffView(LoginRequiredMixin, PermissionRequiredMixin, ListView,UserActionLogMixin):
    template_name='staff/list-staff.html'
    login_url = '/accounts/login/'
    redirect_field_name = 'redirect_to'  
    model=Staff
    permission_required = 'cctv.view_staff'
+   action_type = 'VIEW'
+   extra_info = "Staff List"
    
    def dispatch(self, request, *args, **kwargs):
+            if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)
+
             if not hasattr(self.request.user, 'userprofile') and not self.request.user.is_superuser:
                 messages.error(self.request, "No profile associated with the user was found")
                 return redirect(self.login_url)
@@ -490,7 +495,7 @@ class CreateStaffView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageM
 
 
 
-class UpdateStaffView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView):
+class UpdateStaffView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView,UserActionLogMixin):
       login_url = '/accounts/login/'
       redirect_field_name = 'redirect_to'
       model=Staff
@@ -499,6 +504,13 @@ class UpdateStaffView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageM
       success_url = reverse_lazy("staff-list")
       permission_required = 'cctv.change_staff'
       success_message = "The Staff was Updated successfully."
+      action_type = 'UPDATE'
+
+
+      def form_valid(self, form):
+          self.extra_info = f"Update Staff  ID: {self.object.pk}"
+          self.log_action(self.request)
+          return super().form_valid(form)
       
     #  def form_valid(self, form):
      #    try:
@@ -560,15 +572,20 @@ class DetailStaffView(LoginRequiredMixin,PermissionRequiredMixin,DetailView):
 #Staff****End
 #Black list  CRUD and Functions
 
-class ListBlackListView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListBlackListView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
    login_url = '/accounts/login/'
    redirect_field_name = 'redirect_to'
    template_name='black_list/list-blacklist.html'
    model=BlackList
    permission_required = 'cctv.view_blacklist'
+   action_type = 'VIEW'
+   extra_info = "BlackList List"
   
   
    def dispatch(self, request, *args, **kwargs):
+            if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)
+
             if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
                 messages.error(self.request, "No profile associated with the user was found")
                 return redirect(self.login_url)                
@@ -817,7 +834,7 @@ class CreateBlackListView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMess
      #   return super().form_invalid(form)	   
 
 
-class UpdateBlackListView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView):
+class UpdateBlackListView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView,UserActionLogMixin):
       login_url = '/accounts/login/'
       redirect_field_name = 'redirect_to'
       model=BlackList
@@ -825,9 +842,13 @@ class UpdateBlackListView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMess
       form_class = CreateBlackListForm   
       success_url = reverse_lazy("blacklist-list")
       permission_required = 'cctv.change_blacklist'
-    
-
       success_message = "The Customer was Updated successfully to the BlackList."
+      action_type = 'UPDATE'
+
+      def form_valid(self, form):
+          self.extra_info = f"Update BlackList ID: {self.object.pk}"
+          self.log_action(self.request)
+          return super().form_valid(form)
       
      # def form_valid(self, form):
         # try:
@@ -899,15 +920,20 @@ def magnifyin(request,id):
 
 
 #Black list Resintated CRUD and Functions
-class ListBlackListView_Reinstated(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListBlackListView_Reinstated(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
    login_url = '/accounts/login/'
    redirect_field_name = 'redirect_to'
    template_name='black_list_reinstated/list-blacklist_reinstated.html'
    model=BlackList
    permission_required = 'cctv.add_blacklist'
+   action_type = 'VIEW'
+   extra_info = "Reinstated Customer List"
   
   
    def dispatch(self, request, *args, **kwargs):
+            if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)
+            
             if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
                 messages.error(self.request, "No profile associated with the user was found!")
                 return redirect(self.login_url)                
@@ -1100,17 +1126,22 @@ class ListBlackListView_Reinstated(LoginRequiredMixin,PermissionRequiredMixin,Li
 
    
 
-class UpdateBlackListView_Reinstated(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView):
+class UpdateBlackListView_Reinstated(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,UpdateView,UserActionLogMixin):
       login_url = '/accounts/login/'
       redirect_field_name = 'redirect_to'
       model=BlackList
       template_name = 'black_list_reinstated/update-blacklist_reinstated.html'
       form_class = CreateBlackListForm   
       success_url = reverse_lazy("blacklist-list-reinstated")
-      permission_required = 'cctv.change_blacklist'   
-
+      permission_required = 'cctv.change_blacklist'
       success_message = "The Customer was Updated successfully to the BlackList."
-      
+      action_type = 'UPDATE'
+
+      def form_valid(self, form):
+            self.extra_info = f"Update BlackList Customer Reinstated  ID: {self.object.pk}"
+            self.log_action(self.request)
+            return super().form_valid(form) 
+        
 
 
 
@@ -3741,9 +3772,7 @@ class ListReportView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserAct
        
 
         return super().render_to_response(context, **response_kwargs)
-     
-   
-      
+
 class CreateReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessageMixin,CreateView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
@@ -3862,7 +3891,6 @@ class DeleteReportView(LoginRequiredMixin,PermissionRequiredMixin,SuccessMessage
         self.extra_info = f"Deleted report ID: {obj.pk}"
         self.log_action(request)  # 🔥 Aquí sí se ejecutará antes del delete
         return super().post(request, *args, **kwargs)
-
        
 class DetailReportView(LoginRequiredMixin,PermissionRequiredMixin,DetailView,UserActionLogMixin):
     login_url = '/accounts/login/'
@@ -3872,12 +3900,16 @@ class DetailReportView(LoginRequiredMixin,PermissionRequiredMixin,DetailView,Use
     template_name='report_main/detail-report_main.html'   
     success_url = reverse_lazy("report-list")
     permission_required = 'cctv.view_report'
+    action_type = 'DETAIL'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         report = self.get_object()  # Obtener el objeto Report actual
+        self.extra_info = f"Detail for the ID report: {self.object.report}"
+        self.log_action(self.request)
         context['videos'] = ReportVideo.objects.filter(report_id=report)
         return context
+
 @log_user_action_decorator(action='VIEW', extra_info='Find Report by Date')
 @login_required
 def FilterReportView(request):
@@ -3899,6 +3931,7 @@ def FilterReportView(request):
              if location:
                  report=report.filter(location=location).order_by('-date') 
     return render(request, 'report_main/filter_report_select.html', {'form': form, 'report': report})
+
 @log_user_action_decorator(action='VIEW', extra_info='Find Report by Report No')
 @login_required
 def FilterReportByIdView(request):
@@ -3916,6 +3949,7 @@ def FilterReportByIdView(request):
              if report_id :
                  report=report.filter(report_nro__iexact=report_id)   
     return render(request, 'report_main/filter_by_id.html', {'form': form, 'report': report})
+
 @log_user_action_decorator(action='VIEW', extra_info='Find Report by Report Type')        
 @login_required
 def FilterReportByTypeView(request):
@@ -4011,6 +4045,7 @@ class ReportVideoDeleteView(DeleteView):
     def get_success_url(self):
         return reverse_lazy('reportvideo_list', kwargs={'report_id': self.object.report.pk}) 
 
+@log_user_action_decorator(action='VIEW', extra_info='Download Video')    
 @login_required 
 def download_video(request, video_id):
     video = get_object_or_404(ReportVideo, id=video_id)
@@ -4030,14 +4065,19 @@ def download_video(request, video_id):
 #ReportVideo-----End
 #DailyShift Report-----Begin
 
-class ListDailyShiftView(LoginRequiredMixin,PermissionRequiredMixin,ListView):  
+class ListDailyShiftView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):  
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      template_name='daily_shift/list-daily_shift.html'
      model=DailyShift   
      permission_required = 'cctv.view_dailyshift'
+     action_type = 'VIEW'
+     extra_info = "Daily Shift List"
 
      def dispatch(self, request, *args, **kwargs):
+            if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)
+
             if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
                 messages.error(self.request, "No profile associated with the user was found")
                 return redirect(self.login_url)
@@ -4380,15 +4420,20 @@ def FilterDailyShiftByDateView(request):
 
           #  return context
 
-class ListCashDeskTransactionsView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class ListCashDeskTransactionsView(LoginRequiredMixin, PermissionRequiredMixin, ListView,UserActionLogMixin):
     login_url = '/accounts/login/'
     redirect_field_name = 'redirect_to' 
     model = Cash_Desk_Transaction
     permission_required = 'cctv.view_cash_desk_transaction' 
     template_name = 'cash_desk_transactions/list-cash_desk_transactions.html'
     paginate_by = 10
+    action_type = 'VIEW'
+    extra_info = "Cash Desk Transactions List"
 
-    def dispatch(self, request, *args, **kwargs):                 
+    def dispatch(self, request, *args, **kwargs):
+        if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)  
+
         if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
             messages.error(self.request, "No profile associated with the user was found")
             return redirect(self.login_url)
@@ -4625,7 +4670,7 @@ class DetailCashDeskTransactionsView(LoginRequiredMixin,PermissionRequiredMixin,
     permission_required = 'cctv.view_cash_desk_transaction' 
 
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Find Transactions by Date')  
 @login_required
 def FilterTransactionsByDateView(request):   
 
@@ -4787,7 +4832,7 @@ def FilterTransactionsByDateView(request):
         'transactions': transactions.filter(date=today)[:50],  
     })
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Find Transactions by Customer')   
 @login_required
 def FilterTransactionsByCustomerView(request): 
     if request.user.is_superuser:
@@ -4824,6 +4869,7 @@ def FilterTransactionsByCustomerView(request):
 
     
     return render(request, 'cash_desk_transactions/find_transaction_by_customer.html', {'form': form, 'customer': customer})
+@log_user_action_decorator(action='VIEW', extra_info='Find Transactions by Account Type')
 @login_required
 def FilterTransactionsByAccountView(request):
     
@@ -4858,6 +4904,8 @@ def FilterTransactionsByAccountView(request):
 
     
     return render(request, 'cash_desk_transactions/find_transaction_by_account_type.html', {'form': form, 'transactions': transactions})
+@log_user_action_decorator(action='VIEW', extra_info='Find Customer Expense') 
+
 @login_required
 def FilterCustomerExpense(request):
      
@@ -4892,7 +4940,7 @@ def FilterCustomerExpense(request):
         
         
     return render(request, 'cash_desk_transactions/customer_expense.html', {'form': form, 'transactions': transactions})
-
+@log_user_action_decorator(action='VIEW', extra_info='Find Customer Complimentary')  
 @login_required
 def FilterCustomerCumplimentary(request):
   
@@ -4932,14 +4980,19 @@ def FilterCustomerCumplimentary(request):
 
 #CDError****Begin
    
-class ListCdErrorView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListCdErrorView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      template_name='cash_desk_error/list-cd_error.html'
      model=Cash_Desk_Error
-     permission_required = 'cctv.view_cash_desk_error' 
+     permission_required = 'cctv.view_cash_desk_error'
+     action_type = 'VIEW'
+     extra_info = "Cash Desk Error List" 
 
-     def dispatch(self, request, *args, **kwargs):   
+     def dispatch(self, request, *args, **kwargs):
+          if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)   
+
           if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
             messages.error(self.request, "No profile associated with the user was found")
             return redirect(self.login_url)
@@ -5212,7 +5265,7 @@ class DetailCdErrorView(LoginRequiredMixin,PermissionRequiredMixin,DetailView):
     permission_required = 'cctv.view_cash_desk_error' 
 
    
-
+@log_user_action_decorator(action='VIEW', extra_info='Cash Desk Error Find by Date')
 @login_required
 def FilterCdErrorByDateView(request):    
     if request.user.is_superuser:
@@ -5232,7 +5285,7 @@ def FilterCdErrorByDateView(request):
           cash_error=cash_error.filter(date__range=(date_begin, date_end))    
     return render(request, 'cash_desk_error/find_cd_error_by_date.html', {'form': form, 'cash_error': cash_error})  
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Cash Desk Error Synopsis Cashier') 
 @login_required
 def FilterSynopsisCashierView(request):
     if request.user.is_superuser:
@@ -5273,14 +5326,19 @@ def get_report_id(request, report_value,location):
 
 #Poker Payouts****** BEGIN
 
-class ListPokerPayoutsView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListPokerPayoutsView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      template_name='poker_payouts/list-poker_payouts.html'
      model=Poker_Payout
      permission_required = 'cctv.view_poker_payout'
+     action_type = 'VIEW'
+     extra_info = "Poker Payouts List"
 
-     def dispatch(self, request, *args, **kwargs):               
+     def dispatch(self, request, *args, **kwargs):
+          if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request)               
+
           if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
             messages.error(self.request, "No profile associated with the user was found")
             return redirect(self.login_url) 
@@ -5540,7 +5598,7 @@ class DetailPokerPayoutsView(LoginRequiredMixin,PermissionRequiredMixin,DetailVi
 #Poker Payouts****** END
  
   
-
+@log_user_action_decorator(action='VIEW', extra_info='Poker Payout Find by name')
 @login_required
 def FilterPokerPayoutsByDateView(request):
      
@@ -5561,6 +5619,7 @@ def FilterPokerPayoutsByDateView(request):
           poker_payouts=poker_payouts.filter(date__range=(date_begin, date_end))    
      return render(request, 'poker_payouts/find_poker_payouts.html', {'form': form, 'poker_payouts': poker_payouts})  
 
+@log_user_action_decorator(action='VIEW', extra_info='Poker Payout Synopsis Staff')
 @login_required
 def FilterSynopsisStaffView(request):
    if request.user.is_superuser:
@@ -5596,6 +5655,7 @@ def FilterSynopsisStaffView(request):
 
    return render(request,'poker_payouts/find_synopsis_staff.html',{'form':form, 'staff_synopsis':staff_synopsis})
 
+@log_user_action_decorator(action='VIEW', extra_info='Poker Payout Find Combinations')
 @login_required
 def FilterPokerPayoutCombinationView(request):
     if request.user.is_superuser:
@@ -5617,6 +5677,7 @@ def FilterPokerPayoutCombinationView(request):
           poker_payout_combination=poker_payout_combination.filter(combination_id__exact=combination)     
     return  render(request,'poker_payouts/find_poker_payout_combination.html',{'form':form, 'poker_payout_combination':poker_payout_combination})
 
+@log_user_action_decorator(action='VIEW', extra_info='Poker Payout Find Customers')
 @login_required
 def FilterPokerPayoutCustomerView (request):
    if request.user.is_superuser:
@@ -5646,14 +5707,19 @@ def FilterPokerPayoutCustomerView (request):
 ###***** POKER PAYOUTS*****END
 #Report Synopsis
 
-class ListReportSynopsisView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListReportSynopsisView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
    login_url = '/accounts/login/'
    redirect_field_name = 'redirect_to' 
    template_name='report_synopsis/list-report_synopsis.html'
    model=Report
    permission_required = 'cctv.view_report'
+   action_type = 'VIEW'
+   extra_info = "Report Synopsis List"
 
-   def dispatch(self, request, *args, **kwargs): 
+   def dispatch(self, request, *args, **kwargs):
+          if not request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                self.log_action(request) 
+
           if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
             messages.error(self.request, "No profile associated with the user was found")
             return redirect(self.login_url)            
@@ -5667,7 +5733,7 @@ class ListReportSynopsisView(LoginRequiredMixin,PermissionRequiredMixin,ListView
        
         return qs
 
-        
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis CCTV')         
 @login_required
 def ReportSynopsisCCTV(request):
     if request.user.is_superuser:
@@ -5692,7 +5758,7 @@ def ReportSynopsisCCTV(request):
     return render(request, 'report_synopsis/list-report_synopsis_cctv.html', {'form': form, 'synopsis_cctv': synopsis_cctv})
 
 
-        
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Dealer')          
 @login_required
 def ReportSynopsisDEALER(request):
     if request.user.is_superuser:
@@ -5715,6 +5781,7 @@ def ReportSynopsisDEALER(request):
           synopsis_dealer=synopsis_dealer.filter( dealer__exact=employee_id)    
     return render(request, 'report_synopsis/list-report_synopsis_dealer.html', {'form': form, 'synopsis_dealer': synopsis_dealer})
 
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Inspector') 
 @login_required
 def ReportSynopsisINSPECTOR(request):
     if request.user.is_superuser:
@@ -5740,7 +5807,7 @@ def ReportSynopsisINSPECTOR(request):
     
     return render(request, 'report_synopsis/list-report_synopsis_inspector.html', {'form': form, 'synopsis_inspector': synopsis_inspector})
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Pitboss')  
 @login_required
 def ReportSynopsisPITBOSS(request):
     if request.user.is_superuser:
@@ -5766,6 +5833,7 @@ def ReportSynopsisPITBOSS(request):
     
     return render(request, 'report_synopsis/list-report_synopsis_pitboss.html', {'form': form, 'synopsis_pitboss': synopsis_pitboss})
 
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Summary')
 @login_required
 def ReportSynopsisSUMMARY(request):
     if request.user.is_superuser:
@@ -5789,7 +5857,7 @@ def ReportSynopsisSUMMARY(request):
     
     return render(request, 'report_synopsis/list-report_synopsis_summary.html', {'form': form, 'synopsis_summary': synopsis_summary})
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Title')  
 @login_required
 def ReportSynopsisTITLE(request):
     if request.user.is_superuser:
@@ -5818,7 +5886,7 @@ def ReportSynopsisTITLE(request):
     
     return render(request, 'report_synopsis/list-report_synopsis_tittle.html', {'form': form, 'synopsis_title': synopsis_title})
 
-    
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Underpayments')     
 @login_required
 def ReportSynopsisUNDERPAYMENT(request):
     if request.user.is_superuser:
@@ -5843,7 +5911,7 @@ def ReportSynopsisUNDERPAYMENT(request):
     
     return render(request, 'report_synopsis/list-report_synopsis_underpayment.html', {'form': form, 'synopsis_underpayment': synopsis_underpayment})
 
-  
+@log_user_action_decorator(action='VIEW', extra_info='Report Synopsis Overpayments')     
 @login_required
 def ReportSynopsisOVERPAYMENT(request):
     if request.user.is_superuser:
@@ -5871,14 +5939,19 @@ def ReportSynopsisOVERPAYMENT(request):
 
 #Counterfait Money****Begin
 
-class ListCounterfaitView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListCounterfaitView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      template_name='counterfeit/list-counterfeit.html'
      model=Counterfait
      permission_required = 'cctv.view_counterfait'
+     action_type = 'VIEW'
+     extra_info = "Counterfait Money List"
 
-     def dispatch(self, request, *args, **kwargs): 
+     def dispatch(self, request, *args, **kwargs):
+          if not request.headers.get('x-requested-with') == 'XMLHttpRequest': 
+                self.log_action(request) 
+
           if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
             messages.error(self.request, "You do not have an associated profile or some validation failed.")
             return redirect(self.login_url)
@@ -6117,6 +6190,7 @@ class DetailCounterfaitView(LoginRequiredMixin,PermissionRequiredMixin,DetailVie
     success_url = reverse_lazy("counterfeit-list")
     permission_required = 'cctv.view_counterfait'
 
+@log_user_action_decorator(action='VIEW', extra_info='Counterfait Money Find by Date')  
 @login_required
 def FilterCounterfaitByDateView(request):
      if request.user.is_superuser:
@@ -6139,14 +6213,19 @@ def FilterCounterfaitByDateView(request):
 
 #Daily Exeption****Begin
  
-class ListDailyExeptionView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
+class ListDailyExeptionView(LoginRequiredMixin,PermissionRequiredMixin,ListView,UserActionLogMixin):
      login_url = '/accounts/login/'
      redirect_field_name = 'redirect_to' 
      template_name='daily_exeption/list-daily_exeption.html'
      model=DailyExeption
      permission_required = 'cctv.view_dailyexeption'
+     action_type = 'VIEW'
+     extra_info = "Daily Exception List"
   
-     def dispatch(self, request, *args, **kwargs): 
+     def dispatch(self, request, *args, **kwargs):
+          if not request.headers.get('x-requested-with') == 'XMLHttpRequest': 
+                self.log_action(request) 
+                
           if not hasattr(request.user, 'userprofile') and not self.request.user.is_superuser:
             messages.error(self.request, "No profile associated with the user was found")
             return redirect(self.login_url)
@@ -6369,6 +6448,7 @@ class DetailDailyExeptionView(LoginRequiredMixin,PermissionRequiredMixin,DetailV
     success_url = reverse_lazy("daily_exeption-list")
     permission_required = 'cctv.view_dailyexeption'
 
+@log_user_action_decorator(action='VIEW', extra_info='Daily Exceptions Find by Date')  
 @login_required
 def FilterDailyExeptionByDateView(request):
     if request.user.is_superuser:
@@ -6396,6 +6476,7 @@ def FilterDailyExeptionByDateView(request):
     
     return render(request, 'daily_exeption/find_daily_exeption_by_date.html', {'form': form, 'daily_exeption': daily_exeption})
 
+@log_user_action_decorator(action='VIEW', extra_info='Daily Exceptions Find by Employee') 
 @login_required
 def FilterDailyExeptionByEmployeeView(request):
     if request.user.is_superuser:
@@ -6419,6 +6500,7 @@ def FilterDailyExeptionByEmployeeView(request):
     
     return render(request, 'daily_exeption/find_daily_exeption_by_employee.html', {'form': form, 'daily_exeption': daily_exeption})
 
+@log_user_action_decorator(action='VIEW', extra_info='Daily Exceptions Find by Exception Type') 
 @login_required
 def FilterDailyExeptionByTypeView(request):
     if request.user.is_superuser:
@@ -6817,7 +6899,8 @@ def get_end_date(start_date, duration):
         return start_date + relativedelta(years=1)
     return None  
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Poker Payouts  Graphics') 
+@login_required
 def poker_payout_concurrency_view(request):
     start_date_str = request.GET.get('start_date')
     end_date_str = request.GET.get('end_date')
@@ -6914,7 +6997,8 @@ def poker_payout_concurrency_view(request):
 
     return render(request, 'poker_payouts/concurrency_chart.html', context)
 
-
+@log_user_action_decorator(action='VIEW', extra_info='Cash Desk Error Graphics') 
+@login_required
 def cd_error_concurrency(request):
     start_date_str = request.GET.get('start_date')
     end_date_str = request.GET.get('end_date')

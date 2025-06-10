@@ -2,7 +2,11 @@ from django.shortcuts import render
 from .models import Cash_Desk_Transaction
 from .forms import FilterTtransactionsByTimeLine
 from datetime import date
+from django.contrib.auth.decorators import login_required
+from .utils import log_user_action_decorator
 
+@log_user_action_decorator(action='VIEW', extra_info='Transaction Timeline')   
+@login_required
 def transaction_timeline(request):
     user_location = None
     location_id = None

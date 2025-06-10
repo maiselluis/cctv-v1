@@ -9,9 +9,6 @@ from django.urls import reverse
 import datetime
 import os
 
-
-
-
 # Create your models here.
 
 def validate_decimals(value):
@@ -160,8 +157,7 @@ class ReportOrigination(models.Model):
        verbose_name_plural = "Report Originations"
        db_table='tb_report_origination'
        get_latest_by ='id'
-   
-     
+      
 class Report(models.Model):
      report=models.BigAutoField(primary_key=True,verbose_name='Report')     
      date=models.DateField(verbose_name='Date',blank=False,null=False)
@@ -477,8 +473,7 @@ class DailyExeption(models.Model):
  
    def get_delete_url(self):
        return reverse('daily_exeption-delete',args=[(str(self.id))])
- 
-   
+    
 class Department(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.TextField(max_length=255,verbose_name='Department')
@@ -800,7 +795,6 @@ class CDErrorType(models.Model):
        verbose_name = "Cash Desk Error Type"
        verbose_name_plural = "Cash Desk Errors Types"
        get_latest_by = "id"
-    
 
 class Supplies(models.Model):
     request_choices=[ ('supplies','SUPPLIES'),('equipment','EQUIPMENT'),('service','SERVICE'),('other','OTHER') ]
@@ -854,8 +848,6 @@ class UserLocation(models.Model):
 
     def __str__(self):
         return f"{self.user} - {self.ip}- {self.city}"
-    
-
 
 class UserActionLog(models.Model):
     ACTION_CHOICES = (

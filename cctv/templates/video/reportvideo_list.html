@@ -55,7 +55,7 @@
                 <td>{{ video.caption }}</td>
                 <td> 
                     <div class="embed-responsive embed-responsive-16by9">
-                    <video controls autoplay class=" embed-responsive-item object-fit-sm-contain" autoplay width="100%" height="auto" >
+                    <video controls  class="video-item  embed-responsive-item object-fit-sm-contain" autoplay width="100%" height="auto" >
                      <source src="{{ video.video_file.url }}" type="video/mp4" >
                       Your browser does not support the video tag.
                      </video>  
@@ -114,5 +114,27 @@
 
 
 
+ <script>
+     const videos = document.querySelectorAll('.video-item');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    if (entry.isIntersecting) {
+      video.play().catch(error => {
+        // Por si autoplay está bloqueado por el navegador
+        console.log('Autoplay blocked:', error);
+      });
+    } else {
+      video.pause();
+    }
+  });
+}, {
+  threshold: 0.75 // El 75% del video debe estar visible para considerarlo "en foco"
+});
+
+videos.forEach(video => observer.observe(video));
+ </script>
 
 {%endblock%}
